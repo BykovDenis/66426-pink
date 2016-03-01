@@ -6,7 +6,7 @@
 @font-face{
  
     font-family: 'Open Sans Light';
-    src: url('../fonts/Open-Sans-Light.ttf');
+    src: url('../fonts/OpenSans-Light.ttf');
     width: normal;
     height: normal;
     
@@ -16,7 +16,7 @@
 @font-face{
  
     font-family: 'Open Sans Bold';
-    src: url('../fonts/Open-Sans-Bold.ttf');
+    src: url('../fonts/OpenSans-Bold.ttf');
     width: normal;
     height: normal;
     
@@ -24,13 +24,21 @@
 
 .body{
     
-    wdth: $width-body;
+    width: $width-body;
     
 }
 
 @mixin layout{
     
-    padding: 0 20px;
+    padding: 0 20px;    
+    margin: 0 auto;
+    
+}
+
+@mixin contain-width{
+    
+    margin: 0 auto; 
+    width: 320px;
     
 }
 
@@ -105,9 +113,8 @@
 
 .main-header{
 
-    margin: 0 auto; 
-    width: 320px;
-    
+    @include contain-width;
+    margin-bottom: 46px;
 
     &__layout{
 
@@ -176,6 +183,18 @@
         
     }
     
+    &__content{
+        
+        margin: 0;
+        padding-bottom: 36px;
+        
+        font: 100 #{$font-size}/ #{$line-height + 6px} $open-sans-light;
+        color: $color-white;
+        
+        text-align: center;
+        
+    }
+    
 }
 
 .btn{
@@ -190,7 +209,7 @@
                 
         width: 281px;
         
-        font: 600 (($font-size + 4))/ $line-height $open-sans-bold;
+        font: 600 #{$font-size + 4px}/ #{$line-height - 6px } $open-sans-bold;
         color: $color-white;
         
         text-align: center;
@@ -221,6 +240,33 @@
     &__item:last-of-type{
         
         margin-right: 0;
+    }
+    
+}
+
+.information{
+    
+    @include contain-width;
+    text-align: center;
+    
+    p{
+        
+        margin: 0;
+        margin-bottom: 30px;
+        
+    }
+    
+    &__layout{
+        
+        @include layout;
+        
+    }
+    
+    &__header{
+        
+        font: 100 #{$font-size + 6px}/ #{$line-height} $open-sans-light;
+        color: $color-blue-dark3;
+        
     }
     
 }
