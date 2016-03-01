@@ -1,4 +1,5 @@
 node_modules/
+grunt/
 .DS_Store
 Thumbs.db
 .idea
@@ -7,3 +8,4 @@ Thumbs.db
 *.psd
 *.ai
 css/*.css
+Gruntfile.js
