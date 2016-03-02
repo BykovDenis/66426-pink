@@ -5,269 +5,413 @@
 
 @font-face{
  
-    font-family: 'Open Sans Light';
-    src: url('../fonts/OpenSans-Light.ttf');
-    width: normal;
-    height: normal;
+  font-family: 'Open Sans Light';
+  src: url('../fonts/OpenSans-Light.ttf');
+  width: normal;
+  height: normal;
     
 }
 
 
 @font-face{
  
-    font-family: 'Open Sans Bold';
-    src: url('../fonts/OpenSans-Bold.ttf');
-    width: normal;
-    height: normal;
+  font-family: 'Open Sans Bold';
+  src: url('../fonts/OpenSans-Bold.ttf');
+  width: normal;
+  height: normal;
     
 }
 
-.body{
+@font-face{
+ 
+  font-family: 'Open Sans Regular';
+  src: url('../fonts/OpenSans-Regular.ttf');
+  width: normal;
+  height: normal;
     
-    width: $width-body;
+}
+
+body{
     
+  width: $width-body;    
+      
 }
 
 @mixin layout{
     
-    padding: 0 20px;    
-    margin: 0 auto;
+  padding: 0 20px;    
+  margin: 0 auto;
     
 }
 
 @mixin contain-width{
     
-    margin: 0 auto; 
-    width: 320px;
+  margin: 0 auto; 
+  width: 320px;
+    
+}
+
+@mixin angle{
+    
+  border-top: 40px solid $color-white;
+  border-right:320px solid $color-gray;
+  margin-bottom: 53px;
     
 }
 
 .logo{
     
-    width: 75px;
-    height: 22px;
-    margin:0;
-    padding: 22px 0;
+  width: 75px;
+  height: 22px;
+  margin:0;
+  padding: 22px 0;
     
 }
 
 .main-menu{
    
-    padding: 21px 0;
+  padding: 21px 0;
     
 }
 
 .icon-menu{
     
-    display: inline-block;
-    vertical-align: top;
-    background: url(../img/icon_bin.png) 0 0 no-repeat;
-    width: 50px;
-    height:24px;
+  display: inline-block;
+  vertical-align: top;
+  background: url(../img/icon_bin.png) 0 0 no-repeat;
+  width: 50px;
+  height:24px;
     
 }
 
 .icon-apple{
     
-    display: inline-block;
-    vertical-align: middle;
-    
-    background: url(../img/icon_apple.png) 0 0 no-repeat;
-    
-    width: 38px;
-    height: 47px;
+  display: inline-block;
+  vertical-align: middle;
+
+  background: url(../img/icon_apple.png) 0 0 no-repeat;
+
+  width: 38px;
+  height: 47px;
     
 }
 
 .icon-android{
     
-    display: inline-block;
-    vertical-align: middle;
+  display: inline-block;
+  vertical-align: middle;
     
-    background: url(../img/icon_android.png) 0 0 no-repeat;
+  background: url(../img/icon_android.png) 0 0 no-repeat;
     
-    width: 42px;
-    height: 47px;
+  width: 42px;
+  height: 47px;
     
 }
 
 .icon-microsoft{
     
-    display: inline-block;
-    vertical-align: middle;
+  display: inline-block;
+  vertical-align: middle;
     
-    background: url(../img/icon_microsoft.png) 0 0 no-repeat;
+  width: 44px;
+  height: 41px;    
     
-    width: 44px;
-    height: 41px;
+  background: url(../img/icon_microsoft.png) 0 0 no-repeat;
     
 }
 
 .clearfix:after{
     
-    display: table;
-    clear: both;
-    content: '';
+  display: table;
+  clear: both;
+  content: '';
     
 }
 
 .main-header{
 
-    @include contain-width;
-    margin-bottom: 46px;
+  @include contain-width;
 
-    &__layout{
 
-        @include layout;
+  &__layout{
+ 
+    @include layout;
 
-    }
-    
-    &__top{
-        
-      padding: 0;        
-        
-      background:
-        url(../img/img_screen.jpg) 49.6% 70.6% no-repeat,
-        url(../img/img_iphone5_hand.png) 0 100% no-repeat,
-        $color-blue-dark url(../img/bg_header.jpg) 0 0 no-repeat;
+  }
+
+  &__top{
+
+    padding: 0;        
+
+    background:
+      url(../img/img_screen.jpg) 49.6% 70.6% no-repeat,
+      url(../img/img_iphone5_hand.png) 0 100% no-repeat,
+      $color-blue-dark url(../img/bg_header.jpg) 0 0 no-repeat;
       background-size: 320 486;           
       height: 486px;
-        
-    }
-    
-    &__row1{
-        
-        background-color: rgba(0,0,0,.3); 
-        
-    }
-    
-    &__col1{
-        
-        float: left;
-        
-    }
-    
-    &__col2{
-        
-        float: right;
-        
-    }
+
+}
+
+  &__row1{
+
+    background-color: rgba(0,0,0,.3); 
+
+  }
+
+  &__col1{
+
+    float: left;
+
+  }
+
+  &__col2{
+
+    float: right;
+
+  }
 
 }    
 
 .intro{
     
     
-    &__layout{
-        
-         @include layout;
-        
-    }
-    
-    &__header{
-        
-        font: 100 #{$font-size-h1} / #{$line-height} $open-sans-light;
-        color: $color-white;        
-        text-align: center;
-    }
+  &__layout{
+
+    @include layout;
+
+  }
+
+  &__header{
+
+    font: 100 #{$font-size-h1} / #{$line-height} $open-sans-light;
+    color: $color-white;        
+    text-align: center;
+  }
     
 }
 
 .upload{
-        
-    background-color: $color-blue-dark1;
-    
-    &__layout{
-        
-        @include layout;
-        
-    }
-    
-    &__content{
-        
-        margin: 0;
-        padding-bottom: 36px;
-        
-        font: 100 #{$font-size}/ #{$line-height + 6px} $open-sans-light;
-        color: $color-white;
-        
-        text-align: center;
-        
-    }
+
+  background-color: $color-blue-dark1;
+ 
+  &__layout{
+
+    @include layout;
+
+  }
+
+  &__content{
+
+    margin: 0;
+    padding-bottom: 36px;
+
+    font: 100 #{$font-size}/ #{$line-height + 6px} $open-sans-light;
+    color: $color-white;
+
+    text-align: center;
+
+  }
     
 }
 
 .btn{
         
-    &__upload{
-        
-        display: inline-block;
-        vertical-align: top;
-        
-        margin: 28px 0 32px;
-        padding: 15.5px 0;
-                
-        width: 281px;
-        
-        font: 600 #{$font-size + 4px}/ #{$line-height - 6px } $open-sans-bold;
-        color: $color-white;
-        
-        text-align: center;
-        text-decoration: none;
-        
-        border: 3px solid $color-white;
-        border-radius: 30px;        
-        
-    }    
+  &__upload{
+
+    display: inline-block;
+    vertical-align: top;
+
+    margin: 28px 0 32px;
+    padding: 15.5px 0;
+
+    width: 281px;
+
+    font: 600 #{$font-size + 4px}/ #{$line-height - 6px } $open-sans-bold;
+    color: $color-white;
+
+    text-align: center;
+    text-decoration: none;
+ 
+    border: 3px solid $color-white; 
+    border-radius: 30px;        
+
+  }    
     
 }
 
 .block-logo{
     
-   text-align: center;
-   padding-bottom: 24px;
-    
-    &__item{
-        
-        display: inline-block;
-        vertical-align: baseline;
-        margin-right: 33px;
-        width: 42px;
-        height: 47px;
-        
-    }
-    
-    &__item:last-of-type{
-        
-        margin-right: 0;
-    }
+  text-align: center;
+  padding-bottom: 24px;
+
+  &__item{
+
+    display: inline-block;
+    vertical-align: baseline;
+    margin-right: 33px;
+    width: 42px;
+    height: 47px;
+
+  }
+
+  &__item:last-of-type{
+
+    margin-right: 0;
+  }
     
 }
 
 .information{
+
+  @include contain-width;
+  text-align: center;    
+  padding-top: 46px;
+  margin-bottom: 51px;
+
+  p{
+
+    margin: 0;
+    margin-bottom: 30px;
+
+  }
+
+  &__header{
+
+    font: 100 #{$font-size + 6px}/ #{$line-height} $open-sans-light;
+    color: $color-blue-dark3;   
+    background-color: $color-white;
+
+  }
     
-    @include contain-width;
+  &__content{
+        
+    background-color: $color-gray;
+        
+  }
+
+
+  &__layout{
+
+    @include layout;
+
+  }
+
+}
+
+.advantages{    
+
+    
+  &__layout{
+  
+    @include layout;    
+        
+  }
+    
+  &__header{
+
+    margin: 0;
+      
+    font: 600 #{$font-size-h3} / #{$line-height} $open-sans-bold;
+    color: $color-black;
     text-align: center;
+      
+
+  }
+
+  &__content{
+
+    font: 400 #{$font-size}/#{$line-height} $open-sans-regular;
+    color: $color-blue-dark3;
     
-    p{
-        
-        margin: 0;
-        margin-bottom: 30px;
-        
-    }
+  }
     
-    &__layout{
-        
-        @include layout;
-        
-    }
+  &__content--review{
+
+      line-height: $line-height + 6px;
+
+  }
     
-    &__header{
-        
-        font: 100 #{$font-size + 6px}/ #{$line-height} $open-sans-light;
-        color: $color-blue-dark3;
-        
-    }
+  &__angle{
+
+    @include angle;
+
+  }
+    
+  &__screen{
+
+    margin: 0 auto;
+      
+    width: 157px;
+    height: 278px;
+      
+    background: url(../img/img_iphone_screen3.png) 0 0 no-repeat;      
+
+  }    
+
+}
+
+.review{
+    
+  @include contain-width;
+  text-align: center;
+
+  &__controls{
+
+    padding-top: 20px;
+    text-align: center;
+
+  }
+
+  &__control{
+
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 19px;      
+    width:  6px;
+    height: 6px;
+    background-color: $color-gray1;
+    border-radius: 50%;
+    
+    text-decoration: none;
+    border:0;
+      
+      
+  }
+    
+  &__control--active{
+
+    margin-right: 16px;
+      
+    background-color: $color-white;
+    border: 3px solid $color-blue-dark3;
+      
+  }
+    
+  &__control:last-of-type{
+
+    margin-right: 0;
+
+  }    
+
+    
+}
+
+.price{
+    
+  @include contain-width;
+  background-color: $color-gray;
+
+  &__angle{
+
+    @include angle;
+
+  }
+
+  &__layout{
+
+    @include layout;
+
+  }
     
 }
             
