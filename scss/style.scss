@@ -405,39 +405,52 @@ body{
   @include contain-width;
   background-color: $color-gray;
     
-  position: relative;
-
+  
   &__angle{
 
     @include angle;
 
   }
-
+    
   &__layout{
 
-    margin: 0 20px;
-    border-left: 2px solid $color-gray;
-    border-right: 2px solid $color-gray;      
+    position: relative;  
+    background-color: blue;
+    width: 276px;
+    
 
   }
+
     
   &__header &__layout{
       
     padding: 25px 0;
         
   }    
-    
-  &__table{
-    
-      
-  }
+     
+}
 
+.table{
+  
+  width: 840px;
+  font-size:0;     
+  transform: translateX(-260px);
+  
+    
   &__col{
-      
+            
     display: inline-block;
     vertical-align: top;
-    @include contain-width; 
+    width: 276px;
+    border-left: 2px solid $color-gray;         
       
+  }
+    
+    
+  &__col:last-of-type{
+        
+    border-right: 2px solid $color-gray;
+        
   }
     
   &__row{
@@ -446,13 +459,12 @@ body{
     padding-left: 22px;  
       
     border-bottom: 2px solid $color-gray;
-    text-transform: uppercase;
-      
+    text-transform: uppercase;      
 
   }
      
   &__header{
-  
+    padding: 14.5px 0;    
     background-color: $color-blue;  
     text-align: center;             
 
@@ -485,7 +497,8 @@ body{
     color: $color-white;    
     text-transform: uppercase;      
       
-  }
+  }    
+    
     
 }
             
