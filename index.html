@@ -1,12 +1,135 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Пинк</title>
+<html>
+  <head>   
+    <meta charset="utf-8"/>
+    <title>PINK adaptive    </title>
+    <link href="css/style.css" rel="stylesheet"/>
   </head>
-  <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">Продвинутый HTML и CSS</a>».</p>
-
+  <body>     
+    <header class="main-header"> 
+      <div class="main-header__top">
+        <div class="main-header__row clearfix">
+          <div class="main-header__layout">          
+            <p class="main-header__col1 logo"> <a href="#"><img src="img/img_logo.png" width="75" height="22" alt="PINK"/></a></p>
+            <nav class="main-header__col2 main-menu"><a href="#"><i class="icon-menu">                    </i></a></nav>
+          </div>
+        </div>
+        <div class="intro">
+          <div class="intro__layout">
+            <h1 class="intro__header">Взгляните на жизнь иначе!                          </h1>
+          </div>
+        </div>
+      </div>
+      <div class="upload">
+        <div class="upload__layout"><a href="#" class="btn btn__upload">Скачать приложение</a>
+          <div class="block-logo"><a href="#" class="block-logo__item"><i class="icon-apple"></i></a><a href="#" class="block-logo__item">             <i class="icon-android"></i></a><a href="#" class="block-logo__item">             <i class="icon-microsoft"></i></a></div>
+          <p class="upload__content">Доступно для iPhone, iPad, Android <br> Windows Phone, OS X, Windows 8</p>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="information">
+        <div class="information__header">
+          <div class="information__layout">         
+            <p>Устали от серости мегаполиса?</p>
+            <p>Нам есть, что вам предложить!</p>
+          </div>
+        </div>
+        <div class="information__content">           
+          <div class="advantages">
+            <div class="advantages__angle"></div>
+            <div class="advantages__layout">
+              <h3 class="advantages__header">Поднимает настроение</h3>
+              <p class="advantages__content">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!              </p>
+            </div>
+          </div>
+          <div class="advantages">           
+            <div class="advantages__layout">
+              <h3 class="advantages__header">Меняет мир вокруг</h3>
+              <p class="advantages__content">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект    </p>
+            </div>
+          </div>
+          <div class="advantages">
+            <div class="advantages__layout">
+              <h3 class="advantages__header">Заводит новых друзей</h3>
+              <p class="advantages__content">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых </p>
+            </div>
+          </div>
+          <div class="advantages__screen"></div>
+        </div>
+      </div>
+      <div class="review">         
+        <div class="advantages">           
+          <blockquote class="advantages__layout">
+            <cite class="advantages__header">Николай Петров</cite>
+            <p class="advantages__content advantages__content--review">
+              "Это приложение перевернуло мой мир и позволило 
+              по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой
+              в комментариях к выложенной фотографии!"
+            </p>
+          </blockquote>
+        </div>
+        <div class="controls"><a href="#" class="controls__item controls__item--active">             </a><a href="#" class="controls__item"></a><a href="#" class="controls__item"> </a></div>
+      </div>
+      <div class="price">
+        <div class="price__angle"></div>
+        <div class="price__layout">
+          <div class="table">
+            <div class="table__col">
+              <div class="table__header">
+                <div class="table__layout">
+                  <h4>Стандарт</h4>
+                  <p class="table__value">3,99 USD</p>
+                </div>
+              </div>
+              <div class="table__body">             
+                <div class="table__row">Розовый цвет<i class="icon-yes"> </i></div>
+                <div class="table__row"> Смайлики<i class="icon-no"> </i></div>
+                <div class="table__row"> Комментарии        <i class="icon-no"> </i></div>
+              </div>
+            </div>
+            <div class="table__col table__col--active">
+              <div class="table__header"><i class="icon-hit"></i>
+                <div class="table__layout">
+                  <h4>Стандарт</h4>
+                  <p class="table__value">3,99 USD</p>
+                </div>
+              </div>
+              <div class="table__body">             
+                <div class="table__row"> Розовый цвет<i class="icon-yes"></i></div>
+                <div class="table__row"> Смайлики<i class="icon-yes"></i></div>
+                <div class="table__row"> Комментарии<i class="icon-no"></i></div>
+              </div>
+            </div>
+            <div class="table__col">
+              <div class="table__header">
+                <div class="table__layout">
+                  <h4>Стандарт</h4>
+                  <p class="table__value">3,99 USD</p>
+                </div>
+              </div>
+              <div class="table__body">
+                <div class="table__row"> Розовый цвет<i class="icon-yes"></i></div>
+                <div class="table__row"> Смайлики<i class="icon-yes"></i></div>
+                <div class="table__row"> Комментарии                <i class="icon-yes"></i></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="controls"><a href="#" class="controls__item"></a><a href="#" class="controls__item controls__item--active">             </a><a href="#" class="controls__item"> </a></div>
+      </div>
+      <div class="contacts">
+        <div class="contacts__layout">
+          <h2 class="contacts__header">Остались вопросы? Свяжитесь с нами!</h2>
+          <p class="contacts_title">Звоните:</p>
+          <p class="contacts__content">+7 (812) 555-66-66</p>
+          <p class="contacts_title">Пишите:</p>
+          <p class="contacts__content">mail@htmlacademy.ru</p>
+          <p class="contacts_title">Приезжайте в гости:</p>
+          <p class="contacts__content">ул. Большая Конюшенная, 19/8</p>
+        </div>
+        <div class="contacts__map"></div>
+      </div>
+    </main>
   </body>
 </html>
