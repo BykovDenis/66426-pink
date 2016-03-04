@@ -150,13 +150,15 @@ body{
       background-size: 320 486;           
       height: 486px;
       
-      &--form{
+      &--form,
+      &--photo{
           
         background: $color-blue-dark url(../img/bg_header.jpg) 0 0 no-repeat;
         background-size: 320 235;           
         height: 235px;  
           
       }
+      
       
     }
 
