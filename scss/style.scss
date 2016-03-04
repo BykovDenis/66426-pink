@@ -202,7 +202,12 @@ body{
 
 .upload{
 
-  background-color: $color-blue-dark1;
+  
+  &--main{  
+      
+    background-color: $color-blue-dark1;
+      
+  }
  
   &__layout{
 
