@@ -149,10 +149,20 @@ body{
       $color-blue-dark url(../img/bg_header.jpg) 0 0 no-repeat;
       background-size: 320 486;           
       height: 486px;
+      
+      &--form,
+      &--photo{
+          
+        background: $color-blue-dark url(../img/bg_header.jpg) 0 0 no-repeat;
+        background-size: 320 235;           
+        height: 235px;  
+          
+      }
+      
+      
+    }
 
-}
-
-  &__row1{
+  &__row{
 
     background-color: rgba(0,0,0,.3); 
 
@@ -192,7 +202,12 @@ body{
 
 .upload{
 
-  background-color: $color-blue-dark1;
+  
+  &--main{  
+      
+    background-color: $color-blue-dark1;
+      
+  }
  
   &__layout{
 

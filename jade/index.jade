@@ -7,19 +7,18 @@ html
   body      
     header.main-header 
       div.main-header__top
-        div.main-header__row1.clearfix
+        div.main-header__row.clearfix
           div.main-header__layout           
             p.main-header__col1.logo 
               a(href="#")
                 img(src="img/img_logo.png" width="75" height="22" alt="PINK")
             nav.main-header__col2.main-menu
               a(href="#")
-                i.icon-menu
-        div.main-header__row2.clearfix                
-          div.intro
-            div.intro__layout
-              h1.intro__header Взгляните на жизнь иначе!                          
-      div.upload
+                i.icon-menu                     
+        div.intro
+          div.intro__layout
+            h1.intro__header Взгляните на жизнь иначе!                          
+      div.upload.upload--main
         div.upload__layout
           a(href="#").btn.btn__upload Скачать приложение
           div.block-logo
@@ -73,18 +72,25 @@ html
                   h4 Стандарт
                   p.table__value 3,99 USD
               div.table__body              
-                div.table__row  Розовый цвет
+                div.table__row Розовый цвет
+                  i.icon-yes 
                 div.table__row  Смайлики
+                  i.icon-no 
                 div.table__row  Комментарии        
-            div.table__col
+                  i.icon-no 
+            div.table__col.table__col--active
               div.table__header
+                i.icon-hit
                 div.table__layout
                   h4 Стандарт
                   p.table__value 3,99 USD
               div.table__body              
                 div.table__row  Розовый цвет
+                  i.icon-yes
                 div.table__row  Смайлики
+                  i.icon-yes
                 div.table__row  Комментарии
+                  i.icon-no
             div.table__col
               div.table__header
                 div.table__layout
@@ -92,12 +98,28 @@ html
                   p.table__value 3,99 USD
               div.table__body
                 div.table__row  Розовый цвет
+                  i.icon-yes
                 div.table__row  Смайлики
+                  i.icon-yes
                 div.table__row  Комментарии                
+                  i.icon-yes
         div.controls
           a(href="#").controls__item
           a(href="#").controls__item.controls__item--active              
           a(href="#").controls__item  
+      div.contacts
+        div.contacts__layout
+          h2.contacts__header Остались вопросы? Свяжитесь с нами!
+          p.contacts_title Звоните:
+          p.contacts__content +7 (812) 555-66-66
+        
+          p.contacts_title Пишите:
+          p.contacts__content mail@htmlacademy.ru
+        
+          p.contacts_title Приезжайте в гости:
+          p.contacts__content ул. Большая Конюшенная, 19/8
+        div.contacts__map
+          
 
             
           
