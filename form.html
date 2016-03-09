@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>   
+    <meta charset="utf-8"/>
+    <title>PINK adaptive    </title>
+    <link href="css/style.css" rel="stylesheet"/>
+  </head>
+  <body>     
+    <header class="main-header"> 
+      <div class="main-header__top main-header__top--form">
+        <div class="main-header__row clearfix">
+          <div class="main-header__layout">          
+            <p class="main-header__col1 logo"> <a href="#"><img src="img/img_logo.png" width="75" height="22" alt="PINK"/></a></p>
+            <nav class="main-header__col2 main-menu"><a href="#"><i class="icon-menu">                    </i></a></nav>
+          </div>
+        </div>
+        <div class="intro">
+          <div class="intro__layout">
+            <h1 class="intro__header">Конкурс на самое безбашенное путешествие с Пинк  </h1>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <form method="get" class="form">
+        <p class="form__intro">Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту</p>
+        <label for="first_name" class="form__label">Имя        </label>
+        <input type="text" id="first_name" placeholder="Введите ваше имя" class="form__input"/><br/>
+        <label for="last_name" class="form__label">Фамилия        </label>
+        <input type="text" id="last_name" placeholder="Введите фамилию" class="form__input"/><br/>
+        <label for="middle_name" class="form__label">Отчество</label>
+        <input type="text" id="middle_name" placeholder="Ну и отчество тоже" class="form__input"/>
+        <fieldset class="form__items">
+          <legend>Ваши безбашенные достижения в путешествии</legend>
+          <label>
+            <input type="checkbox" name="item1" checked="checked"/>Сделал селфи с акулой
+          </label><br/>
+          <label>
+            <input type="checkbox" name="item2" checked="checked"/>Обгорел на пляже
+          </label><br/>
+          <label>
+            <input type="checkbox" name="item3"/>Видел Чака Норриса
+          </label><br/>
+          <label>
+            <input type="checkbox" name="item4"/>Накупил сувениров
+          </label><br/>
+          <label>
+            <input type="checkbox" name="item5" cheched="cheched"/>Удержал башню          
+          </label><br/>
+          <label>
+            <input type="checkbox"/>Разгромил отель
+          </label>
+        </fieldset>
+        <label for="phone" class="form__label">Номерок телефончика</label>
+        <input type="text" id="phone" placeholder="Номер, пожалуйста" class="form__input"/><br/>
+        <label for="email" class="form__label">Адресок почты</label>
+        <input type="text" id="email" placeholder="E-mail, пожалуйста" class="form__input"/>
+        <fieldset class="form__items">
+          <legend>С каким приложением путешествовали?</legend>
+          <label>
+            <input type="radio" name="application" checked="checked"/>
+            <Pink>для iOS</Pink>
+          </label><br/>
+          <label>
+            <input type="radio" name="application"/>
+            <Pink>для Android</Pink>
+          </label><br/>
+          <label>
+            <input type="radio" name="application"/>
+            <Windows>Phone</Windows>
+          </label><br/>
+        </fieldset>
+        <label>
+           
+          Опишите свои эмоции <br/>
+          <textarea placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+        </label><br/>
+        <button type="submit">Отправить форму</button>
+        <p><span>*</span><span>- Обязательные поля</span></p>
+      </form>
+    </main>
+    <footer class="main-footer">         
+      <div class="footer-layout"><a href="index.html" class="form__logo"><img src="img/img_logo1.png" width="147" height="40" alt="PINK"/></a></div>
+      <div class="socials"><i class="icon icon-twitter"></i><i class="icon icon-fb"></i><i class="icon icon-youtube"></i></div>
+      <div class="htmlacademy">Разработано<img src="img/img_htmlacademy.png" width="27" height="34" alt="htmlacademy"/></div>
+    </footer>
+  </body>
+</html>
