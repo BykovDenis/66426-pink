@@ -376,7 +376,7 @@ body{
  .controls{
 
     
-    padding-top: 20px;
+    padding: 40px 0 47px;
     text-align: center;
      
 
@@ -514,6 +514,93 @@ body{
       
   }    
     
+    
+}
+
+.contacts{
+    
+  @include contain-width; 
+  text-align: center;
+    
+  width: 320px;
+  height: 645px;   
+    
+  background: 
+      -webkit-linear-gradient(top, #fff 0%, #fff 412px, transparent 412px, transparent 100%),
+      url(../img/bg_map.png) 0 0 no-repeat;
+      
+        
+  &__layout{
+        
+    @include layout;
+        
+  }    
+    
+  &__header{
+        
+    padding: 48px 0 35px;
+    margin:0;
+    font: 100  #{$font-size-h2} / #{$line-height + 4px} $open-sans-light;
+    color: $color-blue;  
+        
+  }
+    
+  &__title{
+        
+    margin: 0;
+    padding: 0;
+    margin-bottom: 4px;
+    font: 600 #{$font-size + 4px} / #{$line-height} $open-sans-bold;
+    color: $color-blue;    
+        
+  }
+    
+  &__content{
+
+    margin: 0;
+    padding: 0;
+    margin-bottom: 25px;
+    font: 100 #{$font-size + 10px}/ #{$line-height + 4px} $open-sans-light;
+    color:  $color-red;
+        
+  }    
+    
+}
+
+.photo-card{
+    
+  @include contain-width; 
+  text-align: center;    
+  position: relative;
+    
+  &__layout{
+        
+    @include layout;    
+    background-color: $color-gray;
+        
+  }
+    
+  &__title{
+    
+    position: absolute;
+    top: 0;
+    right: 0;
+      
+    padding: 3px 0;    
+    margin: 0;
+    margin-right: 20px;
+      
+    width: 140px;
+      
+    background-color: $color-red;
+    color: $color-white;
+    text-transform: uppercase;
+    
+    font: #{$font-size - 2px} / #{$line-height} $open-sans-bold;
+      
+    
+        
+  }
     
 }
             

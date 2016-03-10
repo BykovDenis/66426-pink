@@ -4,6 +4,6 @@
 	"sources": [
 		"../scss/variables.scss"
 	],
-	"mappings": ";AAEA,kBAAkB;AAMlB,mCAAmC;AAQnC,gBAAgB",
+	"mappings": ";AAEA,kBAAkB;AAMlB,mCAAmC;AASnC,gBAAgB",
 	"names": []
 }
