@@ -9,8 +9,8 @@ module.exports = {
         },
         files: [{
             expand: true,
-            cwd: 'scss/',
-            src: ['*.scss'],
+            cwd: 'sass/',
+            src: ['style.scss'],
             dest: 'css/',
             ext: '.css'
         }]
@@ -23,8 +23,8 @@ module.exports = {
         },
         files: [{
             expand: true,
-            cwd: 'scss/',
-            src: ['*.scss'],
+            cwd: 'sass/',
+            src: ['style.scss'],
             dest: 'css/',
             ext: '.css'
         }]

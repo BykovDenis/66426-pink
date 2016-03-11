@@ -1,0 +1,21 @@
+.form{
+    
+  @include contain-width;
+  outline: 1px solid rgba(50, 50, 150, .5);
+    
+  &:before{
+ 
+    content: 'form';
+    background-color: rgba(50, 50, 150, .1); 
+
+  }    
+
+
+  &__layout{
+ 
+    @include layout;
+
+  } 
+    
+    
+}

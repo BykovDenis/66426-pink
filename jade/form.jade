@@ -6,94 +6,102 @@ html
     link(href="css/style.css" rel="stylesheet")
   body      
     header.main-header 
-      div.main-header__top.main-header__top--form
-        div.main-header__row.clearfix
-          div.main-header__layout           
-            p.main-header__col1.logo 
-              a(href="#")
-                img(src="img/img_logo.png" width="75" height="22" alt="PINK")
-            nav.main-header__col2.main-menu
-              a(href="#")
-                i.icon-menu                     
+      div.main-header__top        
+        nav.main-nav           
+          div.main-nav__logo 
+            a(href="#")
+              img(src="img/img_logo.png" width="75" height="22" alt="PINK")
+          div.main-nav__menu
+            a(href="#")
+              i.main-nav__icon    
+            ul.main-nav__items
+              li Информация
+              li Возможности 
+              li Отзывы
+              li Стоимость
         div.intro
           div.intro__layout
             h1.intro__header Конкурс на самое безбашенное путешествие с Пинк  
+            p.intro__description Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту
     main
-      form(method="get").form
-        p.form__intro Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту
-        label(for="first_name").form__label Имя        
-        input(type="text" id="first_name" placeholder="Введите ваше имя").form__input
-        br
-        label(for="last_name").form__label Фамилия        
-        input(type="text" id="last_name" placeholder="Введите фамилию").form__input        
-        br
-        label(for="middle_name").form__label Отчество
-        input(type="text" id="middle_name" placeholder="Ну и отчество тоже").form__input                
+      form(method="get").form        
+        fieldset.form__items        
+          div.form__item
+            label(for="first_name").form__label Имя        
+            input(type="text" id="first_name" placeholder="Введите ваше имя").form__input
+          div.form__item
+            label(for="last_name").form__label Фамилия        
+            input(type="text" id="last_name" placeholder="Введите фамилию").form__input        
+          div.form__item
+            label(for="middle_name").form__label Отчество
+            input(type="text" id="middle_name" placeholder="Ну и отчество тоже").form__input                
         
         fieldset.form__items
-          legend Ваши безбашенные достижения в путешествии
-          label
-            input(type="checkbox" name="item1" checked) 
-            Сделал селфи с акулой
-          br
-          label
-            input(type="checkbox"  name="item2" checked) 
-            Обгорел на пляже
-          br
-          label
-            input(type="checkbox"  name="item3") 
-            Видел Чака Норриса
-          br
-          label
-            input(type="checkbox"  name="item4") 
-            Накупил сувениров
-          br
-          label
-            input(type="checkbox"  name="item5" cheched) 
-            Удержал башню          
-          br          
-          label
-            input(type="checkbox" ) 
-            Разгромил отель
-        label(for="phone").form__label Номерок телефончика
-        input(type="text" id="phone" placeholder="Номер, пожалуйста").form__input            
-        br
-        label(for="email").form__label Адресок почты
-        input(type="text" id="email" placeholder="E-mail, пожалуйста").form__input            
+          legend.form__title Ваши безбашенные достижения в путешествии
+          div.form__item
+            label.form__label
+              input(type="checkbox" name="item1" checked) 
+              Сделал селфи с акулой
+          div.form__item          
+            label.form__label
+              input(type="checkbox"  name="item2" checked) 
+              Обгорел на пляже
+          div.form__item              
+            label.form__label
+              input(type="checkbox"  name="item3") 
+              Видел Чака Норриса
+          div.form__item              
+            label.form__label
+              input(type="checkbox"  name="item4") 
+              Накупил сувениров          
+          div.form__item              
+            label.form__label
+              input(type="checkbox"  name="item5" cheched) 
+              Удержал башню          
+          div.form__item              
+            label.form__label                            
+              input(type="checkbox" name="item6") 
+              Разгромил отель
+              
+        fieldset.form__items  
+          div.form__item
+            label(for="phone").form__label Номерок телефончика
+            input(type="text" id="phone" placeholder="Номер, пожалуйста").form__input            
+          div.form__item
+            label(for="email").form__label Адресок почты
+            input(type="text" id="email" placeholder="E-mail, пожалуйста").form__input            
     
         fieldset.form__items
-          legend С каким приложением путешествовали?
-          label
-            input(type="radio" name="application" checked) 
-            Pink для iOS
-          br        
-          label
-            input(type="radio"  name="application") 
-            Pink для Android
-          br                
-          label
-            input(type="radio"  name="application") 
-            Windows Phone
-          br    
-        label 
-          Опишите свои эмоции 
-          br
-          textarea(placeholder="Можно прям в красках, не стесняясь в выражениях")
-        br
-        button(type="submit") Отправить форму
-        p
+          legend.form__title С каким приложением путешествовали?
+          div.form__item              
+            label.form__label
+              input(type="radio" name="application" checked) 
+              Pink для iOS
+          div.form__item              
+            label.form__label
+              input(type="radio"  name="application") 
+              Pink для Android
+          div.form__item              
+            label.form__label
+              input(type="radio"  name="application") 
+              Windows Phone
+        fieldset.form__items  
+          div.form__item 
+            label.form__label Опишите свои эмоции           
+            textarea(placeholder="Можно прям в красках, не стесняясь в выражениях")
+        
+        button(type="submit").form__send Отправить форму
+        p.requirements
           span *
           span - Обязательные поля
     footer.main-footer          
-      div.footer-layout
+      div.main-footer__layout
         a(href="index.html").form__logo
           img(src="img/img_logo1.png" width="147" height="40" alt="PINK")
-      div.socials
-        i.icon.icon-twitter
-        i.icon.icon-fb
-        i.icon.icon-youtube
-      div.htmlacademy
-        Разработано
-        img(src="img/img_htmlacademy.png" width="27" height="34" alt="htmlacademy")
-      
-      
+        div.socials
+          i.socials__icon.socials__icon--twitter
+          i.socials__icon.socials__icon--fb
+          i.socials__icon.socials__icon--youtube
+        div.htmlacademy
+          Разработано
+          img(src="img/img_htmlacademy.png" width="27" height="34" alt="htmlacademy")

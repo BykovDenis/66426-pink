@@ -1,0 +1,17 @@
+.intro{
+    
+    
+  &__layout{
+
+    @include layout;
+
+  }
+
+  &__header{
+
+    font: 100 #{$font-size-h1} / #{$line-height} $open-sans-light;
+    color: $color-white;        
+    text-align: center;
+  }
+    
+}

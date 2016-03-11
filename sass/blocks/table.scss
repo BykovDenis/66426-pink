@@ -1,0 +1,14 @@
+.table{
+
+  @include layout();    
+  outline: 1px solid rgba(150, 50, 150, .5);
+    
+  &:before{
+ 
+    content: 'table';
+    background-color: rgba(150, 50, 150, .1); 
+
+  }
+   
+    
+}

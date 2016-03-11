@@ -11,7 +11,7 @@ module.exports =  {
     },
     watch: {
       sass: {
-        files: ['scss/**/*.{scss,sass}','scss/_partials/**/*.{scss,sass}'],
+        files: ['sass/**/*.{scss,sass}','sass/_partials/**/*.{scss,sass}'],
         tasks: ['sass:dist', 'autoprefixer']
       },
       livereload: {
