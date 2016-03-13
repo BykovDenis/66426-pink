@@ -1,0 +1,20 @@
+.main-header{
+
+  @include contain-width;
+  outline: 1px solid rgba(150, 50, 50, .5);
+    
+  &:before{
+ 
+    content: 'main-header';
+    background-color: rgba(150, 50, 50, .1); 
+
+  }    
+
+
+  &__layout{
+ 
+    @include layout;
+
+  }
+
+}    

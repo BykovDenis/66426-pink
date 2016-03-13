@@ -1,0 +1,68 @@
+// Подключаем файл нормализации
+@import "normalize";
+
+
+// Импорт переменных
+@import "variables";
+
+/* Подключаем шрифты */
+@import "fonts";
+
+/*  Подключаем миксины */
+@import "mixin";
+
+/* Кнопки */
+@import "blocks/btn";
+
+/* Подключаем блоки */
+/* шапка */
+@import "blocks/main-header";
+/* меню навигации */
+@import "blocks/main-nav";
+/* Заголовок страницы */
+@import "blocks/intro";
+/* Скачать приложение */
+@import "blocks/download";
+/* Блок с информацией */
+@import "blocks/information";
+
+/* Блок преимуществ */
+
+@import "blocks/advantages";
+
+@import "blocks/review";
+@import "blocks/controls";
+
+/* подключаем блок с формой */
+@import "blocks/form";
+
+/* блок фотографий */
+@import "blocks/photo";
+
+@import "blocks/photo-card";
+
+@import "blocks/table";
+@import "blocks/price";
+
+@import "blocks/contacts";
+
+@import "blocks/progressbar";
+
+@import "blocks/image";
+
+
+/* Загрузить фото */
+@import "blocks/upload";
+
+/* Подвал */
+@import "blocks/main-footer";
+    
+@import "blocks/htmlacademy";
+
+    
+
+body{
+    
+  width: $width-body;    
+      
+}

@@ -17,7 +17,8 @@ module.exports = {
 
     styles: {
         files: [
-            'scss/*.scss'
+            'sass/style.scss',
+            'sass/blocks/*.scss'
         ],
         tasks: [
             'sass:dev'
@@ -32,5 +33,15 @@ module.exports = {
             'jade'
         ]
     },
+    
+    browserSync: {
+        files: [
+            '*.html',
+            '*.css'
+        ],
+        tasks: [
+            'browsersync:dev'
+        ]
+    }    
     
 };
