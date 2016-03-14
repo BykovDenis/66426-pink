@@ -8,7 +8,13 @@
     content: 'main-header';
     background-color: rgba(150, 50, 50, .1); 
 
-  }    
+  }  
+    
+  &:after{
+        
+    @include clearfix;      
+        
+  }
 
 
   &__layout{

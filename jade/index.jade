@@ -2,37 +2,41 @@
 html
   head    
     meta(charset="utf-8")
-    title PINK adaptive    
+    meta(name="viewport" content="width=device-width,initial-scale=1")
+    title PINK adaptive 
     link(href="css/style.css" rel="stylesheet")
   body      
     header.main-header 
       div.main-header__top        
-        nav.main-nav           
-          div.main-nav__logo 
-            a(href="#")
-              img(src="img/img_logo.png" width="75" height="22" alt="PINK")
-          div.main-nav__menu
-            a(href="#")
-              i.main-nav__icon    
-            ul.main-nav__items
-              li Информация
-              li Возможности 
-              li Отзывы
-              li Стоимость
-        div.intro
-          div.intro__layout
+        div.main-header__layout
+          nav.main-nav           
+            div.main-nav__logo 
+              a(href="#")
+                img(src="img/img_logo.png" width="75" height="22" alt="PINK")
+            div.main-nav__menu
+              a(href="#")
+                i.main-nav__icon    
+              ul.main-nav__items
+                li.main-nav__item 
+                  a(href="#").main-nav__link Информация
+                li.main-nav__item 
+                  a(href="#").main-nav__link Возможности
+                li.main-nav__item 
+                  a(href="#").main-nav__link Отзывы
+                li.main-nav__item 
+                  a(href="#").main-nav__link Стоимость
+          div.intro
             h1.intro__header Взгляните на жизнь иначе!                          
-        div.download
-          div.download__layout
-            a(href="#").btn.btn--upload Скачать приложение
-            div.download__items
-              a(href="#").download__item
-                i.download__icon.download__icon--apple
-              a(href="#").download__item              
-                i.download__icon.download__icon--android
-              a(href="#").download__item              
-                i.download__icon.download__icon--microsoft
-            p.download__description Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
+            div.download          
+              a(href="#").btn.btn--upload Скачать приложение
+              div.download__items
+                a(href="#").download__item
+                  i.download__icon.download__icon--apple
+                a(href="#").download__item              
+                  i.download__icon.download__icon--android
+                a(href="#").download__item              
+                  i.download__icon.download__icon--microsoft
+              p.download__description Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
     main
       div.information
         div.information__layout   

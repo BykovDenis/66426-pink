@@ -1,6 +1,6 @@
 .information{
     
-   @include contain-width;    
+  @include contain-width;    
   outline: 1px solid rgba(150, 50, 150, .5);
     
   &:before{
@@ -10,11 +10,51 @@
 
   }
     
+  &:after{
+        
+    @include clearfix();
+      
+  }
+    
   &__layout{
 
     @include layout();
 
   } 
-       
     
+  &__body{
+
+    width: 310px;
+
+  }
+    
+}
+
+
+@media(min-width: 700px) and (max-width: 1199px){
+    
+  .download{
+      
+    &__body{
+        
+      float: right;    
+        
+    }
+        
+  }
+    
+} 
+
+@media(min-width: 1200px){
+    
+  .download{ 
+      
+    &__body{
+        
+      float: right;    
+        
+    }
+      
+  }
+        
 }

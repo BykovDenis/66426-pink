@@ -1,17 +1,44 @@
-.intro{
+.intro{   
+  
+  height: 392px;
+  outline: 1px solid pink;
     
+  width: 300px;
     
-  &__layout{
+  &:before{
+     
+    content: "intro";  
+    background-color: rgba(150, 0, 150, .5);      
+        
+  }        
 
-    @include layout;
-
-  }
 
   &__header{
 
-    font: 100 #{$font-size-h1} / #{$line-height} $open-sans-light;
-    color: $color-white;        
-    text-align: center;
+    font: 100 #{$font-size-h1} / #{$line-height} $open-sans-light;         
+    text-align: center; 
+  }
+    
+}
+
+
+@media(min-width: 700px) and (max-width: 1199px){
+    
+  .intro{
+        
+    float: left;     
+        
+  }
+    
+}
+
+@media(min-width: 1200px){
+    
+  .intro{
+        
+    float: left;
+    
+        
   }
     
 }
