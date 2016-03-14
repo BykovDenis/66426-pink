@@ -9,6 +9,7 @@
   
     padding: 0 40px;
       
+      
   }     
     
   @media(min-width: 1200px){
@@ -22,9 +23,7 @@
 @mixin contain-width{
     
   margin: 0 auto; 
-
-  width: 100%;
-    
+  
     
 }
 

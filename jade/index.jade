@@ -6,39 +6,39 @@ html
     title PINK adaptive 
     link(href="css/style.css" rel="stylesheet")
   body      
-    header.main-header 
+    header.main-header      
       div.main-header__top        
-        div.main-header__layout
-          nav.main-nav           
-            div.main-nav__logo 
-              a(href="#")
-                img(src="img/img_logo.png" width="75" height="22" alt="PINK")
-            div.main-nav__menu
-              a(href="#")
-                i.main-nav__icon    
-              ul.main-nav__items
-                li.main-nav__item 
-                  a(href="#").main-nav__link Информация
-                li.main-nav__item 
-                  a(href="#").main-nav__link Возможности
-                li.main-nav__item 
-                  a(href="#").main-nav__link Отзывы
-                li.main-nav__item 
-                  a(href="#").main-nav__link Стоимость
-          div.intro
-            h1.intro__header Взгляните на жизнь иначе!                          
-            div.download          
-              a(href="#").btn.btn--upload Скачать приложение
-              div.download__items
-                a(href="#").download__item
-                  i.download__icon.download__icon--apple
-                a(href="#").download__item              
-                  i.download__icon.download__icon--android
-                a(href="#").download__item              
-                  i.download__icon.download__icon--microsoft
-              p.download__description Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
-    main
-      div.information
+       div.main-header__layout
+         nav.main-nav           
+           div.main-nav__logo 
+             a(href="#")
+               img(src="img/img_logo.png" width="75" height="22" alt="PINK")
+           div.main-nav__menu
+             a(href="#")
+               i.main-nav__icon    
+             ul.main-nav__items
+               li.main-nav__item 
+                 a(href="#").main-nav__link Информация
+               li.main-nav__item 
+                 a(href="#").main-nav__link Возможности
+               li.main-nav__item 
+                 a(href="#").main-nav__link Отзывы
+               li.main-nav__item 
+                 a(href="#").main-nav__link Стоимость
+         article.intro
+           h1.intro__header Взгляните на жизнь иначе!                          
+           div.download          
+             a(href="#").btn.btn--download Скачать приложение
+             div.download__items
+               a(href="#").download__item
+                 i.download__icon.download__icon--apple
+               a(href="#").download__item              
+                i.download__icon.download__icon--android
+               a(href="#").download__item              
+                 i.download__icon.download__icon--microsoft
+             p.download__description Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
+    main.page-main
+      section.information
         div.information__layout   
           div.information__title          
             p Устали от серости мегаполиса?
@@ -52,7 +52,14 @@ html
               p.advantages__description Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект    
             div.advantages            
               h3.advantages__title Заводит новых друзей
-              p.advantages__description Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых           
+              p.advantages__description Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
+      section.application-profit
+        div.application-profit__layout
+          h3.application-profit__title Эффект на 24 часа!
+          p.application-profit__description Британские ученые провели исследования и доказали, что положительный эффект               от использования приложения длится целые сутки!
+          a(href="#").application-profit__link Узнать больше об использовании
+              
+            
       div.review 
         div.review__layout
           blockquote.review__slide.review__slide--active

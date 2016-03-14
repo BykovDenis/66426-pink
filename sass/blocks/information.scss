@@ -2,11 +2,12 @@
     
   @include contain-width;    
   outline: 1px solid rgba(150, 50, 150, .5);
+  text-align: center;  
     
   &:before{
  
     content: 'information';
-    background-color: rgba(150, 50, 150, .1); 
+    background-color: rgba(150, 50, 150, .1);     
 
   }
     
@@ -25,15 +26,16 @@
   &__body{
 
     width: 310px;
+    margin: 0 auto;
 
   }
     
 }
 
 
-@media(min-width: 700px) and (max-width: 1199px){
+@media(min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px){
     
-  .download{
+  .information{
       
     &__body{
         
@@ -45,13 +47,13 @@
     
 } 
 
-@media(min-width: 1200px){
+@media(min-width: $width-content-desktop){
     
-  .download{ 
+  .information{ 
       
-    &__body{
+    &__body{      
         
-      float: right;    
+      width: auto;    
         
     }
       

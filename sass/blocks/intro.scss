@@ -3,7 +3,7 @@
   height: 392px;
   outline: 1px solid pink;
     
-  width: 300px;
+  min-width: 300px;
     
   &:before{
      
@@ -22,7 +22,7 @@
 }
 
 
-@media(min-width: 700px) and (max-width: 1199px){
+@media(min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px){
     
   .intro{
         
@@ -32,7 +32,7 @@
     
 }
 
-@media(min-width: 1200px){
+@media(min-width: $width-content-desktop){
     
   .intro{
         

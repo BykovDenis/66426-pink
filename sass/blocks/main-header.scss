@@ -3,6 +3,12 @@
   @include contain-width;
   outline: 1px solid rgba(150, 50, 50, .5);
     
+  &__layout{
+
+      margin: 0 auto;
+
+  }
+    
   &:before{
  
     content: 'main-header';

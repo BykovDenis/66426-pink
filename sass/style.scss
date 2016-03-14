@@ -26,15 +26,19 @@
 /* Блок с информацией */
 @import "blocks/information";
 
+@import "blocks/page-main"; 
+
 /* Блок преимуществ */
 
-@import "blocks/advantages";
+@import "blocks/advantages"; 
+
+@import "blocks/application-profit"; 
 
 @import "blocks/review";
 @import "blocks/controls";
 
 /* подключаем блок с формой */
-@import "blocks/form";
+@import "blocks/form"; 
 
 /* блок фотографий */
 @import "blocks/photo";
@@ -75,9 +79,15 @@ body{
     }
     @media(min-width: 1200px){
         
-        max-width: 1200px;
+        min-width: 1200px;
         
     }
   
-  width: $width-body;      
+  width: $width-body;   
+    
+}
+
+main{
+    
+    
 }
