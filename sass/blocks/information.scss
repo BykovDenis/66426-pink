@@ -25,7 +25,7 @@
     
   &__body{
 
-    width: 310px;
+    
     margin: 0 auto;
 
   }
@@ -39,7 +39,8 @@
       
     &__body{
         
-      float: right;    
+      width: 310px;
+        float: right;    
         
     }
         
@@ -51,9 +52,9 @@
     
   .information{ 
       
-    &__body{      
-        
-      width: auto;    
+    &__body{              
+      
+        width: auto;    
         
     }
       

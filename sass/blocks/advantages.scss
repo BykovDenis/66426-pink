@@ -1,6 +1,7 @@
 .advantages{
     
   outline: 1px solid $color-red;
+  width: 100%;
     
   &:before{
     
@@ -18,10 +19,12 @@
 
     display: inline-block;
     vertical-align: top;           
-      
-    padding-top: 240px;      
-        
+    
+    margin-right: 20px;  
+    padding-top: 240px;  
+    
     width: 240px;
+    
           
   }
   
