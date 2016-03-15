@@ -1,14 +1,107 @@
 .table{
 
-  @include layout();    
-  outline: 1px solid rgba(150, 50, 150, .5);
+  margin: 0 auto;
+  border-collapse: collapse;
+  outline: 1px solid $color-blue;
+  width: 100%;
     
   &:before{
- 
-    content: 'table';
-    background-color: rgba(150, 50, 150, .1); 
+
+    content:"table";
+    background-color: rgba(150,50,50,.3);
+        
 
   }
+    
+  &__cell{
+
+    padding: 5px;
+    border: 1px solid $color-blue;
+    text-align: center;
+    display: none;
+ 
+  }
+    
+  &__cell--active{
+
+      display: table-cell;
+
+  }
+    
+  &__icon-yes{
+
+    display: inline-block;
+    vertical-align: top;
+    width: 27px;
+    height: 26px;
+    border: 1px solid $color-blue;
+     
+  }
+    
+  &__icon-no{
+
+    display: inline-block;
+    vertical-align: top;
+    width: 27px;
+    height: 26px;
+    border: 1px solid $color-blue;
+
+  }    
+  
+         
+}
+
+@media (min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px){
+
+  .table{
+
+    &__description{
+
+      display: none;
+
+    }
+      
+    &__cell{
+
+      display: table-cell;
+
+    }
+      
+    &__cell:first-of-type &__description{
+
+      display: inline;
+
+    }
    
+      
+  }
+    
+}
+
+@media (min-width: $width-content-desktop){
+     
+  .table{
+
+    &__description{
+
+      display: none;
+
+    }
+      
+    &__cell{
+
+      display: table-cell;
+
+    }    
+      
+    &__cell:first-of-type &__description{
+
+      display: inline;
+
+    }
+       
+      
+  }   
+
     
 }

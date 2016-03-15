@@ -1,7 +1,10 @@
 .main-footer{
     
-  @include contain-width;    
+  @include clearfix(); 
+    
+    
   outline: 1px solid rgba(50, 150, 50, .5);
+  text-align: center;
     
   &:before{
  
@@ -15,6 +18,46 @@
     @include layout();
 
   }
+    
+  &--mainpage{
+ 
+    display: none;  
 
+  }  
+    
+  &__logo{
+
+    display: block;
+    float: left;
+
+  }
+    
+}
+
+@media (min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px){
+ 
+  .main-footer{ 
+    
+    &--mainpage{
+
+      display: block;
+
+    }
+      
+  }
+    
+}
+
+@media (min-width: $width-content-desktop){
+    
+  .main-footer{ 
+    
+    &--mainpage{
+
+      display: block;
+
+    }
+      
+  }    
     
 }

@@ -1,6 +1,7 @@
 .controls{
     
     outline: 1px solid $color-blue;
+    text-align: center;
 
     &__item{
         
@@ -24,18 +25,9 @@
     
     &__item:last-of-type{
         
-        margin-right: 0;
+        margin-right: 0;  
         
     }
     
 }
 
-@media(min-width: $width-content-desktop){
-   
-  .controls{
-    
-    display: none;
-    
-  }
-    
-}

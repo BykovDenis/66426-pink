@@ -94,64 +94,70 @@
           <div class="review__next"> </div>
         </div>
       </div>
-      <div class="price">       
+      <section class="price">       
         <div class="price__layout">
-          <div class="table">
-            <div class="table__col">
-              <div class="table__header">
-                <div class="table__layout">
-                  <h4 class="table__title">Стандарт</h4>
-                  <p class="table__value">3,99 USD</p>
-                </div>
-              </div>
-              <div class="table__body">             
-                <div class="table__row">Розовый цвет<i class="icon-yes"> </i></div>
-                <div class="table__row"> Смайлики<i class="icon-no"> </i></div>
-                <div class="table__row"> Комментарии        <i class="icon-no"> </i></div>
-              </div>
-            </div>
-            <div class="table__col table__col--active">
-              <div class="table__header"><i class="table__icon-hit"></i>
-                <div class="table__layout">
-                  <h4 class="table__title">Стандарт</h4>
-                  <p class="table__value">3,99 USD</p>
-                </div>
-              </div>
-              <div class="table__body">             
-                <div class="table__row"> Розовый цвет<i class="table__icon-yes"></i></div>
-                <div class="table__row"> Смайлики<i class="table__icon-yes"></i></div>
-                <div class="table__row"> Комментарии<i class="table__icon-no"></i></div>
-              </div>
-            </div>
-            <div class="table__col">
-              <div class="table__header">
-                <div class="table__layout">
-                  <h4 class="table__title">Стандарт</h4>
-                  <p class="table__value">3,99 USD</p>
-                </div>
-              </div>
-              <div class="table__body">
-                <div class="table__row"> Розовый цвет<i class="table__icon-yes"></i></div>
-                <div class="table__row"> Смайлики<i class="table__icon-yes"></i></div>
-                <div class="table__row"> Комментарии                <i class="table__icon-yes"></i></div>
-              </div>
-            </div>
-          </div>
+          <table class="table">
+            <tr class="table__row">
+              <td class="table__cell table__cell--first"> </td>
+              <td class="table__cell">
+                <h4 class="table__title">База</h4>
+                <p class="table__value">1,99 USD  </p>
+              </td>
+              <td class="table__cell table__cell--active">
+                <h4 class="table__title">Стандарт</h4>
+                <p class="table__value">3,99 USD  </p>
+              </td>
+              <td class="table__cell">
+                <h4 class="table__title">Анлим</h4>
+                <p class="table__value">9,99 USD  </p>
+              </td>
+            </tr>
+            <tr class="table__row"> 
+              <td class="table__cell"> <span class="table__description">Розовый цвет          </span></td>
+              <td class="table__cell table__cell--active"> <span class="table__description">Розовый цвет</span><i class="table__icon-yes">          </i></td>
+              <td class="table__cell"> <span class="table__description">Розовый цвет</span><i class="table__icon-yes">                        </i></td>
+              <td class="table__cell"> <span class="table__description">Розовый цвет</span><i class="table__icon-yes">                        </i></td>
+            </tr>
+            <tr class="table__row"> 
+              <td class="table__cell"> <span class="table__description">Смайлики          </span></td>
+              <td class="table__cell"> <span class="table__description">Смайлики</span><i class="table__icon-no">          </i></td>
+              <td class="table__cell table__cell--active"> <span class="table__description">Смайлики</span><i class="table__icon-yes">                        </i></td>
+              <td class="table__cell"> <span class="table__description">Смайлики</span><i class="table__icon-yes">                     </i></td>
+            </tr>
+            <tr class="table__row"> 
+              <td class="table__cell"> <span class="table__description">Комментарии          </span></td>
+              <td class="table__cell"> <span class="table__description">Комментарии</span><i class="table__icon-no">          </i></td>
+              <td class="table__cell table__cell--active"> <span class="table__description">Комментарии</span><i class="table__icon-no">                        </i></td>
+              <td class="table__cell"> <span class="table__description">Комментарии</span><i class="table__icon-yes">                                                 </i></td>
+            </tr>
+          </table>
         </div>
         <div class="controls"><a href="#" class="controls__item"></a><a href="#" class="controls__item controls__item--active">             </a><a href="#" class="controls__item"> </a></div>
-      </div>
-      <div class="contacts">
+      </section>
+      <section class="contacts">
         <div class="contacts__layout">
           <h2 class="contacts__header">Остались вопросы? Свяжитесь с нами!</h2>
-          <p class="contacts__name">Звоните:</p>
-          <p class="contacts__description">+7 (812) 555-66-66</p>
-          <p class="contacts__name">Пишите:</p>
-          <p class="contacts__description">mail@htmlacademy.ru</p>
-          <p class="contacts__name">Приезжайте в гости:</p>
-          <p class="contacts__description">ул. Большая Конюшенная, 19/8</p>
+          <div class="contacts__contain">
+            <p class="contacts__name">Звоните:</p>
+            <p class="contacts__description">+7 (812) 555-66-66</p>
+          </div>
+          <div class="contacts__contain">
+            <p class="contacts__name">Пишите:</p>
+            <p class="contacts__description">mail@htmlacademy.ru</p>
+          </div>
+          <div class="contacts__contain">
+            <p class="contacts__name">Приезжайте в гости:</p>
+            <p class="contacts__description">ул. Большая Конюшенная, 19/8</p>
+          </div>
         </div>
         <div class="contacts__map"></div>
-      </div>
+        <section class="main-footer main-footer--mainpage">
+          <div class="main-footer__layout">           <a href="index.html" class="main-footer__logo"><img src="img/img_logo1.png" width="147" height="40" alt="PINK"/></a>
+            <div class="socials"><i class="socials__icon socials__icon--twitter"></i><i class="socials__icon socials__icon--fb"></i><i class="socials__icon socials__icon--youtube"></i></div>
+            <div class="htmlacademy">Разработано<img src="img/img_htmlacademy.png" width="27" height="34" alt="htmlacademy"/></div>
+          </div>
+        </section>
+      </section>
     </main>
   </body>
 </html>

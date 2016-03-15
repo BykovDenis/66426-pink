@@ -89,62 +89,87 @@ html
             a(href="#").controls__item
             a(href="#").controls__item 
           div.review__next  
-      div.price        
+      section.price        
         div.price__layout
-          div.table
-            div.table__col
-              div.table__header
-                div.table__layout
-                  h4.table__title Стандарт
-                  p.table__value 3,99 USD
-              div.table__body              
-                div.table__row Розовый цвет
-                  i.icon-yes 
-                div.table__row  Смайлики
-                  i.icon-no 
-                div.table__row  Комментарии        
-                  i.icon-no 
-            div.table__col.table__col--active
-              div.table__header
-                i.table__icon-hit
-                div.table__layout
-                  h4.table__title Стандарт
-                  p.table__value 3,99 USD
-              div.table__body              
-                div.table__row  Розовый цвет
-                  i.table__icon-yes
-                div.table__row  Смайлики
-                  i.table__icon-yes
-                div.table__row  Комментарии
-                  i.table__icon-no
-            div.table__col
-              div.table__header
-                div.table__layout
-                  h4.table__title Стандарт
-                  p.table__value 3,99 USD
-              div.table__body
-                div.table__row  Розовый цвет
-                  i.table__icon-yes
-                div.table__row  Смайлики
-                  i.table__icon-yes
-                div.table__row  Комментарии                
-                  i.table__icon-yes
+          table.table
+            tr.table__row
+              td.table__cell.table__cell--first  
+              td.table__cell
+                h4.table__title База
+                p.table__value 1,99 USD  
+              td.table__cell.table__cell--active
+                h4.table__title Стандарт
+                p.table__value 3,99 USD  
+              td.table__cell
+                h4.table__title Анлим
+                p.table__value 9,99 USD  
+            tr.table__row  
+              td.table__cell 
+                span.table__description Розовый цвет          
+              td.table__cell.table__cell--active 
+                span.table__description Розовый цвет
+                i.table__icon-yes           
+              td.table__cell 
+                span.table__description Розовый цвет
+                i.table__icon-yes                         
+              td.table__cell 
+                span.table__description Розовый цвет
+                i.table__icon-yes                         
+            tr.table__row  
+              td.table__cell 
+                span.table__description Смайлики          
+              td.table__cell 
+                span.table__description Смайлики
+                i.table__icon-no           
+              td.table__cell.table__cell--active 
+                span.table__description Смайлики
+                i.table__icon-yes                         
+              td.table__cell 
+                span.table__description Смайлики
+                i.table__icon-yes                      
+            tr.table__row  
+              td.table__cell 
+                span.table__description Комментарии          
+              td.table__cell 
+                span.table__description Комментарии
+                i.table__icon-no           
+              td.table__cell.table__cell--active 
+                span.table__description Комментарии
+                i.table__icon-no                         
+              td.table__cell 
+                span.table__description Комментарии
+                i.table__icon-yes                                                  
         div.controls
           a(href="#").controls__item
           a(href="#").controls__item.controls__item--active              
           a(href="#").controls__item  
-      div.contacts
+      section.contacts
         div.contacts__layout
           h2.contacts__header Остались вопросы? Свяжитесь с нами!
-          p.contacts__name Звоните:
-          p.contacts__description +7 (812) 555-66-66
+          
+          div.contacts__contain
+            p.contacts__name Звоните:
+            p.contacts__description +7 (812) 555-66-66
         
-          p.contacts__name Пишите:
-          p.contacts__description mail@htmlacademy.ru
+          div.contacts__contain
+            p.contacts__name Пишите:
+            p.contacts__description mail@htmlacademy.ru
         
-          p.contacts__name Приезжайте в гости:
-          p.contacts__description ул. Большая Конюшенная, 19/8
+          div.contacts__contain
+            p.contacts__name Приезжайте в гости:
+            p.contacts__description ул. Большая Конюшенная, 19/8
         div.contacts__map
+        section.main-footer.main-footer--mainpage
+          div.main-footer__layout            
+            a(href="index.html").main-footer__logo
+              img(src="img/img_logo1.png" width="147" height="40" alt="PINK")
+            div.socials
+              i.socials__icon.socials__icon--twitter
+              i.socials__icon.socials__icon--fb
+              i.socials__icon.socials__icon--youtube
+            div.htmlacademy
+              Разработано
+              img(src="img/img_htmlacademy.png" width="27" height="34" alt="htmlacademy")        
           
 
             

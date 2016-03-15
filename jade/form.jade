@@ -6,24 +6,28 @@ html
     title PINK adaptive    
     link(href="css/style.css" rel="stylesheet")
   body      
-    header.main-header 
+    header.main-header      
       div.main-header__top        
-        nav.main-nav           
-          div.main-nav__logo 
-            a(href="#")
-              img(src="img/img_logo.png" width="75" height="22" alt="PINK")
-          div.main-nav__menu
-            a(href="#")
-              i.main-nav__icon    
-            ul.main-nav__items
-              li Информация
-              li Возможности 
-              li Отзывы
-              li Стоимость
-        div.intro
-          div.intro__layout
-            h1.intro__header Конкурс на самое безбашенное путешествие с Пинк  
-            p.intro__description Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту
+       div.main-header__layout
+         nav.main-nav           
+           div.main-nav__logo 
+             a(href="#")
+               img(src="img/img_logo.png" width="75" height="22" alt="PINK")
+           div.main-nav__menu
+             a(href="#")
+               i.main-nav__icon    
+             ul.main-nav__items
+               li.main-nav__item 
+                 a(href="#").main-nav__link Информация
+               li.main-nav__item 
+                 a(href="#").main-nav__link Возможности
+               li.main-nav__item 
+                 a(href="#").main-nav__link Отзывы
+               li.main-nav__item 
+                 a(href="#").main-nav__link Стоимость
+         article.intro
+           h1.intro__header Конкурс на самое безбашенное путешествие с Пинк  
+           p.intro__description Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту
     main
       form(method="get").form        
         fieldset.form__items        

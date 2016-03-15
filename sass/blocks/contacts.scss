@@ -1,7 +1,8 @@
 .contacts{
-    
-  @include contain-width;    
+  
+  margin: 0;    
   outline: 1px solid rgba(150, 50, 150, .5);
+  text-align: center;
     
   &:before{
  
@@ -13,9 +14,33 @@
   &__layout{
 
     @include layout();
+outline: 1px solid rgba(150, 50, 150, .5);
 
-  }     
+  }    
     
     
-    
+}
+
+@media (min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px),
+    (min-width: $width-content-desktop){
+ 
+  .contacts{
+
+      &__contain{
+          
+          display: inline-block;
+          vertical-align: top;
+          outline: 1px solid $color-red;
+          margin-right: 50px;          
+          
+      }
+      
+      &__contain:last-of-type{
+          
+          margin-right: 0;
+          
+      }
+      
+  }
+        
 }
