@@ -1,6 +1,6 @@
 .form{
     
-  @include contain-width;
+  
   outline: 1px solid rgba(50, 50, 150, .5);
   text-align: center;
     
@@ -13,37 +13,122 @@
 
 
   &__layout{
+   
+    @include layout();
+    display: flex;
+    flex-direction: column;
+    text-align: center;
  
-    @include layout;
-
-  }   
+  }  
+  
     
+}
+
+@media (min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px){
+  
+  .form{
+    
+    &__items:nth-of-type(1){
+ 
+      order: -2;
+
+    } 
+  
+    &__items:nth-of-type(3){
+
+      order: -1;      
+
+    } 
+    
+    &__items:nth-of-type(4){
+
+      order: -2;      
+
+    } 
+    
+  
+    &__control:after{
+      
+      @include clearfix();
+       
+    }
+    
+    &__send{
+
+      
+      float: left;
+      width: 300px;
+      margin: 0;
+      
+    }
+    
+    &__requirement{
+
+      
+      float: right;
+      width: 200px;
+      margin:0
+      
+    }
+    
+  }
+  
 }
 
 @media (min-width: $width-content-desktop){
  
   .form{
     
-    @include clearfix();
-    
-    &__items:first-of-type{
-      
-      float: left;
-      
+    &__control:after{
+
+      @include clearfix();
+
     }
     
-    &__items:nth-of-type(4){
+    &__control{
       
-      float: right;
+      order: 1;
       
-    }    
-    
+    }
+
     &__send{
-      
+
+
       float: left;
-      
+      width: 300px;
+      margin: 0;
+
+    }
+
+    &__requirement{
+
+
+      float: right;
+      width: 200px;
+      margin:0
+
+    }
+
+    &__layout1{
+
+      display: flex;
+      justify-content: space-between;
+
     }
     
+    &__layout>&__items:nth-of-type(1){
+       
+      order: 1;      
+
+    } 
+    
+    &__layout>&__items:nth-of-type(3){
+            
+      order: 1;      
+
+    }     
+    
+  
   }
   
   

@@ -4,6 +4,8 @@
   outline: 1px solid pink;
     
   min-width: 300px;
+  
+  
     
   &:before{
      
@@ -25,6 +27,13 @@
 @media(min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px){
         
   .intro{
+    
+    &__layout{
+      
+      @include layout();  
+      outline: 1px solid $color-blue;
+      
+    }
         
     &--mainpage{
 
@@ -38,7 +47,14 @@
 
 @media(min-width: $width-content-desktop){
     
-  .intro{       
+  .intro{   
+    
+    &__layout{
+      
+      @include layout();   
+      outline: 1px solid $color-blue;
+      
+    }    
     
     &--mainpage{
 

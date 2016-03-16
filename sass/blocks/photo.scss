@@ -1,7 +1,13 @@
 .photo{
+  
+  text-align: center;
+  
+  &:after{
     
+    @include clearfix();
     
-  @include contain-width;    
+  }
+  
   outline: 1px solid rgba(150, 50, 150, .5);
     
   &:before{

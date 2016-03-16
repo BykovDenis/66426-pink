@@ -28,35 +28,51 @@ html
         div.intro
           div.intro__layout
             h1.intro__header Фотографии пользователей
-            p.intro__description 
+        section.block-header 
+          div.block-header__layout
+            div.block-header__description
               Взгляните на фотографии, которые выкладывают пользователи!
               Видите, как не хватает ваших? 
     main
       div.photo
         div.photo__layout   
         
-         -cards = [{filepath:"#", title:"Анна", time_added:"(5 минут назад)", content:"Прыгать или нет? Напишите комментарий свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!", counter:"215", type:"top"},{filepath:"#", title:"Левон", time_added:"(5 часов назад)", content:"Вчера он на луну летал, сегодня в руки к нам попал", counter:"356", type:""},{filepath:"#", title:"Антон", time_added:"(12 часов назад)" ,content:"Соседи будут рады", counter:"666",type:""},{filepath:"#", title:"Борис", time_added:"(20 часов назад)", content:"Здесь могла быть ваша цитата о высоком и вечном.", counter:"215",type:""},{filepath:"#", title:"Сергей", time_added:"(25 часов назад)", content:"Самая кубанская в мире!", counter:"4",type:""},{filepath:"#", title:"Максим", time_added:"(40 часов назад)", content:"Где снег-то?", counter:"150",type:""},{filepath:"#", title:"Надежда", time_added:"(45 часов назад)", content:"Всем GM и взаимные лайки!", counter:"2560",type:""}]  
-         
-           each card in cards            
-           
-             article.photo-card
-               
-               if card["type"] != "top"
-                 img(src="#" alt="#{card['title']}" width="320" height="180").photo-card__image          
-               else
-                 img(src="#" alt="#{card['title']}"  width="320" height="137").photo-card__top-image 
-                 p.photo-card__title Панорама дня                 
-               p.photo-card__author #{card["title"]}     
-                 span.photo-card__time-added #{card["time_added"]}  
-               p.photo-card__body.
-                 #{card["content"]}
-               p.photo-card__likes
-                 i.photo-card__icon-heart
-                 Нравится:
-                 span.photo-card__likes-counter #{card["counter"]}
+          -cards = [{filepath:"#", title:"Анна", time_added:"(5 минут назад)", content:"Прыгать или нет? Напишите комментарий свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!", counter:"215", type:"top"},{filepath:"#", title:"Левон", time_added:"(5 часов назад)", content:"Вчера он на луну летал, сегодня в руки к нам попал", counter:"356", type:""},{filepath:"#", title:"Антон", time_added:"(12 часов назад)" ,content:"Соседи будут рады", counter:"666",type:""},{filepath:"#", title:"Борис", time_added:"(20 часов назад)", content:"Здесь могла быть ваша цитата о высоком и вечном.", counter:"215",type:""},{filepath:"#", title:"Сергей", time_added:"(25 часов назад)", content:"Самая кубанская в мире!", counter:"4",type:""},{filepath:"#", title:"Максим", time_added:"(40 часов назад)", content:"Где снег-то?", counter:"150",type:""},{filepath:"#", title:"Надежда", time_added:"(45 часов назад)", content:"Всем GM и взаимные лайки!", counter:"2560",type:""}]  
+
+            each card in cards  
+
+              if card["type"] != "top"
+
+                article.photo-card               
+                   img(src="#" alt="#{card['title']}" width="300" height="200").photo-card__image  
+
+                   p.photo-card__author #{card["title"]}     
+                     span.photo-card__time-added #{card["time_added"]}  
+                   p.photo-card__body.
+                     #{card["content"]}
+                   p.photo-card__likes
+                     i.photo-card__icon-heart
+                     Нравится:
+                     span.photo-card__likes-counter #{card["counter"]}                 
+
+              else
+                 article.photo-card.photo-card--main                 
+                   img(src="#" alt="#{card['title']}" width="300" height="200").photo-card__top-image 
+                   p.photo-card__title Панорама дня                 
+
+                   p.photo-card__author #{card["title"]}     
+                     span.photo-card__time-added #{card["time_added"]}  
+                   p.photo-card__body.
+                     #{card["content"]}
+                   p.photo-card__likes
+                     i.photo-card__icon-heart
+                     Нравится:
+                     span.photo-card__likes-counter #{card["counter"]}
       form(method="get").upload
         div.upload__layout
-          p.upload__header Затмите их всех! Выкладывайте все, что накопилось на телефоне!
+          section.block-header 
+            div.block-header__layout
+              div.block-header__description Затмите их всех! Выкладывайте все, что накопилось на телефоне!
           div.image
             div.image__src
               img(src="#" width="280" height="375" alt="Загрузить изображение с телефона")
@@ -75,7 +91,7 @@ html
               
             input(type="submit" value="Запостить").upload__post 
             input(type="reset" value="Отмена").upload__cancel 
-    footer.main-footer.main-footer--mainpage
+    footer.main-footer
       div.main-footer__layout            
         a(href="index.html").main-footer__logo
           img(src="img/img_logo1.png" width="147" height="40" alt="PINK")

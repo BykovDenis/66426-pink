@@ -35,20 +35,43 @@
     <main class="page-main">
       <form method="get" class="form">
         <div class="form__layout">
-          <fieldset class="form__items">       
-            <div class="form__item">
-              <label for="first_name" class="form__label">Имя        </label>
-              <input type="text" id="first_name" placeholder="Введите ваше имя" class="form__input"/>
-            </div>
-            <div class="form__item">
-              <label for="last_name" class="form__label">Фамилия        </label>
-              <input type="text" id="last_name" placeholder="Введите фамилию" class="form__input"/>
-            </div>
-            <div class="form__item">
-              <label for="middle_name" class="form__label">Отчество</label>
-              <input type="text" id="middle_name" placeholder="Ну и отчество тоже" class="form__input"/>
-            </div>
-          </fieldset>
+          <div class="form__layout1">
+            <fieldset class="form__items">       
+              <div class="form__item">
+                <label for="first_name" class="form__label">Имя        </label>
+                <input type="text" id="first_name" placeholder="Введите ваше имя" class="form__input"/>
+              </div>
+              <div class="form__item">
+                <label for="last_name" class="form__label">Фамилия        </label>
+                <input type="text" id="last_name" placeholder="Введите фамилию" class="form__input"/>
+              </div>
+              <div class="form__item">
+                <label for="middle_name" class="form__label">Отчество</label>
+                <input type="text" id="middle_name" placeholder="Ну и отчество тоже" class="form__input"/>
+              </div>
+            </fieldset>
+            <fieldset class="form__items">
+              <legend class="form__title">С каким приложением путешествовали?</legend>
+              <div class="form__item">             
+                <label class="form__label">
+                  <input type="radio" name="application" checked="checked"/>
+                  <Pink>для iOS</Pink>
+                </label>
+              </div>
+              <div class="form__item">             
+                <label class="form__label">
+                  <input type="radio" name="application"/>
+                  <Pink>для Android</Pink>
+                </label>
+              </div>
+              <div class="form__item">             
+                <label class="form__label">
+                  <input type="radio" name="application"/>
+                  <Windows>Phone  </Windows>
+                </label>
+              </div>
+            </fieldset>
+          </div>
           <fieldset class="form__items">
             <legend class="form__title">Ваши безбашенные достижения в путешествии</legend>
             <div class="form__item">
@@ -92,43 +115,24 @@
               <input type="text" id="email" placeholder="E-mail, пожалуйста" class="form__input"/>
             </div>
           </fieldset>
-          <fieldset class="form__items">
-            <legend class="form__title">С каким приложением путешествовали?</legend>
-            <div class="form__item">             
-              <label class="form__label">
-                <input type="radio" name="application" checked="checked"/>
-                <Pink>для iOS</Pink>
-              </label>
-            </div>
-            <div class="form__item">             
-              <label class="form__label">
-                <input type="radio" name="application"/>
-                <Pink>для Android</Pink>
-              </label>
-            </div>
-            <div class="form__item">             
-              <label class="form__label">
-                <input type="radio" name="application"/>
-                <Windows>Phone</Windows>
-              </label>
-            </div>
-          </fieldset>
           <fieldset class="form__items"> 
             <div class="form__item"> 
               <label class="form__label">Опишите свои эмоции           </label>
               <textarea placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
             </div>
           </fieldset>
-          <button type="submit" class="form__send">Отправить форму</button>
-          <p class="requirements"><span>*</span><span>- Обязательные поля</span></p>
+          <fieldset class="form__control"> 
+            <button type="submit" class="form__send">Отправить форму</button>
+            <p class="form__requirement"><span>*</span><span>- Обязательные поля</span></p>
+          </fieldset>
         </div>
       </form>
-      <footer class="main-footer main-footer--mainpage">
-        <div class="main-footer__layout">           <a href="index.html" class="main-footer__logo"><img src="img/img_logo1.png" width="147" height="40" alt="PINK"/></a>
-          <div class="socials"><i class="socials__icon socials__icon--twitter"></i><i class="socials__icon socials__icon--fb"></i><i class="socials__icon socials__icon--youtube"></i></div>
-          <div class="htmlacademy">Разработано<img src="img/img_htmlacademy.png" width="27" height="34" alt="htmlacademy"/></div>
-        </div>
-      </footer>
     </main>
+    <footer class="main-footer">
+      <div class="main-footer__layout">           <a href="index.html" class="main-footer__logo"><img src="img/img_logo1.png" width="147" height="40" alt="PINK"/></a>
+        <div class="socials"><i class="socials__icon socials__icon--twitter"></i><i class="socials__icon socials__icon--fb"></i><i class="socials__icon socials__icon--youtube"></i></div>
+        <div class="htmlacademy">Разработано<img src="img/img_htmlacademy.png" width="27" height="34" alt="htmlacademy"/></div>
+      </div>
+    </footer>
   </body>
 </html>

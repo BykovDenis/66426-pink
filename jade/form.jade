@@ -34,17 +34,35 @@ html
     main.page-main
       form(method="get").form
         div.form__layout
-          fieldset.form__items        
-            div.form__item
-              label(for="first_name").form__label Имя        
-              input(type="text" id="first_name" placeholder="Введите ваше имя").form__input
-            div.form__item
-              label(for="last_name").form__label Фамилия        
-              input(type="text" id="last_name" placeholder="Введите фамилию").form__input        
-            div.form__item
-              label(for="middle_name").form__label Отчество
-              input(type="text" id="middle_name" placeholder="Ну и отчество тоже").form__input                
+        
+          div.form__layout1
+        
+            fieldset.form__items        
+              div.form__item
+                label(for="first_name").form__label Имя        
+                input(type="text" id="first_name" placeholder="Введите ваше имя").form__input
+              div.form__item
+                label(for="last_name").form__label Фамилия        
+                input(type="text" id="last_name" placeholder="Введите фамилию").form__input        
+              div.form__item
+                label(for="middle_name").form__label Отчество
+                input(type="text" id="middle_name" placeholder="Ну и отчество тоже").form__input   
 
+            fieldset.form__items
+              legend.form__title С каким приложением путешествовали?
+              div.form__item              
+                label.form__label
+                  input(type="radio" name="application" checked) 
+                  Pink для iOS
+              div.form__item              
+                label.form__label
+                  input(type="radio"  name="application") 
+                  Pink для Android
+              div.form__item              
+                label.form__label
+                  input(type="radio"  name="application") 
+                  Windows Phone  
+                  
           fieldset.form__items
             legend.form__title Ваши безбашенные достижения в путешествии
             div.form__item
@@ -78,39 +96,25 @@ html
               input(type="text" id="phone" placeholder="Номер, пожалуйста").form__input            
             div.form__item
               label(for="email").form__label Адресок почты
-              input(type="text" id="email" placeholder="E-mail, пожалуйста").form__input            
-
-          fieldset.form__items
-            legend.form__title С каким приложением путешествовали?
-            div.form__item              
-              label.form__label
-                input(type="radio" name="application" checked) 
-                Pink для iOS
-            div.form__item              
-              label.form__label
-                input(type="radio"  name="application") 
-                Pink для Android
-            div.form__item              
-              label.form__label
-                input(type="radio"  name="application") 
-                Windows Phone
+              input(type="text" id="email" placeholder="E-mail, пожалуйста").form__input     
+              
           fieldset.form__items  
             div.form__item 
               label.form__label Опишите свои эмоции           
               textarea(placeholder="Можно прям в красках, не стесняясь в выражениях")
-
-          button(type="submit").form__send Отправить форму
-          p.requirements
-            span *
-            span - Обязательные поля
-      footer.main-footer.main-footer--mainpage
-        div.main-footer__layout            
-          a(href="index.html").main-footer__logo
-            img(src="img/img_logo1.png" width="147" height="40" alt="PINK")
-          div.socials
-            i.socials__icon.socials__icon--twitter
-            i.socials__icon.socials__icon--fb
-            i.socials__icon.socials__icon--youtube
-          div.htmlacademy
-            Разработано
-            img(src="img/img_htmlacademy.png" width="27" height="34" alt="htmlacademy")     
+          fieldset.form__control 
+            button(type="submit").form__send Отправить форму
+            p.form__requirement
+              span *
+              span - Обязательные поля
+    footer.main-footer
+      div.main-footer__layout            
+        a(href="index.html").main-footer__logo
+          img(src="img/img_logo1.png" width="147" height="40" alt="PINK")
+        div.socials
+          i.socials__icon.socials__icon--twitter
+          i.socials__icon.socials__icon--fb
+          i.socials__icon.socials__icon--youtube
+        div.htmlacademy
+          Разработано
+          img(src="img/img_htmlacademy.png" width="27" height="34" alt="htmlacademy")     

@@ -1,6 +1,10 @@
 .main-footer{
+  
+  &:after{
+  
+    @include clearfix(); 
     
-  @include clearfix(); 
+  }
     
     
   outline: 1px solid rgba(50, 150, 50, .5);
@@ -11,7 +15,7 @@
     content: 'main-footer';
     background-color: rgba(50, 150, 50, .1); 
 
-  }
+  }  
     
   &__layout{
 
@@ -37,12 +41,8 @@
  
   .main-footer{ 
     
-    &--mainpage{
-
-      display: block;
-
-    }
-    
+    display: block;
+  
     &__logo{
     
       float: left;
@@ -55,13 +55,9 @@
 
 @media (min-width: $width-content-desktop){
     
-  .main-footer{   
-    
-    &--mainpage{
-
-      display: block;
-
-    }
+  .main-footer{  
+        
+    display: block;
     
     &__logo{
     
