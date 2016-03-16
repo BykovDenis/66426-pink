@@ -2,6 +2,7 @@
     
   @include contain-width;
   outline: 1px solid rgba(50, 50, 150, .5);
+  text-align: center;
     
   &:before{
  
@@ -15,7 +16,35 @@
  
     @include layout;
 
-  } 
+  }   
     
+}
+
+@media (min-width: $width-content-desktop){
+ 
+  .form{
     
+    @include clearfix();
+    
+    &__items:first-of-type{
+      
+      float: left;
+      
+    }
+    
+    &__items:nth-of-type(4){
+      
+      float: right;
+      
+    }    
+    
+    &__send{
+      
+      float: left;
+      
+    }
+    
+  }
+  
+  
 }

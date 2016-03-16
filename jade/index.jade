@@ -14,29 +14,29 @@ html
              a(href="#")
                img(src="img/img_logo.png" width="75" height="22" alt="PINK")
            div.main-nav__menu
-             a(href="#")
+             a(href="#").main-nav__main-link
                i.main-nav__icon    
              ul.main-nav__items
                li.main-nav__item 
-                 a(href="#").main-nav__link Информация
+                 a(href="#").main-nav__link.main-nav__link--active Главная  
                li.main-nav__item 
-                 a(href="#").main-nav__link Возможности
+                 a(href="#").main-nav__link Фотографии
                li.main-nav__item 
-                 a(href="#").main-nav__link Отзывы
+                 a(href="#").main-nav__link Конкурс
                li.main-nav__item 
-                 a(href="#").main-nav__link Стоимость
-         article.intro
-           h1.intro__header Взгляните на жизнь иначе!                          
-           div.download          
-             a(href="#").btn.btn--download Скачать приложение
-             div.download__items
-               a(href="#").download__item
-                 i.download__icon.download__icon--apple
-               a(href="#").download__item              
-                i.download__icon.download__icon--android
-               a(href="#").download__item              
-                 i.download__icon.download__icon--microsoft
-             p.download__description Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
+                 a(href="#").main-nav__link Html Academy
+          article.intro.intro--mainpage
+            h1.intro__header Взгляните на жизнь иначе!                          
+            div.download          
+              a(href="#").btn.btn--download Скачать приложение
+              div.download__items
+                a(href="#").download__item
+                  i.download__icon.download__icon--apple
+                a(href="#").download__item              
+                  i.download__icon.download__icon--android
+                a(href="#").download__item              
+                  i.download__icon.download__icon--microsoft
+                p.download__description Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
     main.page-main
       section.information
         div.information__layout   
@@ -159,17 +159,17 @@ html
             p.contacts__name Приезжайте в гости:
             p.contacts__description ул. Большая Конюшенная, 19/8
         div.contacts__map
-        section.main-footer.main-footer--mainpage
-          div.main-footer__layout            
-            a(href="index.html").main-footer__logo
-              img(src="img/img_logo1.png" width="147" height="40" alt="PINK")
-            div.socials
-              i.socials__icon.socials__icon--twitter
-              i.socials__icon.socials__icon--fb
-              i.socials__icon.socials__icon--youtube
-            div.htmlacademy
-              Разработано
-              img(src="img/img_htmlacademy.png" width="27" height="34" alt="htmlacademy")        
+    footer.main-footer.main-footer--mainpage
+      div.main-footer__layout            
+        a(href="index.html").main-footer__logo
+          img(src="img/img_logo1.png" width="147" height="40" alt="PINK")
+        div.socials
+          i.socials__icon.socials__icon--twitter
+          i.socials__icon.socials__icon--fb
+          i.socials__icon.socials__icon--youtube
+        div.htmlacademy
+          Разработано
+          img(src="img/img_htmlacademy.png" width="27" height="34" alt="htmlacademy")        
           
 
             

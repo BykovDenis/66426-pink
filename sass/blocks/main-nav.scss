@@ -37,22 +37,23 @@
    }
 
  }
+  
 
-  &__menu{
+  &__main-link{
 
     float: right;
     height: 22px;    
     width: 75px;
-    padding: 21px 0; 
     outline: 1px solid yellow;  
-      
+    
     &:before{        
 
-      content: "__menu";
-      background-color: rgba(180, 180, 50, .3);
+    content: "__main-link";
+    background-color: rgba(180, 180, 50, .3);
 
-    }      
-
+    }
+    
+      
   }
     
   &__items{
@@ -61,4 +62,42 @@
 
   }
     
+}
+
+@media(min-width: $width-content-desktop){
+ 
+  .main-nav{
+    
+    
+  
+    &__items{
+     
+      display: block;
+      padding: 0;
+      text-align: center;
+      
+    }
+       
+    &__item{
+      
+      display: inline-block;
+      
+          
+    }
+    
+    &__link{
+      
+      color: $color-blue;
+      font-size: 12px;
+      
+    }
+    
+    &__main-link{
+      
+      display: none; 
+      
+    }
+    
+  }
+  
 }

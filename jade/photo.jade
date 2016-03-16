@@ -6,20 +6,25 @@ html
     title PINK adaptive    
     link(href="css/style.css" rel="stylesheet")
   body      
-    header.main-header 
+    header.main-header      
       div.main-header__top        
-        nav.main-nav           
-          div.main-nav__logo 
-            a(href="#")
-              img(src="img/img_logo.png" width="75" height="22" alt="PINK")
-          div.main-nav__menu
-            a(href="#")
-              i.main-nav__icon    
-            ul.main-nav__items
-              li Информация
-              li Возможности 
-              li Отзывы
-              li Стоимость
+       div.main-header__layout
+         nav.main-nav           
+           div.main-nav__logo 
+             a(href="#")
+               img(src="img/img_logo.png" width="75" height="22" alt="PINK")
+           div.main-nav__menu
+             a(href="#").main-nav__main-link
+               i.main-nav__icon    
+             ul.main-nav__items
+               li.main-nav__item 
+                 a(href="#").main-nav__link.main-nav__link--active Главная  
+               li.main-nav__item 
+                 a(href="#").main-nav__link Фотографии
+               li.main-nav__item 
+                 a(href="#").main-nav__link Конкурс
+               li.main-nav__item 
+                 a(href="#").main-nav__link Html Academy
         div.intro
           div.intro__layout
             h1.intro__header Фотографии пользователей
@@ -70,9 +75,9 @@ html
               
             input(type="submit" value="Запостить").upload__post 
             input(type="reset" value="Отмена").upload__cancel 
-    footer.main-footer          
-      div.main-footer__layout
-        a(href="index.html").form__logo
+    footer.main-footer.main-footer--mainpage
+      div.main-footer__layout            
+        a(href="index.html").main-footer__logo
           img(src="img/img_logo1.png" width="147" height="40" alt="PINK")
         div.socials
           i.socials__icon.socials__icon--twitter
@@ -80,4 +85,4 @@ html
           i.socials__icon.socials__icon--youtube
         div.htmlacademy
           Разработано
-          img(src="img/img_htmlacademy.png" width="27" height="34" alt="htmlacademy")            
+          img(src="img/img_htmlacademy.png" width="27" height="34" alt="htmlacademy")          

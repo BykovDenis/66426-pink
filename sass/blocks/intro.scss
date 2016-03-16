@@ -23,10 +23,14 @@
 
 
 @media(min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px){
-    
+        
   .intro{
         
-    float: left;     
+    &--mainpage{
+
+      float: left;    
+
+    } 
         
   }
     
@@ -34,11 +38,14 @@
 
 @media(min-width: $width-content-desktop){
     
-  .intro{
-        
-    float: left;
+  .intro{       
     
-        
+    &--mainpage{
+
+      float: left;    
+
+    }
+    
   }
     
 }

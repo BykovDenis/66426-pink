@@ -1,5 +1,10 @@
-.htmlacademy{
-    
-  float: right;    
-    
+
+@media (min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px),(min-width: $width-content-desktop){
+
+  .htmlacademy{
+
+    float: right;    
+
+  }
+  
 }

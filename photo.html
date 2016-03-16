@@ -7,19 +7,21 @@
     <link href="css/style.css" rel="stylesheet"/>
   </head>
   <body>     
-    <header class="main-header"> 
+    <header class="main-header">     
       <div class="main-header__top">       
-        <nav class="main-nav">          
-          <div class="main-nav__logo"> <a href="#"><img src="img/img_logo.png" width="75" height="22" alt="PINK"/></a></div>
-          <div class="main-nav__menu"><a href="#"><i class="main-nav__icon">   </i></a>
-            <ul class="main-nav__items">
-              <li>Информация</li>
-              <li>Возможности </li>
-              <li>Отзывы</li>
-              <li>Стоимость</li>
-            </ul>
-          </div>
-        </nav>
+        <div class="main-header__layout">
+          <nav class="main-nav">          
+            <div class="main-nav__logo"> <a href="#"><img src="img/img_logo.png" width="75" height="22" alt="PINK"/></a></div>
+            <div class="main-nav__menu"><a href="#" class="main-nav__main-link"><i class="main-nav__icon">   </i></a>
+              <ul class="main-nav__items">
+                <li class="main-nav__item"> <a href="#" class="main-nav__link main-nav__link--active">Главная  </a></li>
+                <li class="main-nav__item"> <a href="#" class="main-nav__link">Фотографии</a></li>
+                <li class="main-nav__item"> <a href="#" class="main-nav__link">Конкурс</a></li>
+                <li class="main-nav__item"> <a href="#" class="main-nav__link">Html Academy</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
         <div class="intro">
           <div class="intro__layout">
             <h1 class="intro__header">Фотографии пользователей</h1>
@@ -97,8 +99,8 @@
         </div>
       </form>
     </main>
-    <footer class="main-footer">         
-      <div class="main-footer__layout"><a href="index.html" class="form__logo"><img src="img/img_logo1.png" width="147" height="40" alt="PINK"/></a>
+    <footer class="main-footer main-footer--mainpage">
+      <div class="main-footer__layout">           <a href="index.html" class="main-footer__logo"><img src="img/img_logo1.png" width="147" height="40" alt="PINK"/></a>
         <div class="socials"><i class="socials__icon socials__icon--twitter"></i><i class="socials__icon socials__icon--fb"></i><i class="socials__icon socials__icon--youtube"></i></div>
         <div class="htmlacademy">Разработано<img src="img/img_htmlacademy.png" width="27" height="34" alt="htmlacademy"/></div>
       </div>

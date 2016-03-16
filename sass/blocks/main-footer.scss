@@ -27,8 +27,7 @@
     
   &__logo{
 
-    display: block;
-    float: left;
+    display: block;    
 
   }
     
@@ -43,6 +42,12 @@
       display: block;
 
     }
+    
+    &__logo{
+    
+      float: left;
+
+    }
       
   }
     
@@ -50,13 +55,19 @@
 
 @media (min-width: $width-content-desktop){
     
-  .main-footer{ 
+  .main-footer{   
     
     &--mainpage{
 
       display: block;
 
     }
+    
+    &__logo{
+    
+      float: left;
+
+    }    
       
   }    
     

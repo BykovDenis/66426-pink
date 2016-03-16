@@ -2,18 +2,17 @@
 
 @mixin layout{
       
-  padding: 0 20px;    
+  padding: 0 5.4% ;    
   margin: 0 auto;
   
     
-  @media(min-width: 700px) and (max-width: 1199px) {
+  @media(min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px) {
   
-    padding: 0 40px;
-      
+    padding: 0 5.5%;      
       
   }     
     
-  @media(min-width: 1200px){
+  @media(min-width: $width-content-desktop){
   
     padding: 0 130px;
     max-width: 940px;
