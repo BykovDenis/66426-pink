@@ -1,19 +1,6 @@
 .main-nav{
     
   outline: 1px solid yellow;
-
-  &:before{
-    
-    content: "main-nav";
-    background-color: rgba(150, 150, 50, .3);
-
-  }
-    
-  &:after{
-
-      @include clearfix;
-
-  }
     
   &__layout{
    
@@ -21,11 +8,13 @@
         
   }
 
-  &__logo{
+  &__logo img{
 
+    float: left;
+    display: block;    
     width: 75px;
     height: 22px;
-    float: left;
+    
     outline: 1px solid yellow;
     padding: 22px 0;
 
@@ -41,25 +30,38 @@
 
   &__main-link{
 
-    float: right;
-    height: 22px;    
-    width: 75px;
-    outline: 1px solid yellow;  
-    
-    &:before{        
-
-    content: "__main-link";
-    background-color: rgba(180, 180, 50, .3);
-
-    }
-    
+    float: right;       
+    outline: 1px solid yellow; 
+    padding: 20px 0;
       
+  }
+  
+  &__icon{
+    
+    display: block;
+    background: url(../../img/icon-menu-burger.svg) 0 0 no-repeat;
+    width: 50px;
+    height: 25px; 
+    
   }
     
   &__items{
 
     display: none;
 
+  }
+  
+  &__top{
+    
+    &:after{
+
+        @include clearfix();
+
+    }
+    
+    background-color: rgba(0,0,0,0.3);
+    
+        
   }
     
 }

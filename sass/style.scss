@@ -69,22 +69,7 @@
 
 body{    
     
-    @media(max-width: 699px){
-        
-        min-width: 320px;
-        
-    }
-    @media(min-width: 700px) and (max-width: 1199px){
-        
-        min-width: 700px;
-        
-    }
-    @media(min-width: 1200px){
-        
-        min-width: 1200px;
-        
-    }
-  
+ 
   width: $width-body;   
     
 }

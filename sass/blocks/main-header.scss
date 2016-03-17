@@ -1,15 +1,10 @@
 .main-header{
 
-  @include contain-width;
-  outline: 1px solid rgba(150, 50, 50, .5);
+  background: 
+    url(../img/img_screen.jpg) 104px 205px no-repeat,
+    url(../img/img_iphone5_hand.png) 0 173px no-repeat,
+    url(../img/bg-back-mobile.jpg) -190px -6px no-repeat;
     
-
-  &:before{
- 
-    content: 'main-header';
-    background-color: rgba(150, 50, 50, .1); 
-
-  }  
     
   &:after{
         
