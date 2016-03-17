@@ -1,4 +1,57 @@
 .image{
     
+  display: flex;
+  flex-direction: column;
+
+  &__effects{
     
+    display: flex;
+    justify-content:space-around;
+        
+  }
+  
+  &__src{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  
+}
+
+@media(min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px),
+(min-width: $width-content-desktop){
+ 
+  .image{
+    
+    flex-direction: row;
+    
+    &__src{
+            
+      justify-content: center;
+      align-items: center;
+
+    }
+    
+    &__effects{
+
+      display: flex;
+      flex-direction: column;
+      justify-content:space-around;
+
+    }    
+    
+    &__effect{
+      
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      
+    }
+    
+  }
+  
 }

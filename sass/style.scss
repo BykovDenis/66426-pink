@@ -67,10 +67,28 @@
 
     
 
-body{    
+body{  
+  
+  @media (max-width: $width-content-mobile) and (max-width: $width-content-tablet - 1px){
+    
+    min-width:  $width-content-mobile;   
+    
+  }
     
  
-  width: $width-body;   
+  @media (min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px){
+    
+    min-width:  $width-content-tablet; 
+    
+  }
+  
+  @media (min-width: $width-content-desktop){
+    
+    min-width:  $width-content-desktop; 
+    
+  }
+  
+  /* width: $width-body;   */
     
 }
 

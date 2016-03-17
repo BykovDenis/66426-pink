@@ -21,6 +21,29 @@
  
   }  
   
+  &__item--content {
+    
+    display:flex;
+    flex-direction: column; 
+    justify-content: space-between;    
+    
+  }
+  
+  &__item--control {
+    
+    display:flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: stretch;    
+    
+  }
+  
+  &__label-content{
+    
+    align-self: flex-start;
+    
+  }
+  
     
 }
 
@@ -109,7 +132,7 @@
 
     }
 
-    &__layout1{
+    &--row{
 
       display: flex;
       justify-content: space-between;

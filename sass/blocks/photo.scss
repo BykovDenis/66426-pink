@@ -1,13 +1,8 @@
 .photo{
   
   text-align: center;
-  
-  &:after{
     
-    @include clearfix();
-    
-  }
-  
+
   outline: 1px solid rgba(150, 50, 150, .5);
     
   &:before{
@@ -20,7 +15,17 @@
   &__layout{
 
     @include layout();
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    align-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    
+    
 
   }      
     
+  
 }

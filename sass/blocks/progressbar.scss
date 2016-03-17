@@ -1,5 +1,59 @@
 .progressbar{
+   
+  display: none;
+  justify-content: center;
+  
+   
+  height: 10px;
+  outline: 1px solid $color-blue;
+  background-color: $color-blue;   
+  
+  &--main{
+  
+    display: flex;
+    flex-direction: column;
+ 
+    align-self: center; 
     
-    
-    
+  }
+ 
+  
+        
+}
+
+@media (min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px){
+
+  
+.progressbar{
+  
+  width: 240px; 
+  
+  display: flex;
+  
+  &--main{
+  
+    display: none;
+  
+  }
+  
+}
+  
+}
+
+@media (min-width: $width-content-desktop){
+ 
+.progressbar{
+  
+  width: 240px; 
+  
+  display: flex;  
+  
+  &--main{
+  
+    display: none;
+  
+  }
+  
+}
+  
 }

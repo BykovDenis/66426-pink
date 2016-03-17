@@ -1,6 +1,8 @@
 .upload{
      
-  @include contain-width;    
+  display: flex;
+  flex-direction: column;
+  
   outline: 1px solid rgba(150, 50, 150, .5);
     
   &:before{
@@ -14,6 +16,56 @@
 
     @include layout(); 
 
-  }      
+  }  
+   
+  &__file{
     
+    display: none;
+    
+  }  
+  
+  &__controls{
+    
+    display: flex;
+    flex-direction: column;
+    
+  }
+  
+    
+}  
+
+@media(min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px),
+ (min-width: $width-content-desktop){
+ 
+  .upload{
+
+    flex-direction: row;
+
+    &--rules{
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+
+    }
+
+  }
+  
 }
+
+@media(min-width: $width-content-desktop){
+
+  .upload{
+    
+    &__controls{
+   
+      flex-direction: row;
+      justify-content: space-between;
+      
+    }
+    
+  }  
+  
+}
+
