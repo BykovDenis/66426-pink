@@ -1,5 +1,32 @@
 .advantages{
     
+  outline: 1px solid $color-red;
+  
     
+  &:before{
+    
+    content: "advantages";
+    background-color: rgba(255, 150, 150, 0.4);
+      
+  }
+    
+}
+
+
+@media(min-width: $width-content-desktop){
+
+  .advantages{ 
+
+    display: inline-block;
+    vertical-align: top;           
+    
+    margin-right: 20px;  
+    padding-top: 240px;  
+    
+    width: 240px;
+    
+          
+  }
+  
     
 }

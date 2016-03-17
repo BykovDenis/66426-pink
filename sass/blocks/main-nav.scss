@@ -1,3 +1,103 @@
 .main-nav{
     
+  outline: 1px solid yellow;
+
+  &:before{
+    
+    content: "main-nav";
+    background-color: rgba(150, 150, 50, .3);
+
+  }
+    
+  &:after{
+
+      @include clearfix;
+
+  }
+    
+  &__layout{
+   
+    @include layout();
+        
+  }
+
+  &__logo{
+
+    width: 75px;
+    height: 22px;
+    float: left;
+    outline: 1px solid yellow;
+    padding: 22px 0;
+
+  &:before{        
+
+    content: "__logo";
+    background-color: rgba(180, 180, 50, .3);
+
+   }
+
+ }
+  
+
+  &__main-link{
+
+    float: right;
+    height: 22px;    
+    width: 75px;
+    outline: 1px solid yellow;  
+    
+    &:before{        
+
+    content: "__main-link";
+    background-color: rgba(180, 180, 50, .3);
+
+    }
+    
+      
+  }
+    
+  &__items{
+
+    display: none;
+
+  }
+    
+}
+
+@media(min-width: $width-content-desktop){
+ 
+  .main-nav{
+    
+    
+  
+    &__items{
+     
+      display: block;
+      padding: 0;
+      text-align: center;
+      
+    }
+       
+    &__item{
+      
+      display: inline-block;
+      
+          
+    }
+    
+    &__link{
+      
+      color: $color-blue;
+      font-size: 12px;
+      
+    }
+    
+    &__main-link{
+      
+      display: none; 
+      
+    }
+    
+  }
+  
 }

@@ -1,7 +1,7 @@
-.review{
-    
-   @include contain-width;    
+.review{    
+  
   outline: 1px solid rgba(150, 50, 150, .5);
+  text-align: center;
     
   &:before{
  
@@ -14,6 +14,90 @@
 
     @include layout();
 
-  }     
+  } 
+    
+  &__slide{
+        
+    display: none;   
+      
+  }
+    
+  &__slide--active{
+        
+    display: block;      
+        
+  }
+    
+  &__details{
+  
+    display: none;
+        
+  }
+    
+}
+
+@media (min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px){
+
+  .review{ 
+    
+    &__details{
+  
+      display: block;
+        
+    }   
+ 
+    
+  }   
+    
+    
+}
+
+@media (min-width: $width-content-desktop){
+ 
+  .review{ 
+    
+  
+    &__body{     
+      
+    
+    display: flex;
+    justify-content: space-between;
+    width: 685px;          
+          
+    }
+
+  &__slide--active{
+
+    display: inline-block;
+    vertical-align: middle;
+    outline: 1px solid $color-red; 
+    margin: 0 80px;
+
+  }
+      
+  &__prev,
+  &__next{
+    
+    display: inline-block;
+    vertical-align: middle;
+    width: 25px;
+    height: 40px;
+    outline: 1px solid $color-red;
+          
+  }
+      
+  &__details{
+  
+    display: block;
+        
+  }  
+      
+  .controls{
+    
+    display: none;
+    
+  }      
+      
+ }
     
 }

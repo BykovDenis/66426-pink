@@ -2,38 +2,38 @@
 <html>
   <head>   
     <meta charset="utf-8"/>
-    <title>PINK adaptive    </title>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>PINK adaptive </title>
     <link href="css/style.css" rel="stylesheet"/>
   </head>
   <body>     
-    <header class="main-header"> 
+    <header class="main-header">     
       <div class="main-header__top">       
-        <nav class="main-nav">          
-          <div class="main-nav__logo"> <a href="#"><img src="img/img_logo.png" width="75" height="22" alt="PINK"/></a></div>
-          <div class="main-nav__menu"><a href="#"><i class="main-nav__icon">   </i></a>
-            <ul class="main-nav__items">
-              <li>Информация</li>
-              <li>Возможности </li>
-              <li>Отзывы</li>
-              <li>Стоимость</li>
-            </ul>
-          </div>
-        </nav>
-        <div class="intro">
-          <div class="intro__layout">
+        <div class="main-header__layout">
+          <nav class="main-nav">          
+            <div class="main-nav__logo"> <a href="#"><img src="img/img_logo.png" width="75" height="22" alt="PINK"/></a></div>
+            <div class="main-nav__menu"><a href="#" class="main-nav__main-link"><i class="main-nav__icon">   </i></a>
+              <ul class="main-nav__items">
+                <li class="main-nav__item"> <a href="#" class="main-nav__link main-nav__link--active">Главная  </a></li>
+                <li class="main-nav__item"> <a href="#" class="main-nav__link">Фотографии</a></li>
+                <li class="main-nav__item"> <a href="#" class="main-nav__link">Конкурс</a></li>
+                <li class="main-nav__item"> <a href="#" class="main-nav__link">Html Academy</a></li>
+              </ul>
+            </div>
+          </nav>
+          <article class="intro intro--mainpage">
             <h1 class="intro__header">Взгляните на жизнь иначе!                          </h1>
-          </div>
-        </div>
-        <div class="download">
-          <div class="download__layout"><a href="#" class="btn btn--upload">Скачать приложение</a>
-            <div class="download__items"><a href="#" class="download__item"><i class="download__icon download__icon--apple"></i></a><a href="#" class="download__item">             <i class="download__icon download__icon--android"></i></a><a href="#" class="download__item">             <i class="download__icon download__icon--microsoft"></i></a></div>
-            <p class="download__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
-          </div>
+            <div class="download">         <a href="#" class="btn btn--download">Скачать приложение</a>
+              <div class="download__items"><a href="#" class="download__item"><i class="download__icon download__icon--apple"></i></a><a href="#" class="download__item">             <i class="download__icon download__icon--android"></i></a><a href="#" class="download__item">             <i class="download__icon download__icon--microsoft"></i></a>
+                <p class="download__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </header>
-    <main>
-      <div class="information">
+    <main class="page-main">
+      <section class="information">
         <div class="information__layout">  
           <div class="information__title">         
             <p>Устали от серости мегаполиса?</p>
@@ -50,101 +50,115 @@
             </div>
             <div class="advantages">           
               <h3 class="advantages__title">Заводит новых друзей</h3>
-              <p class="advantages__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых           </p>
+              <p class="advantages__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
             </div>
           </div>
         </div>
-      </div>
+      </section>
+      <section class="application-profit">
+        <div class="application-profit__layout">
+          <h3 class="application-profit__title">Эффект на 24 часа!</h3>
+          <p class="application-profit__description">Британские ученые провели исследования и доказали, что положительный эффект               от использования приложения длится целые сутки!</p><a href="#" class="application-profit__link">Узнать больше об использовании</a>
+        </div>
+      </section>
       <div class="review"> 
         <div class="review__layout">
-          <blockquote class="review__slide review__slide--active">
-            <cite class="review__title">Николай Петров
-              <p class="review__body">
-                "Это приложение перевернуло мой мир и позволило 
-                по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой
-                в комментариях к выложенной фотографии!"
-              </p>
-            </cite>
-          </blockquote>
-          <blockquote class="review__slide review__slide">
-            <cite class="review__title">Николай Петров
-              <p class="review__body">
-                "Это приложение перевернуло мой мир и позволило 
-                по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой
-                в комментариях к выложенной фотографии!"                
-              </p>
-            </cite>
-          </blockquote>
-          <blockquote class="review__slide review__slide">
-            <cite class="review__title">Николай Петров
-              <p class="review__body">
-                "Это приложение перевернуло мой мир и позволило 
-                по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой
-                в комментариях к выложенной фотографии!"                                        
-              </p>
-            </cite>
-          </blockquote>
+          <div class="review__prev"></div>
+          <section class="review__slide review__slide--active">
+            <h4 class="review__title">Николай Петров</h4>
+            <p class="review__details">25 лет, водитель трамвая </p>
+            <p class="review__body">
+              "Это приложение перевернуло мой мир и позволило 
+              по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой
+              в комментариях к выложенной фотографии!"
+            </p>
+          </section>
+          <section class="review__slide">
+            <h4 class="review__title">Николай Петров</h4>
+            <p class="review__details">25 лет, водитель трамвая </p>
+            <p class="review__body">
+              "Это приложение перевернуло мой мир и позволило 
+              по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой
+              в комментариях к выложенной фотографии!"              
+            </p>
+          </section>
+          <section class="review__slide">
+            <h4 class="review__title">Николай Петров</h4>
+            <p class="review__details">25 лет, водитель трамвая </p>
+            <p class="review__body">
+              "Это приложение перевернуло мой мир и позволило 
+              по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой
+              в комментариях к выложенной фотографии!"                                                 
+            </p>
+          </section>
           <div class="controls"><a href="#" class="controls__item controls__item--active">             </a><a href="#" class="controls__item"></a><a href="#" class="controls__item"> </a></div>
+          <div class="review__next"> </div>
         </div>
       </div>
-      <div class="price">       
+      <section class="price">       
         <div class="price__layout">
-          <div class="table">
-            <div class="table__col">
-              <div class="table__header">
-                <div class="table__layout">
-                  <h4 class="table__title">Стандарт</h4>
-                  <p class="table__value">3,99 USD</p>
-                </div>
-              </div>
-              <div class="table__body">             
-                <div class="table__row">Розовый цвет<i class="icon-yes"> </i></div>
-                <div class="table__row"> Смайлики<i class="icon-no"> </i></div>
-                <div class="table__row"> Комментарии        <i class="icon-no"> </i></div>
-              </div>
-            </div>
-            <div class="table__col table__col--active">
-              <div class="table__header"><i class="table__icon-hit"></i>
-                <div class="table__layout">
-                  <h4 class="table__title">Стандарт</h4>
-                  <p class="table__value">3,99 USD</p>
-                </div>
-              </div>
-              <div class="table__body">             
-                <div class="table__row"> Розовый цвет<i class="table__icon-yes"></i></div>
-                <div class="table__row"> Смайлики<i class="table__icon-yes"></i></div>
-                <div class="table__row"> Комментарии<i class="table__icon-no"></i></div>
-              </div>
-            </div>
-            <div class="table__col">
-              <div class="table__header">
-                <div class="table__layout">
-                  <h4 class="table__title">Стандарт</h4>
-                  <p class="table__value">3,99 USD</p>
-                </div>
-              </div>
-              <div class="table__body">
-                <div class="table__row"> Розовый цвет<i class="table__icon-yes"></i></div>
-                <div class="table__row"> Смайлики<i class="table__icon-yes"></i></div>
-                <div class="table__row"> Комментарии                <i class="table__icon-yes"></i></div>
-              </div>
-            </div>
-          </div>
+          <table class="table">
+            <tr class="table__row">
+              <td class="table__cell table__cell--first"> </td>
+              <td class="table__cell">
+                <h4 class="table__title">База</h4>
+                <p class="table__value">1,99 USD  </p>
+              </td>
+              <td class="table__cell table__cell--active">
+                <h4 class="table__title">Стандарт</h4>
+                <p class="table__value">3,99 USD  </p>
+              </td>
+              <td class="table__cell">
+                <h4 class="table__title">Анлим</h4>
+                <p class="table__value">9,99 USD  </p>
+              </td>
+            </tr>
+            <tr class="table__row"> 
+              <td class="table__cell"> <span class="table__description">Розовый цвет          </span></td>
+              <td class="table__cell table__cell--active"> <span class="table__description">Розовый цвет</span><i class="table__icon-yes">          </i></td>
+              <td class="table__cell"> <span class="table__description">Розовый цвет</span><i class="table__icon-yes">                        </i></td>
+              <td class="table__cell"> <span class="table__description">Розовый цвет</span><i class="table__icon-yes">                        </i></td>
+            </tr>
+            <tr class="table__row"> 
+              <td class="table__cell"> <span class="table__description">Смайлики          </span></td>
+              <td class="table__cell"> <span class="table__description">Смайлики</span><i class="table__icon-no">          </i></td>
+              <td class="table__cell table__cell--active"> <span class="table__description">Смайлики</span><i class="table__icon-yes">                        </i></td>
+              <td class="table__cell"> <span class="table__description">Смайлики</span><i class="table__icon-yes">                     </i></td>
+            </tr>
+            <tr class="table__row"> 
+              <td class="table__cell"> <span class="table__description">Комментарии          </span></td>
+              <td class="table__cell"> <span class="table__description">Комментарии</span><i class="table__icon-no">          </i></td>
+              <td class="table__cell table__cell--active"> <span class="table__description">Комментарии</span><i class="table__icon-no">                        </i></td>
+              <td class="table__cell"> <span class="table__description">Комментарии</span><i class="table__icon-yes">                                                 </i></td>
+            </tr>
+          </table>
         </div>
         <div class="controls"><a href="#" class="controls__item"></a><a href="#" class="controls__item controls__item--active">             </a><a href="#" class="controls__item"> </a></div>
-      </div>
-      <div class="contacts">
+      </section>
+      <section class="contacts">
         <div class="contacts__layout">
           <h2 class="contacts__header">Остались вопросы? Свяжитесь с нами!</h2>
-          <p class="contacts__name">Звоните:</p>
-          <p class="contacts__description">+7 (812) 555-66-66</p>
-          <p class="contacts__name">Пишите:</p>
-          <p class="contacts__description">mail@htmlacademy.ru</p>
-          <p class="contacts__name">Приезжайте в гости:</p>
-          <p class="contacts__description">ул. Большая Конюшенная, 19/8</p>
+          <div class="contacts__contain">
+            <p class="contacts__name">Звоните:</p>
+            <p class="contacts__description">+7 (812) 555-66-66</p>
+          </div>
+          <div class="contacts__contain">
+            <p class="contacts__name">Пишите:</p>
+            <p class="contacts__description">mail@htmlacademy.ru</p>
+          </div>
+          <div class="contacts__contain">
+            <p class="contacts__name">Приезжайте в гости:</p>
+            <p class="contacts__description">ул. Большая Конюшенная, 19/8</p>
+          </div>
         </div>
         <div class="contacts__map"></div>
-      </div>
+      </section>
     </main>
+    <footer class="main-footer main-footer--mainpage">
+      <div class="main-footer__layout">           <a href="index.html" class="main-footer__logo"><img src="img/img_logo1.png" width="147" height="40" alt="PINK"/></a>
+        <div class="socials"><i class="socials__icon socials__icon--twitter"></i><i class="socials__icon socials__icon--fb"></i><i class="socials__icon socials__icon--youtube"></i></div>
+        <div class="htmlacademy">Разработано<img src="img/img_htmlacademy.png" width="27" height="34" alt="htmlacademy"/></div>
+      </div>
+    </footer>
   </body>
 </html>

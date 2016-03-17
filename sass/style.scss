@@ -26,15 +26,22 @@
 /* Блок с информацией */
 @import "blocks/information";
 
+@import "blocks/page-main";  
+
+@import "blocks/block-header";  
+
 /* Блок преимуществ */
 
-@import "blocks/advantages";
+@import "blocks/advantages"; 
+
+@import "blocks/application-profit"; 
 
 @import "blocks/review";
 @import "blocks/controls";
+@import "blocks/socials";
 
 /* подключаем блок с формой */
-@import "blocks/form";
+@import "blocks/form"; 
 
 /* блок фотографий */
 @import "blocks/photo";
@@ -50,7 +57,6 @@
 
 @import "blocks/image";
 
-
 /* Загрузить фото */
 @import "blocks/upload";
 
@@ -61,8 +67,29 @@
 
     
 
-body{
+body{    
     
-  width: $width-body;    
-      
+    @media(max-width: 699px){
+        
+        min-width: 320px;
+        
+    }
+    @media(min-width: 700px) and (max-width: 1199px){
+        
+        min-width: 700px;
+        
+    }
+    @media(min-width: 1200px){
+        
+        min-width: 1200px;
+        
+    }
+  
+  width: $width-body;   
+    
+}
+
+main{
+    
+    
 }

@@ -1,17 +1,67 @@
-.intro{
+.intro{   
+  
+  height: 392px;
+  outline: 1px solid pink;
     
+  min-width: 300px;
+  
+  
     
-  &__layout{
+  &:before{
+     
+    content: "intro";  
+    background-color: rgba(150, 0, 150, .5);      
+        
+  }        
 
-    @include layout;
-
-  }
 
   &__header{
 
-    font: 100 #{$font-size-h1} / #{$line-height} $open-sans-light;
-    color: $color-white;        
-    text-align: center;
+    font: 100 #{$font-size-h1} / #{$line-height} $open-sans-light;         
+    text-align: center; 
+  }
+    
+}
+
+
+@media(min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px){
+        
+  .intro{
+    
+    &__layout{
+      
+      @include layout();  
+      outline: 1px solid $color-blue;
+      
+    }
+        
+    &--mainpage{
+
+      float: left;    
+
+    } 
+        
+  }
+    
+}
+
+@media(min-width: $width-content-desktop){
+    
+  .intro{   
+    
+    &__layout{
+      
+      @include layout();   
+      outline: 1px solid $color-blue;
+      
+    }    
+    
+    &--mainpage{
+
+      float: left;    
+
+    }
+    
   }
     
 }

@@ -2,39 +2,43 @@
 html
   head    
     meta(charset="utf-8")
-    title PINK adaptive    
+    meta(name="viewport" content="width=device-width,initial-scale=1")
+    title PINK adaptive 
     link(href="css/style.css" rel="stylesheet")
   body      
-    header.main-header 
+    header.main-header      
       div.main-header__top        
-        nav.main-nav           
-          div.main-nav__logo 
-            a(href="#")
-              img(src="img/img_logo.png" width="75" height="22" alt="PINK")
-          div.main-nav__menu
-            a(href="#")
-              i.main-nav__icon    
-            ul.main-nav__items
-              li Информация
-              li Возможности 
-              li Отзывы
-              li Стоимость
-        div.intro
-          div.intro__layout
+       div.main-header__layout
+         nav.main-nav           
+           div.main-nav__logo 
+             a(href="#")
+               img(src="img/img_logo.png" width="75" height="22" alt="PINK")
+           div.main-nav__menu
+             a(href="#").main-nav__main-link
+               i.main-nav__icon    
+             ul.main-nav__items
+               li.main-nav__item 
+                 a(href="#").main-nav__link.main-nav__link--active Главная  
+               li.main-nav__item 
+                 a(href="#").main-nav__link Фотографии
+               li.main-nav__item 
+                 a(href="#").main-nav__link Конкурс
+               li.main-nav__item 
+                 a(href="#").main-nav__link Html Academy
+          article.intro.intro--mainpage
             h1.intro__header Взгляните на жизнь иначе!                          
-        div.download
-          div.download__layout
-            a(href="#").btn.btn--upload Скачать приложение
-            div.download__items
-              a(href="#").download__item
-                i.download__icon.download__icon--apple
-              a(href="#").download__item              
-                i.download__icon.download__icon--android
-              a(href="#").download__item              
-                i.download__icon.download__icon--microsoft
-            p.download__description Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
-    main
-      div.information
+            div.download          
+              a(href="#").btn.btn--download Скачать приложение
+              div.download__items
+                a(href="#").download__item
+                  i.download__icon.download__icon--apple
+                a(href="#").download__item              
+                  i.download__icon.download__icon--android
+                a(href="#").download__item              
+                  i.download__icon.download__icon--microsoft
+                p.download__description Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
+    main.page-main
+      section.information
         div.information__layout   
           div.information__title          
             p Устали от серости мегаполиса?
@@ -48,87 +52,124 @@ html
               p.advantages__description Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект    
             div.advantages            
               h3.advantages__title Заводит новых друзей
-              p.advantages__description Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых           
+              p.advantages__description Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
+      section.application-profit
+        div.application-profit__layout
+          h3.application-profit__title Эффект на 24 часа!
+          p.application-profit__description Британские ученые провели исследования и доказали, что положительный эффект               от использования приложения длится целые сутки!
+          a(href="#").application-profit__link Узнать больше об использовании
+              
+            
       div.review 
         div.review__layout
-          blockquote.review__slide.review__slide--active
-            cite.review__title Николай Петров
-              p.review__body
-                "Это приложение перевернуло мой мир и позволило 
-                по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой
-                в комментариях к выложенной фотографии!"
-          blockquote.review__slide.review__slide
-            cite.review__title Николай Петров
-              p.review__body
-                "Это приложение перевернуло мой мир и позволило 
-                по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой
-                в комментариях к выложенной фотографии!"                
-          blockquote.review__slide.review__slide
-            cite.review__title Николай Петров
-              p.review__body
-                "Это приложение перевернуло мой мир и позволило 
-                по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой
-                в комментариях к выложенной фотографии!"                                        
+          div.review__prev
+          section.review__slide.review__slide--active
+            h4.review__title Николай Петров
+            p.review__details 25 лет, водитель трамвая 
+            p.review__body
+              "Это приложение перевернуло мой мир и позволило 
+              по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой
+              в комментариях к выложенной фотографии!"
+          section.review__slide
+            h4.review__title Николай Петров
+            p.review__details 25 лет, водитель трамвая 
+            p.review__body
+              "Это приложение перевернуло мой мир и позволило 
+              по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой
+              в комментариях к выложенной фотографии!"              
+          section.review__slide
+            h4.review__title Николай Петров
+            p.review__details 25 лет, водитель трамвая 
+            p.review__body
+              "Это приложение перевернуло мой мир и позволило 
+              по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой
+              в комментариях к выложенной фотографии!"                                                 
           div.controls
             a(href="#").controls__item.controls__item--active              
             a(href="#").controls__item
-            a(href="#").controls__item  
-      div.price        
+            a(href="#").controls__item 
+          div.review__next  
+      section.price        
         div.price__layout
-          div.table
-            div.table__col
-              div.table__header
-                div.table__layout
-                  h4.table__title Стандарт
-                  p.table__value 3,99 USD
-              div.table__body              
-                div.table__row Розовый цвет
-                  i.icon-yes 
-                div.table__row  Смайлики
-                  i.icon-no 
-                div.table__row  Комментарии        
-                  i.icon-no 
-            div.table__col.table__col--active
-              div.table__header
-                i.table__icon-hit
-                div.table__layout
-                  h4.table__title Стандарт
-                  p.table__value 3,99 USD
-              div.table__body              
-                div.table__row  Розовый цвет
-                  i.table__icon-yes
-                div.table__row  Смайлики
-                  i.table__icon-yes
-                div.table__row  Комментарии
-                  i.table__icon-no
-            div.table__col
-              div.table__header
-                div.table__layout
-                  h4.table__title Стандарт
-                  p.table__value 3,99 USD
-              div.table__body
-                div.table__row  Розовый цвет
-                  i.table__icon-yes
-                div.table__row  Смайлики
-                  i.table__icon-yes
-                div.table__row  Комментарии                
-                  i.table__icon-yes
+          table.table
+            tr.table__row
+              td.table__cell.table__cell--first  
+              td.table__cell
+                h4.table__title База
+                p.table__value 1,99 USD  
+              td.table__cell.table__cell--active
+                h4.table__title Стандарт
+                p.table__value 3,99 USD  
+              td.table__cell
+                h4.table__title Анлим
+                p.table__value 9,99 USD  
+            tr.table__row  
+              td.table__cell 
+                span.table__description Розовый цвет          
+              td.table__cell.table__cell--active 
+                span.table__description Розовый цвет
+                i.table__icon-yes           
+              td.table__cell 
+                span.table__description Розовый цвет
+                i.table__icon-yes                         
+              td.table__cell 
+                span.table__description Розовый цвет
+                i.table__icon-yes                         
+            tr.table__row  
+              td.table__cell 
+                span.table__description Смайлики          
+              td.table__cell 
+                span.table__description Смайлики
+                i.table__icon-no           
+              td.table__cell.table__cell--active 
+                span.table__description Смайлики
+                i.table__icon-yes                         
+              td.table__cell 
+                span.table__description Смайлики
+                i.table__icon-yes                      
+            tr.table__row  
+              td.table__cell 
+                span.table__description Комментарии          
+              td.table__cell 
+                span.table__description Комментарии
+                i.table__icon-no           
+              td.table__cell.table__cell--active 
+                span.table__description Комментарии
+                i.table__icon-no                         
+              td.table__cell 
+                span.table__description Комментарии
+                i.table__icon-yes                                                  
         div.controls
           a(href="#").controls__item
           a(href="#").controls__item.controls__item--active              
           a(href="#").controls__item  
-      div.contacts
+      section.contacts
         div.contacts__layout
           h2.contacts__header Остались вопросы? Свяжитесь с нами!
-          p.contacts__name Звоните:
-          p.contacts__description +7 (812) 555-66-66
+          
+          div.contacts__contain
+            p.contacts__name Звоните:
+            p.contacts__description +7 (812) 555-66-66
         
-          p.contacts__name Пишите:
-          p.contacts__description mail@htmlacademy.ru
+          div.contacts__contain
+            p.contacts__name Пишите:
+            p.contacts__description mail@htmlacademy.ru
         
-          p.contacts__name Приезжайте в гости:
-          p.contacts__description ул. Большая Конюшенная, 19/8
+          div.contacts__contain
+            p.contacts__name Приезжайте в гости:
+            p.contacts__description ул. Большая Конюшенная, 19/8
         div.contacts__map
+    footer.main-footer.main-footer--mainpage
+      div.main-footer__layout            
+        a(href="index.html").main-footer__logo
+          img(src="img/img_logo1.png" width="147" height="40" alt="PINK")
+        div.socials
+          i.socials__icon.socials__icon--twitter
+          i.socials__icon.socials__icon--fb
+          i.socials__icon.socials__icon--youtube
+        div.htmlacademy
+          Разработано
+          img(src="img/img_htmlacademy.png" width="27" height="34" alt="htmlacademy")        
           
 
             

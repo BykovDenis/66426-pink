@@ -1,0 +1,58 @@
+.application-profit{    
+  
+  display: none;   
+    
+}
+
+@media (min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px),(min-width: $width-content-desktop){
+
+  .application-profit{
+    
+    display: block; 
+    outline: 1px solid $color-red;
+    position: relative; 
+      
+    text-align: left;
+    margin: 0 auto;
+    
+      
+    &__layout{
+ 
+      @include layout();
+      
+    }         
+
+      
+    &:before{
+          
+      content: "application-profit";
+      background-color: rgba(255, 150, 150, 0.4);
+          
+    }
+    
+  }
+    
+}
+
+@media (min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px){
+    
+  .application-profit{
+    
+    padding-left: 310px;
+    width: 300px;
+      
+  }    
+    
+}
+
+
+@media (min-width: $width-content-desktop){
+    
+  .application-profit{
+    
+    padding-left: 366px;
+    width: 530px; 
+      
+  }
+    
+}

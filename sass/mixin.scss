@@ -1,16 +1,30 @@
 /* Миксины */
 
 @mixin layout{
-    
-  padding: 0 20px;    
+      
+  padding: 0 5.4% ;    
   margin: 0 auto;
+  
+    
+  @media(min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px) {
+  
+    padding: 0 5.5%;      
+      
+  }     
+    
+  @media(min-width: $width-content-desktop){
+  
+    padding: 0 130px;
+    max-width: 940px;
+      
+  }      
     
 }
 
 @mixin contain-width{
     
-  margin: 0 auto; 
-  width: 320px;
+  margin: 0 auto;   
+  
     
 }
 
@@ -19,5 +33,13 @@
   border-top: 40px solid $color-white;
   border-right:320px solid $color-gray;
   margin-bottom: 53px;
+    
+}
+
+@mixin clearfix{
+    
+    display: table;
+    clear: both;
+    content: '';    
     
 }

@@ -1,0 +1,25 @@
+.block-header{
+  
+  outline: 1px solid $color-red;
+    
+  &:before{
+    
+    content: "block-header"; 
+    background-color: rgba(255, 150, 150, 0.4);
+      
+  }
+    
+  &__layout{
+
+    @include layout();
+
+  }
+  
+  &__description{
+    
+    outline: 1px solid $color-red;  
+    text-align: center;
+    
+  }
+    
+}
