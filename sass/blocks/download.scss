@@ -1,15 +1,95 @@
 .download{
-    
+
+  text-align: center;
+
+  background: url(../../img/img_iphone5_hand.png) 0 173px no-repeat;
   min-width: 300px;
-    
-  height: 270px;
-  outline: 1px solid rgba(0, 150, 150, 1);
-    
+  height: 458px;
+
   &:before{
 
-    content: "download";
-    background-color: rgba(0, 150, 150, .4);
-       
+    background: url(../../img/img_screen.jpg) 104px 205px no-repeat;
+    width:300px;
+    height: 458px;
+    content: '';
+    display: block;
+
   }
-    
+
+  &__btn{
+
+    display: inline-block;
+    vertical-align: top;
+    padding: 15px 0;
+    margin: 28px 0;
+    margin-bottom: 32px;
+    width: 275px;
+    text-align: center;
+    font: 600 #{$font-size + 4px} / #{$line-height - 6px} 'Open Sans Bold';
+    color: $color-white;
+    text-decoration: none;
+    border: 3px solid $color-white;
+    border-radius: 40px;
+
+  }
+
+  &__items{
+
+    text-align: center;
+
+  }
+
+  &__item{
+
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 37px
+
+  }
+
+  &__item:last-of-type{
+
+    margin-right: 0;
+
+  }
+
+  &__icon{
+
+    display: block;
+    width: 44px;
+    height: 56px;
+
+    &--apple{
+
+      background: url(../../img/logo-apple.svg) 0 0 no-repeat;
+
+    }
+
+    &--android{
+
+      background: url(../../img/logo-android.svg) 0 9px no-repeat;
+
+    }
+
+    &--microsoft{
+
+      background: url(../../img/logo-microsoft.svg) 0 13px no-repeat;
+
+    }
+
+  }
+
+  &__description{
+
+
+    margin: 23px 25px;
+    margin-bottom: 32px;
+    font: 100 #{$font-size} / #{$font-size * 1.71}  'Open Sans Light';
+    color: $color-white;
+
+
+
+  }
+
+
 }

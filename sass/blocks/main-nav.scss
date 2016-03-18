@@ -1,105 +1,106 @@
 .main-nav{
-    
-  outline: 1px solid yellow;
-    
-  &__layout{
-   
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: $width-content-mobile;
+
+  &__layout {
+
     @include layout();
-        
+
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    background-color: rgba(0, 0, 0, .1);
+
   }
+
 
   &__logo img{
 
     float: left;
-    display: block;    
+    display: block;
     width: 75px;
     height: 22px;
-    
-    outline: 1px solid yellow;
     padding: 22px 0;
-
-  &:before{        
-
-    content: "__logo";
-    background-color: rgba(180, 180, 50, .3);
-
-   }
-
  }
-  
+
 
   &__main-link{
 
-    float: right;       
-    outline: 1px solid yellow; 
+    float: right;
     padding: 20px 0;
-      
+
   }
-  
+
   &__icon{
-    
+
     display: block;
     background: url(../../img/icon-menu-burger.svg) 0 0 no-repeat;
     width: 50px;
-    height: 25px; 
-    
+    height: 25px;
+
   }
-    
+
   &__items{
 
     display: none;
 
   }
-  
+
   &__top{
-    
+
+    @include layout();
+
     &:after{
 
         @include clearfix();
 
     }
-    
+
     background-color: rgba(0,0,0,0.3);
-    
-        
+
+
   }
-    
+
 }
 
 @media(min-width: $width-content-desktop){
- 
+
   .main-nav{
-    
-    
-  
+
+
+
     &__items{
-     
+
       display: block;
       padding: 0;
       text-align: center;
-      
+
     }
-       
+
     &__item{
-      
+
       display: inline-block;
-      
-          
+
+
     }
-    
+
     &__link{
-      
+
       color: $color-blue;
       font-size: 12px;
-      
+
     }
-    
+
     &__main-link{
-      
-      display: none; 
-      
+
+      display: none;
+
     }
-    
+
   }
-  
+
 }

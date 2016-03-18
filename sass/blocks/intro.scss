@@ -1,67 +1,63 @@
-.intro{   
-  
-  height: 392px;
-  outline: 1px solid pink;
-    
-  min-width: 300px;
-  
-  
-    
-  &:before{
-     
-    content: "intro";  
-    background-color: rgba(150, 0, 150, .5);      
-        
-  }        
+.intro{
 
+  position: relative;
+  background: url(../../img/bg-back-mobile.jpg) -189px -5px no-repeat $color-blue-dark1;
+
+  height: 730px;
+  min-width: 300px;
 
   &__header{
 
-    font: 100 #{$font-size-h1} / #{$line-height} $open-sans-light;         
-    text-align: center; 
+    font: 100 #{$font-size-h1} / #{$line-height} $open-sans-light;
+    text-align: center;
   }
-    
+
+  &--mainpage &__header{
+
+     display: none;
+
+  }
+
 }
 
 
 @media(min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px){
-        
+
   .intro{
-    
+
     &__layout{
-      
-      @include layout();  
-      outline: 1px solid $color-blue;
-      
+
+      @include layout();
+
     }
-        
+
     &--mainpage{
 
-      float: left;    
+      float: left;
 
-    } 
-        
+    }
+
   }
-    
+
 }
 
 @media(min-width: $width-content-desktop){
-    
-  .intro{   
-    
-    &__layout{
-      
-      @include layout();   
-      outline: 1px solid $color-blue;
-      
-    }    
-    
-    &--mainpage{
 
-      float: left;    
+  .intro{
+
+    &__layout{
+
+      @include layout();
+      outline: 1px solid $color-blue;
 
     }
-    
+
+    &--mainpage{
+
+      float: left;
+
+    }
+
   }
-    
+
 }

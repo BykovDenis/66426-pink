@@ -26,22 +26,22 @@
 /* Блок с информацией */
 @import "blocks/information";
 
-@import "blocks/page-main";  
+@import "blocks/page-main";
 
-@import "blocks/block-header";  
+@import "blocks/block-header";
 
 /* Блок преимуществ */
 
-@import "blocks/advantages"; 
+@import "blocks/advantages";
 
-@import "blocks/application-profit"; 
+@import "blocks/application-profit";
 
 @import "blocks/review";
 @import "blocks/controls";
 @import "blocks/socials";
 
 /* подключаем блок с формой */
-@import "blocks/form"; 
+@import "blocks/form";
 
 /* блок фотографий */
 @import "blocks/photo";
@@ -62,37 +62,38 @@
 
 /* Подвал */
 @import "blocks/main-footer";
-    
+
 @import "blocks/htmlacademy";
 
-    
 
-body{  
-  
+
+body{
+
+  /*
+
   @media (max-width: $width-content-mobile) and (max-width: $width-content-tablet - 1px){
-    
-    min-width:  $width-content-mobile;   
-    
-  }
-    
- 
-  @media (min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px){
-    
-    min-width:  $width-content-tablet; 
-    
-  }
-  
-  @media (min-width: $width-content-desktop){
-    
-    min-width:  $width-content-desktop; 
-    
-  }
-  
-  /* width: $width-body;   */
-    
-}
 
-main{
-    
-    
+    min-width:  $width-content-mobile;
+
+  }
+
+
+  @media (min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px){
+
+    min-width:  $width-content-tablet;
+
+  }
+
+  @media (min-width: $width-content-desktop){
+
+    min-width:  $width-content-desktop;
+
+  }
+
+  /* width: $width-body;    */
+
+
+  width: 320px;
+  max-width: 320px;
+
 }

@@ -1,18 +1,18 @@
 .main-header{
 
-    
-    
+  position: relative;
+
   &:after{
-        
-    @include clearfix;      
-        
+
+    @include clearfix;
+
   }
 
 
   &__layout{
- 
+
     @include layout;
 
   }
 
-}    
+}
