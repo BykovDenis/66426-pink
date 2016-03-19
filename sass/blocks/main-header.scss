@@ -29,3 +29,13 @@
   }
 
 }
+
+@media (min-width: $width-content-desktop){
+
+  .main-header {
+
+    width: $width-content-desktop;
+
+  }
+
+}

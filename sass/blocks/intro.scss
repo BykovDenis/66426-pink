@@ -1,15 +1,20 @@
 .intro{
 
   position: relative;
-  background: url(../../img/bg-back-mobile.jpg) -189px -5px no-repeat $color-blue-dark1;
-
-  height: 730px;
   min-width: $width-content-mobile;
+
+
+  &:after{
+
+    @include clearfix();
+
+  }
 
   &__header{
 
     font: 100 #{$font-size-h1} / #{$line-height} $open-sans-light;
     text-align: center;
+    margin: 0;
   }
 
   &--mainpage &__header{
@@ -26,28 +31,13 @@
 
   .intro{
 
-    background: url(../../img/bg-back-tablet.jpg) -250px 0px no-repeat $color-blue-dark1;
-    width: $width-content-tablet;
-
-
-    &__layout{
-
-      outline: 1px solid red;
-      float: left;
-      width: 300px;
-      margin: 165px 0 150px;
-
-
-    }
-
     &--mainpage &__header{
 
       display: block;
       float: left;
       margin: 0 40px;
-      font: 100 #{$font-size-h1} /  1 "Open Sans Light";
+      font: 100 #{$font-size-h1} /  1.2 "Open Sans Light";
       color: $color-white;
-
 
     }
 
@@ -60,21 +50,20 @@
 
   .intro{
 
-    &__layout{
-
-      @include layout();
-      outline: 1px solid $color-blue;
-
-    }
-
     &--mainpage{
 
       float: left;
 
     }
 
+    &--mainpage &__header {
 
+      display: block;
+      font: 100 #{$font-size-h1 + 10px} /  1.2 "Open Sans Light";
+      color: $color-white;
+      padding: 0 10px;
 
+    }
 
   }
 
