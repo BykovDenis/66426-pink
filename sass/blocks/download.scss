@@ -2,14 +2,13 @@
 
   text-align: center;
 
-  background: url(../../img/img_iphone5_hand.png) 0 173px no-repeat;
-  min-width: 300px;
+  background: url(../../img/iphone-hand-mobile.png) 0 173px no-repeat;
   height: 458px;
+  width: $width-content-mobile;
 
   &:before{
 
-    background: url(../../img/img_screen.jpg) 104px 205px no-repeat;
-    width:300px;
+
     height: 458px;
     content: '';
     display: block;
@@ -87,9 +86,34 @@
     font: 100 #{$font-size} / #{$font-size * 1.71}  'Open Sans Light';
     color: $color-white;
 
+  }
 
+}
+
+@media (min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px) {
+
+  .download {
+
+    &:before{
+
+      height: auto;
+      content: '';
+      display: block;
+
+    }
+
+    height: auto;
+
+    background: url(../../img/iphone-hand-tablet.png) 171px 20px no-repeat;
+    background-size: 482px 545px;
+    width: $width-content-mobile;
 
   }
 
+  &__btn{
+
+    width: 300px;
+
+  }
 
 }

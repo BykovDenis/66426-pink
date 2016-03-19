@@ -1,17 +1,30 @@
 .main-header{
 
+  width: $width-content-mobile;
+  @include contain-width();
+
   position: relative;
 
   &:after{
 
-    @include clearfix;
+    @include clearfix();
 
   }
 
 
   &__layout{
 
-    @include layout;
+    @include layout();
+
+  }
+
+}
+
+@media (min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px){
+
+  .main-header {
+
+    width: $width-content-tablet;
 
   }
 

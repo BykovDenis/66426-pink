@@ -18,13 +18,14 @@
   }
 
 
-  &__logo img{
+  &__logo {
 
     float: left;
     display: block;
     width: 75px;
     height: 22px;
     padding: 22px 0;
+    background: url(../../img/logo-pink-white-mobile.svg) 0 22px no-repeat;
  }
 
 
@@ -60,10 +61,36 @@
 
     }
 
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0,0,0,0.4);
 
 
   }
+
+}
+
+@media (min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px){
+
+ .main-nav {
+
+   width: $width-content-tablet;
+
+   &__logo {
+
+     float: left;
+     display: block;
+     width: 147px;
+     height: 65px;
+     padding: 22px 0;
+     background: url(../../img/logotype-white-tablet.png) 0 27px no-repeat;
+   }
+
+   &__main-link{
+
+     padding: 43px 0;
+
+   }
+
+ }
 
 }
 

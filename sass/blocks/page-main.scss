@@ -1,4 +1,6 @@
 .page-main{
 
+  width: $width-content-mobile;
+  @include contain-width();
 
 }

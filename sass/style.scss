@@ -69,11 +69,13 @@
 
 body{
 
-  /*
+  margin: 0 auto;
 
   @media (max-width: $width-content-mobile) and (max-width: $width-content-tablet - 1px){
 
-    min-width:  $width-content-mobile;
+    width: $width-content-mobile;
+    max-width: $width-content-mobile;
+
 
   }
 
@@ -93,7 +95,6 @@ body{
   /* width: $width-body;    */
 
 
-  width: 320px;
-  max-width: 320px;
+
 
 }

@@ -4,7 +4,7 @@
   background: url(../../img/bg-back-mobile.jpg) -189px -5px no-repeat $color-blue-dark1;
 
   height: 730px;
-  min-width: 300px;
+  min-width: $width-content-mobile;
 
   &__header{
 
@@ -15,6 +15,7 @@
   &--mainpage &__header{
 
      display: none;
+     margin: 0;
 
   }
 
@@ -25,17 +26,31 @@
 
   .intro{
 
+    background: url(../../img/bg-back-tablet.jpg) -250px 0px no-repeat $color-blue-dark1;
+    width: $width-content-tablet;
+
+
     &__layout{
 
-      @include layout();
-
-    }
-
-    &--mainpage{
-
+      outline: 1px solid red;
       float: left;
+      width: 300px;
+      margin: 165px 0 150px;
+
 
     }
+
+    &--mainpage &__header{
+
+      display: block;
+      float: left;
+      margin: 0 40px;
+      font: 100 #{$font-size-h1} /  1 "Open Sans Light";
+      color: $color-white;
+
+
+    }
+
 
   }
 
@@ -57,6 +72,9 @@
       float: left;
 
     }
+
+
+
 
   }
 
