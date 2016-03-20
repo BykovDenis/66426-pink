@@ -1,6 +1,6 @@
 .main-footer{
 
-  
+
   @include page-width();
 
   &:after{
@@ -9,16 +9,8 @@
 
   }
 
-
   outline: 1px solid rgba(50, 150, 50, .5);
   text-align: center;
-
-  &:before{
-
-    content: 'main-footer';
-    background-color: rgba(50, 150, 50, .1);
-
-  }
 
   &__layout{
 
@@ -45,6 +37,15 @@
   .main-footer{
 
     display: block;
+    border-top: 1px solid transparent;
+
+    &__layout{
+
+      @include layout();
+      margin-top: 30px;
+      margin-bottom: 30px;
+
+    }
 
     &__logo{
 

@@ -1,21 +1,22 @@
 .socials{
-    
+
   display: inline;
-  width: 200px;    
-    
+  width: 200px;
+
   &__icon{
 
     display: inline-block;
     vertical-align: top;
-      
+
     width: 45px;
     height: 45px;
-      
+
     margin-right: 12px;
-    
+
     border: 3px solid $color-gray;
     border-radius: 50%;
-    
+
+
   }
-    
+
 }
