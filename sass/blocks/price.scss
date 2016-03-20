@@ -1,14 +1,9 @@
 .price{
 
   @include page-width();
-  outline: 1px solid rgba(150, 50, 150, .5);
+  overflow-x: hidden;
 
-  &:before{
-
-    content: 'price';
-    background-color: rgba(150, 50, 150, .1);
-
-  }
+  background-color: $color-gray;
 
   &__layout{
 
@@ -16,18 +11,55 @@
 
   }
 
+  @include angle(30px, $width-content-mobile, $color-gray);
+
 }
 
-@media (min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px),
-    (min-width: $width-content-desktop){
+@media (min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px){
 
   .price{
+
+    overflow-x: visible;
+    text-align: right;
+    padding-bottom: 68px;
+
 
     & .controls{
 
       display: none;
 
     }
+
+    @include clearfix();
+    @include angle(52px, $width-content-tablet, $color-gray);
+
+  }
+
+}
+
+@media (min-width: $width-content-desktop) {
+
+  .price{
+
+    overflow-x: visible;
+    text-align: right;
+    padding-bottom: 68px;
+
+
+    & .controls{
+
+      display: none;
+
+    }
+
+    &__layout{
+
+      padding-top: 58px;
+
+    }
+
+    @include clearfix();
+    @include angle(90px, $width-content-desktop, $color-gray);
 
   }
 

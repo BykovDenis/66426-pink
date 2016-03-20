@@ -55,3 +55,18 @@
   }
 
 }
+
+/*  Закрашенный угол */
+
+@mixin angle($border-height, $container-width, $color) {
+
+  &:before {
+
+    display: block;
+    content: "";
+    border-top: $border-height solid $color-white;
+    border-right: $container-width solid $color;
+
+  }
+
+}

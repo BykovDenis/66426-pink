@@ -2,106 +2,232 @@
 
   margin: 0 auto;
   border-collapse: collapse;
-  outline: 1px solid $color-blue;
-  width: 100%;
-    
-  &:before{
+  width: 840px;
+  transform: translateX(-33%);
+  margin-top: 30px;
 
-    content:"table";
-    background-color: rgba(150,50,50,.3);
-        
-
-  }
-    
-  &__cell{
+  &__cell, &__header-cell{
 
     padding: 5px;
-    border: 1px solid $color-blue;
-    text-align: center;
-    display: none;
- 
+    padding-left: 22px;
+    text-align: left;
+    width: 276px;
+    border-left: 2px solid $color-gray;
+    border-right: 2px solid $color-gray;
+    border-bottom: 2px solid $color-gray;
+    background-color: $color-white;
+
   }
-    
+
   &__cell--active{
 
-      display: table-cell;
+    display: table-cell;
 
   }
-    
+
+  &__header-cell {
+
+    background-color: $color-blue;
+    color: $color-white;
+    padding: 25px 0;
+    text-align: center;
+    position: relative;
+
+  }
+
+  &__header-cell--active {
+
+
+    &:before{
+
+      width: 100px;
+      height: 100px;
+      content: "";
+      display: block;
+      background: url(../../img/bg-hit.png) 0 0 no-repeat;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 100;
+
+    }
+
+  }
+
+  &__description{
+
+    font: 400 #{$font-size} / 2.14 $open-sans-regular;
+    color: $color-blue;
+
+  }
+
+  &__title{
+
+    font: 600 #{$font-size + 4px} / 1.67 $open-sans-bold;
+    margin: 0;
+
+  }
+
+  &__value{
+
+    font: 100 #{$font-size + 10px}/ 1.25 $open-sans-light;
+    margin: 0;
+
+  }
+
   &__icon-yes{
 
-    display: inline-block;
-    vertical-align: top;
+    display: block;
+    float: right;
     width: 27px;
     height: 26px;
-    border: 1px solid $color-blue;
-     
+    background: url(../../img/icon_yes.png) 0 0 no-repeat;
+    padding-right: 17px;
+
   }
-    
+
   &__icon-no{
 
-    display: inline-block;
-    vertical-align: top;
+    display: block;
+    float: right;
     width: 27px;
     height: 26px;
-    border: 1px solid $color-blue;
+    background: url(../../img/icon_no.png) 0 0 no-repeat;
+    padding-right: 17px;
 
-  }    
-  
-         
+  }
+
+
 }
 
 @media (min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px){
 
   .table{
 
+    width: 457px;
+    transform: translateX(3%);
+    float:right;
+
     &__description{
 
       display: none;
 
     }
-      
-    &__cell{
+
+    &__cell, &__header-cell{
+
 
       display: table-cell;
+      width: 130px;
+      position: relative;
 
     }
-      
+
     &__cell:first-of-type &__description{
 
       display: inline;
 
     }
-   
-      
+
+    &__icon-yes{
+
+      float: none;
+      display: inline-block;
+      vertical-align: top;
+      width: 130px;
+      background: url(../../img/icon_yes.png) 50% 0 no-repeat;
+
+    }
+
+    &__icon-no{
+
+      float: none;
+      display: inline-block;
+      vertical-align: top;
+      width: 130px;
+      background: url(../../img/icon_no.png) 50% 0 no-repeat;
+
+    }
+
+    &__cell:first-of-type &__description{
+
+        box-sizing: border-box;
+        width: 130px;
+        position: absolute;
+        transform: translate(-117%, -7px);
+        background-color: white;
+        padding: 4px;
+        border: 2px solid $color-gray;
+    }
+
+
   }
-    
+
 }
 
 @media (min-width: $width-content-desktop){
-     
+
   .table{
+
+    width: 698px;
+    transform: translateX(0%);
+    float: right;
+
 
     &__description{
 
       display: none;
 
     }
-      
-    &__cell{
+
+    &__cell, &__header-cell{
+
 
       display: table-cell;
+      width: 216px;
+      position: relative;
 
-    }    
-      
+    }
+
     &__cell:first-of-type &__description{
 
       display: inline;
 
     }
-       
-      
-  }   
 
-    
+    &__icon-yes{
+
+      float: none;
+      display: inline-block;
+      vertical-align: top;
+      width: 216px;
+      background: url(../../img/icon_yes.png) 50% 0 no-repeat;
+
+    }
+
+    &__icon-no{
+
+      float: none;
+      display: inline-block;
+      vertical-align: top;
+      width: 216px;
+      background: url(../../img/icon_no.png) 50% 0 no-repeat;
+
+    }
+
+    &__cell:first-of-type &__description{
+
+      box-sizing: border-box;
+      width: 216px;
+      position: absolute;
+      transform: translate(-110%, -7px);
+      background-color: white;
+      padding: 4px;
+      border: 2px solid $color-gray;
+    }
+
+
+  }
+
+
 }

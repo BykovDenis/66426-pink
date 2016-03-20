@@ -101,31 +101,26 @@ html
         .price__layout
           table.table
             tr.table__row
-              td.table__cell.table__cell--first
-              td.table__cell
+              th.table__header-cell
                 h4.table__title База
                 p.table__value 1,99 USD
-              td.table__cell.table__cell--active
+              th.table__header-cell.table__header-cell--active
                 h4.table__title Стандарт
                 p.table__value 3,99 USD
-              td.table__cell
+              th.table__header-cell
                 h4.table__title Анлим
                 p.table__value 9,99 USD
             tr.table__row
               td.table__cell
                 span.table__description Розовый цвет
+                span.table__icon-yes
               td.table__cell.table__cell--active
                 span.table__description Розовый цвет
                 span.table__icon-yes
               td.table__cell
                 span.table__description Розовый цвет
                 span.table__icon-yes
-              td.table__cell
-                span.table__description Розовый цвет
-                span.table__icon-yes
             tr.table__row
-              td.table__cell
-                span.table__description Смайлики
               td.table__cell
                 span.table__description Смайлики
                 span.table__icon-no
@@ -138,8 +133,6 @@ html
             tr.table__row
               td.table__cell
                 span.table__description Комментарии
-              td.table__cell
-                span.table__description Комментарии
                 span.table__icon-no
               td.table__cell.table__cell--active
                 span.table__description Комментарии
@@ -147,7 +140,7 @@ html
               td.table__cell
                 span.table__description Комментарии
                 span.table__icon-yes
-        .controls
+        .controls.controls--table
           a(href="#").controls__item
           a(href="#").controls__item.controls__item--active
           a(href="#").controls__item

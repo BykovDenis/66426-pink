@@ -21,15 +21,7 @@
     background-color: $color-gray;
     text-align: center;
 
-
-    &:before{
-
-      display: block;
-      content: "";
-      border-top:30px solid $color-white;
-      border-right: $width-content-mobile solid  $color-gray;
-
-    }
+    @include angle(30px, $width-content-mobile, $color-gray);
 
   }
 
@@ -81,14 +73,7 @@
       position: relative;
 
 
-      &:before{
-
-        display: block;
-        content: "";
-        border-top:52px solid $color-white;
-        border-right:$width-content-tablet solid  $color-gray;
-
-      }
+      @include angle(52px, $width-content-tablet, $color-gray);
 
     }
 
@@ -149,14 +134,7 @@
 
     &__column{
 
-      &:before{
-
-        display: block;
-        content: "";
-        border-top:90px solid $color-white;
-        border-right: $width-content-desktop solid  $color-gray;
-
-      }
+      @include angle(90px, $width-content-desktop, $color-gray);
 
     }
 
