@@ -87,7 +87,7 @@
 
     text-decoration: none;
 
-    font: 600 #{$font-size + 4px} / 3 'Open Sans Bold';
+    font: 600 #{$font-size + 4px} / 3 $open-sans-bold;
     color: $color-white;
 
     padding: 15px 0;
@@ -219,7 +219,7 @@
 
       text-decoration: none;
 
-      font: 400 #{$font-size + 4px} / 1 'Open Sans Regular';
+      font: 400 #{$font-size + 4px} / 1 $open-sans-regular;
       color: $color-white;
 
       padding: 15px 0;

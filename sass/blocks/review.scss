@@ -1,103 +1,170 @@
-.review{    
-  
-  outline: 1px solid rgba(150, 50, 150, .5);
-  text-align: center;
-    
-  &:before{
- 
-    content: 'review';
-    background-color: rgba(150, 50, 150, .1); 
+.review{
 
-  }
-    
+  text-align: center;
+
   &__layout{
 
     @include layout();
 
-  } 
-    
+  }
+
+  &__title{
+
+    font: 600 #{$font-size-h4}/  1.67 $open-sans-bold;
+    color: $color-black;
+    margin: 0 ;
+    margin-top: 52px;
+    margin-bottom: 25px;
+
+  }
+
+  &__description{
+
+    font: 400 #{$font-size} / 2.14 $open-sans-regular;
+    color: $color-blue;
+    margin: 0;
+
+  }
+
   &__slide{
-        
-    display: none;   
-      
-  }
-    
-  &__slide--active{
-        
-    display: block;      
-        
-  }
-    
-  &__details{
-  
+
     display: none;
-        
+
   }
-    
+
+  &__slide--active{
+
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  &__details{
+
+    display: none;
+
+  }
+
+  &__prev,
+  &__next{
+    display: none;
+
+  }
+
 }
 
 @media (min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px){
 
-  .review{ 
-    
+  .review{
+
     &__details{
-  
+
       display: block;
-        
-    }   
- 
-    
-  }   
-    
-    
+      order: 1;
+      font: 400 #{$font-size + 4px} / 1.67 $open-sans-regular;
+      color: $color-blue;
+      margin: 0;
+
+    }
+
+
+    &__title{
+
+      font: 600 #{$font-size-h4 +2px}/  1.5 $open-sans-bold;
+      color: $color-black;
+      margin: 0 ;
+      margin-top: 43px;
+      margin-bottom: 15px;
+      order: 1;
+
+    }
+
+    &__description{
+
+      font: 400 #{$font-size + 4px} / 1.67 $open-sans-regular;
+      color: $color-blue;
+      margin: 0;
+
+    }
+
+  }
+
 }
 
 @media (min-width: $width-content-desktop){
- 
-  .review{ 
-    
-  
-    &__body{     
-      
-    
-    display: flex;
-    justify-content: space-between;
-    width: 685px;          
-          
+
+  .review{
+
+    margin-top: 72px;
+
+    &__slides{
+
+      display: inline-block;
+      vertical-align: middle;
+      width: 680px;
+      margin: 0 90px;
+
     }
 
-  &__slide--active{
+    &__prev,
+    &__next{
 
-    display: inline-block;
-    vertical-align: middle;
-    outline: 1px solid $color-red; 
-    margin: 0 80px;
+      display: inline-block;
+      vertical-align: middle;
+      width: 25px;
+      height: 40px;
+      font: 600 80px / 1 Arial;
+      color: $color-gray;
 
-  }
-      
-  &__prev,
-  &__next{
-    
-    display: inline-block;
-    vertical-align: middle;
-    width: 25px;
-    height: 40px;
-    outline: 1px solid $color-red;
-          
-  }
-      
-  &__details{
-  
-    display: block;
-        
-  }  
-      
-  .controls{
-    
-    display: none;
-    
-  }      
-      
+    }
+
+    &__details{
+
+      display: block;
+      order: 1;
+      font: 400 #{$font-size + 4px} / 1.67 $open-sans-regular;
+      color: $color-blue;
+      margin: 0;
+
+    }
+
+
+    &__title{
+
+      font: 600 #{$font-size-h4 +6px}/  1.25 $open-sans-bold;
+      color: $color-black;
+      margin: 0 ;
+      margin-top: 43px;
+      margin-bottom: 10px;
+      order: 1;
+
+    }
+
+    &__description{
+
+      font: 400 #{$font-size + 4px} / 1.67 $open-sans-regular;
+      color: $color-blue;
+      margin: 0;
+
+    }
+
+    &__slides{
+
+      &:before{
+
+        content:'';
+        display: block;
+        background: url(../../img/icon_quote.png) 50% 0 no-repeat;
+        height: 64px;
+        margin-bottom: 50px;
+
+
+      }
+
+
+    }
+
+
  }
-    
+
 }

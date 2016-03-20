@@ -20,7 +20,7 @@
     margin-bottom: 32px;
     width: 275px;
     text-align: center;
-    font: 600 #{$font-size + 4px} / 1.03 'Open Sans Bold';
+    font: 600 #{$font-size + 4px} / 1.03 $open-sans-bold;
     color: $color-white;
     text-decoration: none;
     border: 3px solid $color-white;
@@ -79,7 +79,7 @@
 
     margin: 23px 25px;
     margin-bottom: 32px;
-    font: 100 #{$font-size} / #{$font-size * 1.71}  'Open Sans Light';
+    font: 100 #{$font-size} / #{$font-size * 1.71}  "Open Sans Light";
     color: $color-white;
 
   }
@@ -129,7 +129,7 @@
 
     &__description{
 
-      font: 100 #{$font-size + 4px} / #{$font-size * 1.71}  'Open Sans Light';
+      font: 100 #{$font-size + 4px} / #{$font-size * 1.71}  $open-sans-light;
       margin:0;
 
     }
@@ -199,13 +199,13 @@
 
       width: 290px;
       margin-bottom: 46px;
-      font: 600 #{$font-size + 7px} / 1.03 'Open Sans Bold';
+      font: 600 #{$font-size + 7px} / 1.03 "Open Sans Bold";
 
     }
 
     &__description{
 
-      font: 100 #{$font-size + 4px} / #{$font-size * 1.71}  'Open Sans Light';
+      font: 100 #{$font-size + 4px} / #{$font-size * 1.71}  $open-sans-light;
       margin:0;
 
     }
