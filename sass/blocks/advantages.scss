@@ -1,32 +1,40 @@
 .advantages{
-    
+
   outline: 1px solid $color-red;
-  
-    
+  text-align: center;
+
+
   &:before{
-    
+
     content: "advantages";
     background-color: rgba(255, 150, 150, 0.4);
-      
+
   }
-    
+
+  &__title{
+
+    font: 600 #{$font-size-h3} / 1.3 'Open Sans Bold';
+    color: black;
+
+  }
+
 }
 
 
 @media(min-width: $width-content-desktop){
 
-  .advantages{ 
+  .advantages{
 
     display: inline-block;
-    vertical-align: top;           
-    
-    margin-right: 20px;  
-    padding-top: 240px;  
-    
+    vertical-align: top;
+
+    margin-right: 20px;
+    padding-top: 240px;
+
     width: 240px;
-    
-          
+
+
   }
-  
-    
+
+
 }

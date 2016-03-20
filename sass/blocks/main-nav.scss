@@ -4,8 +4,10 @@
   top: 0;
   left: 0;
   z-index: 100;
-  width: $width-content-mobile;
   background-color: rgba(0, 0, 0, .4);
+
+  @include page-width();
+
 
   &__layout {
 
@@ -17,11 +19,6 @@
 
   }
 
-  &--active{
-
-    background-color: $color-blue-dark;
-
-  }
 
   &__logo {
 
@@ -59,6 +56,13 @@
 
   }
 
+
+  &--active{
+
+    background-color: $color-blue-dark;
+
+  }
+
   &__items{
     display: none;
     /*display: flex; */
@@ -66,9 +70,9 @@
     list-style-type: none;
     margin: 0;
     padding:0;
-    width: $width-content-mobile;
     text-align: center;
     border-top: 1px solid $color-black1;
+    background-color: $color-blue-dark;
 
   }
 
@@ -114,8 +118,6 @@
 @media (min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px){
 
  .main-nav {
-
-   width: $width-content-tablet;
 
    &__logo {
 
@@ -177,6 +179,7 @@
       text-align: center;
       border: 0;
       margin-left: 173px;
+      background: none;
 
     }
 
@@ -194,7 +197,7 @@
 
     &__items {
 
-      width: $width-content-desktop;
+      @include page-width();
 
     }
 

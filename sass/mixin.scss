@@ -21,13 +21,6 @@
 
 }
 
-@mixin contain-width{
-
-  margin: 0 auto;
-
-
-}
-
 @mixin angle{
 
   border-top: 40px solid $color-white;
@@ -41,5 +34,24 @@
     display: table;
     clear: both;
     content: '';
+
+}
+
+@mixin page-width{
+
+  width: $width-content-mobile;
+  margin: 0 auto;
+
+  @media(min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px) {
+
+    width: $width-content-tablet;
+
+  }
+
+  @media(min-width: $width-content-desktop) {
+
+    width: $width-content-desktop;
+
+  }
 
 }

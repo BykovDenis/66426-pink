@@ -1,34 +1,34 @@
 .price{
-    
-  @include contain-width;    
+
+  @include page-width();
   outline: 1px solid rgba(150, 50, 150, .5);
-    
+
   &:before{
- 
+
     content: 'price';
-    background-color: rgba(150, 50, 150, .1); 
+    background-color: rgba(150, 50, 150, .1);
 
   }
-    
+
   &__layout{
 
     @include layout();
 
-  }     
-    
+  }
+
 }
-    
+
 @media (min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px),
     (min-width: $width-content-desktop){
-    
+
   .price{
-  
+
     & .controls{
 
       display: none;
 
     }
-      
+
   }
-    
+
 }

@@ -1,63 +1,69 @@
 .information{
-    
-  @include contain-width;    
-  outline: 1px solid rgba(150, 50, 150, .5);
-  text-align: center;  
-    
-  &:before{
- 
-    content: 'information';
-    background-color: rgba(150, 50, 150, .1);     
+
+  @include page-width();
+
+  margin-top: 47px;
+
+
+  &__item {
+
+    text-align: center;
+
+    font: 100 #{$font-size + 10px} / 1 'Open Sans Light';
+    color: $color-blue;
+
+    margin: 0;
+    margin-bottom:40px;
 
   }
-    
-  &:after{
-        
-    @include clearfix();
-      
-  }
-    
-  &__layout{
 
-    @include layout();
-
-  } 
-    
-  &__body{
-
-    
-    margin: 0 auto;
-
-  }
-    
 }
 
 
 @media(min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px){
-    
+
   .information{
-      
-    &__body{
-        
-      width: 310px;
-      float: right;    
-        
+
+    margin-top: 57px;
+    &__item {
+
+      font: 100 #{$font-size-h1} / 1.1 'Open Sans Light';
+      color: $color-blue;
+
+      margin: 0;
+      &:last-of-type{
+
+        margin-bottom: 45px;
+        padding: 0 60px;
+
+      }
+
     }
-        
+
   }
-    
-}  
+
+}
 
 @media(min-width: $width-content-desktop){
-    
-  .information{ 
-      
-    &__body{              
-      
-        width: auto;    
-        
+
+  .information{
+
+    margin-top: 80px;
+    &__item {
+
+      font: 100 #{$font-size-h1 + 10px} / 1.1 'Open Sans Light';
+      color: $color-blue;
+      margin:0;
+
+      &:last-of-type{
+
+        margin-bottom: 45px;
+        padding: 0 240px;
+
+      }
+
     }
-      
+
   }
-        
+
 }

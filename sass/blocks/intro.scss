@@ -1,8 +1,17 @@
 .intro{
 
-  position: relative;
-  min-width: $width-content-mobile;
+  &--not-main{
 
+    @include page-width();
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+    background: url(../../img/bg-back-tablet.jpg) 50% 0px no-repeat $color-blue-dark1;
+    padding-top: 111px;
+
+  }
 
   &:after{
 
@@ -12,8 +21,10 @@
 
   &__header{
 
-    font: 100 #{$font-size-h1} / #{$line-height} $open-sans-light;
+    font: 100 #{$font-size + 10px} / 1.4 $open-sans-light;
+    color: $color-white;
     text-align: center;
+    padding: 10px 20px 80px;
     margin: 0;
   }
 
@@ -29,7 +40,19 @@
 
 @media(min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px){
 
+
   .intro{
+
+    text-align: center;
+
+    &__header{
+
+      font: 100 #{$font-size-h1 + 10px} / 1.4 $open-sans-light;
+      color: $color-white;
+      text-align: center;
+      margin: 0;
+
+    }
 
     &--mainpage &__header{
 
@@ -38,9 +61,15 @@
       margin: 0 40px;
       font: 100 #{$font-size-h1} /  1.2 "Open Sans Light";
       color: $color-white;
+      padding: 10px 20px 0px;
 
     }
 
+    &--not-main &__header{
+
+      padding: 63px 113px;
+
+    }
 
   }
 
@@ -50,17 +79,40 @@
 
   .intro{
 
+    text-align: center;
+
+    &--not-main{
+
+      display: block;
+
+      background: url(../../img/bg-back-desktop.jpg) 50% 0px no-repeat $color-blue-dark1;
+      padding-top: 111px;
+
+    }
+
+    &--not-main &__header{
+
+      padding: 62px 224px 100px;
+
+    }
+
+
     &--mainpage{
 
       float: left;
 
     }
 
+    &__header{
+
+      font: 100 #{$font-size-h1 + 10px} /  1.2 "Open Sans Light";
+      color: $color-white;
+
+    }
+
     &--mainpage &__header {
 
       display: block;
-      font: 100 #{$font-size-h1 + 10px} /  1.2 "Open Sans Light";
-      color: $color-white;
       padding: 0 10px;
 
     }

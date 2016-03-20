@@ -15,15 +15,15 @@ html
               span.main-nav__icon
         ul.main-nav__items
           li.main-nav__item
-            a(href="#").main-nav__link.main-nav__link--active Главная
+            a(href="index.html").main-nav__link.main-nav__link--active Главная
           li.main-nav__item
-            a(href="#").main-nav__link Фотографии
+            a(href="photo.html").main-nav__link Фотографии
           li.main-nav__item
             a(href="#").main-nav__link Конкурс
           li.main-nav__item
             a(href="#").main-nav__link Html Academy
-      article.download
-        .download__body
+      article.download.download--mainpage
+        .download__body.download__body--mainpage
           .intro.intro--mainpage
             .intro__layout
               h1.intro__header Взгляните на жизнь иначе!
@@ -39,20 +39,18 @@ html
         img(src="img/iphone-hand-tablet.png" width="482" height="545" alt ="Скачать приложение").download__image
     main.page-main
       section.information
-        .information__layout
-          .information__title
-            p Устали от серости мегаполиса?
-            p Нам есть, что вам предложить!
-          .information__body
-            .advantages
-              h3.advantages__title Поднимает настроение
-              p.advantages__description Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
-            .advantages
-              h3.advantages__title Меняет мир вокруг
-              p.advantages__description Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
-            .advantages
-              h3.advantages__title Заводит новых друзей
-              p.advantages__description Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
+        p.information__item Устали от серости мегаполиса?
+        p.information__item Нам есть, что вам предложить!
+        .information__body
+          .advantages
+            h3.advantages__title Поднимает настроение
+            p.advantages__description Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
+          .advantages
+            h3.advantages__title Меняет мир вокруг
+            p.advantages__description Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
+          .advantages
+            h3.advantages__title Заводит новых друзей
+            p.advantages__description Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
       section.application-profit
         .application-profit__layout
           h3.application-profit__title Эффект на 24 часа!

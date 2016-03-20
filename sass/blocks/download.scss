@@ -1,11 +1,12 @@
 .download{
 
+  @include page-width();
+
   text-align: center;
   display: flex;
   flex-direction: column;
 
   background: url(../../img/bg-back-tablet.jpg) 50% 0px no-repeat $color-blue-dark1;
-  width: $width-content-mobile;
   padding-top: 111px;
   position: relative;
   font-size: 0;
@@ -83,7 +84,7 @@
 
   }
 
-  &__body{
+  &__body--mainpage{
 
     background-color: $color-blue-dark1;
     order: 1;
@@ -108,11 +109,16 @@
 
     display: block;
     background: url(../../img/bg-back-tablet.jpg) 50% 0px no-repeat $color-blue-dark1;
-    width: $width-content-tablet;
-    outline: 1px solid red;
     padding-top: 111px;
     position: relative;
     font-size: 0;
+    height: 331px;
+
+    &--mainpage{
+
+      height: auto;
+
+    }
 
     &__btn{
 
@@ -164,7 +170,6 @@
 
   .download{
 
-    width: $width-content-desktop;
     display: flex;
     flex-direction: row;
     justify-content:center;

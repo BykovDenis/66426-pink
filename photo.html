@@ -1,109 +1,103 @@
 <!DOCTYPE html>
 <html>
-  <head>   
+  <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <title>PINK adaptive    </title>
+    <title>PINK adaptive</title>
     <link href="css/style.css" rel="stylesheet"/>
   </head>
-  <body>     
-    <header class="main-header">     
-      <div class="main-header__top">       
-        <div class="main-header__layout">
-          <nav class="main-nav">          
-            <div class="main-nav__logo"> <a href="#"><img src="img/img_logo.png" width="75" height="22" alt="PINK"/></a></div>
-            <div class="main-nav__menu"><a href="#" class="main-nav__main-link"><span class="main-nav__icon">   </span></a>
-              <ul class="main-nav__items">
-                <li class="main-nav__item"> <a href="#" class="main-nav__link main-nav__link--active">Главная  </a></li>
-                <li class="main-nav__item"> <a href="#" class="main-nav__link">Фотографии</a></li>
-                <li class="main-nav__item"> <a href="#" class="main-nav__link">Конкурс</a></li>
-                <li class="main-nav__item"> <a href="#" class="main-nav__link">Html Academy</a></li>
-              </ul>
-            </div>
-          </nav>
+  <body>
+    <header class="main-header">
+      <nav class="main-nav">
+        <div class="main-nav__layout"><a href="index.html" class="main-nav__logo"></a>
+          <div class="main-nav__menu"><a href="#" class="main-nav__main-link"><span class="main-nav__icon"></span></a></div>
         </div>
-        <div class="intro">
-          <div class="intro__layout">
-            <h1 class="intro__header">Фотографии пользователей</h1>
-          </div>
-        </div>
-        <section class="block-header"> 
-          <div class="block-header__layout">
-            <div class="block-header__description">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших? </div>
-          </div>
-        </section>
+        <ul class="main-nav__items main-nav__items--active">
+          <li class="main-nav__item"><a href="index.html" class="main-nav__link main-nav__link--active">Главная</a></li>
+          <li class="main-nav__item"><a href="photo.html" class="main-nav__link">Фотографии</a></li>
+          <li class="main-nav__item"><a href="#" class="main-nav__link">Конкурс</a></li>
+          <li class="main-nav__item"><a href="#" class="main-nav__link">Html Academy</a></li>
+        </ul>
+      </nav>
+      <div class="intro intro--not-main">
+        <h1 class="intro__header">Фотографии пользователей</h1>
       </div>
+      <section class="block-header">
+        <div class="block-header__layout">
+          <div class="block-header__description">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</div>
+        </div>
+      </section>
     </header>
     <main>
       <div class="photo">
-        <div class="photo__layout">  
-          <article class="photo-card photo-card--main">                <img src="#" alt="Анна" width="300" height="200" class="photo-card__top-image"/>
-            <p class="photo-card__title">Панорама дня                 </p>
-            <p class="photo-card__author">Анна     <span class="photo-card__time-added">(5 минут назад)  </span></p>
+        <div class="photo__layout">
+          <article class="photo-card photo-card--main"><img src="#" alt="Анна" width="300" height="200" class="photo-card__top-image"/>
+            <p class="photo-card__title">Панорама дня</p>
+            <p class="photo-card__author">Анна<span class="photo-card__time-added">(5 минут назад)</span></p>
             <p class="photo-card__body">Прыгать или нет? Напишите комментарий свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
             <p class="photo-card__likes"><span class="photo-card__icon-heart"></span>Нравится:<span class="photo-card__likes-counter">215</span></p>
           </article>
-          <article class="photo-card">              <img src="#" alt="Левон" width="300" height="200" class="photo-card__image"/>
-            <p class="photo-card__author">Левон     <span class="photo-card__time-added">(5 часов назад)  </span></p>
+          <article class="photo-card"><img src="#" alt="Левон" width="300" height="200" class="photo-card__image"/>
+            <p class="photo-card__author">Левон<span class="photo-card__time-added">(5 часов назад)</span></p>
             <p class="photo-card__body">Вчера он на луну летал, сегодня в руки к нам попал</p>
-            <p class="photo-card__likes"><span class="photo-card__icon-heart"></span>Нравится:<span class="photo-card__likes-counter">356                 </span></p>
+            <p class="photo-card__likes"><span class="photo-card__icon-heart"></span>Нравится:<span class="photo-card__likes-counter">356</span></p>
           </article>
-          <article class="photo-card">              <img src="#" alt="Антон" width="300" height="200" class="photo-card__image"/>
-            <p class="photo-card__author">Антон     <span class="photo-card__time-added">(12 часов назад)  </span></p>
+          <article class="photo-card"><img src="#" alt="Антон" width="300" height="200" class="photo-card__image"/>
+            <p class="photo-card__author">Антон<span class="photo-card__time-added">(12 часов назад)</span></p>
             <p class="photo-card__body">Соседи будут рады</p>
-            <p class="photo-card__likes"><span class="photo-card__icon-heart"></span>Нравится:<span class="photo-card__likes-counter">666                 </span></p>
+            <p class="photo-card__likes"><span class="photo-card__icon-heart"></span>Нравится:<span class="photo-card__likes-counter">666</span></p>
           </article>
-          <article class="photo-card">              <img src="#" alt="Борис" width="300" height="200" class="photo-card__image"/>
-            <p class="photo-card__author">Борис     <span class="photo-card__time-added">(20 часов назад)  </span></p>
+          <article class="photo-card"><img src="#" alt="Борис" width="300" height="200" class="photo-card__image"/>
+            <p class="photo-card__author">Борис<span class="photo-card__time-added">(20 часов назад)</span></p>
             <p class="photo-card__body">Здесь могла быть ваша цитата о высоком и вечном.</p>
-            <p class="photo-card__likes"><span class="photo-card__icon-heart"></span>Нравится:<span class="photo-card__likes-counter">215                 </span></p>
+            <p class="photo-card__likes"><span class="photo-card__icon-heart"></span>Нравится:<span class="photo-card__likes-counter">215</span></p>
           </article>
-          <article class="photo-card">              <img src="#" alt="Сергей" width="300" height="200" class="photo-card__image"/>
-            <p class="photo-card__author">Сергей     <span class="photo-card__time-added">(25 часов назад)  </span></p>
+          <article class="photo-card"><img src="#" alt="Сергей" width="300" height="200" class="photo-card__image"/>
+            <p class="photo-card__author">Сергей<span class="photo-card__time-added">(25 часов назад)</span></p>
             <p class="photo-card__body">Самая кубанская в мире!</p>
-            <p class="photo-card__likes"><span class="photo-card__icon-heart"></span>Нравится:<span class="photo-card__likes-counter">4                 </span></p>
+            <p class="photo-card__likes"><span class="photo-card__icon-heart"></span>Нравится:<span class="photo-card__likes-counter">4</span></p>
           </article>
-          <article class="photo-card">              <img src="#" alt="Максим" width="300" height="200" class="photo-card__image"/>
-            <p class="photo-card__author">Максим     <span class="photo-card__time-added">(40 часов назад)  </span></p>
+          <article class="photo-card"><img src="#" alt="Максим" width="300" height="200" class="photo-card__image"/>
+            <p class="photo-card__author">Максим<span class="photo-card__time-added">(40 часов назад)</span></p>
             <p class="photo-card__body">Где снег-то?</p>
-            <p class="photo-card__likes"><span class="photo-card__icon-heart"></span>Нравится:<span class="photo-card__likes-counter">150                 </span></p>
+            <p class="photo-card__likes"><span class="photo-card__icon-heart"></span>Нравится:<span class="photo-card__likes-counter">150</span></p>
           </article>
-          <article class="photo-card">              <img src="#" alt="Надежда" width="300" height="200" class="photo-card__image"/>
-            <p class="photo-card__author">Надежда     <span class="photo-card__time-added">(45 часов назад)  </span></p>
+          <article class="photo-card"><img src="#" alt="Надежда" width="300" height="200" class="photo-card__image"/>
+            <p class="photo-card__author">Надежда<span class="photo-card__time-added">(45 часов назад)</span></p>
             <p class="photo-card__body">Всем GM и взаимные лайки!</p>
-            <p class="photo-card__likes"><span class="photo-card__icon-heart"></span>Нравится:<span class="photo-card__likes-counter">2560                 </span></p>
+            <p class="photo-card__likes"><span class="photo-card__icon-heart"></span>Нравится:<span class="photo-card__likes-counter">2560</span></p>
           </article>
         </div>
       </div>
       <form method="get" class="upload">
         <div class="upload__layout">
-          <section class="block-header"> 
+          <section class="block-header">
             <div class="block-header__layout">
               <div class="block-header__description">Затмите их всех! Выкладывайте все, что накопилось на телефоне!</div>
             </div>
             <div class="image">
               <div class="image__src"><img src="#" width="280" height="375" alt="Загрузить изображение с телефона"/></div>
-              <div class="upload--rules">               
-                <div class="image__effects">           
+              <div class="upload--rules">
+                <div class="image__effects">
                   <label class="image__effect"><span class="image__icon image__icon--crop"></span>
                     <input type="checkbox" id="crop" checked="checked"/>
                     <div class="progressbar">
                       <div class="progressbar__line"></div>
-                      <div class="progressbar__point">               </div>
+                      <div class="progressbar__point"></div>
                     </div>
                   </label>
                   <label class="image__effect"><span class="image__icon image__icon--fill"></span>
                     <input type="checkbox" id="fill"/>
                     <div class="progressbar">
                       <div class="progressbar__line"></div>
-                      <div class="progressbar__point">                               </div>
+                      <div class="progressbar__point"></div>
                     </div>
                   </label>
                   <label class="image__effect"><span class="image__icon image__icon--contrast"></span>
                     <input type="checkbox" id="contrast"/>
                     <div class="progressbar">
                       <div class="progressbar__line"></div>
-                      <div class="progressbar__point">               </div>
+                      <div class="progressbar__point"></div>
                     </div>
                   </label>
                 </div>
@@ -111,7 +105,7 @@
                   <div class="progressbar__line"></div>
                   <div class="progressbar__point"></div>
                 </div>
-                <div class="upload__controls">   
+                <div class="upload__controls">
                   <input type="file" value="Прикрепить фото" class="upload__file"/>
                   <input type="submit" value="Запостить" class="upload__post"/>
                   <input type="reset" value="Отмена" class="upload__cancel"/>
@@ -123,7 +117,7 @@
       </form>
     </main>
     <footer class="main-footer">
-      <div class="main-footer__layout">           <a href="index.html" class="main-footer__logo"><img src="img/img_logo1.png" width="147" height="40" alt="PINK"/></a>
+      <div class="main-footer__layout"><a href="index.html" class="main-footer__logo"><img src="img/img_logo1.png" width="147" height="40" alt="PINK"/></a>
         <div class="socials"><span class="socials__icon socials__icon--twitter"></span><span class="socials__icon socials__icon--fb"></span><span class="socials__icon socials__icon--youtube"></span></div>
         <div class="htmlacademy">Разработано<img src="img/img_htmlacademy.png" width="27" height="34" alt="htmlacademy"/></div>
       </div>

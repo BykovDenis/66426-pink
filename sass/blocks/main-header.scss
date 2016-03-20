@@ -1,8 +1,6 @@
 .main-header{
 
-  width: $width-content-mobile;
-  @include contain-width();
-
+  @include page-width();
   position: relative;
 
   &:after{
@@ -20,22 +18,5 @@
 
 }
 
-@media (min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px){
 
-  .main-header {
 
-    width: $width-content-tablet;
-
-  }
-
-}
-
-@media (min-width: $width-content-desktop){
-
-  .main-header {
-
-    width: $width-content-desktop;
-
-  }
-
-}

@@ -1,32 +1,28 @@
 <!DOCTYPE html>
 <html>
-  <head>   
+  <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <title>PINK adaptive    </title>
+    <title>PINK adaptive</title>
     <link href="css/style.css" rel="stylesheet"/>
   </head>
-  <body>     
-    <header class="main-header">     
-      <div class="main-header__top">       
-        <div class="main-header__layout">
-          <nav class="main-nav">          
-            <div class="main-nav__logo"> <a href="#"><img src="img/img_logo.png" width="75" height="22" alt="PINK"/></a></div>
-            <div class="main-nav__menu"><a href="#" class="main-nav__main-link"><span class="main-nav__icon">   </span></a>
-              <ul class="main-nav__items">
-                <li class="main-nav__item"> <a href="#" class="main-nav__link main-nav__link--active">Главная  </a></li>
-                <li class="main-nav__item"> <a href="#" class="main-nav__link">Фотографии</a></li>
-                <li class="main-nav__item"> <a href="#" class="main-nav__link">Конкурс</a></li>
-                <li class="main-nav__item"> <a href="#" class="main-nav__link">Html Academy</a></li>
-              </ul>
-            </div>
-          </nav>
-          <article class="intro">
-            <h1 class="intro__header">Конкурс на самое безбашенное путешествие с Пинк  </h1>
-          </article>
+  <body>
+    <header class="main-header">
+      <nav class="main-nav">
+        <div class="main-nav__layout"><a href="index.html" class="main-nav__logo"></a>
+          <div class="main-nav__menu"><a href="#" class="main-nav__main-link"><span class="main-nav__icon"></span></a></div>
         </div>
+        <ul class="main-nav__items main-nav__items--active">
+          <li class="main-nav__item"><a href="index.html" class="main-nav__link main-nav__link--active">Главная</a></li>
+          <li class="main-nav__item"><a href="photo.html" class="main-nav__link">Фотографии</a></li>
+          <li class="main-nav__item"><a href="#" class="main-nav__link">Конкурс</a></li>
+          <li class="main-nav__item"><a href="#" class="main-nav__link">Html Academy</a></li>
+        </ul>
+      </nav>
+      <div class="intro intro--not-main">
+        <h1 class="intro__header">Конкурс на самое безбашенное путешествие с Пинк</h1>
       </div>
-      <section class="block-header"> 
+      <section class="block-header">
         <div class="block-header__layout">
           <div class="block-header__description">Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту</div>
         </div>
@@ -36,13 +32,13 @@
       <form method="get" class="form">
         <div class="form__layout">
           <div class="form--row">
-            <fieldset class="form__items">      
-              <div class="form__item form__item--content"> 
-                <label for="first_name" class="form__label-content">Имя        </label>
+            <fieldset class="form__items">
+              <div class="form__item form__item--content">
+                <label for="first_name" class="form__label-content">Имя</label>
                 <input type="text" id="first_name" placeholder="Введите ваше имя" class="form__input"/>
               </div>
               <div class="form__item form__item--content">
-                <label for="last_name" class="form__label-content">Фамилия        </label>
+                <label for="last_name" class="form__label-content">Фамилия</label>
                 <input type="text" id="last_name" placeholder="Введите фамилию" class="form__input"/>
               </div>
               <div class="form__item form__item--content">
@@ -52,22 +48,22 @@
             </fieldset>
             <fieldset class="form__items">
               <legend class="form__title">С каким приложением путешествовали?</legend>
-              <div class="form__item form__item--control">             
+              <div class="form__item form__item--control">
                 <label class="form__label-control">
                   <input type="radio" name="application" checked="checked"/>
                   <Pink>для iOS</Pink>
                 </label>
               </div>
-              <div class="form__item form__item--control">             
+              <div class="form__item form__item--control">
                 <label class="form__label-control">
                   <input type="radio" name="application"/>
                   <Pink>для Android</Pink>
                 </label>
               </div>
-              <div class="form__item form__item--control">             
+              <div class="form__item form__item--control">
                 <label class="form__label-control">
                   <input type="radio" name="application"/>
-                  <Windows>Phone  </Windows>
+                  <Windows>Phone</Windows>
                 </label>
               </div>
             </fieldset>
@@ -79,49 +75,49 @@
                 <input type="checkbox" name="item1" checked="checked"/>Сделал селфи с акулой
               </label>
             </div>
-            <div class="form__item form__item--control">         
+            <div class="form__item form__item--control">
               <label class="form__label-control">
                 <input type="checkbox" name="item2" checked="checked"/>Обгорел на пляже
               </label>
             </div>
-            <div class="form__item form__item--control">             
+            <div class="form__item form__item--control">
               <label class="form__label-control">
                 <input type="checkbox" name="item3"/>Видел Чака Норриса
               </label>
             </div>
-            <div class="form__item form__item--control">             
+            <div class="form__item form__item--control">
               <label class="form__label-control">
-                <input type="checkbox" name="item4"/>Накупил сувениров          
+                <input type="checkbox" name="item4"/>Накупил сувениров
               </label>
             </div>
-            <div class="form__item form__item--control">             
+            <div class="form__item form__item--control">
               <label class="form__label-control">
-                <input type="checkbox" name="item5" cheched="cheched"/>Удержал башню          
+                <input type="checkbox" name="item5" cheched="cheched"/>Удержал башню
               </label>
             </div>
-            <div class="form__item form__item--control">             
-              <label class="form__label-control">                           
+            <div class="form__item form__item--control">
+              <label class="form__label-control">
                 <input type="checkbox" name="item6"/>Разгромил отель
               </label>
             </div>
           </fieldset>
-          <fieldset class="form__items"> 
-            <div class="form__item form__item--content"> 
+          <fieldset class="form__items">
+            <div class="form__item form__item--content">
               <label for="phone" class="form__label-content">Номерок телефончика</label>
               <input type="text" id="phone" placeholder="Номер, пожалуйста" class="form__input"/>
             </div>
-            <div class="form__item form__item--content"> 
+            <div class="form__item form__item--content">
               <label for="email" class="form__label-content">Адресок почты</label>
               <input type="text" id="email" placeholder="E-mail, пожалуйста" class="form__input"/>
             </div>
           </fieldset>
-          <fieldset class="form__items"> 
-            <div class="form__item form__item--content"> 
-              <label class="form__label-content">Опишите свои эмоции           </label>
+          <fieldset class="form__items">
+            <div class="form__item form__item--content">
+              <label class="form__label-content">Опишите свои эмоции</label>
               <textarea placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
             </div>
           </fieldset>
-          <fieldset class="form__control"> 
+          <fieldset class="form__control">
             <button type="submit" class="form__send">Отправить форму</button>
             <p class="form__requirement"><span>*</span><span>- Обязательные поля</span></p>
           </fieldset>
@@ -129,7 +125,7 @@
       </form>
     </main>
     <footer class="main-footer">
-      <div class="main-footer__layout">           <a href="index.html" class="main-footer__logo"><img src="img/img_logo1.png" width="147" height="40" alt="PINK"/></a>
+      <div class="main-footer__layout"><a href="index.html" class="main-footer__logo"><img src="img/img_logo1.png" width="147" height="40" alt="PINK"/></a>
         <div class="socials"><span class="socials__icon socials__icon--twitter"></span><span class="socials__icon socials__icon--fb"></span><span class="socials__icon socials__icon--youtube"></span></div>
         <div class="htmlacademy">Разработано<img src="img/img_htmlacademy.png" width="27" height="34" alt="htmlacademy"/></div>
       </div>
