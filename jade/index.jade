@@ -69,7 +69,8 @@ html
 
       section.review
         .review__layout
-          .review__prev <
+          .review__prev
+            a(href="#") <
           section.review__slides
             section.review__slide.review__slide--active
               h4.review__title Николай Петров
@@ -92,7 +93,8 @@ html
                 "Это приложение перевернуло мой мир и позволило
                 по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой
                 в комментариях к выложенной фотографии!"
-          .review__next >
+          .review__next
+            a(href="#") >
           .controls
             a(href="#").controls__item.controls__item--active
             a(href="#").controls__item
@@ -159,7 +161,8 @@ html
           .contacts__contain
             p.contacts__name Приезжайте в гости:
             p.contacts__description ул. Большая Конюшенная, 19/8
-        .contacts__map
+        .div.contacts__map
+          img(src="../../img/img_map_desktop.jpg" width="320" height="645" alt="Карта")
     footer.main-footer.main-footer--mainpage
       .main-footer__layout
         a(href="index.html").main-footer__logo

@@ -113,8 +113,14 @@
       vertical-align: middle;
       width: 25px;
       height: 40px;
-      font: 600 80px / 1 Arial;
-      color: $color-gray;
+
+      a {
+
+        font: 600 80px / 1 Arial;
+        color: $color-gray;
+        text-decoration: none;
+
+      }
 
     }
 
