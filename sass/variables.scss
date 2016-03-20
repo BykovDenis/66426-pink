@@ -4,6 +4,12 @@ $width-content-mobile: 320px;
 $width-content-tablet: 700px;
 $width-content-desktop: 1200px;
 
+/* размеры паддингов для контейнеров */
+
+$layout-padding-mobile: 20px;
+$layout-padding-tablet: 40px;
+$layout-padding-desktop: 130px;
+
 
 /* шрифты */
 
@@ -15,6 +21,7 @@ $open-sans-regular: 'Open Sans Regular', 'Arial', open-sans;
 
 $font-size: 14px;
 $font-size-h1: 40px;
+$font-size-h2: 30px;
 $font-size-h3: 18px;
 
 $line-height: 24px;
@@ -32,4 +39,5 @@ $color-gray1: #bec2c7;
 $color-gray2: #485461;
 $color-gray3: #283544;
 $color-red: #ff9999;
+$color-red1: #d22856;
 

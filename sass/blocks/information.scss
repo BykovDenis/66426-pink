@@ -4,7 +4,6 @@
 
   margin-top: 47px;
 
-
   &__item {
 
     text-align: center;
@@ -14,6 +13,42 @@
 
     margin: 0;
     margin-bottom:40px;
+
+  }
+
+  &__column{
+
+    background-color: $color-gray;
+    text-align: center;
+
+
+    &:before{
+
+      display: block;
+      content: '';
+      border-top:30px solid $color-white;
+      border-right: $width-content-mobile solid  $color-gray;
+
+    }
+
+  }
+
+  &__image{
+
+    padding-top:47px;
+    height: 270px;
+    position: relative;
+    overflow-y: hidden;
+    text-align: center;
+
+  }
+
+  &__image img{
+
+    position: relative;
+    top: 0;
+    width: 157px;
+    height: 320px;
 
   }
 
@@ -40,6 +75,56 @@
 
     }
 
+    &__column{
+
+      @include clearfix();
+      position: relative;
+
+
+      &:before{
+
+        display: block;
+        content: '';
+        border-top:52px solid $color-white;
+        border-right:$width-content-tablet solid  $color-gray;
+
+      }
+
+    }
+
+    &__body{
+
+      float: right;
+      padding-right: $layout-padding-tablet;
+      width: $width-content-mobile;
+      text-align: left;
+      margin-bottom: 37px;
+
+    }
+
+    &__image{
+
+      padding-left: $layout-padding-tablet;
+      height: 480px;
+      position: absolute;
+      overflow-y: hidden;
+      text-align: center;
+      top: -42px;
+      left: 0;
+
+    }
+
+    &__image img{
+
+      position: relative;
+      top: 0;
+      width: 268px;
+      height: 548px;
+
+    }
+
+
+
   }
 
 }
@@ -49,18 +134,35 @@
   .information{
 
     margin-top: 80px;
-    &__item {
+
+    &__item{
 
       font: 100 #{$font-size-h1 + 10px} / 1.1 'Open Sans Light';
-      color: $color-blue;
-      margin:0;
 
       &:last-of-type{
 
-        margin-bottom: 45px;
-        padding: 0 240px;
+        padding: 0 238px;
 
       }
+
+    }
+
+    &__column{
+
+      &:before{
+
+        display: block;
+        content: '';
+        border-top:90px solid $color-white;
+        border-right: $width-content-desktop solid  $color-gray;
+
+      }
+
+    }
+
+    &__image{
+
+      display: none;
 
     }
 

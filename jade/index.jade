@@ -7,13 +7,13 @@ html
     link(href="css/style.css" rel="stylesheet")
   body
     header.main-header
-      nav.main-nav
+      nav.main-nav.main-nav--active
         .main-nav__layout
           a(href="index.html").main-nav__logo
           .main-nav__menu
             a(href="#").main-nav__main-link
               span.main-nav__icon
-        ul.main-nav__items
+        ul.main-nav__items.main-nav__items
           li.main-nav__item
             a(href="index.html").main-nav__link.main-nav__link--active Главная
           li.main-nav__item
@@ -41,20 +41,30 @@ html
       section.information
         p.information__item Устали от серости мегаполиса?
         p.information__item Нам есть, что вам предложить!
-        .information__body
-          .advantages
-            h3.advantages__title Поднимает настроение
-            p.advantages__description Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
-          .advantages
-            h3.advantages__title Меняет мир вокруг
-            p.advantages__description Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
-          .advantages
-            h3.advantages__title Заводит новых друзей
-            p.advantages__description Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
+        .information__column
+          .information__body
+            .advantages
+              .advantages__image
+                img(src="img/iphone-screen-desktop1.png" width="157" height="382" alt="Преимущества")
+              h3.advantages__title Поднимает настроение
+              p.advantages__description Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
+            .advantages
+              .advantages__image
+                img(src="img/iphone-screen-desktop2.png" width="157" height="382" alt="Преимущества")
+              h3.advantages__title Меняет мир вокруг
+              p.advantages__description Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
+            .advantages
+              .advantages__image
+                img(src="img/iphone-screen-tablet.png" width="157" height="382" alt="Преимущества")
+              h3.advantages__title Заводит новых друзей
+              p.advantages__description Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
+            .information__image
+              img(src="img/iphone-screen-tablet.png" width="157" height="382" alt="Преимущества")
       section.application-profit
+        img(src="img/img_application_profit.png" width="240" height="278" alt="Эффект на 24 часа!" ).application-profit__image
         .application-profit__layout
-          h3.application-profit__title Эффект на 24 часа!
-          p.application-profit__description Британские ученые провели исследования и доказали, что положительный эффект               от использования приложения длится целые сутки!
+          h2.application-profit__title Эффект на 24 часа!
+          p.application-profit__description Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!
           a(href="#").application-profit__link Узнать больше об использовании
 
 

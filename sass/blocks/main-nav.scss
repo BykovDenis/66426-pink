@@ -64,8 +64,8 @@
   }
 
   &__items{
-    display: none;
-    /*display: flex; */
+
+    display: flex;
     flex-direction: column;
     list-style-type: none;
     margin: 0;
@@ -191,6 +191,7 @@
       width: 147px;
       height: 65px;
       padding: 22px 0;
+      padding-right: 170px;
       background: url(../../img/logotype-white-desktop.png) 0 27px no-repeat;
 
     }
@@ -231,6 +232,12 @@
         color: red;
 
       }
+
+    }
+
+    &--active{
+
+      background: rgba(0,0,0,.4);
 
     }
 
