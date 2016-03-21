@@ -27,6 +27,11 @@
   &__logo{
 
     display: block;
+    width: 147px;
+    height: 40px;
+    background: url(../../img/img_logo1.png) 0 0 no-repeat;
+    margin-top: 36px;
+    margin-bottom: 51px;
 
   }
 
@@ -38,14 +43,6 @@
 
     display: block;
     border-top: 1px solid transparent;
-
-    &__layout{
-
-      @include layout();
-      margin-top: 30px;
-      margin-bottom: 30px;
-
-    }
 
     &__logo{
 
@@ -66,6 +63,7 @@
     &__logo{
 
       float: left;
+      background: url(../../img/logotype-blue-desktop.png) 0 0 no-repeat;
 
     }
 
