@@ -8,15 +8,13 @@
     display: inline-block;
     vertical-align: top;
 
-    margin-top: 39px;
-    margin-bottom: 37px;
 
     width: 51px;
     height: 51px;
 
     margin-right: 12px;
 
-    border: 3px solid $color-gray;
+    border: 3px solid $color-grey;
     border-radius: 50%;
 
     opacity: 0.1;
@@ -43,6 +41,47 @@
     &--youtube{
 
       background: url(../../img/icon-youtube.svg) 50% 50% no-repeat;
+
+    }
+
+  }
+
+}
+
+@media (min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px) {
+
+
+  .socials{
+
+    display: inline;
+    width: 200px;
+
+    &__icon {
+
+      margin-top: 39px;
+      margin-bottom: 37px;
+
+
+    }
+
+  }
+
+}
+
+
+@media (min-width: $width-content-desktop){
+
+
+  .socials{
+
+    display: inline;
+    width: 200px;
+
+    &__icon {
+
+      margin-top: 39px;
+      margin-bottom: 37px;
+
 
     }
 

@@ -21,7 +21,7 @@
 
   &__header{
 
-    font: 100 #{$font-size + 10px} / 1.4 $open-sans-light;
+    font: 100 #{$font-size + 10px} / 1.4 $open-sans;
     color: $color-white;
     text-align: center;
     padding: 10px 20px 80px;
@@ -47,7 +47,7 @@
 
     &__header{
 
-      font: 100 #{$font-size-h1 + 10px} / 1.4 $open-sans-light;
+      font: 100 #{$font-size-h1 + 10px} / 1.4 $open-sans;
       color: $color-white;
       text-align: center;
       margin: 0;
@@ -59,7 +59,7 @@
       display: block;
       float: left;
       margin: 0 40px;
-      font: 100 #{$font-size-h1} /  1.2 "Open Sans Light";
+      font: 100 #{$font-size-h1} /  1.2 $open-sans;
       color: $color-white;
       padding: 10px 20px 0px;
 
@@ -105,7 +105,7 @@
 
     &__header{
 
-      font: 100 #{$font-size-h1 + 10px} /  1.2 "Open Sans Light";
+      font: 100 #{$font-size-h1 + 10px} /  1.2 $open-sans;
       color: $color-white;
 
     }

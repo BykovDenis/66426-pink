@@ -8,7 +8,7 @@
 
     text-align: center;
 
-    font: 100 #{$font-size + 10px} / 1 $open-sans-light;
+    font: 100 #{$font-size + 10px} / 1 $open-sans;
     color: $color-blue;
 
     margin: 0;
@@ -18,10 +18,10 @@
 
   &__column{
 
-    background-color: $color-gray;
+    background-color: $color-grey;
     text-align: center;
 
-    @include angle(30px, $width-content-mobile, $color-gray);
+    @include angle(30px, $width-content-mobile, $color-grey);
 
   }
 
@@ -54,7 +54,7 @@
     margin-top: 57px;
     &__item {
 
-      font: 100 #{$font-size-h1} / 1.1 $open-sans-light;
+      font: 100 #{$font-size-h1} / 1.1 $open-sans;
       color: $color-blue;
 
       margin: 0;
@@ -73,7 +73,7 @@
       position: relative;
 
 
-      @include angle(52px, $width-content-tablet, $color-gray);
+      @include angle(52px, $width-content-tablet, $color-grey);
 
     }
 
@@ -122,7 +122,7 @@
 
     &__item{
 
-      font: 100 #{$font-size-h1 + 10px} / 1.1 $open-sans-light;
+      font: 100 #{$font-size-h1 + 10px} / 1.1 $open-sans;
 
       &:last-of-type{
 
@@ -134,7 +134,7 @@
 
     &__column{
 
-      @include angle(90px, $width-content-desktop, $color-gray);
+      @include angle(90px, $width-content-desktop, $color-grey);
 
     }
 

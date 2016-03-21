@@ -13,9 +13,7 @@ $layout-padding-desktop: 130px;
 
 /* шрифты */
 
-$open-sans-light: 'Open Sans Light', 'Arial', open-sans;
-$open-sans-bold: 'Open Sans Bold', 'Arial', open-sans;
-$open-sans-regular: 'Open Sans Regular', 'Arial', open-sans;
+$open-sans: 'Open Sans', Arial, sans-serif;
 
 /* размеры шрифтов */
 
@@ -25,8 +23,6 @@ $font-size-h2: 30px;
 $font-size-h3: 18px;
 $font-size-h4: 18px;
 
-$line-height: 24px;
-
 /* цвета */
 
 $color-white: #ffffff;
@@ -35,10 +31,12 @@ $color-black1: #010101;
 $color-blue-dark:  #222d39;
 $color-blue-dark1: #1d2631;
 $color-blue: #283645;
-$color-gray:  #f2f2f2;
-$color-gray1: #bec2c7;
-$color-gray2: #485461;
-$color-gray3: #283544;
+$color-grey:  #f2f2f2;
+$color-grey1: #bec2c7;
+$color-grey2: #485461;
+$color-grey3: #283544;
+$color-grey4: #e5e5e5;
 $color-red: #ff9999;
 $color-red1: #d22856;
+$color-green: #2aab6d;
 

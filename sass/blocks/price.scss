@@ -2,7 +2,7 @@
 
   @include page-width();
   overflow-x: hidden;
-  background-color: $color-gray;
+  background-color: $color-grey;
   margin-bottom: 48px;
 
   &__layout{
@@ -11,7 +11,7 @@
 
   }
 
-  @include angle(30px, $width-content-mobile, $color-gray);
+  @include angle(30px, $width-content-mobile, $color-grey);
 
 }
 
@@ -31,7 +31,7 @@
     }
 
     @include clearfix();
-    @include angle(52px, $width-content-tablet, $color-gray);
+    @include angle(52px, $width-content-tablet, $color-grey);
 
   }
 
@@ -59,7 +59,7 @@
     }
 
     @include clearfix();
-    @include angle(90px, $width-content-desktop, $color-gray);
+    @include angle(90px, $width-content-desktop, $color-grey);
 
   }
 

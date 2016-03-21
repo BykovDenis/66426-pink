@@ -66,6 +66,7 @@
   &__items{
 
     display: flex;
+    display: none;
     flex-direction: column;
     list-style-type: none;
     margin: 0;
@@ -78,7 +79,7 @@
 
   &__item{
 
-    border-top: 1px solid $color-gray2;
+    border-top: 1px solid $color-grey2;
     border-bottom: 1px solid $color-black1;
 
   }
@@ -87,7 +88,7 @@
 
     text-decoration: none;
 
-    font: 600 #{$font-size + 4px} / 3 $open-sans-bold;
+    font: 600 #{$font-size + 4px} / 3 $open-sans;
     color: $color-white;
 
     padding: 15px 0;
@@ -219,7 +220,7 @@
 
       text-decoration: none;
 
-      font: 400 #{$font-size + 4px} / 1 $open-sans-regular;
+      font: 400 #{$font-size + 4px} / 1 $open-sans;
       color: $color-white;
 
       padding: 15px 0;

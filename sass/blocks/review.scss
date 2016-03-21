@@ -10,7 +10,7 @@
 
   &__title{
 
-    font: 600 #{$font-size-h4}/  1.67 $open-sans-bold;
+    font: 600 #{$font-size-h4}/  1.67 $open-sans;
     color: $color-black;
     margin: 0 ;
     margin-top: 52px;
@@ -20,7 +20,7 @@
 
   &__description{
 
-    font: 400 #{$font-size} / 2.14 $open-sans-regular;
+    font: 400 #{$font-size} / 2.14 $open-sans;
     color: $color-blue;
     margin: 0;
 
@@ -61,7 +61,7 @@
 
       display: block;
       order: 1;
-      font: 400 #{$font-size + 4px} / 1.67 $open-sans-regular;
+      font: 400 #{$font-size + 4px} / 1.67 $open-sans;
       color: $color-blue;
       margin: 0;
 
@@ -70,7 +70,7 @@
 
     &__title{
 
-      font: 600 #{$font-size-h4 +2px}/  1.5 $open-sans-bold;
+      font: 600 #{$font-size-h4 +2px}/  1.5 $open-sans;
       color: $color-black;
       margin: 0 ;
       margin-top: 43px;
@@ -81,7 +81,7 @@
 
     &__description{
 
-      font: 400 #{$font-size + 4px} / 1.67 $open-sans-regular;
+      font: 400 #{$font-size + 4px} / 1.67 $open-sans;
       color: $color-blue;
       margin: 0;
 
@@ -117,7 +117,7 @@
       a {
 
         font: 600 80px / 1 Arial;
-        color: $color-gray;
+        color: $color-grey;
         text-decoration: none;
 
       }
@@ -128,7 +128,7 @@
 
       display: block;
       order: 1;
-      font: 400 #{$font-size + 4px} / 1.67 $open-sans-regular;
+      font: 400 #{$font-size + 4px} / 1.67 $open-sans;
       color: $color-blue;
       margin: 0;
 
@@ -137,7 +137,7 @@
 
     &__title{
 
-      font: 600 #{$font-size-h4 +6px}/  1.25 $open-sans-bold;
+      font: 600 #{$font-size-h4 +6px}/  1.25 $open-sans;
       color: $color-black;
       margin: 0 ;
       margin-top: 43px;
@@ -148,7 +148,7 @@
 
     &__description{
 
-      font: 400 #{$font-size + 4px} / 1.67 $open-sans-regular;
+      font: 400 #{$font-size + 4px} / 1.67 $open-sans;
       color: $color-blue;
       margin: 0;
 

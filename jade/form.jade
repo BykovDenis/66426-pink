@@ -13,7 +13,7 @@ html
           .main-nav__menu
             a(href="#").main-nav__main-link
               span.main-nav__icon
-        ul.main-nav__items.main-nav__items--active
+        ul.main-nav__items
           li.main-nav__item
             a(href="index.html").main-nav__link.main-nav__link--active Главная
           li.main-nav__item
@@ -32,60 +32,50 @@ html
       form(method="get").form
         .form__layout
 
-          .form--row
-
-            fieldset.form__items
-              .form__item.form__item--content
-                label(for="first_name").form__label-content Имя
-                input(type="text" id="first_name" placeholder="Введите ваше имя").form__input
-              .form__item.form__item--content
-                label(for="last_name").form__label-content Фамилия
-                input(type="text" id="last_name" placeholder="Введите фамилию").form__input
-              .form__item.form__item--content
-                label(for="middle_name").form__label-content Отчество
-                input(type="text" id="middle_name" placeholder="Ну и отчество тоже").form__input
-
-            fieldset.form__items
-              legend.form__title С каким приложением путешествовали?
-              .form__item.form__item--control
-                label.form__label-control
-                  input(type="radio" name="application" checked)
-                  Pink для iOS
-              .form__item.form__item--control
-                label.form__label-control
-                  input(type="radio"  name="application")
-                  Pink для Android
-              .form__item.form__item--control
-                label.form__label-control
-                  input(type="radio"  name="application")
-                  Windows Phone
 
           fieldset.form__items
+            .form__item.form__item--content
+              label(for="first_name").form__label-content Имя
+              input(type="text" id="first_name" placeholder="Введите ваше имя").form__input
+            .form__item.form__item--content
+              label(for="last_name").form__label-content Фамилия
+              input(type="text" id="last_name" placeholder="Введите фамилию").form__input
+            .form__item.form__item--content
+              label(for="middle_name").form__label-content Отчество
+              input(type="text" id="middle_name" placeholder="Ну и отчество тоже").form__input
+
+          fieldset.form__items.form__items--grey
+            legend.form__title С каким приложением путешествовали?
+            label.form__item.form__item--control
+              input(type="radio" name="application" checked).form__radio
+              span.form__label-control Pink для iOS
+            label.form__item.form__item--control
+              input(type="radio"  name="application").form__radio
+              span.form__label-control Pink для Android
+            label.form__item.form__item--control
+              input(type="radio"  name="application").form__radio
+              span.form__label-control Windows Phone
+
+          fieldset.form__items.form__items--grey
             legend.form__title Ваши безбашенные достижения в путешествии
-            .form__item.form__item--control
-              label.form__label-control
-                input(type="checkbox" name="item1" checked)
-                Сделал селфи с акулой
-            .form__item.form__item--control
-              label.form__label-control
-                input(type="checkbox"  name="item2" checked)
-                Обгорел на пляже
-            .form__item.form__item--control
-              label.form__label-control
-                input(type="checkbox"  name="item3")
-                Видел Чака Норриса
-            .form__item.form__item--control
-              label.form__label-control
-                input(type="checkbox"  name="item4")
-                Накупил сувениров
-            .form__item.form__item--control
-              label.form__label-control
-                input(type="checkbox"  name="item5" cheched)
-                Удержал башню
-            .form__item.form__item--control
-              label.form__label-control
-                input(type="checkbox" name="item6")
-                Разгромил отель
+            label.form__item.form__item--control
+              input(type="checkbox" name="item1" checked).form__checkbox
+              span.form__label-control Сделал селфи с акулой
+            label.form__item.form__item--control
+              input(type="checkbox"  name="item2" checked).form__checkbox
+              span.form__label-control Обгорел на пляже
+            label.form__item.form__item--control
+              input(type="checkbox"  name="item3").form__checkbox
+              span.form__label-control Видел Чака Норриса
+            label.form__item.form__item--control
+              input(type="checkbox"  name="item4").form__checkbox
+              span.form__label-control Накупил сувениров
+            label.form__item.form__item--control
+              input(type="checkbox"  name="item5" cheched).form__checkbox
+              span.form__label-control Удержал башню
+            label.form__item.form__item--control
+              input(type="checkbox" name="item6").form__checkbox
+              span.form__label-control Разгромил отель
 
           fieldset.form__items
             .form__item.form__item--content
@@ -98,7 +88,7 @@ html
           fieldset.form__items
             .form__item.form__item--content
               label.form__label-content Опишите свои эмоции
-              textarea(placeholder="Можно прям в красках, не стесняясь в выражениях")
+              textarea(placeholder="Можно прям в красках, не стесняясь в выражениях").form__textarea
           fieldset.form__control
             button(type="submit").form__send Отправить форму
             p.form__requirement
@@ -113,5 +103,5 @@ html
           span.socials__icon.socials__icon--fb
           span.socials__icon.socials__icon--youtube
         .htmlacademy
-          Разработано
-          img(src="img/img_htmlacademy.png" width="27" height="34" alt="htmlacademy")
+          span.htmlacademy__description Разработано
+          img(src="img/img_htmlacademy.png" width="27" height="34" alt="htmlacademy").htmlacademy__logo

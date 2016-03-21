@@ -12,7 +12,7 @@
         <div class="main-nav__layout"><a href="index.html" class="main-nav__logo"></a>
           <div class="main-nav__menu"><a href="#" class="main-nav__main-link"><span class="main-nav__icon"></span></a></div>
         </div>
-        <ul class="main-nav__items main-nav__items--active">
+        <ul class="main-nav__items">
           <li class="main-nav__item"><a href="index.html" class="main-nav__link main-nav__link--active">Главная</a></li>
           <li class="main-nav__item"><a href="photo.html" class="main-nav__link">Фотографии</a></li>
           <li class="main-nav__item"><a href="#" class="main-nav__link">Конкурс</a></li>
@@ -31,7 +31,7 @@
     <main class="page-main">
       <form method="get" class="form">
         <div class="form__layout">
-          <div class="form--row">
+          <div class="form form--row">
             <fieldset class="form__items">
               <div class="form__item form__item--content">
                 <label for="first_name" class="form__label-content">Имя</label>
@@ -46,60 +46,39 @@
                 <input type="text" id="middle_name" placeholder="Ну и отчество тоже" class="form__input"/>
               </div>
             </fieldset>
-            <fieldset class="form__items">
+            <fieldset class="form__items form__items--grey">
               <legend class="form__title">С каким приложением путешествовали?</legend>
-              <div class="form__item form__item--control">
-                <label class="form__label-control">
-                  <input type="radio" name="application" checked="checked"/>
-                  <Pink>для iOS</Pink>
-                </label>
-              </div>
-              <div class="form__item form__item--control">
-                <label class="form__label-control">
-                  <input type="radio" name="application"/>
-                  <Pink>для Android</Pink>
-                </label>
-              </div>
-              <div class="form__item form__item--control">
-                <label class="form__label-control">
-                  <input type="radio" name="application"/>
-                  <Windows>Phone</Windows>
-                </label>
-              </div>
+              <label class="form__item form__item--control">
+                <input type="radio" name="application" checked="checked" class="form__radio"/><span class="form__label-control">Pink для iOS</span>
+              </label>
+              <label class="form__item form__item--control">
+                <input type="radio" name="application" class="form__radio"/><span class="form__label-control">Pink для Android</span>
+              </label>
+              <label class="form__item form__item--control">
+                <input type="radio" name="application" class="form__radio"/><span class="form__label-control">Windows Phone</span>
+              </label>
             </fieldset>
           </div>
-          <fieldset class="form__items">
+          <fieldset class="form__items form__items--grey">
             <legend class="form__title">Ваши безбашенные достижения в путешествии</legend>
-            <div class="form__item form__item--control">
-              <label class="form__label-control">
-                <input type="checkbox" name="item1" checked="checked"/>Сделал селфи с акулой
-              </label>
-            </div>
-            <div class="form__item form__item--control">
-              <label class="form__label-control">
-                <input type="checkbox" name="item2" checked="checked"/>Обгорел на пляже
-              </label>
-            </div>
-            <div class="form__item form__item--control">
-              <label class="form__label-control">
-                <input type="checkbox" name="item3"/>Видел Чака Норриса
-              </label>
-            </div>
-            <div class="form__item form__item--control">
-              <label class="form__label-control">
-                <input type="checkbox" name="item4"/>Накупил сувениров
-              </label>
-            </div>
-            <div class="form__item form__item--control">
-              <label class="form__label-control">
-                <input type="checkbox" name="item5" cheched="cheched"/>Удержал башню
-              </label>
-            </div>
-            <div class="form__item form__item--control">
-              <label class="form__label-control">
-                <input type="checkbox" name="item6"/>Разгромил отель
-              </label>
-            </div>
+            <label class="form__item form__item--control">
+              <input type="checkbox" name="item1" checked="checked" class="form__checkbox"/><span class="form__label-control">Сделал селфи с акулой</span>
+            </label>
+            <label class="form__item form__item--control">
+              <input type="checkbox" name="item2" checked="checked" class="form__checkbox"/><span class="form__label-control">Обгорел на пляже</span>
+            </label>
+            <label class="form__item form__item--control">
+              <input type="checkbox" name="item3" class="form__checkbox"/><span class="form__label-control">Видел Чака Норриса</span>
+            </label>
+            <label class="form__item form__item--control">
+              <input type="checkbox" name="item4" class="form__checkbox"/><span class="form__label-control">Накупил сувениров</span>
+            </label>
+            <label class="form__item form__item--control">
+              <input type="checkbox" name="item5" cheched="cheched" class="form__checkbox"/><span class="form__label-control">Удержал башню</span>
+            </label>
+            <label class="form__item form__item--control">
+              <input type="checkbox" name="item6" class="form__checkbox"/><span class="form__label-control">Разгромил отель</span>
+            </label>
           </fieldset>
           <fieldset class="form__items">
             <div class="form__item form__item--content">
@@ -114,7 +93,7 @@
           <fieldset class="form__items">
             <div class="form__item form__item--content">
               <label class="form__label-content">Опишите свои эмоции</label>
-              <textarea placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+              <textarea placeholder="Можно прям в красках, не стесняясь в выражениях" class="form__textarea"></textarea>
             </div>
           </fieldset>
           <fieldset class="form__control">
@@ -127,7 +106,7 @@
     <footer class="main-footer">
       <div class="main-footer__layout"><a href="index.html" class="main-footer__logo"><img src="img/img_logo1.png" width="147" height="40" alt="PINK"/></a>
         <div class="socials"><span class="socials__icon socials__icon--twitter"></span><span class="socials__icon socials__icon--fb"></span><span class="socials__icon socials__icon--youtube"></span></div>
-        <div class="htmlacademy">Разработано<img src="img/img_htmlacademy.png" width="27" height="34" alt="htmlacademy"/></div>
+        <div class="htmlacademy"><span class="htmlacademy__description">Разработано</span><img src="img/img_htmlacademy.png" width="27" height="34" alt="htmlacademy" class="htmlacademy__logo"/></div>
       </div>
     </footer>
   </body>

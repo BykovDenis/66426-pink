@@ -41,24 +41,33 @@
 
     &__title{
 
-      padding-top: 40px;
-      font: 600 #{$font-size-h2} /  1.2 "Open Sans Bold";
+      border: 1px solid transparent;
+      margin-top: 40px;
+      font: 600 #{$font-size-h2} /  1.2 $open-sans;
       color: $color-black;
       width: 168px;
+      display: block;
 
     }
 
     &__description{
 
-      font: 400 #{$font-size}/ 1.71 "Open Sans Regular";
+      font: 400 #{$font-size}/ 1.71 $open-sans;
       color: $color-blue;
 
     }
 
     &__link{
 
-      font: 400 #{$font-size} / 1.71 "Open Sans Regular";
+      font: 400 #{$font-size} / 1.71 $open-sans;
       color: $color-red1;
+
+    }
+
+    &__label-control{
+
+      font: 400 #{$font-size}/ 1.71 $open-sans;
+      color: $color-blue;
 
     }
 
@@ -80,7 +89,7 @@
     margin: 0 auto;
     padding-top: 50px;
     padding-bottom: 65px;
-    background-color: $color-gray;
+    background-color: $color-grey;
 
 
     &:after{
@@ -107,7 +116,7 @@
     &__title{
 
       padding-top: 40px;
-      font: 600 #{$font-size-h2} /  1.2 "Open Sans Bold";
+      font: 600 #{$font-size-h2} /  1.2 $open-sans;
       color: $color-black;
 
 
@@ -115,14 +124,14 @@
 
     &__description{
 
-      font: 400 #{$font-size}/ 1.71 "Open Sans Regular";
+      font: 400 #{$font-size}/ 1.71 $open-sans;
       color: $color-blue;
 
     }
 
     &__link{
 
-      font: 400 #{$font-size} / 1.71 "Open Sans Regular";
+      font: 400 #{$font-size} / 1.71 $open-sans;
       color: $color-red1;
 
     }
