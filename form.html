@@ -24,61 +24,67 @@
       </div>
       <section class="block-header">
         <div class="block-header__layout">
-          <div class="block-header__description">Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту</div>
+          <div class="block-header__description">Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!<span class="block-header__add-info">Пожалуйста заполните форму ниже</span></div>
         </div>
       </section>
     </header>
     <main class="page-main">
       <form method="get" class="form">
         <div class="form__layout">
-          <div class="form form--row">
+          <div class="form__row">
             <fieldset class="form__items">
               <div class="form__item form__item--content">
-                <label for="first_name" class="form__label-content">Имя</label>
+                <label for="first_name" class="form__label-content">Имя:</label>
                 <input type="text" id="first_name" placeholder="Введите ваше имя" class="form__input"/>
               </div>
               <div class="form__item form__item--content">
-                <label for="last_name" class="form__label-content">Фамилия</label>
+                <label for="last_name" class="form__label-content">Фамилия:</label>
                 <input type="text" id="last_name" placeholder="Введите фамилию" class="form__input"/>
               </div>
               <div class="form__item form__item--content">
-                <label for="middle_name" class="form__label-content">Отчество</label>
+                <label for="middle_name" class="form__label-content">Отчество:</label>
                 <input type="text" id="middle_name" placeholder="Ну и отчество тоже" class="form__input"/>
               </div>
             </fieldset>
             <fieldset class="form__items form__items--grey">
               <legend class="form__title">С каким приложением путешествовали?</legend>
               <label class="form__item form__item--control">
-                <input type="radio" name="application" checked="checked" class="form__radio"/><span class="form__label-control">Pink для iOS</span>
+                <input type="radio" name="application" id="radio1" checked="checked" class="form__radio"/><span class="form__label-control">Pink для iOS</span>
               </label>
               <label class="form__item form__item--control">
-                <input type="radio" name="application" class="form__radio"/><span class="form__label-control">Pink для Android</span>
+                <input type="radio" name="application" id="radio2" class="form__radio"/><span class="form__label-control">Pink для Android</span>
               </label>
               <label class="form__item form__item--control">
-                <input type="radio" name="application" class="form__radio"/><span class="form__label-control">Windows Phone</span>
+                <input type="radio" name="application" id="radio3" class="form__radio"/><span class="form__label-control">Windows Phone</span>
               </label>
             </fieldset>
           </div>
           <fieldset class="form__items form__items--grey">
             <legend class="form__title">Ваши безбашенные достижения в путешествии</legend>
-            <label class="form__item form__item--control">
-              <input type="checkbox" name="item1" checked="checked" class="form__checkbox"/><span class="form__label-control">Сделал селфи с акулой</span>
-            </label>
-            <label class="form__item form__item--control">
-              <input type="checkbox" name="item2" checked="checked" class="form__checkbox"/><span class="form__label-control">Обгорел на пляже</span>
-            </label>
-            <label class="form__item form__item--control">
-              <input type="checkbox" name="item3" class="form__checkbox"/><span class="form__label-control">Видел Чака Норриса</span>
-            </label>
-            <label class="form__item form__item--control">
-              <input type="checkbox" name="item4" class="form__checkbox"/><span class="form__label-control">Накупил сувениров</span>
-            </label>
-            <label class="form__item form__item--control">
-              <input type="checkbox" name="item5" cheched="cheched" class="form__checkbox"/><span class="form__label-control">Удержал башню</span>
-            </label>
-            <label class="form__item form__item--control">
-              <input type="checkbox" name="item6" class="form__checkbox"/><span class="form__label-control">Разгромил отель</span>
-            </label>
+            <div class="form__item form__item--control">
+              <input type="checkbox" name="item1" id="check1" checked="checked" class="form__checkbox"/>
+              <label for="check1" class="form__label-control">Сделал селфи с акулой</label>
+            </div>
+            <div class="form__item form__item--control">
+              <input type="checkbox" name="item2" id="check2" checked="checked" class="form__checkbox"/>
+              <label for="check2" class="form__label-control">Обгорел на пляже</label>
+            </div>
+            <div class="form__item form__item--control">
+              <input type="checkbox" name="item3" id="check3" class="form__checkbox"/>
+              <label for="check3" class="form__label-control">Видел Чака Норриса</label>
+            </div>
+            <div class="form__item form__item--control">
+              <input type="checkbox" name="item4" id="check4" class="form__checkbox"/>
+              <label for="check4" class="form__label-control">Накупил сувениров</label>
+            </div>
+            <div class="form__item form__item--control">
+              <input type="checkbox" name="item5" id="check5" cheched="cheched" class="form__checkbox"/>
+              <label for="check5" class="form__label-control">Удержал башню</label>
+            </div>
+            <div class="form__item form__item--control">
+              <input type="checkbox" name="item6" id="check6" class="form__checkbox"/>
+              <label for="check6" class="form__label-control">Разгромил отель</label>
+            </div>
           </fieldset>
           <fieldset class="form__items">
             <div class="form__item form__item--content">

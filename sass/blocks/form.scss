@@ -117,7 +117,7 @@
     width: 280px;
     height: 63px;
     border: 2px solid $color-grey;
-    padding-left:22px;
+    padding-left:19px;
     font: 400 #{$font-size} / 2.14 $open-sans;
     color: $color-blue;
 
@@ -193,32 +193,35 @@
 
   }
 
+
+  &__row{
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+  }
+
   &__control{
 
     border: 0;
 
   }
 
-  &--row &__items:last-of-type {
+  &__row &__items:last-of-type {
 
     order: 1;
-    background-color: #0000AA;
+
 
   }
 
   &__items:nth-child(2){
 
-    background-color: #00DD00;
+
     order: -3;
 
   }
 
-  &--row{
-
-    display: flex;
-    flex-direction: column;
-
-  }
 
 
 }
@@ -226,6 +229,74 @@
 @media (min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px){
 
   .form{
+
+
+    &__items{
+
+      @include layout();
+      margin: 0;
+      margin-top: 49px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+
+      &--grey{
+
+        background: none;
+        border: 2px solid $color-grey4;
+
+      }
+
+
+    }
+
+    &__item--content{
+
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: stretch;
+      margin-bottom: 52px;
+
+    }
+
+    &__input {
+
+
+      box-sizing: border-box;
+      border: 2px solid $color-grey;
+      padding-left: 24px;
+      font: 400 #{$font-size + 4px} / 1.67 $open-sans;
+      color: $color-blue;
+      width: auto;
+      align-self: stretch;
+      flex-grow: 1;
+    }
+
+    &__radio + &__label-control:before,
+    &__checkbox + &__label-control:before{
+
+      margin-right: 22px;
+
+    }
+
+    &__label-control{
+
+      font-size: $font-size + 4px;
+      line-height: ($font-size + 4px)/30;
+
+    }
+
+
+    &__title{
+
+      font: 400 #{$font-size} / (30px / $font-size) $open-sans;
+      position: static;
+      margin-bottom: 39px;
+      padding: 0 25px;
+
+
+    }
 
     &__items:nth-of-type(1){
 
@@ -269,6 +340,8 @@
       margin:0
 
     }
+
+
 
   }
 

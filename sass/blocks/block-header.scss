@@ -16,4 +16,31 @@
 
   }
 
+  &__add-info{
+
+    display: none;
+
+  }
+
+}
+
+@media (min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px) {
+
+  .block-header{
+
+    &__description{
+
+      font: 400 #{$font-size + 4px} / 1.67 $open-sans;
+      margin: 94px 65px 25px;
+
+    }
+
+    &__add-info{
+
+      display: inline;
+
+    }
+
+  }
+
 }
