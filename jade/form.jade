@@ -33,30 +33,28 @@ html
       form(method="get").form
         .form__layout
 
-          .form__row
+          fieldset.form__items
+            .form__item.form__item--content
+              label(for="first_name").form__label-content Имя:
+              input(type="text" id="first_name" placeholder="Введите ваше имя").form__input
+            .form__item.form__item--content
+              label(for="last_name").form__label-content Фамилия:
+              input(type="text" id="last_name" placeholder="Введите фамилию").form__input
+            .form__item.form__item--content
+              label(for="middle_name").form__label-content Отчество:
+              input(type="text" id="middle_name" placeholder="Ну и отчество тоже").form__input
 
-            fieldset.form__items
-              .form__item.form__item--content
-                label(for="first_name").form__label-content Имя:
-                input(type="text" id="first_name" placeholder="Введите ваше имя").form__input
-              .form__item.form__item--content
-                label(for="last_name").form__label-content Фамилия:
-                input(type="text" id="last_name" placeholder="Введите фамилию").form__input
-              .form__item.form__item--content
-                label(for="middle_name").form__label-content Отчество:
-                input(type="text" id="middle_name" placeholder="Ну и отчество тоже").form__input
-
-            fieldset.form__items.form__items--grey
-              legend.form__title С каким приложением путешествовали?
-              label.form__item.form__item--control
-                input(type="radio" name="application" id="radio1" checked).form__radio
-                span.form__label-control Pink для iOS
-              label.form__item.form__item--control
-                input(type="radio"  name="application" id="radio2").form__radio
-                span.form__label-control Pink для Android
-              label.form__item.form__item--control
-                input(type="radio"  name="application" id="radio3").form__radio
-                span.form__label-control Windows Phone
+          fieldset.form__items.form__items--grey
+            legend.form__title С каким приложением путешествовали?
+            label.form__item.form__item--control
+              input(type="radio" name="application" id="radio1" checked).form__radio
+              span.form__label-control Pink для iOS
+            label.form__item.form__item--control
+              input(type="radio"  name="application" id="radio2").form__radio
+              span.form__label-control Pink для Android
+            label.form__item.form__item--control
+              input(type="radio"  name="application" id="radio3").form__radio
+              span.form__label-control Windows Phone
 
           fieldset.form__items.form__items--grey
             legend.form__title Ваши безбашенные достижения в путешествии
@@ -73,23 +71,26 @@ html
               input(type="checkbox"  name="item4" id="check4").form__checkbox
               label(for="check4").form__label-control Накупил сувениров
             .form__item.form__item--control
-              input(type="checkbox"  name="item5" id="check5" cheched).form__checkbox
+              input(type="checkbox"  name="item5" id="check5" checked).form__checkbox
               label(for="check5").form__label-control Удержал башню
             .form__item.form__item--control
               input(type="checkbox" name="item6" id="check6").form__checkbox
               label(for="check6").form__label-control Разгромил отель
 
           fieldset.form__items
+            legend.form__title.form__title--not-mobile Контактная информация
             .form__item.form__item--content
-              label(for="phone").form__label-content Номерок телефончика
+              label(for="phone").form__label-content.form__label-content--mobile Номерок телефончика
+              label(for="phone").form__label-content.form__label-content--other Номер телефона
               input(type="text" id="phone" placeholder="Номер, пожалуйста").form__input
             .form__item.form__item--content
-              label(for="email").form__label-content Адресок почты
+              label(for="email").form__label-content.form__label-content--mobile Адресок почты
+              label(for="email").form__label-content.form__label-content--other Адрес почты
               input(type="text" id="email" placeholder="E-mail, пожалуйста").form__input
 
           fieldset.form__items
+            legend.form__title Опишите свои эмоции
             .form__item.form__item--content
-              label.form__label-content Опишите свои эмоции
               textarea(placeholder="Можно прям в красках, не стесняясь в выражениях").form__textarea
           fieldset.form__control
             button(type="submit").form__send Отправить форму

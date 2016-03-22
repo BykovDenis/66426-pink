@@ -44,3 +44,23 @@
   }
 
 }
+
+@media (min-width: $width-content-desktop) {
+
+  .block-header {
+
+    &__description {
+
+      margin: 100px 100px 64px;
+
+    }
+
+    &__add-info{
+
+      display: inline;
+
+    }
+
+  }
+
+}

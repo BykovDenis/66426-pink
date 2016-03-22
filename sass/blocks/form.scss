@@ -1,10 +1,13 @@
 .form{
 
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
 
+  &__layout{
+
+    display: flex;
+    flex-direction: column;
+
+  }
 
   &__items{
 
@@ -16,6 +19,12 @@
   &__items--grey{
 
     background-color: $color-grey;
+
+  }
+
+  &__items--grey &__item--content{
+
+    padding-left: 55px;
 
   }
 
@@ -47,7 +56,13 @@
     text-transform: uppercase;
     margin-bottom:14px;
     margin-left: 23px;
-    margin-top: 25px;
+    padding-top: 19px;
+
+    &--other{
+
+      display:none;
+
+    }
 
   }
 
@@ -140,7 +155,15 @@
     top: 63px;
     margin-bottom: 39px;
 
+    &--not-mobile{
+
+      display: none;
+
+    }
+
   }
+
+
 
   &__textarea{
 
@@ -202,23 +225,53 @@
 
   }
 
-  &__control{
-
-    border: 0;
-
-  }
-
-  &__row &__items:last-of-type {
+  // ФИО
+  &__items:first-of-type{
 
     order: 1;
 
+  }
+  // с каким приложением путешествуете
+  &__items:nth-of-type(2){
+
+    order: 4;
+
+  }
+  // безбашенные достижения
+  &__items:nth-of-type(3){
+
+    order: 3;
+
+
+  }
+  // Номер телефона
+  &__items:nth-of-type(4){
+
+    order: 3;
 
   }
 
-  &__items:nth-child(2){
+  //опишите свои эмоции
+  &__items:nth-of-type(5){
+
+    order: 5;
+    margin: 0;
+    margin-top: 39px;
+
+  }
 
 
-    order: -3;
+  &__items:nth-of-type(5) &__title{
+
+    position: static;
+    top: 0;
+
+  }
+
+  &__control{
+
+    border: 0;
+    order: 6;
 
   }
 
@@ -230,10 +283,16 @@
 
   .form{
 
+    &__layout{
+
+      @include layout();
+
+    }
+
 
     &__items{
 
-      @include layout();
+      padding: 0;
       margin: 0;
       margin-top: 49px;
 
@@ -253,6 +312,7 @@
 
     &__item--content{
 
+      display: flex;
       flex-direction: row;
       justify-content: space-between;
       align-items: stretch;
@@ -261,7 +321,6 @@
     }
 
     &__input {
-
 
       box-sizing: border-box;
       border: 2px solid $color-grey;
@@ -292,30 +351,70 @@
 
       font: 400 #{$font-size} / (30px / $font-size) $open-sans;
       position: static;
-      margin-bottom: 39px;
+      margin-bottom: 0;
       padding: 0 25px;
 
 
     }
 
-    &__items:nth-of-type(1){
+    // с каким приложением путешествуете
+    &__items:nth-of-type(2){
 
-      order: -2;
-
-    }
-
-    &__items:nth-of-type(3){
-
-      order: -1;
+      order: 2;
 
     }
 
+
+    // Номер телефона
     &__items:nth-of-type(4){
 
-      order: -2;
+      order: 2;
+      border: 2px solid $color-grey4;
 
     }
 
+    &__items:nth-of-type(4) &__title--not-mobile{
+
+      display: block;
+      margin-bottom: 47px;
+
+    }
+
+    &__items:nth-of-type(4) &__item{
+
+      display: flex;
+      flex-direction: column-reverse;
+
+    }
+
+    //опишите свои эмоции
+    &__items:nth-of-type(5)  &__item {
+
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    &__items:nth-of-type(5) &__title{
+
+      position: static;
+      margin-bottom: 38px;
+
+    }
+
+    &__items:nth-of-type(5) {
+
+      border: 2px solid $color-grey4;
+      margin-bottom: 67px;
+      margin-top: 60px;
+
+    }
+
+    &__item--control, &__item--content{
+
+      padding:0 55px;
+
+    }
 
     &__control:after{
 
@@ -337,11 +436,33 @@
 
       float: right;
       width: 200px;
-      margin:0
+      margin: 25px 0;
 
     }
 
+    &__item--control {
 
+      margin: 57px 0;
+
+    }
+
+    &__label-content{
+
+      padding-right: 20px;
+
+      &--mobile{
+
+        display: none;
+
+      }
+
+      &--other{
+
+        display: block;
+
+      }
+
+    }
 
   }
 
@@ -351,55 +472,227 @@
 
   .form{
 
-    &__control:after{
+    &__items{
 
-      @include clearfix();
+      padding: 0;
 
     }
 
+    &__layout{
+
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      position: relative;
+
+    }
+
+    &__items--grey{
+
+      background: none;
+
+    }
+
+    &__items:nth-of-type(1){
+
+      align-self: flex-start;
+      margin-left: 55px;
+      padding: 0;
+      padding-bottom: 32px;
+      width: 432px;
+
+    }
+
+    &__items:nth-of-type(1) &__item{
+
+      display: flex;
+      flex-direction: row;
+      padding-bottom: 53px;
+
+    }
+
+    &__items:nth-of-type(2) {
+
+      position: absolute;
+      right: 130px;
+      top: -13px;
+      padding: 0;
+
+    }
+
+    &__input{
+
+      flex-grow: 1;
+
+
+    }
+
+    &__label-content{
+
+      padding-right: 20px;
+
+    }
+
+    &__items--grey {
+
+      background: none;
+      border: 2px solid #e5e5e5;
+
+    }
+    &__title{
+
+      font: 400 #{$font-size} / (30px / $font-size) $open-sans;
+      position: static;
+      margin-bottom: 0;
+      padding: 0 25px;
+
+
+    }
+
+    &__input {
+
+      box-sizing: border-box;
+      border: 2px solid $color-grey;
+      padding-left: 24px;
+      font: 400 #{$font-size + 4px} / 1.67 $open-sans;
+      color: $color-blue;
+      width: auto;
+      align-self: stretch;
+      flex-grow: 1;
+    }
+
+    &__radio + &__label-control:before,
+    &__checkbox + &__label-control:before{
+
+      margin-right: 22px;
+
+    }
+
+    &__label-control{
+
+      font-size: $font-size + 4px;
+      line-height: ($font-size + 4px)/30;
+
+    }
+
+    &__item--control, &__item--content{
+
+      padding:0 55px;
+
+    }
+
+    &__item--control{
+
+    margin: 40px 0;
+
+    }
+
+    // Номер телефона
+    &__items:nth-of-type(4){
+
+      order: 2;
+      border: 2px solid $color-grey4;
+      display: block;
+      width: $width-content-desktop - ($layout-padding-desktop * 2);
+
+    }
+
+
+    &__items:nth-of-type(4) &__item:first-of-type{
+
+      float: left;
+      margin-top: 44px;
+
+    }
+
+    &__items:nth-of-type(4) &__item:last-of-type{
+
+      float: right;
+      margin-top: 44px;
+      margin-bottom: 55px;
+
+    }
+
+    &__items:nth-of-type(4) &__input{
+
+      order: -1;
+      width: 360px;
+
+
+    }
+
+
+    &__title--not-mobile{
+
+      display: inline;
+
+    }
+
+    &__label-content--mobile{
+
+      display: none;
+
+    }
+
+    &__label-content--other{
+
+      display: inline-block;
+      vertical-align: top;
+
+    }
+
+    //опишите свои эмоции
+    &__items:nth-of-type(5)  &__item {
+
+      display: flex;
+      flex-direction: column;
+
+    }
+
+    &__items:nth-of-type(5) &__title{
+
+      position: static;
+      margin-bottom: 38px;
+
+    }
+
+    &__items:nth-of-type(5) {
+
+      border: 2px solid $color-grey4;
+      margin: 0 auto;
+      margin-bottom: 67px;
+      margin-top: 60px;
+      width: $width-content-desktop - ($layout-padding-desktop * 2);
+
+    }
+
+
     &__control{
 
-      order: 1;
+      margin: 0 auto;
+      display: block;
+      flex-direction: row;
+      justify-content: space-between;
+      width: $width-content-desktop - ($layout-padding-desktop * 2);
 
     }
 
     &__send{
 
-
       float: left;
       width: 300px;
       margin: 0;
+      display: block;
 
     }
 
     &__requirement{
 
-
       float: right;
-      width: 200px;
-      margin:0
+      width: 312px;
+
 
     }
-
-    &--row{
-
-      display: flex;
-      justify-content: space-between;
-
-    }
-
-    &__layout>&__items:nth-of-type(1){
-
-      order: 1;
-
-    }
-
-    &__layout>&__items:nth-of-type(3){
-
-      order: 1;
-
-    }
-
 
   }
 
