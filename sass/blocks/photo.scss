@@ -1,17 +1,10 @@
 .photo{
-  
+
+  @include page-width();
+
   text-align: center;
-    
 
-  outline: 1px solid rgba(150, 50, 150, .5);
-    
-  &:before{
- 
-    content: 'photo';
-    background-color: rgba(150, 50, 150, .1); 
 
-  }
-    
   &__layout{
 
     @include layout();
@@ -21,11 +14,11 @@
     align-content: space-between;
     flex-wrap: wrap;
     justify-content: space-between;
-    
-    
-    
 
-  }      
-    
-  
+
+
+
+  }
+
+
 }

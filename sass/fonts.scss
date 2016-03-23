@@ -11,6 +11,17 @@
 
 }
 
+@font-face{
+
+  font-family: 'Open Sans';
+  src:
+    url('../fonts/opensanslight.woff2'),
+    url('../fonts/opensanslight.woff');
+  font-weight: 300;
+  font-style: normal;
+
+}
+
 
 @font-face{
 
@@ -19,6 +30,17 @@
     url('../fonts/opensansbold.woff2'),
     url('../fonts/opensansbold.woff');
   font-weight: 600;
+  font-style: normal;
+
+}
+
+@font-face{
+
+  font-family: 'Open Sans';
+  src:
+    url('../fonts/opensansbold.woff2'),
+    url('../fonts/opensansbold.woff');
+  font-weight: 700;
   font-style: normal;
 
 }
