@@ -5,16 +5,22 @@
   margin-bottom: 28px;
   position: relative;
 
-
-  width: 240px;
+  width: 320px;
   height: 14px;
+
+
+
 
   &--main{
 
     display: flex;
     flex-direction: column;
-
     align-self: center;
+
+    margin-bottom: 38px;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    height: 68px;
+
 
   }
 
@@ -22,13 +28,15 @@
 
     background-color: $color-blue;
     height: 2px;
+    width: 240px;
+    margin: 0 auto;
 
   }
 
   &__point{
 
     position: absolute;
-    top: -2px;
+    top: 26px;
     left: 191px;
 
     border: 2px solid $color-red1;
@@ -42,8 +50,6 @@
 
 
 
-
-
 }
 
 @media (min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px){
@@ -51,13 +57,24 @@
 
 .progressbar{
 
-  width: 240px;
-
   display: flex;
+  flex-direction: column;
+  align-self: center;
+
+  margin-bottom: 38px;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+  height: 68px;
+  width: 275px;
 
   &--main{
 
     display: none;
+
+  }
+
+  &__line{
+
+    width: 202px;
 
   }
 
@@ -70,8 +87,9 @@
 .progressbar{
 
   width: 240px;
-
   display: flex;
+  flex-direction: column;
+  align-self: center;
 
   &--main{
 

@@ -8,18 +8,33 @@
   margin-bottom: 20px;
 
   background-color: $color-grey;
-
   text-align: left;
 
 
-  font-size: $font-size;
+  font-size: 0;
   line-height: 24px / $font-size;
   font-family: $open-sans;
   color: $color-blue;
 
+  &__layout{
+
+    position: relative;
+    padding-top: 25px;
+    margin: 0 20px;
+    background-color: $color-grey;
+
+  }
+
+  &--top{
+
+    background: $color-white;
+
+  }
+
   &__author{
 
-    @include layout();
+    font-size: $font-size;
+    padding: 0 20px;
     font-weight: 700;
     text-align: left;
     margin: 0;
@@ -43,6 +58,7 @@
     padding: 6px 20px;
     text-transform: uppercase;
     margin: 0;
+    font-size: $font-size;
 
   }
 
@@ -52,11 +68,12 @@
     margin-top:0;
     margin-bottom: 20px;
     padding: 0 $layout-padding-mobile;
+    font-size: $font-size;
   }
 
   &__likes{
 
-    @include layout();
+    padding: 0 20px;
     margin: 0;
     font-size: $font-size - 2px;
     line-height: 24px / ($font-size - 2px);
@@ -81,7 +98,9 @@
 
   &__top-image{
 
-    margin-bottom: 25px;
+    width: 320px;
+    height: 137px;
+    background-color: $color-white;
 
   }
 
@@ -105,41 +124,189 @@
 
   .photo-card{
 
-    align-items: center;
+    justify-content: flex-start;
     width: 300px;
-    outline: 1px solid $color-blue;
 
-    &--main{
+    &__top-image{
 
-      width: 100%;
+      width: $width-content-tablet;
+      height: 509px;
+
+    }
+
+    &__title{
+
+      position: absolute;
+      right: 60px;
+      top: 57px;
+      background-color: $color-red1;
+      font: 700 #{$font-size - 2px} / (24px / ($font-size - 2px)) $open-sans;
+      color: $color-white;
+      padding: 6px 20px;
+      text-transform: uppercase;
+      margin: 0;
+
+    }
+
+    &__padding{
+
+      padding: 0 27px;
+
+    }
+
+    &--top &__likes {
+
+      position: absolute;
+      top: 28px;
+      right: 0;
+      padding: 0 20px;
+
+    }
+
+    &--top &__icon-heart{
+
+      float: right;
+      margin-left: 16px;
+
+    }
+
+    &--top &__content{
+
+      padding-right: 84px;
+
+    }
+
+    &__image{
+
+      width: 300px;
+      height: 300px;
+
+    }
+
+    &__layout{
+
+      margin: 0 $layout-padding-tablet;
+
+
+    }
+
+    &--top{
+
+      width: $width-content-tablet;
+
+    }
+
+    &__likes{
+
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: auto;
+
+    }
+
+    &__icon-heart{
+
+      order: 1;
+      margin-left:auto;
 
     }
 
   }
-
-
 
 }
 
 
 @media (min-width: $width-content-desktop){
 
-  .photo-card{
+  .photo-card {
 
-    display: inline-block;
-    vertical-align: top;
+    justify-content: flex-start;
     width: 300px;
-    height: 400px;
-    outline: 1px solid $color-blue;
 
+    &__top-image {
 
-    &--main{
-
-      width: 100%;
-
+      width: $width-content-desktop;
+      height: 509px;
 
     }
 
+    &__title {
+
+      position: absolute;
+      right: 130px;
+      top: 54px;
+      background-color: $color-red1;
+      font: 700 #{$font-size - 2px} / (24px / ($font-size - 2px)) $open-sans;
+      color: $color-white;
+      padding: 6px 20px;
+      text-transform: uppercase;
+      margin: 0;
+
+    }
+
+    &__padding {
+
+      padding: 0 27px;
+
+    }
+
+    &--top &__likes {
+
+      position: absolute;
+      top: 28px;
+      right: 0;
+      padding: 0 20px;
+
+    }
+
+    &--top &__icon-heart {
+
+      float: right;
+      margin-left: 16px;
+
+    }
+
+    &--top &__content {
+
+      padding-right: 84px;
+
+    }
+
+    &__image {
+
+      width: 300px;
+      height: 400px;
+
+    }
+
+    &__layout {
+
+      margin: 0 $layout-padding-desktop;
+
+    }
+
+    &--top {
+
+      width: $width-content-desktop;
+
+    }
+
+    &__likes {
+
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: auto;
+
+    }
+
+    &__icon-heart {
+
+      order: 1;
+      margin-left: auto;
+
+    }
 
   }
 

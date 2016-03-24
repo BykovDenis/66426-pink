@@ -24,17 +24,15 @@ html
             a(href="#").main-nav__link Html Academy
       .intro.intro--not-main
             h1.intro__header Фотографии пользователей
-        section.block-header
+        section.block-header.block-header--photo
           .block-header__layout
             .block-header__description Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?
     main
       .photo
-        .photo__layout
-
-          article.photo-card
-            img(src="../img/panorama-mobile.jpg" alt="Анна" width="320" height="137").photo-card__top-image
-            p.photo-card__title Панорама дня
-
+        section.photo-card.photo-card--top
+          img(src="../img/panorama-mobile.jpg" alt="Анна" width="320" height="137").photo-card__top-image
+          p.photo-card__title Панорама дня
+          .photo-card__layout
             p.photo-card__author Анна
               span.photo-card__time-added (5 минут назад)
             p.photo-card__content.
@@ -52,7 +50,7 @@ html
 
               if card["type"] != "top"
 
-                article.photo-card
+                section.photo-card
                    img(src="#{card['filepath']}" alt="#{card['title']}" width="280" height="180").photo-card__image
 
                    p.photo-card__author #{card["title"]}
@@ -63,43 +61,40 @@ html
                      span.photo-card__icon-heart
                      Нравится:
                      span.photo-card__likes-counter #{card["counter"]}
+      section.block-header.block-header--photo
+        .block-header__description Затмите их всех! <br> Выкладывайте все, что накопилось на телефоне!
 
       form(method="get").upload
-        .upload__layout
-          section.block-header
-            .block-header__layout
-              .block-header__description Затмите их всех! <br> Выкладывайте все, что накопилось на телефоне!
-
-            .image
-              .image__src
-                img(src="../img/photo-7-mobile.jpg" width="280" height="375" alt="Загрузить изображение с телефона")
-              .upload__rules
-                .image__effects
-                  .image__effect
-                    input(type="checkbox" id="crop" checked).image__crop
-                    label(for="crop").image__icon-crop
-                      .progressbar
-                        .progressbar__line
-                        .progressbar__point
-                  .image__effect
-                    input(type="checkbox" id="fill").image__fill
-                    label(for="fill").image__icon-fill
-                      .progressbar
-                        .progressbar__line
-                        .progressbar__point
-                  .image__effect
-                    input(type="checkbox" id="contrast").image__contrast
-                    label(for="contrast").image__icon-contrast
-                      .progressbar
-                        .progressbar__line
-                        .progressbar__point
-                .progressbar.progressbar--main
-                  .progressbar__line
-                  .progressbar__point
-                .upload__controls
-                  input(type="file" value="Прикрепить фото").btn.btn__file
-                  input(type="submit" value="Запостить").btn
-                  input(type="reset" value="Отмена").btn.btn--disable
+        .image
+          .image__src
+            img(src="../img/photo-7-mobile.jpg" width="280" height="375" alt="Загрузить изображение с телефона")
+        .upload__rules
+          .image__effects
+            .image__effect
+              input(type="checkbox" id="crop" checked).image__crop
+              label(for="crop").image__icon-crop
+              .progressbar
+                .progressbar__line.image__effect--crop
+                .progressbar__point
+            .image__effect
+              input(type="checkbox" id="fill").image__fill
+              label(for="fill").image__icon-fill
+              .progressbar.image__effect--fill
+                .progressbar__line
+                .progressbar__point
+            .image__effect
+              input(type="checkbox" id="contrast").image__contrast
+              label(for="contrast").image__icon-contrast
+              .progressbar.image__effect--contrast
+                .progressbar__line
+                .progressbar__point
+          .progressbar.progressbar--main
+            .progressbar__line
+            .progressbar__point
+          .upload__controls
+            input(type="file" value="Прикрепить фото").btn.btn__file
+            input(type="submit" value="Запостить").btn
+            input(type="reset" value="Отмена").btn.btn--disable
     footer.main-footer
       .main-footer__layout
         a(href="index.html").main-footer__logo

@@ -2,19 +2,13 @@
 
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  background-color: #f2f2f2;
+  width: $width-content-mobile;
+  margin: 0 auto;
+  padding-top: 20px;
 
-  outline: 1px solid rgba(150, 50, 150, .5);
-
-  &:before{
-
-    content: 'upload';
-    background-color: rgba(150, 50, 150, .1);
-
-  }
-
-  &__layout{
-
-  }
 
   &__file{
 
@@ -37,20 +31,19 @@
     align-items: center;
     justify-content: center;
 
-    padding: 38px 0;
-    border-top: 1px solid rgba(0,0,0,.1);
-
   }
 
 
 }
 
-@media(min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px),
- (min-width: $width-content-desktop){
+@media(min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px) {
 
   .upload{
 
+    display: flex;
     flex-direction: row;
+    align-items: flex-end;
+    width: $width-content-tablet;
 
     &--rules{
 
@@ -58,6 +51,11 @@
       flex-direction: column;
       justify-content: space-around;
 
+    }
+
+    &__controls{
+
+      margin-bottom: 40px;
 
     }
 
@@ -69,10 +67,22 @@
 
   .upload{
 
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    width: $width-content-desktop - ($layout-padding-desktop * 2);
+
+    &--rules{
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+    }
+
     &__controls{
 
-      flex-direction: row;
-      justify-content: space-between;
+      margin-bottom: 40px;
 
     }
 
