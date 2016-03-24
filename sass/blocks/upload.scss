@@ -1,42 +1,53 @@
 .upload{
-     
+
   display: flex;
   flex-direction: column;
-  
+
   outline: 1px solid rgba(150, 50, 150, .5);
-    
+
   &:before{
- 
+
     content: 'upload';
-    background-color: rgba(150, 50, 150, .1); 
+    background-color: rgba(150, 50, 150, .1);
 
   }
-    
+
   &__layout{
 
-    @include layout(); 
+  }
 
-  }  
-   
   &__file{
-    
+
     display: none;
-    
-  }  
-  
-  &__controls{
-    
+
+  }
+
+
+  &__rules{
+
     display: flex;
     flex-direction: column;
-    
+
   }
-  
-    
-}  
+
+  &__controls{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 38px 0;
+    border-top: 1px solid rgba(0,0,0,.1);
+
+  }
+
+
+}
 
 @media(min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px),
  (min-width: $width-content-desktop){
- 
+
   .upload{
 
     flex-direction: row;
@@ -51,21 +62,21 @@
     }
 
   }
-  
+
 }
 
 @media(min-width: $width-content-desktop){
 
   .upload{
-    
+
     &__controls{
-   
+
       flex-direction: row;
       justify-content: space-between;
-      
+
     }
-    
-  }  
-  
+
+  }
+
 }
 

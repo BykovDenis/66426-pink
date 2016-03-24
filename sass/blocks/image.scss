@@ -1,57 +1,130 @@
 .image{
-    
+
   display: flex;
   flex-direction: column;
+  background-color: $color-grey;
+  padding-top: 20px;
 
-  &__effects{
-    
-    display: flex;
-    justify-content:space-around;
-        
-  }
-  
   &__src{
-    
+
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    margin-bottom: 42px;
+
   }
-  
-  
+
+  &__effects{
+
+    height: 44px;
+    width: 198px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: center;
+    align-items: center;
+    margin-bottom: 40px;
+
+  }
+
+  &__icon-crop{
+
+      display: block;
+      width:44px;
+      height: 44px;
+      background: url(../../img/icon-editor-crop.svg) 0 0 no-repeat;
+
+    }
+
+
+  &__icon-fill{
+
+    display: block;
+    width:48px;
+    height: 43px;
+    background: url(../../img/icon-editor-fill.svg) 0 0 no-repeat;
+
+  }
+
+  &__icon-contrast{
+
+    display: block;
+    width:32px;
+    height: 32px;
+    background: url(../../img/icon-editor-contrast.svg) 0 0 no-repeat;
+
+  }
+
+  &__crop{
+
+    display: none;
+
+  }
+
+  &__fill{
+
+    display: none;
+
+  }
+
+  &__contrast{
+
+    display: none;
+
+  }
+
+  &__fill:checked + &__icon-fill {
+
+    opacity:.7;
+
+  }
+
+  &__crop:checked + &__icon-crop {
+
+    opacity:.7;
+
+  }
+
+  &__contrast:checked + &__icon-contrast {
+
+    opacity:.7;
+
+  }
+
+
 }
 
 @media(min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px),
 (min-width: $width-content-desktop){
- 
+
   .image{
-    
+
     flex-direction: row;
-    
+
     &__src{
-            
+
       justify-content: center;
       align-items: center;
 
     }
-    
+
     &__effects{
 
       display: flex;
       flex-direction: column;
       justify-content:space-around;
 
-    }    
-    
+    }
+
     &__effect{
-      
+
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       margin-bottom: 10px;
-      
+
     }
-    
+
   }
-  
+
 }
