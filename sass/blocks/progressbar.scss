@@ -2,24 +2,24 @@
 
   display: none;
   justify-content: center;
-  margin-bottom: 28px;
+  margin-bottom: 40px;
   position: relative;
 
   width: 320px;
   height: 14px;
 
 
-
-
   &--main{
 
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
     align-self: center;
 
-    margin-bottom: 38px;
     border-bottom: 1px solid rgba(0,0,0,.1);
-    height: 68px;
+    height: auto;
+    width: 275px;
+    padding-bottom: 40px;
 
 
   }
@@ -36,7 +36,7 @@
   &__point{
 
     position: absolute;
-    top: 26px;
+    top: -3px;
     left: 191px;
 
     border: 2px solid $color-red1;
@@ -45,9 +45,7 @@
     border-radius: 50%;
     background-color: $color-grey;
 
-
   }
-
 
 
 }
@@ -55,48 +53,104 @@
 @media (min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px){
 
 
-.progressbar{
+  .progressbar{
 
-  display: flex;
-  flex-direction: column;
-  align-self: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-self: center;
 
-  margin-bottom: 38px;
-  border-bottom: 1px solid rgba(0,0,0,.1);
-  height: 68px;
-  width: 275px;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    height: auto;
+    width: 275px;
+    padding-bottom: 15px;
 
-  &--main{
+    &--main{
 
-    display: none;
+      display: none;
+
+    }
+
+    &__line{
+
+      width: 202px;
+
+    }
+
+
+    &--crop &__point{
+
+      top: 3px;
+      left: 195px;
+
+    }
+
+    &--fill &__point{
+
+      top: 3px;
+      left: 75px;
+
+    }
+
+    &--contrast &__point{
+
+      top: 0;
+      left: 145px;
+
+    }
 
   }
-
-  &__line{
-
-    width: 202px;
-
-  }
-
-}
 
 }
 
 @media (min-width: $width-content-desktop){
 
-.progressbar{
+  .progressbar{
 
-  width: 240px;
-  display: flex;
-  flex-direction: column;
-  align-self: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-self: center;
 
-  &--main{
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    height: auto;
+    width: 275px;
+    padding-bottom: 15px;
 
-    display: none;
+    &--main{
+
+      display: none;
+
+    }
+
+    &__line{
+
+      width: 202px;
+
+    }
+
+
+    &--crop &__point{
+
+      top: 3px;
+      left: 195px;
+
+    }
+
+    &--fill &__point{
+
+      top: 3px;
+      left: 75px;
+
+    }
+
+    &--contrast &__point{
+
+      top: 0;
+      left: 145px;
+
+    }
 
   }
-
-}
 
 }

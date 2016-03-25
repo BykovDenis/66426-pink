@@ -71,21 +71,21 @@ html
         .upload__rules
           .image__effects
             .image__effect
-              input(type="checkbox" id="crop" checked).image__crop
-              label(for="crop").image__icon-crop
-              .progressbar
+              .progressbar.progressbar--crop
+                input(type="checkbox" id="crop" checked).image__crop
+                label(for="crop").image__icon-crop
                 .progressbar__line.image__effect--crop
                 .progressbar__point
             .image__effect
-              input(type="checkbox" id="fill").image__fill
-              label(for="fill").image__icon-fill
-              .progressbar.image__effect--fill
+              .progressbar.progressbar--fill
+                input(type="checkbox" id="fill").image__fill
+                label(for="fill").image__icon-fill
                 .progressbar__line
                 .progressbar__point
             .image__effect
-              input(type="checkbox" id="contrast").image__contrast
-              label(for="contrast").image__icon-contrast
-              .progressbar.image__effect--contrast
+              .progressbar.progressbar--contrast
+                input(type="checkbox" id="contrast").image__contrast
+                label(for="contrast").image__icon-contrast
                 .progressbar__line
                 .progressbar__point
           .progressbar.progressbar--main

@@ -120,6 +120,8 @@
       display: flex;
       flex-direction: column;
       justify-content:space-around;
+      height: auto;
+      margin-top: 20px;
 
 
     }
@@ -129,7 +131,55 @@
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      margin-bottom: 70px;
+
+    }
+
+    &__icon-crop{
+
+      display: block;
+      width:22px;
+      height: 22px;
+      background: url(../../img/icon-editor-crop.svg) 0 0 no-repeat;
+      background-size: 22px 22px;
+
+    }
+
+
+    &__icon-fill{
+
+      display: block;
+      width:24px;
+      height: 22px;
+      background: url(../../img/icon-editor-fill.svg) 0 0 no-repeat;
+      background-size: 24px 22px;
+
+    }
+
+    &__icon-contrast{
+
+      display: block;
+      width:16px;
+      height: 16px;
+      background: url(../../img/icon-editor-contrast.svg) 0 0 no-repeat;
+      background-size: 16px 16px;
+
+    }
+
+    &__fill:checked + &__icon-fill {
+
+      opacity:1;
+
+    }
+
+    &__crop:checked + &__icon-crop {
+
+      opacity:1;
+
+    }
+
+    &__contrast:checked + &__icon-contrast {
+
+      opacity:1;
 
     }
 
@@ -139,7 +189,6 @@
 
 
 @media (min-width: $width-content-desktop) {
-
 
   .image{
 
@@ -163,6 +212,8 @@
       display: flex;
       flex-direction: column;
       justify-content:space-around;
+      height: auto;
+      margin-top: 20px;
 
 
     }
@@ -172,7 +223,55 @@
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      margin-bottom: 70px;
+
+    }
+
+    &__icon-crop{
+
+      display: block;
+      width:22px;
+      height: 22px;
+      background: url(../../img/icon-editor-crop.svg) 0 0 no-repeat;
+      background-size: 22px 22px;
+
+    }
+
+
+    &__icon-fill{
+
+      display: block;
+      width:24px;
+      height: 22px;
+      background: url(../../img/icon-editor-fill.svg) 0 0 no-repeat;
+      background-size: 24px 22px;
+
+    }
+
+    &__icon-contrast{
+
+      display: block;
+      width:16px;
+      height: 16px;
+      background: url(../../img/icon-editor-contrast.svg) 0 0 no-repeat;
+      background-size: 16px 16px;
+
+    }
+
+    &__fill:checked + &__icon-fill {
+
+      opacity:1;
+
+    }
+
+    &__crop:checked + &__icon-crop {
+
+      opacity:1;
+
+    }
+
+    &__contrast:checked + &__icon-contrast {
+
+      opacity:1;
 
     }
 
