@@ -1,67 +1,122 @@
-.intro{   
-  
-  height: 392px;
-  outline: 1px solid pink;
-    
-  min-width: 300px;
-  
-  
-    
-  &:before{
-     
-    content: "intro";  
-    background-color: rgba(150, 0, 150, .5);      
-        
-  }        
+.intro{
 
+  &--not-main{
+
+    @include page-width();
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+    background: url(../../img/bg-back-tablet.jpg) 50% 0px no-repeat $color-blue-dark1;
+    padding-top: 111px;
+
+  }
+
+  &:after{
+
+    @include clearfix();
+
+  }
 
   &__header{
 
-    font: 100 #{$font-size-h1} / #{$line-height} $open-sans-light;         
-    text-align: center; 
+    font: 100 #{$font-size + 10px} / 1.4 $open-sans;
+    color: $color-white;
+    text-align: center;
+    padding: 10px 20px 80px;
+    margin: 0;
   }
-    
+
+  &--mainpage &__header{
+
+     display: none;
+     margin: 0;
+
+  }
+
 }
 
 
 @media(min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px){
-        
+
+
   .intro{
-    
-    &__layout{
-      
-      @include layout();  
-      outline: 1px solid $color-blue;
-      
+
+    text-align: center;
+
+    &__header{
+
+      font: 100 #{$font-size-h1 + 10px} / 1.4 $open-sans;
+      color: $color-white;
+      text-align: center;
+      margin: 0;
+
     }
-        
-    &--mainpage{
 
-      float: left;    
+    &--mainpage &__header{
 
-    } 
-        
+      display: block;
+      float: left;
+      margin: 0 40px;
+      font: 100 #{$font-size-h1} /  1.2 $open-sans;
+      color: $color-white;
+      padding: 10px 20px 0px;
+
+    }
+
+    &--not-main &__header{
+
+      padding: 63px 113px;
+
+    }
+
   }
-    
+
 }
 
 @media(min-width: $width-content-desktop){
-    
-  .intro{   
-    
-    &__layout{
-      
-      @include layout();   
-      outline: 1px solid $color-blue;
-      
-    }    
-    
-    &--mainpage{
 
-      float: left;    
+  .intro{
+
+    text-align: center;
+
+    &--not-main{
+
+      display: block;
+
+      background: url(../../img/bg-back-desktop.jpg) 50% 0px no-repeat $color-blue-dark1;
+      padding-top: 111px;
 
     }
-    
+
+    &--not-main &__header{
+
+      padding: 62px 224px 100px;
+
+    }
+
+
+    &--mainpage{
+
+      float: left;
+
+    }
+
+    &__header{
+
+      font: 100 #{$font-size-h1 + 10px} /  1.2 $open-sans;
+      color: $color-white;
+
+    }
+
+    &--mainpage &__header {
+
+      display: block;
+      padding: 0 10px;
+
+    }
+
   }
-    
+
 }

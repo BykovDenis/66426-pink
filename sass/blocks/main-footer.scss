@@ -1,70 +1,89 @@
 .main-footer{
-  
-  &:after{
-  
-    @include clearfix(); 
-    
-  }
-    
-    
-  outline: 1px solid rgba(50, 150, 50, .5);
-  text-align: center;
-    
-  &:before{
- 
-    content: 'main-footer';
-    background-color: rgba(50, 150, 50, .1); 
 
-  }  
-    
+  @include page-width();
+
+  &:after{
+
+    @include clearfix();
+
+  }
+
+  text-align: center;
+
   &__layout{
 
     @include layout();
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 
   }
-    
-  &--mainpage{
- 
-    display: none;  
 
-  }  
-    
+  &--mainpage{
+
+    display: none;
+
+  }
+
   &__logo{
 
-    display: block;    
+    display: block;
+    width: 147px;
+    height: 40px;
+    background: url(../../img/img_logo1.png) 0 0 no-repeat;
+    margin: 40px 0;
+
 
   }
-    
+
 }
 
 @media (min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px){
- 
-  .main-footer{ 
-    
+
+  .main-footer{
+
     display: block;
-  
-    &__logo{
-    
-      float: left;
+    border-top: 1px solid transparent;
+
+    &__layout {
+
+      display: block;
 
     }
-      
+
+    &__logo{
+
+      float: left;
+      margin-bottom: 51px;
+
+    }
+
   }
-    
+
 }
 
 @media (min-width: $width-content-desktop){
-    
-  .main-footer{  
-        
-    display: block;
-    
-    &__logo{
-    
-      float: left;
 
-    }    
-      
-  }    
-    
+  .main-footer{
+
+    display: block;
+
+    &__layout {
+
+      display: block;
+
+    }
+
+    &__logo{
+
+      float: left;
+      background: url(../../img/logotype-blue-desktop.png) 0 0 no-repeat;
+      margin-bottom: 51px;
+
+    }
+
+  }
+
 }

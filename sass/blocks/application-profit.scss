@@ -1,58 +1,141 @@
-.application-profit{    
-  
-  display: none;   
-    
-}
+.application-profit{
 
-@media (min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px),(min-width: $width-content-desktop){
+  display: none;
 
-  .application-profit{
-    
-    display: block; 
-    outline: 1px solid $color-red;
-    position: relative; 
-      
-    text-align: left;
-    margin: 0 auto;
-    
-      
-    &__layout{
- 
-      @include layout();
-      
-    }         
-
-      
-    &:before{
-          
-      content: "application-profit";
-      background-color: rgba(255, 150, 150, 0.4);
-          
-    }
-    
-  }
-    
 }
 
 @media (min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px){
-    
+
   .application-profit{
-    
-    padding-left: 310px;
-    width: 300px;
-      
-  }    
-    
+
+
+    display: block;
+    position: relative;
+
+    text-align: left;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 100px;
+
+
+    &:after{
+
+      @include clearfix();
+
+    }
+
+    &__image{
+
+      float: left;
+      padding-left: $layout-padding-tablet;
+
+    }
+
+    &__layout{
+
+      float: right;
+      width: 320px;
+      padding-right: $layout-padding-tablet;
+
+    }
+
+    &__title{
+
+      border: 1px solid transparent;
+      margin-top: 40px;
+      font: 600 #{$font-size-h2} /  1.2 $open-sans;
+      color: $color-black;
+      width: 168px;
+      display: block;
+
+    }
+
+    &__description{
+
+      font: 400 #{$font-size}/ 1.71 $open-sans;
+      color: $color-blue;
+
+    }
+
+    &__link{
+
+      font: 400 #{$font-size} / 1.71 $open-sans;
+      color: $color-red1;
+
+    }
+
+    &__label-control{
+
+      font: 400 #{$font-size}/ 1.71 $open-sans;
+      color: $color-blue;
+
+    }
+
+
+  }
+
 }
 
 
 @media (min-width: $width-content-desktop){
-    
+
   .application-profit{
-    
-    padding-left: 366px;
-    width: 530px; 
-      
+
+
+    display: block;
+    position: relative;
+
+    text-align: left;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 65px;
+    background-color: $color-grey;
+
+
+    &:after{
+
+      @include clearfix();
+
+    }
+
+    &__image{
+
+      float: left;
+      padding-left: $layout-padding-desktop;
+
+    }
+
+    &__layout{
+
+      float: right;
+      width: 520px;
+      padding-right: $layout-padding-desktop + 75px; /* 205 */
+
+    }
+
+    &__title{
+
+      padding-top: 40px;
+      font: 600 #{$font-size-h2} /  1.2 $open-sans;
+      color: $color-black;
+
+
+    }
+
+    &__description{
+
+      font: 400 #{$font-size}/ 1.71 $open-sans;
+      color: $color-blue;
+
+    }
+
+    &__link{
+
+      font: 400 #{$font-size} / 1.71 $open-sans;
+      color: $color-red1;
+
+    }
+
   }
-    
+
 }

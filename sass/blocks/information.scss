@@ -1,63 +1,149 @@
 .information{
-    
-  @include contain-width;    
-  outline: 1px solid rgba(150, 50, 150, .5);
-  text-align: center;  
-    
-  &:before{
- 
-    content: 'information';
-    background-color: rgba(150, 50, 150, .1);     
+
+  @include page-width();
+
+  margin-top: 47px;
+
+  &__item {
+
+    text-align: center;
+
+    font: 100 #{$font-size + 10px} / 1 $open-sans;
+    color: $color-blue;
+
+    margin: 0;
+    margin-bottom:40px;
 
   }
-    
-  &:after{
-        
-    @include clearfix();
-      
-  }
-    
-  &__layout{
 
-    @include layout();
+  &__column{
 
-  } 
-    
-  &__body{
+    background-color: $color-grey;
+    text-align: center;
 
-    
-    margin: 0 auto;
+    @include angle(30px, $width-content-mobile, $color-grey);
 
   }
-    
+
+  &__image{
+
+    padding-top:47px;
+    height: 270px;
+    position: relative;
+    overflow-y: hidden;
+    text-align: center;
+
+  }
+
+  &__image img{
+
+    position: relative;
+    top: 0;
+    width: 157px;
+    height: 320px;
+
+  }
+
 }
 
 
 @media(min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px){
-    
+
   .information{
-      
-    &__body{
-        
-      width: 310px;
-        float: right;    
-        
+
+    margin-top: 57px;
+    &__item {
+
+      font: 100 #{$font-size-h1} / 1.1 $open-sans;
+      color: $color-blue;
+
+      margin: 0;
+      &:last-of-type{
+
+        margin-bottom: 45px;
+        padding: 0 60px;
+
+      }
+
     }
-        
+
+    &__column{
+
+      @include clearfix();
+      position: relative;
+
+
+      @include angle(52px, $width-content-tablet, $color-grey);
+
+    }
+
+    &__body{
+
+      float: right;
+      padding-right: $layout-padding-tablet;
+      width: $width-content-mobile;
+      text-align: left;
+      margin-bottom: 37px;
+
+    }
+
+    &__image{
+
+      padding-left: $layout-padding-tablet;
+      height: 480px;
+      position: absolute;
+      overflow-y: hidden;
+      text-align: center;
+      top: -42px;
+      left: 0;
+
+    }
+
+    &__image img{
+
+      position: relative;
+      top: 0;
+      width: 268px;
+      height: 548px;
+
+    }
+
+
+
   }
-    
-} 
+
+}
 
 @media(min-width: $width-content-desktop){
-    
-  .information{ 
-      
-    &__body{              
-      
-        width: auto;    
-        
+
+  .information{
+
+    margin-top: 80px;
+
+    &__item{
+
+      font: 100 #{$font-size-h1 + 10px} / 1.1 $open-sans;
+
+      &:last-of-type{
+
+        padding: 0 238px;
+
+      }
+
     }
-      
+
+    &__column{
+
+      @include angle(90px, $width-content-desktop, $color-grey);
+
+    }
+
+    &__image{
+
+      display: none;
+
+    }
+
   }
-        
+
 }

@@ -1,5 +1,156 @@
 .progressbar{
-    
-    
-    
+
+  display: none;
+  justify-content: center;
+  margin-bottom: 40px;
+  position: relative;
+
+  width: 320px;
+  height: 14px;
+
+
+  &--main{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-self: center;
+
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    height: auto;
+    width: 275px;
+    padding-bottom: 40px;
+
+
+  }
+
+  &__line{
+
+    background-color: $color-blue;
+    height: 2px;
+    width: 240px;
+    margin: 0 auto;
+
+  }
+
+  &__point{
+
+    position: absolute;
+    top: -3px;
+    left: 191px;
+
+    border: 2px solid $color-red1;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: $color-grey;
+
+  }
+
+
+}
+
+@media (min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px){
+
+
+  .progressbar{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-self: center;
+
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    height: auto;
+    width: 275px;
+    padding-bottom: 15px;
+
+    &--main{
+
+      display: none;
+
+    }
+
+    &__line{
+
+      width: 202px;
+
+    }
+
+
+    &--crop &__point{
+
+      top: 3px;
+      left: 195px;
+
+    }
+
+    &--fill &__point{
+
+      top: 3px;
+      left: 75px;
+
+    }
+
+    &--contrast &__point{
+
+      top: 0;
+      left: 145px;
+
+    }
+
+  }
+
+}
+
+@media (min-width: $width-content-desktop){
+
+  .progressbar{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-self: center;
+
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    height: auto;
+    width: 275px;
+    padding-bottom: 15px;
+
+    &--main{
+
+      display: none;
+
+    }
+
+    &__line{
+
+      width: 202px;
+
+    }
+
+
+    &--crop &__point{
+
+      top: 3px;
+      left: 195px;
+
+    }
+
+    &--fill &__point{
+
+      top: 3px;
+      left: 75px;
+
+    }
+
+    &--contrast &__point{
+
+      top: 0;
+      left: 145px;
+
+    }
+
+  }
+
 }

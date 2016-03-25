@@ -1,45 +1,72 @@
 /* Миксины */
 
 @mixin layout{
-      
-  padding: 0 5.4% ;    
-  margin: 0 auto;
-  
-    
-  @media(min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px) {
-  
-    padding: 0 5.5%;      
-      
-  }     
-    
-  @media(min-width: $width-content-desktop){
-  
-    padding: 0 130px;
-    max-width: 940px;
-      
-  }      
-    
-}
 
-@mixin contain-width{
-    
-  margin: 0 auto;   
-  
-    
+  padding: 0 $layout-padding-mobile;
+  margin: 0 auto;
+
+
+  @media(min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px) {
+
+    padding: 0 $layout-padding-tablet;
+
+  }
+
+  @media(min-width: $width-content-desktop){
+
+    padding: 0 $layout-padding-desktop;
+    max-width: 1200px;
+
+  }
+
 }
 
 @mixin angle{
-    
+
   border-top: 40px solid $color-white;
   border-right:320px solid $color-gray;
   margin-bottom: 53px;
-    
+
 }
 
 @mixin clearfix{
-    
+
     display: table;
     clear: both;
-    content: '';    
-    
+    content: '';
+
+}
+
+@mixin page-width{
+
+  width: $width-content-mobile;
+  margin: 0 auto;
+
+  @media(min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px) {
+
+    width: $width-content-tablet;
+
+  }
+
+  @media(min-width: $width-content-desktop) {
+
+    width: $width-content-desktop;
+
+  }
+
+}
+
+/*  Закрашенный угол */
+
+@mixin angle($border-height, $container-width, $color) {
+
+  &:before {
+
+    display: block;
+    content: "";
+    border-top: $border-height solid $color-white;
+    border-right: $container-width solid $color;
+
+  }
+
 }

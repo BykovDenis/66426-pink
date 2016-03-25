@@ -1,25 +1,74 @@
 .block-header{
-  
-  outline: 1px solid $color-red;
-    
-  &:before{
-    
-    content: "block-header"; 
-    background-color: rgba(255, 150, 150, 0.4);
-      
-  }
-    
-  &__layout{
+
+ &__layout{
 
     @include layout();
 
   }
-  
+
   &__description{
-    
-    outline: 1px solid $color-red;  
+
     text-align: center;
-    
+    font: 400 #{$font-size} / 2.14 $open-sans;
+    color: $color-blue;
+    margin-bottom: 50px;
+    margin-top: 54px;
+
   }
-    
+
+  &__add-info{
+
+    display: none;
+
+  }
+
+}
+
+@media (min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px) {
+
+  .block-header{
+
+    &__description{
+
+      font: 400 #{$font-size + 4px} / 1.67 $open-sans;
+      margin: 94px 65px 25px;
+
+    }
+
+    &__add-info{
+
+      display: inline;
+
+    }
+
+    &--photo &__description{
+
+      margin: 84px 65px 72px;
+
+    }
+
+  }
+
+}
+
+@media (min-width: $width-content-desktop) {
+
+  .block-header {
+
+    &__description {
+
+      margin: 100px 233px 64px;
+      font-size: $font-size + 4px;
+      line-height: 30px / ($font-size + 4px);
+
+    }
+
+    &__add-info{
+
+      display: inline;
+
+    }
+
+  }
+
 }

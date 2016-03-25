@@ -1,46 +1,229 @@
 .contacts{
-  
-  margin: 0;    
-  outline: 1px solid rgba(150, 50, 150, .5);
+
+  margin: 0;
   text-align: center;
-    
-  &:before{
- 
-    content: 'contacts';
-    background-color: rgba(150, 50, 150, .1); 
+  position: relative;
+
+  /*
+  &:after{
+
+    border-top: 29px solid transparent;
+    border-right: 162px solid red;
+    border-left: 162px solid red;
+    content: "";
+    display: block;
+    background-color: green;
 
   }
-    
+
+  */
+
   &__layout{
 
     @include layout();
-outline: 1px solid rgba(150, 50, 150, .5);
 
-  }    
-    
-    
+  }
+
+  &__header{
+
+    font: 100 #{$font-size-h2 - 6px} / 1.2 $open-sans;
+    color: $color-blue;
+    margin: 0;
+
+  }
+
+  &__name{
+
+    font: 600 #{$font-size + 4px} / 1.2 $open-sans;
+    color: $color-blue;
+    margin: 0;
+
+  }
+
+  &__description{
+
+    font: 100 #{$font-size + 10px} / 1.2 $open-sans;
+    color: $color-red1;
+    margin: 0;
+
+  }
+
+  &__contain{
+
+    margin: 30px 0;
+
+  }
+
+  &__map{
+
+    position: relative;
+    overflow: hidden;
+    width: $width-content-mobile;
+    height: 200px;
+
+
+
+    img {
+
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 100;
+      width: 1200px;
+      height: 976px;
+      display: block;
+      transform: translate(-439px, 330px);
+
+
+
+    }
+
+  }
+
 }
 
-@media (min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px),
-    (min-width: $width-content-desktop){
- 
-  .contacts{
+@media (min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px) {
+
+  .contacts {
+
+    margin: 0;
+    text-align: center;
+    position: relative;
+
+    &__contain {
+
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 50px;
+
+
+    }
+
+    &__contain:nth-of-type(2n) {
+
+      margin-right: 0;
+
+    }
+
+    &__layout {
+
+      @include layout();
+
+    }
+
+    &__header {
+
+      font: 100 #{$font-size-h2 + 10px} / 1.2 $open-sans;
+      color: $color-blue;
+      padding: 0 125px;
+      margin: 0;
+
+    }
+
+    &__name {
+
+      font: 600 #{$font-size + 4px} / 1.2 $open-sans;
+      color: $color-blue;
+      margin: 0;
+
+    }
+
+    &__description {
+
+      font: 100 #{$font-size + 10px} / 1.2 $open-sans;
+      color: $color-red1;
+      margin: 0;
+
+    }
+
+    &__map {
+
+      width: $width-content-tablet;
+      height: 377px;
+
+      img {
+
+        transform: translate(-268px, 244px);
+
+      }
+
+    }
+
+  }
+
+}
+
+  @media (min-width: $width-content-desktop) {
+
+    .contacts{
+
+      margin: 0;
+      text-align: center;
+      position: relative;
+
 
       &__contain{
-          
-          display: inline-block;
-          vertical-align: top;
-          outline: 1px solid $color-red;
-          margin-right: 50px;          
-          
+
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 50px;
+
       }
-      
-      &__contain:last-of-type{
-          
-          margin-right: 0;
-          
+
+      &__contain:nth-of-type(3n){
+
+        margin-right: 0;
+
       }
-      
+
+      &__layout{
+
+        @include layout();
+
+      }
+
+      &__header{
+
+        font: 100 #{$font-size-h2 + 20px} / 1.2 $open-sans;
+        color: $color-blue;
+        padding: 0 125px;
+        margin: 0;
+
+      }
+
+      &__name{
+
+        font: 600 #{$font-size + 4px} / 1.2 $open-sans;
+        color: $color-blue;
+        margin: 0;
+
+      }
+
+      &__description{
+
+        font: 100 #{$font-size + 10px} / 1.2 $open-sans;
+        color: $color-red1;
+        margin: 0;
+
+      }
+
+
+      &__map{
+
+        width: $width-content-desktop;
+        height: 500px;
+
+
+
+        img {
+
+          transform: translate(0px, 214px);
+
+        }
+
+      }
+
+
   }
-        
+
 }

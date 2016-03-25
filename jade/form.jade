@@ -1,120 +1,111 @@
 <!DOCTYPE html>
 html
-  head    
+  head
     meta(charset="utf-8")
-    meta(name="viewport" content="width=device-width,initial-scale=1")    
-    title PINK adaptive    
+    meta(name="viewport" content="width=device-width,initial-scale=1")
+    title PINK adaptive
     link(href="css/style.css" rel="stylesheet")
-  body      
-    header.main-header      
-      div.main-header__top        
-       div.main-header__layout
-         nav.main-nav           
-           div.main-nav__logo 
-             a(href="#")
-               img(src="img/img_logo.png" width="75" height="22" alt="PINK")
-           div.main-nav__menu
-             a(href="#").main-nav__main-link
-               i.main-nav__icon    
-             ul.main-nav__items
-               li.main-nav__item 
-                 a(href="#").main-nav__link.main-nav__link--active Главная  
-               li.main-nav__item 
-                 a(href="#").main-nav__link Фотографии
-               li.main-nav__item 
-                 a(href="#").main-nav__link Конкурс
-               li.main-nav__item 
-                 a(href="#").main-nav__link Html Academy
-         article.intro
-           h1.intro__header Конкурс на самое безбашенное путешествие с Пинк  
-      section.block-header 
-        div.block-header__layout
-          div.block-header__description
-            Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту
+  body
+    header.main-header
+      nav.main-nav
+        .main-nav__layout
+          a(href="index.html").main-nav__logo
+          .main-nav__menu
+            a(href="#").main-nav__main-link
+              span.main-nav__icon
+        ul.main-nav__items
+          li.main-nav__item
+            a(href="index.html").main-nav__link.main-nav__link--active Главная
+          li.main-nav__item
+            a(href="photo.html").main-nav__link Фотографии
+          li.main-nav__item
+            a(href="#").main-nav__link Конкурс
+          li.main-nav__item
+            a(href="#").main-nav__link Html Academy
+      .intro.intro--not-main
+        h1.intro__header Конкурс на самое безбашенное путешествие с Пинк
+      section.block-header
+        .block-header__layout
+          .block-header__description
+            Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!
+            span.block-header__add-info Пожалуйста заполните форму ниже
     main.page-main
       form(method="get").form
-        div.form__layout
-        
-          div.form__layout1
-        
-            fieldset.form__items        
-              div.form__item
-                label(for="first_name").form__label Имя        
-                input(type="text" id="first_name" placeholder="Введите ваше имя").form__input
-              div.form__item
-                label(for="last_name").form__label Фамилия        
-                input(type="text" id="last_name" placeholder="Введите фамилию").form__input        
-              div.form__item
-                label(for="middle_name").form__label Отчество
-                input(type="text" id="middle_name" placeholder="Ну и отчество тоже").form__input   
+        .form__layout
 
-            fieldset.form__items
-              legend.form__title С каким приложением путешествовали?
-              div.form__item              
-                label.form__label
-                  input(type="radio" name="application" checked) 
-                  Pink для iOS
-              div.form__item              
-                label.form__label
-                  input(type="radio"  name="application") 
-                  Pink для Android
-              div.form__item              
-                label.form__label
-                  input(type="radio"  name="application") 
-                  Windows Phone  
-                  
           fieldset.form__items
-            legend.form__title Ваши безбашенные достижения в путешествии
-            div.form__item
-              label.form__label
-                input(type="checkbox" name="item1" checked) 
-                Сделал селфи с акулой
-            div.form__item          
-              label.form__label
-                input(type="checkbox"  name="item2" checked) 
-                Обгорел на пляже
-            div.form__item              
-              label.form__label
-                input(type="checkbox"  name="item3") 
-                Видел Чака Норриса
-            div.form__item              
-              label.form__label
-                input(type="checkbox"  name="item4") 
-                Накупил сувениров          
-            div.form__item              
-              label.form__label
-                input(type="checkbox"  name="item5" cheched) 
-                Удержал башню          
-            div.form__item              
-              label.form__label                            
-                input(type="checkbox" name="item6") 
-                Разгромил отель
+            .form__item.form__item--content
+              label(for="first_name").form__label-content Имя:
+              input(type="text" id="first_name" placeholder="Введите ваше имя").form__input
+            .form__item.form__item--content
+              label(for="last_name").form__label-content Фамилия:
+              input(type="text" id="last_name" placeholder="Введите фамилию").form__input
+            .form__item.form__item--content
+              label(for="middle_name").form__label-content Отчество:
+              input(type="text" id="middle_name" placeholder="Ну и отчество тоже").form__input
 
-          fieldset.form__items  
-            div.form__item
-              label(for="phone").form__label Номерок телефончика
-              input(type="text" id="phone" placeholder="Номер, пожалуйста").form__input            
-            div.form__item
-              label(for="email").form__label Адресок почты
-              input(type="text" id="email" placeholder="E-mail, пожалуйста").form__input     
-              
-          fieldset.form__items  
-            div.form__item 
-              label.form__label Опишите свои эмоции           
-              textarea(placeholder="Можно прям в красках, не стесняясь в выражениях")
-          fieldset.form__control 
+          fieldset.form__items.form__items--grey
+            legend.form__title С каким приложением путешествовали?
+            label.form__item.form__item--control
+              input(type="radio" name="application" id="radio1" checked).form__radio
+              span.form__label-control Pink для iOS
+            label.form__item.form__item--control
+              input(type="radio"  name="application" id="radio2").form__radio
+              span.form__label-control Pink для Android
+            label.form__item.form__item--control
+              input(type="radio"  name="application" id="radio3").form__radio
+              span.form__label-control Windows Phone
+
+          fieldset.form__items.form__items--grey
+            legend.form__title Ваши безбашенные достижения в путешествии
+            .form__layout
+              .form__item.form__item--control
+                input(type="checkbox" name="item1" id="check1" checked).form__checkbox
+                label(for="check1").form__label-control Сделал селфи с акулой
+              .form__item.form__item--control
+                input(type="checkbox"  name="item2" id="check2" checked).form__checkbox
+                label(for="check2").form__label-control Обгорел на пляже
+              .form__item.form__item--control
+                input(type="checkbox"  name="item3" id="check3").form__checkbox
+                label(for="check3").form__label-control Видел Чака Норриса
+              .form__item.form__item--control
+                input(type="checkbox"  name="item4" id="check4").form__checkbox
+                label(for="check4").form__label-control Накупил сувениров
+              .form__item.form__item--control
+                input(type="checkbox"  name="item5" id="check5" checked).form__checkbox
+                label(for="check5").form__label-control Удержал башню
+              .form__item.form__item--control
+                input(type="checkbox" name="item6" id="check6").form__checkbox
+                label(for="check6").form__label-control Разгромил отель
+
+          fieldset.form__items
+            legend.form__title.form__title--not-mobile Контактная информация
+            .form__item.form__item--content
+              label(for="phone").form__label-content.form__label-content--mobile Номерок телефончика
+              label(for="phone").form__label-content.form__label-content--other Номер телефона
+              input(type="text" id="phone" placeholder="Номер, пожалуйста").form__input
+            .form__item.form__item--content
+              label(for="email").form__label-content.form__label-content--mobile Адресок почты
+              label(for="email").form__label-content.form__label-content--other Адрес почты
+              input(type="text" id="email" placeholder="E-mail, пожалуйста").form__input
+
+          fieldset.form__items
+            legend.form__title Опишите свои эмоции
+            .form__item.form__item--content
+              textarea(placeholder="Можно прям в красках, не стесняясь в выражениях").form__textarea
+          fieldset.form__control
             button(type="submit").form__send Отправить форму
             p.form__requirement
               span *
               span - Обязательные поля
     footer.main-footer
-      div.main-footer__layout            
+      .main-footer__layout
         a(href="index.html").main-footer__logo
           img(src="img/img_logo1.png" width="147" height="40" alt="PINK")
-        div.socials
-          i.socials__icon.socials__icon--twitter
-          i.socials__icon.socials__icon--fb
-          i.socials__icon.socials__icon--youtube
-        div.htmlacademy
-          Разработано
-          img(src="img/img_htmlacademy.png" width="27" height="34" alt="htmlacademy")     
+        .socials
+          span.socials__icon.socials__icon--twitter
+          span.socials__icon.socials__icon--fb
+          span.socials__icon.socials__icon--youtube
+        .htmlacademy
+          span.htmlacademy__description Разработано
+          img(src="img/img_htmlacademy.png" width="27" height="34" alt="htmlacademy").htmlacademy__logo

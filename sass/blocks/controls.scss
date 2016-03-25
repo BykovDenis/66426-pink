@@ -1,33 +1,49 @@
 .controls{
-    
-    outline: 1px solid $color-blue;
+
     text-align: center;
+    margin: 35px 0;
+
 
     &__item{
-        
+
         display: inline-block;
         vertical-align: top;
         width: 6px;
         height: 6px;
         border: 3px solid $color-white;
-        background-color: $color-gray1;
+        background-color: $color-grey1;
         margin-right: 13px;
         border-radius: 50%;
-            
-    }   
-    
+
+      &:hover{
+
+        cursor: pointer;
+
+      }
+
+    }
+
+    &--table > &__item {
+
+        border: 3px solid $color-grey;
+
+    }
+
+
+    &--table > &__item--active,
     &__item--active{
-        
+
         border: 3px solid $color-blue;
-        background-color: $color-white;        
-        
+        background-color: $color-white;
+
     }
-    
+
     &__item:last-of-type{
-        
-        margin-right: 0;  
-        
+
+        margin-right: 0;
+
     }
-    
+
+
 }
 

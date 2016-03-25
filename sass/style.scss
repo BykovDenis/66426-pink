@@ -26,22 +26,22 @@
 /* Блок с информацией */
 @import "blocks/information";
 
-@import "blocks/page-main";  
+@import "blocks/page-main";
 
-@import "blocks/block-header";  
+@import "blocks/block-header";
 
 /* Блок преимуществ */
 
-@import "blocks/advantages"; 
+@import "blocks/advantages";
 
-@import "blocks/application-profit"; 
+@import "blocks/application-profit";
 
 @import "blocks/review";
 @import "blocks/controls";
 @import "blocks/socials";
 
 /* подключаем блок с формой */
-@import "blocks/form"; 
+@import "blocks/form";
 
 /* блок фотографий */
 @import "blocks/photo";
@@ -62,34 +62,39 @@
 
 /* Подвал */
 @import "blocks/main-footer";
-    
+
 @import "blocks/htmlacademy";
 
-    
 
-body{    
-    
-    @media(max-width: 699px){
-        
-        min-width: 320px;
-        
-    }
-    @media(min-width: 700px) and (max-width: 1199px){
-        
-        min-width: 700px;
-        
-    }
-    @media(min-width: 1200px){
-        
-        min-width: 1200px;
-        
-    }
-  
-  width: $width-body;   
-    
-}
 
-main{
-    
-    
+body{
+
+  margin: 0 auto;
+
+  @media (max-width: $width-content-mobile) and (max-width: $width-content-tablet - 1px){
+
+    width: $width-content-mobile;
+    max-width: $width-content-mobile;
+
+
+  }
+
+
+  @media (min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px){
+
+    min-width:  $width-content-tablet;
+
+  }
+
+  @media (min-width: $width-content-desktop){
+
+    min-width:  $width-content-desktop;
+
+  }
+
+  /* width: $width-body;    */
+
+
+
+
 }
