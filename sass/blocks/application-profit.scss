@@ -14,7 +14,7 @@
 
     text-align: left;
     margin: 0 auto;
-    margin-top: 57px;
+    padding-top: 58px;
     margin-bottom: 100px;
 
 
@@ -90,7 +90,7 @@
 
     text-align: left;
     margin: 0 auto;
-    padding-top: 50px;
+    padding-top: 0;
     padding-bottom: 65px;
     background-color: $color-grey;
 
@@ -112,13 +112,13 @@
 
       float: right;
       width: 520px;
-      padding-right: $layout-padding-desktop + 75px; /* 205 */
+      padding-right: 186px;
 
     }
 
     &__title{
 
-      padding-top: 40px;
+      padding-top: 60px;
       font: 600 #{$font-size-h2} /  1.2 $open-sans;
       color: $color-black;
 
@@ -127,14 +127,14 @@
 
     &__description{
 
-      font: 400 #{$font-size}/ 1.71 $open-sans;
+      font: 400 #{$font-size + 4px}/ #{30px/($font-size + 4px)} $open-sans;
       color: $color-blue;
 
     }
 
     &__link{
 
-      font: 400 #{$font-size} / 1.71 $open-sans;
+      font: 400 #{$font-size + 4px}/ #{30px/($font-size + 4px)} $open-sans;
       color: $color-red1;
 
     }
