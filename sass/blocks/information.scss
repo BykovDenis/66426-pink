@@ -58,6 +58,7 @@
   .information{
 
     margin-top: 57px;
+
     &__item {
 
       font: 100 #{$font-size-h1} / 1.1 $open-sans;
@@ -66,7 +67,7 @@
       margin: 0;
       &:last-of-type{
 
-        margin-bottom: 45px;
+        margin-bottom: 54px;
         padding: 0 60px;
 
       }
@@ -86,10 +87,11 @@
     &__body{
 
       float: right;
-      padding-right: $layout-padding-tablet;
+      padding-right: 29px;
       width: $width-content-mobile;
       text-align: left;
-      margin-bottom: 37px;
+      margin-bottom: 0;
+      padding-top: 22px;
 
     }
 
@@ -100,8 +102,9 @@
       position: absolute;
       overflow-y: hidden;
       text-align: center;
-      top: -42px;
+      top: -51px;
       left: 0;
+      padding-top: 54px;
 
     }
 
@@ -125,6 +128,7 @@
   .information{
 
     margin-top: 71px;
+    margin-bottom: -113px;
 
     &__item{
 
@@ -143,11 +147,25 @@
 
       @include angle(90px, $width-content-desktop, $color-grey);
 
+      &:before{
+
+        margin-top:82px;
+
+      }
+
     }
 
     &__image{
 
       display: none;
+
+    }
+
+    &__body{
+
+      padding-top: 36px;
+      position: relative;
+      top: -139px;
 
     }
 

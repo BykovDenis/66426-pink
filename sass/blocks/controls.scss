@@ -47,3 +47,14 @@
 
 }
 
+@media (min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px){
+
+  .controls{
+
+    margin-top: 35px;
+    margin-bottom: 14px;
+
+  }
+
+}
+

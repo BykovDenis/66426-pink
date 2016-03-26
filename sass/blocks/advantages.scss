@@ -31,7 +31,8 @@
 
   .advantages{
 
-    padding: 5px 0;
+    padding: 0;
+    margin-bottom: 38px;
 
     &__image{
 
@@ -52,17 +53,16 @@
     display: inline-block;
     vertical-align: top;
     margin-right: 20px;
-    width: 240px;
+    width: 300px;
+    padding: 10px 9px;
 
       &__image{
 
         display: block;
-        height: 270px;
         position: relative;
         overflow-y: hidden;
         text-align: center;
-        margin-bottom: 60px;
-        border-bottom: 2px solid $color-grey1;
+        margin-bottom: 53px;
 
       }
 
@@ -70,10 +70,25 @@
 
         position: relative;
         top: 0;
-        width: 187px;
-        height: 320px;
 
       }
+
+    &__title{
+
+      font: 700 #{$font-size-h2}/ 1 $open-sans;
+      color: $color-black;
+      margin-bottom: 22px;
+      padding: 0 30px;
+
+    }
+
+    &__description{
+
+      font: 400 #{$font-size + 4px} / #{30px/($font-size + 4px)} $open-sans;
+      color: $color-blue;
+      padding: 0 30px;
+
+    }
 
 
   }

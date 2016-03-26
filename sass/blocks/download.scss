@@ -6,7 +6,16 @@
   display: flex;
   flex-direction: column;
 
-  background: url(../../img/bg-back-tablet.jpg) 50% 0px no-repeat $color-blue-dark1;
+  background: url(../../img/bg-back-mobile.jpg) 50% -6px no-repeat $color-blue-dark1;
+  background-size: 700px 462px;
+
+  @media (min-resolution: 1.5dppx) {
+
+    background: url(../../img/bg-back-mobile@2x.jpg) 50% -6px no-repeat $color-blue-dark1;
+    background-size: 700px 462px;
+
+  }
+
   padding-top: 111px;
   position: relative;
   font-size: 0;

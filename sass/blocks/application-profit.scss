@@ -14,7 +14,7 @@
 
     text-align: left;
     margin: 0 auto;
-    margin-top: 50px;
+    margin-top: 57px;
     margin-bottom: 100px;
 
 
@@ -28,6 +28,8 @@
 
       float: left;
       padding-left: $layout-padding-tablet;
+      width: 240px;
+      height: 277px;
 
     }
 
@@ -35,18 +37,19 @@
 
       float: right;
       width: 320px;
-      padding-right: $layout-padding-tablet;
+      padding-right: 29px;
 
     }
 
     &__title{
 
       border: 1px solid transparent;
-      margin-top: 40px;
+      padding-right: 110px;
+      display: block;
+      margin-top: 39px;
+      margin-bottom: 10px;
       font: 600 #{$font-size-h2} /  1.2 $open-sans;
       color: $color-black;
-      width: 168px;
-      display: block;
 
     }
 
@@ -133,6 +136,13 @@
 
       font: 400 #{$font-size} / 1.71 $open-sans;
       color: $color-red1;
+
+    }
+
+    &__image{
+
+      width: 298px;
+      height: 345px;
 
     }
 
