@@ -27,8 +27,8 @@
 
   &__image{
 
-    padding-top:47px;
-    height: 270px;
+    padding-top:17px;
+    height: 277px;
     position: relative;
     overflow-y: hidden;
     text-align: center;
@@ -41,6 +41,12 @@
     top: 0;
     width: 157px;
     height: 320px;
+
+  }
+
+  &__body{
+
+    padding-top: 36px;
 
   }
 

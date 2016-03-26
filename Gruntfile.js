@@ -46,18 +46,19 @@ module.exports = function(grunt) {
         }
       }
     },
-      
+
     jade: {
-      
+
         options: {
           processName: function(filename) {
             return filename.toUpperCase();
           },
           client: false,
           runtime: true,
-          pretty: true,
+          pretty: ' ',
           compileDebug: false,
-          extension: false
+          extension: false,
+          inline: false
         },
         all: {
             files: [{
@@ -68,12 +69,12 @@ module.exports = function(grunt) {
                 ext: '.html'
             }]
         }
-        
+
     },
 
     watch: {
       files: ["sass/**/*.{scss,sass}","jade/**/*.{jade}"],
-      tasks: ["sass", "postcss","jade"],        
+      tasks: ["sass", "postcss","jade"],
       options: {
         spawn: false
       }

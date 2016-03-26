@@ -19,11 +19,18 @@
 
   }
 
+  &__cell {
+
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+  }
+
   &__header-cell {
 
     background-color: $color-blue;
     color: $color-white;
-    padding: 25px 0;
+    padding: 19px 0;
     text-align: center;
     position: relative;
 
@@ -52,12 +59,14 @@
 
     font: 400 #{$font-size} / 2.14 $open-sans;
     color: $color-blue;
+    text-transform: uppercase;
 
   }
 
   &__title{
 
     font: 600 #{$font-size + 4px} / 1.67 $open-sans;
+    text-transform: uppercase;
     margin: 0;
 
   }
@@ -73,10 +82,13 @@
 
     display: block;
     float: right;
-    width: 27px;
-    height: 26px;
-    background: url(../../img/icon_yes.png) 0 0 no-repeat;
-    padding-right: 17px;
+    width: 31px;
+    height: 21px;
+    background: url(../../img/icon-yes.svg) 0 0 no-repeat;
+    background-size: 31px 21px;
+    padding-right: 13px;
+    color: $color-red1;
+
 
   }
 
@@ -86,8 +98,10 @@
     float: right;
     width: 27px;
     height: 26px;
-    background: url(../../img/icon_no.png) 0 0 no-repeat;
-    padding-right: 17px;
+    background: url(../../img/icon-no.svg) 0 0 no-repeat;
+    background-size: 27px 26px;
+    padding-right: 13px;
+    color: $color-red1;
 
   }
 
@@ -218,6 +232,7 @@
       background-color: white;
       padding: 4px;
       border: 2px solid $color-grey;
+      text-transform: none;
     }
 
 
