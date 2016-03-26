@@ -19,8 +19,8 @@
      <li class="main-nav__item"><a href="#" class="main-nav__link">Html Academy</a></li>
     </ul>
    </nav>
-   <section class="download download--mainpage">
-    <div class="download__body download__body--mainpage">
+   <section class="download">
+    <div class="download__body">
      <div class="intro intro--mainpage">
       <div class="intro__layout">
        <h1 class="intro__header">Взгляните на жизнь иначе!</h1>
@@ -30,7 +30,11 @@
       <p class="download__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
      </div>
     </div>
-    <picture><img src="img/iphone-hand-mobile.png" width="482" height="545" alt="Скачать приложение" class="download__image"/></picture>
+    <picture>
+     <source media="(min-width:300px)" srcset="img/iphone-hand-mobile.png 1x, img/iphone-hand-mobile@2x.png 2x"/>
+     <source media="(min-width:700px)" srcset="img/iphone-hand-tablet@1x.png 1x, img/iphone-hand-tablet@2x.png 2x"/>
+     <source media="(min-width:1200px)" srcset="img/iphone-hand-desktop@1x.png 1x, img/iphone-hand-desktop@2x.png 2x"/><img src="img/iphone-hand-mobile.png" srcset="img/iphone-hand-mobile@2x.png 2x" alt="Скачать приложение" class="download__image"/>
+    </picture>
    </section>
   </header>
   <main class="page-main">
@@ -40,7 +44,13 @@
     <div class="information__column">
      <div class="information__body">
       <div class="advantages">
-       <div class="advantages__image"><img src="img/iphone-screen-desktop1.png" width="157" height="382" alt="Преимущества"/></div>
+       <div class="advantages__image">
+        <picture>
+         <source media="(min-width:300px)" srcset="img/iphone-screen-mobile.png 1x, img/iphone-screen-mobile@x2.png 2x"/>
+         <source media="(min-width:700px)" srcset="img/iphone-screen-tablet-3@1x.png 1x, img/iphone-screen-tablet-3@2x.png 2x, img/iphone-screen-tablet-3@3x.png 3x"/>
+         <source media="(min-width:1200px)" srcset="img/iphone-screen-desktop-1@1x.png 1x, img/iphone-screen-desktop-1@2x.png 2x, img/iphone-screen-desktop-1@3x.png 3x"/><img src="img/iphone-screen-mobile.png" srcset="img/iphone-screen-mobile@x2.png 2x" alt="Преимущества"/>
+        </picture>
+       </div>
        <h3 class="advantages__title">Поднимает настроение</h3>
        <p class="advantages__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
       </div>
@@ -54,7 +64,9 @@
        <h3 class="advantages__title">Заводит новых друзей</h3>
        <p class="advantages__description">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
       </div>
-      <div class="information__image"><img src="img/iphone-screen-tablet.png" width="157" height="382" alt="Преимущества"/></div>
+      <div class="information__image">
+       <picture><img src="img/iphone-screen-mobile.png" srcset="img/iphone-screen-mobile@2x.png" width="157" height="382" alt="Преимущества"/></picture>
+      </div>
      </div>
     </div>
    </section>

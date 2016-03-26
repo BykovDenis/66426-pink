@@ -22,8 +22,8 @@ html
             a(href="#").main-nav__link Конкурс
           li.main-nav__item
             a(href="#").main-nav__link Html Academy
-      section.download.download--mainpage
-        .download__body.download__body--mainpage
+      section.download
+        .download__body
           .intro.intro--mainpage
             .intro__layout
               h1.intro__header Взгляните на жизнь иначе!
@@ -37,7 +37,10 @@ html
               span.download__icon.download__icon--microsoft
             p.download__description Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
         picture
-          img(src="img/iphone-hand-mobile.png" width="482" height="545" alt ="Скачать приложение").download__image
+          source(media="(min-width:300px)" srcset="img/iphone-hand-mobile.png 1x, img/iphone-hand-mobile@2x.png 2x" )
+          source(media="(min-width:700px)" srcset="img/iphone-hand-tablet@1x.png 1x, img/iphone-hand-tablet@2x.png 2x")
+          source(media="(min-width:1200px)" srcset="img/iphone-hand-desktop@1x.png 1x, img/iphone-hand-desktop@2x.png 2x")
+          img(src="img/iphone-hand-mobile.png" srcset="img/iphone-hand-mobile@2x.png 2x"  alt ="Скачать приложение").download__image
     main.page-main
       section.information
         p.information__item Устали от серости мегаполиса?
@@ -46,7 +49,11 @@ html
           .information__body
             .advantages
               .advantages__image
-                img(src="img/iphone-screen-desktop1.png" width="157" height="382" alt="Преимущества")
+                picture
+                  source(media="(min-width:300px)" srcset="img/iphone-screen-mobile.png 1x, img/iphone-screen-mobile@x2.png 2x" )
+                  source(media="(min-width:700px)" srcset="img/iphone-screen-tablet-3@1x.png 1x, img/iphone-screen-tablet-3@2x.png 2x, img/iphone-screen-tablet-3@3x.png 3x")
+                  source(media="(min-width:1200px)" srcset="img/iphone-screen-desktop-1@1x.png 1x, img/iphone-screen-desktop-1@2x.png 2x, img/iphone-screen-desktop-1@3x.png 3x")
+                  img(src="img/iphone-screen-mobile.png" srcset="img/iphone-screen-mobile@x2.png 2x" alt="Преимущества")
               h3.advantages__title Поднимает настроение
               p.advantages__description Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
             .advantages
@@ -60,7 +67,8 @@ html
               h3.advantages__title Заводит новых друзей
               p.advantages__description Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых
             .information__image
-              img(src="img/iphone-screen-tablet.png" width="157" height="382" alt="Преимущества")
+              picture
+                img(src="img/iphone-screen-mobile.png" srcset="img/iphone-screen-mobile@2x.png" width="157" height="382" alt="Преимущества")
       section.application-profit
         img(src="img/img_application_profit.png" width="240" height="278" alt="Эффект на 24 часа!" ).application-profit__image
         .application-profit__layout

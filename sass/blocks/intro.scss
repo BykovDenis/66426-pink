@@ -72,7 +72,7 @@
       margin: 0 40px;
       font: 100 #{$font-size-h1} /  1.2 $open-sans;
       color: $color-white;
-      padding: 10px 20px 0px;
+      padding: 10px 15px 0px;
 
     }
 
@@ -97,26 +97,20 @@
     padding-top: 111px;
 
 
-    &__header{
-
-      padding: 62px 224px 100px;
-
-    }
-
-
     &--mainpage{
 
       display: block;
       background: none;
       width: auto;
       float: left;
-
+  
     }
 
     &__header{
 
       font: 100 #{$font-size-h1 + 10px} /  1.2 $open-sans;
       color: $color-white;
+      padding: 62px 224px 100px;
 
     }
 
@@ -124,7 +118,7 @@
 
       display: block;
       padding: 0 10px;
-
+      margin-bottom: 21px;
     }
 
   }

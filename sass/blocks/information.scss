@@ -124,11 +124,12 @@
 
   .information{
 
-    margin-top: 80px;
+    margin-top: 71px;
 
     &__item{
 
       font: 100 #{$font-size-h1 + 10px} / 1.1 $open-sans;
+      margin-bottom: 7px;
 
       &:last-of-type{
 

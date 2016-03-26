@@ -84,7 +84,7 @@
 
   }
 
-  &__body--mainpage{
+  &__body{
 
     background-color: $color-blue-dark1;
     order: 1;
@@ -112,13 +112,8 @@
     padding-top: 111px;
     position: relative;
     font-size: 0;
-    height: 331px;
+    height: auto;
 
-    &--mainpage{
-
-      height: auto;
-
-    }
 
     &__btn{
 
@@ -145,8 +140,8 @@
       position: absolute;
       width: 300px;
       z-index: 1;
-      top: 206px;
-      left: 40px;
+      top: 84px;
+      left: 39px;
       background: none;
 
     }
@@ -157,7 +152,7 @@
       display: inline-block;
       text-align: center;
       left: 73px;
-      padding-top: 76px;
+      padding-top: 71px;
       width: 482px;
       height: 545px;
 
@@ -179,10 +174,12 @@
 
     &__body{
 
-      background: none;
+      position: absolute;
       width: 300px;
-      order:-1;
-      align-self: center;
+      z-index: 1;
+      top: 108px;
+      left: 130px;
+      background: none;
 
 
     }
@@ -192,13 +189,16 @@
       display: block;
       width: 555px;
       height: 645px;
+      position: relative;
+      left: 171px;
+
 
     }
 
     &__btn{
 
       width: 290px;
-      margin-bottom: 46px;
+      margin-bottom: 70px;
       font: 600 #{$font-size + 7px} / 1.03 $open-sans;
 
     }
@@ -212,7 +212,7 @@
 
     &__icon {
 
-      margin-bottom: 40px;
+      margin-bottom: 54px;
 
     }
 
