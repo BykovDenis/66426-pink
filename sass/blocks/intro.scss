@@ -1,17 +1,14 @@
 .intro{
 
-  &--not-main{
-
     @include page-width();
 
     text-align: center;
     display: flex;
     flex-direction: column;
+    align-items: stretch;
 
     background: url(../../img/bg-back-tablet.jpg) 50% 0px no-repeat $color-blue-dark1;
     padding-top: 111px;
-
-  }
 
   &:after{
 
@@ -26,6 +23,12 @@
     text-align: center;
     padding: 10px 20px 80px;
     margin: 0;
+  }
+
+  &--mainpage{
+
+    display: none;
+
   }
 
   &--mainpage &__header{
@@ -54,6 +57,14 @@
 
     }
 
+    &--mainpage{
+
+      display: block;
+      background: none;
+      width: auto;
+
+    }
+
     &--mainpage &__header{
 
       display: block;
@@ -65,7 +76,7 @@
 
     }
 
-    &--not-main &__header{
+    &__header{
 
       padding: 63px 113px;
 
@@ -80,17 +91,13 @@
   .intro{
 
     text-align: center;
+    display: block;
 
-    &--not-main{
+    background: url(../../img/bg-back-desktop.jpg) 50% 0px no-repeat $color-blue-dark1;
+    padding-top: 111px;
 
-      display: block;
 
-      background: url(../../img/bg-back-desktop.jpg) 50% 0px no-repeat $color-blue-dark1;
-      padding-top: 111px;
-
-    }
-
-    &--not-main &__header{
+    &__header{
 
       padding: 62px 224px 100px;
 
@@ -99,6 +106,9 @@
 
     &--mainpage{
 
+      display: block;
+      background: none;
+      width: auto;
       float: left;
 
     }

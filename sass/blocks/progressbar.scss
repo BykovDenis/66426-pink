@@ -1,31 +1,28 @@
 .progressbar{
 
-  display: none;
+  display: flex;
   justify-content: center;
-  margin-bottom: 40px;
+
   position: relative;
-
-  width: 320px;
-  height: 14px;
-
+  flex-direction: row;
+  align-items: center;
+  align-self: center;
 
   &--main{
 
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    align-self: center;
-
     border-bottom: 1px solid rgba(0,0,0,.1);
     height: auto;
-    width: 275px;
-    padding-bottom: 40px;
+    width: 320px;
 
+    padding-bottom: 40px;
+    margin-bottom: 40px;
 
   }
 
   &__line{
 
+    display: none;
     background-color: $color-blue;
     height: 2px;
     width: 240px;
@@ -33,10 +30,17 @@
 
   }
 
+  &--main &__line{
+
+    display: block;
+
+  }
+
   &__point{
 
+    display: none;
     position: absolute;
-    top: -3px;
+    top: -6px;
     left: 191px;
 
     border: 2px solid $color-red1;
@@ -44,6 +48,12 @@
     height: 12px;
     border-radius: 50%;
     background-color: $color-grey;
+
+  }
+
+  &--main &__point{
+
+    display: block;
 
   }
 
@@ -56,14 +66,12 @@
   .progressbar{
 
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    align-self: center;
 
     border-bottom: 1px solid rgba(0,0,0,.1);
     height: auto;
     width: 275px;
     padding-bottom: 15px;
+    margin-bottom: 40px;
 
     &--main{
 
@@ -73,7 +81,14 @@
 
     &__line{
 
+      display: block;
       width: 202px;
+
+    }
+
+    &__point{
+
+      display: block;
 
     }
 
@@ -115,6 +130,7 @@
     border-bottom: 1px solid rgba(0,0,0,.1);
     height: auto;
     width: 275px;
+    margin-bottom: 40px;
     padding-bottom: 15px;
 
     &--main{
@@ -125,7 +141,14 @@
 
     &__line{
 
+      display: block;
       width: 202px;
+
+    }
+
+    &__point{
+
+      display: block;
 
     }
 
