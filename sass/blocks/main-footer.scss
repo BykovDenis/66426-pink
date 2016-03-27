@@ -32,8 +32,8 @@
     display: block;
     width: 147px;
     height: 40px;
-    background: url(../../img/img_logo1.png) 0 0 no-repeat;
-    margin: 40px 0;
+    background: url(../img/logo-pink-blue-mobile.svg) 0 0 no-repeat;
+    margin: 47px 0 42px;
 
 
   }
@@ -56,7 +56,7 @@
     &__logo{
 
       float: left;
-      margin-bottom: 51px;
+      margin: 36px 0;
 
     }
 
@@ -79,8 +79,9 @@
     &__logo{
 
       float: left;
-      background: url(../../img/logotype-blue-desktop.png) 0 0 no-repeat;
-      margin-bottom: 51px;
+      background: url(../img/logo-pink-blue-desktop.svg) 0 0 no-repeat;
+      margin-top: 69px;
+
 
     }
 

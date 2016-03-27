@@ -38,7 +38,7 @@ html
               input(type="text" id="first_name" placeholder="Введите ваше имя").form__input
             .form__item.form__item--content
               label(for="last_name").form__label-content Фамилия:
-              input(type="text" id="last_name" placeholder="Введите фамилию").form__input
+              input(type="text" id="last_name" placeholder="Укажите фамилию").form__input
             .form__item.form__item--content
               label(for="middle_name").form__label-content Отчество:
               input(type="text" id="middle_name" placeholder="Ну и отчество тоже").form__input
@@ -50,7 +50,7 @@ html
               span.form__label-control Pink для iOS
             label.form__item.form__item--control
               input(type="radio"  name="application" id="radio2").form__radio
-              span.form__label-control Pink для Android
+              span.form__label-control Pink на Android
             label.form__item.form__item--control
               input(type="radio"  name="application" id="radio3").form__radio
               span.form__label-control Windows Phone
@@ -92,15 +92,14 @@ html
             legend.form__title Опишите свои эмоции
             .form__item.form__item--content
               textarea(placeholder="Можно прям в красках, не стесняясь в выражениях").form__textarea
-          fieldset.form__control
+          .form__control
             button(type="submit").form__send Отправить форму
             p.form__requirement
               span *
-              span - Обязательные поля
+              span — обязательные поля
     footer.main-footer
       .main-footer__layout
         a(href="index.html").main-footer__logo
-          img(src="img/img_logo1.png" width="147" height="40" alt="PINK")
         .socials
           span.socials__icon.socials__icon--twitter
           span.socials__icon.socials__icon--fb
