@@ -4,20 +4,6 @@
   text-align: center;
   position: relative;
 
-  /*
-  &:after{
-
-    border-top: 29px solid transparent;
-    border-right: 162px solid red;
-    border-left: 162px solid red;
-    content: "";
-    display: block;
-    background-color: green;
-
-  }
-
-  */
-
   &__layout{
 
     @include layout();
@@ -91,11 +77,29 @@
     text-align: center;
     position: relative;
 
+    &:after{
+
+      display: block;
+      content: "";
+      background: url(../../img/bg-triangle-white-footer.svg) 0 0 no-repeat;
+      width: $width-content-tablet;
+      height: 74px;
+      position: absolute;
+      bottom: 303px;
+      left: 0;
+      background-size: $width-content-tablet;
+      z-index: 100;
+
+    }
+
     &__contain {
 
       display: inline-block;
       vertical-align: top;
-      margin-right: 50px;
+      margin-right: 77px;
+      margin-left: 15px;
+      margin-bottom: 11px;
+      margin-top: 43px;
 
 
     }
@@ -103,6 +107,20 @@
     &__contain:nth-of-type(2n) {
 
       margin-right: 0;
+
+    }
+
+    &__contain:last-of-type {
+
+      margin-right: 16px;
+
+    }
+
+    &__contain:last-of-type &__description{
+
+      margin-top: 2px;
+      width: 215px;
+      padding-bottom: 15px;
 
     }
 
@@ -134,7 +152,7 @@
       font: 100 #{$font-size + 10px} / 1.2 $open-sans;
       color: $color-red1;
       margin: 0;
-
+      margin-top: 5px;
     }
 
     &__map {
@@ -144,7 +162,7 @@
 
       img {
 
-        transform: translate(-268px, 244px);
+        transform: translate(-249px, 256px);
 
       }
 
@@ -162,12 +180,30 @@
       text-align: center;
       position: relative;
 
+      &:after{
+
+        display: block;
+        content: "";
+        background: url(../../img/bg-triangle-white-footer.svg) 0 0 no-repeat;
+        width: $width-content-desktop +10px;
+        height: 127px;
+        position: absolute;
+        bottom: 374px;
+        left: 0;
+        background-size: $width-content-desktop + 10px;
+        z-index: 100;
+
+      }
+
 
       &__contain{
 
         display: inline-block;
         vertical-align: top;
-        margin-right: 50px;
+        margin:0;
+        margin-top: 57px;
+        margin-right: 0;
+        width: 237px;
 
       }
 
@@ -179,7 +215,12 @@
 
       &__layout{
 
-        @include layout();
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+        align-items: stretch;
+        justify-content: center;
+        width: 940px;
 
       }
 
@@ -189,6 +230,29 @@
         color: $color-blue;
         padding: 0 125px;
         margin: 0;
+        grow:1;
+        flex-basis: 100%;
+
+      }
+
+      &__contain:first-of-type{
+
+        order:2;
+        margin-right: 82px;
+
+      }
+
+      &__contain:nth-of-type(2){
+
+        order:4;
+        margin-left: 82px;
+
+      }
+
+      &__contain:last-of-type{
+
+        order:3;
+
 
       }
 
@@ -197,6 +261,7 @@
         font: 600 #{$font-size + 4px} / 1.2 $open-sans;
         color: $color-blue;
         margin: 0;
+        margin-bottom: 26px;
 
       }
 
@@ -218,7 +283,7 @@
 
         img {
 
-          transform: translate(0px, 214px);
+          transform: translate(0px, 257px);
 
         }
 

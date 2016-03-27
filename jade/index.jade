@@ -37,9 +37,8 @@ html
               span.download__icon.download__icon--microsoft
             p.download__description Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
         picture
-          source(media="(min-width:300px)" srcset="img/iphone-hand-mobile.png 1x, img/iphone-hand-mobile@2x.png 2x" )
-          source(media="(min-width:700px)" srcset="img/iphone-hand-tablet@1x.png 1x, img/iphone-hand-tablet@2x.png 2x")
           source(media="(min-width:1200px)" srcset="img/iphone-hand-desktop@1x.png 1x, img/iphone-hand-desktop@2x.png 2x")
+          source(media="(min-width:700px)" srcset="img/iphone-hand-tablet@1x.png 1x, img/iphone-hand-tablet@2x.png 2x")
           img(src="img/iphone-hand-mobile.png" srcset="img/iphone-hand-mobile@2x.png 2x"  alt ="Скачать приложение").download__image
     main.page-main
       section.information
@@ -50,9 +49,8 @@ html
             .advantages
               .advantages__image
                 picture
-                  source(media="(min-width:300px)" srcset="img/iphone-screen-mobile.png 1x, img/iphone-screen-mobile@2x.png 2x" )
-                  source(media="(min-width:700px)" srcset="img/iphone-screen-tablet-3@1x.png 1x, img/iphone-screen-tablet-3@2x.png 2x, img/iphone-screen-tablet-3@3x.png 3x")
                   source(media="(min-width:1200px)" srcset="img/iphone-screen-desktop-1@1x.png, img/iphone-screen-desktop-1@2x.png 2x, img/iphone-screen-desktop-1@3x.png 3x")
+                  source(media="(min-width:700px)" srcset="img/iphone-screen-tablet-3@1x.png 1x, img/iphone-screen-tablet-3@2x.png 2x, img/iphone-screen-tablet-3@3x.png 3x")
                   img(src="img/iphone-screen-mobile.png" srcset="img/iphone-screen-mobile@2x.png 2x" alt="Преимущества")
               h2.advantages__title Поднимает настроение
               p.advantages__description Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
@@ -70,6 +68,7 @@ html
               picture
                 img(src="img/iphone-screen-mobile.png" srcset="img/iphone-screen-mobile@2x.png" width="157" height="382" alt="Преимущества")
       section.application-profit
+        span.application-profit__hours 24
         img(src="img/icon-timer.svg" width="240" height="278" alt="Эффект на 24 часа!" ).application-profit__image
         .application-profit__layout
           h2.application-profit__title Эффект на 24 часа!
@@ -79,7 +78,7 @@ html
       section.review
         .review__layout
           .review__prev
-            a(href="#") <
+            a(href="#")
           .review__slides
             .review__slide.review__slide--active
               h4.review__title Николай Петров
@@ -103,7 +102,7 @@ html
                 по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой
                 в комментариях к выложенной фотографии!"
           .review__next
-            a(href="#") >
+            a(href="#")
           .controls
             a(href="#").controls__item.controls__item--active
             a(href="#").controls__item
@@ -123,13 +122,13 @@ html
                 p.table__value 9,99 USD
             tr.table__row
               td.table__cell
-                span.table__description Розовый цвет
+                span.table__description Розовый фильтр
                 span.table__icon-yes
               td.table__cell
-                span.table__description Розовый цвет
+                span.table__description Розовый фильтр
                 span.table__icon-yes
               td.table__cell
-                span.table__description Розовый цвет
+                span.table__description Розовый фильтр
                 span.table__icon-yes
             tr.table__row
               td.table__cell

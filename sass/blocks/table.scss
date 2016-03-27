@@ -222,9 +222,11 @@
 
   .table{
 
+    margin-top:0;
     width: 698px;
     transform: translateX(0%);
     float: right;
+
 
 
     &__description{
@@ -237,8 +239,14 @@
 
 
       display: table-cell;
-      width: 216px;
       position: relative;
+      padding-left: 0;
+
+    }
+
+    &__cell{
+
+      padding: 18px 0;
 
     }
 
@@ -253,8 +261,11 @@
       float: none;
       display: inline-block;
       vertical-align: top;
-      width: 216px;
+      width: 224px;
+      padding-left: 10px;
+      padding-right:0;
       background: url(../../img/icon_yes.png) 50% 0 no-repeat;
+
 
     }
 
@@ -263,7 +274,9 @@
       float: none;
       display: inline-block;
       vertical-align: top;
-      width: 216px;
+      width: 224px;
+      padding-left: 10px;
+      padding-right:0;
       background: url(../../img/icon_no.png) 50% 0 no-repeat;
 
     }
@@ -271,13 +284,22 @@
     &__cell:first-of-type &__description{
 
       box-sizing: border-box;
-      width: 216px;
+      width: 232px;
       position: absolute;
-      transform: translate(-110%, -7px);
+      transform: translate(-100%, -20px);
       background-color: white;
-      padding: 4px;
-      border: 2px solid $color-grey;
+      padding: 14px 20px 18px;
+      border: 2px solid #f2f2f2;
       text-transform: none;
+
+    }
+
+    &__description{
+
+      font: 400 #{$font-size + 4px} / #{(30px / ($font-size + 4px))} $open-sans;
+      color: $color-blue;
+      text-transform: none;
+
     }
 
 

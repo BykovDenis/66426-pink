@@ -1,7 +1,8 @@
 .socials{
 
-  display: inline;
+  display: inline-block;
   width: 200px;
+  text-align: left;
 
   &__icon{
 
@@ -9,16 +10,13 @@
     vertical-align: top;
 
 
-    width: 51px;
-    height: 51px;
+    width: 45px;
+    height: 45px;
 
     margin-right: 12px;
 
     border: 3px solid $color-grey;
     border-radius: 50%;
-
-    opacity: 0.1;
-    border: 3px solid #283645;
 
     &:last-of-type{
 
@@ -53,8 +51,6 @@
 
   .socials{
 
-    display: inline;
-    width: 200px;
 
     &__icon {
 
