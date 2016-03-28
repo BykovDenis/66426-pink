@@ -13,7 +13,7 @@ html
           .main-nav__menu
             a(href="#").main-nav__main-link
               span.main-nav__icon
-        ul.main-nav__items.main-nav__items--active
+        ul.main-nav__items
           li.main-nav__item
             a(href="index.html").main-nav__link.main-nav__link--active Главная
           li.main-nav__item
@@ -22,15 +22,18 @@ html
             a(href="#").main-nav__link Конкурс
           li.main-nav__item
             a(href="#").main-nav__link Html Academy
-      .intro.intro--not-main
+      .intro
             h1.intro__header Фотографии пользователей
-        section.block-header.block-header--photo
-          .block-header__layout
-            .block-header__description Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?
-    main
+      section.block-header
+        .block-header__layout
+          .block-header__description Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?
+    main.page-main
       .photo
         section.photo-card.photo-card--top
-          img(src="../img/panorama-mobile.jpg" alt="Анна" width="320" height="137").photo-card__top-image
+          picture
+            source(media="(min-width:1200px)" srcset="img/panorama-desktop.jpg 1x, img/panorama-desktop@2x.jpg 2x")
+            source(media="(min-width:700px)" srcset="img/panorama-tablet.jpg 1x, img/panorama-tablet@2x.jpg 2x")
+            img(src="img/panorama-mobile.jpg" srcset="img/panorama-mobile@2x.jpg 2x" alt="Анна" width="320" height="137").photo-card__top-image
           p.photo-card__title Панорама дня
           .photo-card__layout
             p.photo-card__author Анна
@@ -44,30 +47,35 @@ html
 
         .photo__layout
 
-          -cards = [{filepath:"../img/photo-1-mobile.jpg", title:"Левон", time_added:"(5 часов назад)", content:"Вчера он на луну летал, сегодня в руки к нам попал", counter:"356", type:""},{filepath:"../img/photo-2-mobile.jpg", title:"Антон", time_added:"(12 часов назад)" ,content:"Соседи будут рады", counter:"666",type:""},{filepath:"../img/photo-3-mobile.jpg", title:"Борис", time_added:"(20 часов назад)", content:"Здесь могла быть ваша цитата о высоком и вечном.", counter:"215",type:""},{filepath:"../img/photo-4-mobile.jpg", title:"Сергей", time_added:"(25 часов назад)", content:"Самая кубанская в мире!", counter:"4",type:""},{filepath:"../img/photo-5-mobile.jpg", title:"Максим", time_added:"(40 часов назад)", content:"Где снег-то?", counter:"150",type:""},{filepath:"../img/photo-6-mobile.jpg", title:"Надежда", time_added:"(45 часов назад)", content:"Всем GM и взаимные лайки!", counter:"2560",type:""}]
+          -cards = [{filepath:"img/photo-1-mobile.jpg", srcset:"img/photo-1-mobile@2x.jpg 2x", srcset_dsk:"img/photo-1-desktop.jpg, img/photo-1-desktop@2x.jpg 2x", srcset_tbl:"img/photo-1-tablet.jpg, img/photo-1-tablet@2x.jpg 2x", title:"Левон", time_added:"(5 часов назад)", content:"Вчера он на луну летал, сегодня в руки к нам попал", counter:"356", type:""},{filepath:"img/photo-2-mobile.jpg", srcset:"img/photo-2-mobile@2x.jpg 2x", srcset_dsk:"img/photo-2-desktop.jpg, img/photo-2-desktop@2x.jpg 2x", srcset_tbl:"img/photo-2-tablet.jpg, img/photo-2-tablet@2x.jpg 2x", title:"Антон", time_added:"(12 часов назад)" ,content:"Соседи будут рады", counter:"666",type:""},{filepath:"img/photo-3-mobile.jpg", srcset:"img/photo-3-mobile@2x.jpg 2x", srcset_dsk:"img/photo-3-desktop.jpg, img/photo-3-desktop@2x.jpg 2x", srcset_tbl:"img/photo-3-tablet.jpg, img/photo-3-tablet@2x.jpg 2x", title:"Борис", time_added:"(20 часов назад)", content:"Здесь могла быть ваша цитата о высоком и вечном.", counter:"215",type:""},{filepath:"img/photo-4-mobile.jpg", srcset:"img/photo-4-mobile@2x.jpg 2x", srcset_dsk:"img/photo-4-desktop.jpg, img/photo-4-desktop@2x.jpg 2x", srcset_tbl:"img/photo-4-tablet.jpg, img/photo-4-tablet@2x.jpg 2x", title:"Сергей", time_added:"(25 часов назад)", content:"Самая кубанская в мире!", counter:"4",type:""},{filepath:"img/photo-5-mobile.jpg", srcset:"img/photo-5-mobile@2x.jpg 2x", srcset_dsk:"img/photo-5-desktop.jpg, img/photo-5-desktop@2x.jpg 2x", srcset_tbl:"img/photo-5-tablet.jpg, img/photo-5-tablet@2x.jpg 2x", title:"Максим", time_added:"(40 часов назад)", content:"Где снег-то?", counter:"150",type:""},{filepath:"img/photo-6-mobile.jpg", srcset:"img/photo-6-mobile@2x.jpg 2x", srcset_dsk:"img/photo-6-desktop.jpg, img/photo-6-desktop@2x.jpg 2x", srcset_tbl:"img/photo-6-tablet.jpg, img/photo-6-tablet@2x.jpg 2x", title:"Надежда", time_added:"(45 часов назад)", content:"Всем GM и взаимные лайки!", counter:"2560",type:""}]
 
             each card in cards
 
               if card["type"] != "top"
 
                 section.photo-card
-                   img(src="#{card['filepath']}" alt="#{card['title']}" width="280" height="180").photo-card__image
+                  picture
+                    source(media="(min-width: 1200px)" srcset="#{card['srcset_dsk']}")
+                    source(media="(min-width: 700px)" srcset="#{card['srcset_tbl']}")
+                    img(src="#{card['filepath']}" srcset="#{card['srcset']}" alt="#{card['title']}" width="280" height="180").photo-card__image
 
-                   p.photo-card__author #{card["title"]}
-                     span.photo-card__time-added #{card["time_added"]}
-                   p.photo-card__content.
-                     #{card["content"]}
-                   p.photo-card__likes
-                     span.photo-card__icon-heart
-                     Нравится:
-                     span.photo-card__likes-counter #{card["counter"]}
+                  p.photo-card__author #{card["title"]}
+                   span.photo-card__time-added #{card["time_added"]}
+                  p.photo-card__content.
+                   #{card["content"]}
+                  p.photo-card__likes
+                   span.photo-card__icon-heart
+                   Нравится:
+                   span.photo-card__likes-counter #{card["counter"]}
+
       section.block-header.block-header--photo
-        .block-header__description Затмите их всех! <br> Выкладывайте все, что накопилось на телефоне!
+        .block-header__layout
+          .block-header__description Затмите их всех! <br> Выкладывайте все, что накопилось на телефоне!
 
       form(method="get").upload
         .image
           .image__src
-            img(src="../img/photo-7-mobile.jpg" width="280" height="375" alt="Загрузить изображение с телефона")
+            img(src="img/photo-7-mobile.jpg" width="280" height="375" alt="Загрузить изображение с телефона")
         .upload__rules
           .image__effects
             .image__effect

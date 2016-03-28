@@ -81,7 +81,7 @@
 
       display: block;
       content: "";
-      background: url(../../img/bg-triangle-white-footer.svg) 0 0 no-repeat;
+      background: url(../img/bg-triangle-white-footer.svg) 0 0 no-repeat;
       width: $width-content-tablet;
       height: 74px;
       position: absolute;
@@ -184,11 +184,11 @@
 
         display: block;
         content: "";
-        background: url(../../img/bg-triangle-white-footer.svg) 0 0 no-repeat;
+        background: url(../img/bg-triangle-white-footer.svg) 0 0 no-repeat;
         width: $width-content-desktop +10px;
         height: 127px;
         position: absolute;
-        bottom: 374px;
+        bottom: 397px;
         left: 0;
         background-size: $width-content-desktop + 10px;
         z-index: 100;

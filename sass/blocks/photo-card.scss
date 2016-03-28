@@ -12,14 +12,19 @@
 
 
   font-size: 0;
-  line-height: 24px / $font-size;
   font-family: $open-sans;
   color: $color-blue;
+
+  &:last-of-child{
+
+    margin-bottom: 0;
+
+  }
 
   &__layout{
 
     position: relative;
-    padding-top: 25px;
+    padding-top: 19px;
     margin: 0 20px;
     background-color: $color-grey;
 
@@ -55,30 +60,29 @@
     background-color: $color-red1;
     font: 700 #{$font-size - 2px} / (24px / ($font-size - 2px)) $open-sans;
     color: $color-white;
-    padding: 6px 20px;
+    padding: 6px 20px 6px 19px;
     text-transform: uppercase;
     margin: 0;
-    font-size: $font-size;
+
 
   }
 
   &__content{
 
-    font-weight: 400;
-    margin-top:0;
-    margin-bottom: 20px;
-    padding: 0 $layout-padding-mobile;
-    font-size: $font-size;
+    margin-top:5px;
+    margin-bottom: 9px;
+    padding: 0 $layout-padding-mobile - 1px;
+    font: 300 #{$font-size} / (24px / $font-size) $open-sans;
   }
 
   &__likes{
 
-    padding: 0 20px;
+    padding: 0 $layout-padding-mobile - 1px;
     margin: 0;
+    margin-bottom: 20px;
     font-size: $font-size - 2px;
     line-height: 24px / ($font-size - 2px);
     color: $color-red1;
-    margin-bottom: 25px;
     text-transform: uppercase;
 
 
@@ -91,7 +95,7 @@
     content:"";
     width: 14px;
     height: 24px;
-    background: url(../../img/icon-heart.svg) 0 45% no-repeat;
+    background: url(../img/icon-heart.svg) 0 45% no-repeat;
     padding-right: 18px;
 
   }
@@ -106,7 +110,7 @@
 
   &__image{
 
-    margin-bottom: 25px;
+    margin-bottom: 19px;
 
   }
 

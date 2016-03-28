@@ -22,6 +22,14 @@
 
   }
 
+
+  &--photo &__description{
+
+    margin-top: 22px;
+    margin-bottom: 46px;
+
+  }
+
 }
 
 @media (min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px) {
@@ -38,12 +46,6 @@
     &__add-info{
 
       display: inline;
-
-    }
-
-    &--photo &__description{
-
-      margin: 84px 65px 72px;
 
     }
 

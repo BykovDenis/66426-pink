@@ -6,12 +6,12 @@
   display: flex;
   flex-direction: column;
 
-  background: url(../../img/bg-back-mobile.jpg) 50% -6px no-repeat $color-blue-dark1;
+  background: url(../img/bg-back-mobile.jpg) 50% -6px no-repeat $color-blue-dark1;
   background-size: 700px 462px;
 
   @media (min-resolution: 1.5dppx) {
 
-    background: url(../../img/bg-back-mobile@2x.jpg) 50% -6px no-repeat $color-blue-dark1;
+    background: url(../img/bg-back-mobile@2x.jpg) 50% -6px no-repeat $color-blue-dark1;
     background-size: 700px 462px;
 
   }
@@ -65,19 +65,19 @@
 
     &--apple{
 
-      background: url(../../img/logo-apple.svg) 0 0 no-repeat;
+      background: url(../img/logo-apple.svg) 0 0 no-repeat;
 
     }
 
     &--android{
 
-      background: url(../../img/logo-android.svg) 0 9px no-repeat;
+      background: url(../img/logo-android.svg) 0 9px no-repeat;
 
     }
 
     &--microsoft{
 
-      background: url(../../img/logo-microsoft.svg) 0 13px no-repeat;
+      background: url(../img/logo-microsoft.svg) 0 13px no-repeat;
 
     }
 
@@ -117,7 +117,7 @@
   .download {
 
     display: block;
-    background: url(../../img/bg-back-tablet.jpg) 50% 0px no-repeat $color-blue-dark1;
+    background: url(../img/bg-back-tablet.jpg) 50% 0px no-repeat $color-blue-dark1;
     padding-top: 111px;
     position: relative;
     font-size: 0;
@@ -177,7 +177,7 @@
     display: flex;
     flex-direction: row;
     justify-content:center;
-    background: url(../../img/bg-back-desktop.jpg) 50% 0px no-repeat $color-blue-dark1;
+    background: url(../img/bg-back-desktop.jpg) 50% 0px no-repeat $color-blue-dark1;
     font-size: 0;
     padding-top: 147px;
 
