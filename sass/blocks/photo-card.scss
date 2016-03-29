@@ -130,6 +130,14 @@
 
     justify-content: flex-start;
     width: 300px;
+    margin-bottom: 24px;
+    min-height: 451px;
+
+    &--top {
+
+      margin-bottom: 49px;
+
+    }
 
     &__top-image{
 
@@ -138,10 +146,28 @@
 
     }
 
+    &__author{
+
+      padding: 0 27px;
+
+    }
+
+    &__content {
+
+      padding: 0 27px;
+
+    }
+
+    &--top &__content{
+
+      margin-bottom: 26px;
+
+    }
+
     &__title{
 
       position: absolute;
-      right: 60px;
+      right: 40px;
       top: 57px;
       background-color: $color-red1;
       font: 700 #{$font-size - 2px} / (24px / ($font-size - 2px)) $open-sans;
@@ -161,8 +187,8 @@
     &--top &__likes {
 
       position: absolute;
-      top: 28px;
-      right: 0;
+      top: 24px;
+      right: -8px;
       padding: 0 20px;
 
     }
@@ -184,12 +210,14 @@
 
       width: 300px;
       height: 300px;
+      margin-bottom: 26px;
 
     }
 
     &__layout{
 
       margin: 0 $layout-padding-tablet;
+      padding-top: 24px;
 
 
     }
@@ -206,6 +234,8 @@
       flex-direction: row;
       justify-content: space-between;
       margin-top: auto;
+      padding-left: 27px;
+      padding-right: 15px;
 
     }
 
@@ -227,11 +257,20 @@
 
     justify-content: flex-start;
     width: 300px;
+    margin-bottom: 56px;
+    min-height: 552px;
+
+    &--top{
+
+      width: $width-content-desktop;
+      margin-bottom: 50px;
+
+    }
 
     &__top-image {
 
       width: $width-content-desktop;
-      height: 509px;
+      height: 506px;
 
     }
 
@@ -258,9 +297,9 @@
     &--top &__likes {
 
       position: absolute;
-      top: 28px;
+      top: 24px;
       right: 0;
-      padding: 0 20px;
+      padding: 0 16px;
 
     }
 
@@ -273,7 +312,21 @@
 
     &--top &__content {
 
-      padding-right: 84px;
+      padding-left: 27px;
+      margin-bottom: 22px;
+      font: 400 #{$font-size} / (24px / $font-size) $open-sans;
+
+    }
+
+    &__content{
+
+      padding-left: 27px;
+
+    }
+
+    &__author{
+
+      padding-left: 27px;
 
     }
 
@@ -281,20 +334,23 @@
 
       width: 300px;
       height: 400px;
+      margin-bottom: 27px;
 
     }
 
     &__layout {
 
       margin: 0 $layout-padding-desktop;
+      padding-top: 25px;
 
     }
 
-    &--top {
+    &--top &__author{
 
-      width: $width-content-desktop;
+      padding-left: 27px;
 
     }
+
 
     &__likes {
 
@@ -302,6 +358,7 @@
       flex-direction: row;
       justify-content: space-between;
       margin-top: auto;
+      padding-left: 27px;
 
     }
 
@@ -309,6 +366,7 @@
 
       order: 1;
       margin-left: auto;
+      padding-right: 12px;
 
     }
 

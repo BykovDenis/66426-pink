@@ -20,3 +20,14 @@
 
 
 }
+
+@media(min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px) {
+
+  .photo{
+
+    margin-top: 49px;
+    padding-bottom: 24px;
+
+  }
+
+}

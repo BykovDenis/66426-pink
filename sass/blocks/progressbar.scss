@@ -70,8 +70,8 @@
     border-bottom: 1px solid rgba(0,0,0,.1);
     height: auto;
     width: 275px;
-    padding-bottom: 15px;
-    margin-bottom: 40px;
+    padding-bottom: 23px;
+    margin-bottom: 27px;
 
     &--main{
 
@@ -129,9 +129,9 @@
 
     border-bottom: 1px solid rgba(0,0,0,.1);
     height: auto;
-    width: 275px;
-    margin-bottom: 40px;
-    padding-bottom: 15px;
+    width: 410px;
+    margin-bottom: 18px;
+    padding-bottom: 11px;
 
     &--main{
 
@@ -142,7 +142,9 @@
     &__line{
 
       display: block;
-      width: 202px;
+      margin-left: 50px;
+      padding-left: 57px;
+      margin-right: 29px;
 
     }
 
@@ -155,22 +157,22 @@
 
     &--crop &__point{
 
-      top: 3px;
-      left: 195px;
+      top: 15px;
+      left: 163px;
 
     }
 
     &--fill &__point{
 
-      top: 3px;
-      left: 75px;
+      top: 15px;
+      left: 339px;
 
     }
 
     &--contrast &__point{
 
-      top: 0;
-      left: 145px;
+      top: 12px;
+      left: 252px;
 
     }
 

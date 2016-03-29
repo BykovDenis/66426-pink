@@ -49,6 +49,7 @@
   .intro {
 
     text-align: center;
+    min-height: 343px;
 
     &__header {
 
@@ -98,6 +99,8 @@
 
     background: url(../img/bg-back-desktop.jpg) 50% 0px no-repeat $color-blue-dark1;
     padding-top: 111px;
+    min-height: 283px;
+
 
 
     &--mainpage{
@@ -111,9 +114,9 @@
 
     &__header{
 
-      font: 100 #{$font-size-h1 + 10px} /  1.2 $open-sans;
+      font: 300 #{$font-size-h1 + 10px} /  1.21 $open-sans;
       color: $color-white;
-      padding: 62px 224px 100px;
+      padding: 62px 426px 100px;
 
     }
 

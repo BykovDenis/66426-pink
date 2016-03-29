@@ -26,3 +26,33 @@
 
 
 }
+
+@media(min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px) {
+
+  .btn {
+
+    width: 258px;
+    margin-bottom: 21px;
+
+  }
+
+}
+
+@media(min-width: $width-content-desktop) {
+
+  .btn{
+
+    width: 183px;
+
+    &--disable{
+
+      margin-left: 44px;
+
+    }
+
+
+  }
+
+
+
+}

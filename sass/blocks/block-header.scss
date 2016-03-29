@@ -49,6 +49,13 @@
 
     }
 
+    &--photo &__description {
+
+      margin-bottom: 70px;
+
+    }
+
+
   }
 
 }
@@ -59,15 +66,21 @@
 
     &__description {
 
-      margin: 100px 233px 64px;
-      font-size: $font-size + 4px;
-      line-height: 30px / ($font-size + 4px);
+      margin: 92px 184px 55px;
+      font: 400 #{$font-size + 4px} / #{30px/($font-size + 4px)} $open-sans;
 
     }
 
     &__add-info{
 
       display: inline;
+
+    }
+
+    &--photo &__description{
+
+      margin-top: 7px;
+      margin-bottom: 66px;
 
     }
 
