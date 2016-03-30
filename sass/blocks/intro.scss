@@ -101,8 +101,6 @@
     padding-top: 111px;
     min-height: 283px;
 
-
-
     &--mainpage{
 
       display: block;
@@ -127,6 +125,14 @@
       margin-bottom: 21px;
 
     }
+
+    &--form &__header{
+
+      padding-left: 101px;
+      padding-right: 99px;
+
+    }
+
 
   }
 
