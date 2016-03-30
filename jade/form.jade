@@ -57,7 +57,7 @@ html
 
           fieldset.form__items.form__items--grey
             legend.form__title Ваши безбашенные достижения в путешествии
-            .form__layout
+            .form__item-layout1
               .form__item.form__item--control
                 input(type="checkbox" name="item1" id="check1" checked).form__checkbox
                 label(for="check1").form__label-control Сделал селфи с акулой
@@ -89,8 +89,8 @@ html
                 label(for="email").form__label-content.form__label-content--other Адрес почты
                 input(type="text" id="email" placeholder="E-mail, пожалуйста").form__input
 
-          fieldset.form__items
-            legend.form__title Опишите свои эмоции
+          .form__items
+            p.form__title Опишите свои эмоции
             .form__item.form__item--content
               textarea(placeholder="Можно прям в красках, не стесняясь в выражениях").form__textarea
           .form__control
@@ -98,6 +98,7 @@ html
             p.form__requirement
               span *
               span — обязательные поля
+              span — обязательные для заполнения поля
     footer.main-footer
       .main-footer__layout
         a(href="index.html").main-footer__logo
