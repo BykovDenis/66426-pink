@@ -31,7 +31,7 @@
   <main class="page-main">
    <form method="get" class="form">
     <div class="form__layout">
-     <fieldset class="form__items">
+     <div class="form__items">
       <div class="form__item form__item--content">
        <label for="first_name" class="form__label-content">Имя:</label>
        <input type="text" id="first_name" placeholder="Введите ваше имя" class="form__input"/>
@@ -44,9 +44,9 @@
        <label for="middle_name" class="form__label-content">Отчество:</label>
        <input type="text" id="middle_name" placeholder="Ну и отчество тоже" class="form__input"/>
       </div>
-     </fieldset>
-     <fieldset class="form__items form__items--grey">
-      <legend class="form__title">С каким приложением путешествовали?</legend>
+     </div>
+     <div class="form__items form__items--grey">
+      <p class="form__title">С каким приложением путешествовали?</p>
       <label class="form__item form__item--control">
        <input type="radio" name="application" id="radio1" checked="checked" class="form__radio"/><span class="form__label-control">Pink для iOS</span>
       </label>
@@ -56,7 +56,7 @@
       <label class="form__item form__item--control">
        <input type="radio" name="application" id="radio3" class="form__radio"/><span class="form__label-control">Windows Phone</span>
       </label>
-     </fieldset>
+     </div>
      <fieldset class="form__items form__items--grey">
       <legend class="form__title">Ваши безбашенные достижения в путешествии</legend>
       <div class="form__layout">
@@ -88,15 +88,17 @@
      </fieldset>
      <fieldset class="form__items">
       <legend class="form__title form__title--not-mobile">Контактная информация</legend>
-      <div class="form__item form__item--content">
-       <label for="phone" class="form__label-content form__label-content--mobile">Номерок телефончика</label>
-       <label for="phone" class="form__label-content form__label-content--other">Номер телефона</label>
-       <input type="text" id="phone" placeholder="Номер, пожалуйста" class="form__input"/>
-      </div>
-      <div class="form__item form__item--content">
-       <label for="email" class="form__label-content form__label-content--mobile">Адресок почты</label>
-       <label for="email" class="form__label-content form__label-content--other">Адрес почты</label>
-       <input type="text" id="email" placeholder="E-mail, пожалуйста" class="form__input"/>
+      <div class="form__item-layout">
+       <div class="form__item form__item--content">
+        <label for="phone" class="form__label-content form__label-content--mobile">Номерок телефончика</label>
+        <label for="phone" class="form__label-content form__label-content--other">Номер телефона</label>
+        <input type="text" id="phone" placeholder="Номер, пожалуйста" class="form__input"/>
+       </div>
+       <div class="form__item form__item--content">
+        <label for="email" class="form__label-content form__label-content--mobile">Адресок почты</label>
+        <label for="email" class="form__label-content form__label-content--other">Адрес почты</label>
+        <input type="text" id="email" placeholder="E-mail, пожалуйста" class="form__input"/>
+       </div>
       </div>
      </fieldset>
      <fieldset class="form__items">

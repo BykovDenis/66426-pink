@@ -32,7 +32,7 @@ html
       form(method="get").form
         .form__layout
 
-          fieldset.form__items
+          .form__items
             .form__item.form__item--content
               label(for="first_name").form__label-content Имя:
               input(type="text" id="first_name" placeholder="Введите ваше имя").form__input
@@ -43,8 +43,8 @@ html
               label(for="middle_name").form__label-content Отчество:
               input(type="text" id="middle_name" placeholder="Ну и отчество тоже").form__input
 
-          fieldset.form__items.form__items--grey
-            legend.form__title С каким приложением путешествовали?
+          .form__items.form__items--grey
+            p.form__title С каким приложением путешествовали?
             label.form__item.form__item--control
               input(type="radio" name="application" id="radio1" checked).form__radio
               span.form__label-control Pink для iOS
@@ -79,14 +79,15 @@ html
 
           fieldset.form__items
             legend.form__title.form__title--not-mobile Контактная информация
-            .form__item.form__item--content
-              label(for="phone").form__label-content.form__label-content--mobile Номерок телефончика
-              label(for="phone").form__label-content.form__label-content--other Номер телефона
-              input(type="text" id="phone" placeholder="Номер, пожалуйста").form__input
-            .form__item.form__item--content
-              label(for="email").form__label-content.form__label-content--mobile Адресок почты
-              label(for="email").form__label-content.form__label-content--other Адрес почты
-              input(type="text" id="email" placeholder="E-mail, пожалуйста").form__input
+            .form__item-layout
+              .form__item.form__item--content
+                label(for="phone").form__label-content.form__label-content--mobile Номерок телефончика
+                label(for="phone").form__label-content.form__label-content--other Номер телефона
+                input(type="text" id="phone" placeholder="Номер, пожалуйста").form__input
+              .form__item.form__item--content
+                label(for="email").form__label-content.form__label-content--mobile Адресок почты
+                label(for="email").form__label-content.form__label-content--other Адрес почты
+                input(type="text" id="email" placeholder="E-mail, пожалуйста").form__input
 
           fieldset.form__items
             legend.form__title Опишите свои эмоции

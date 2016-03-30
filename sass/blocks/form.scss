@@ -113,8 +113,8 @@
     background-color: $color-white;
     margin-right: 30px;
     content: "";
-    width: 39px;
-    height: 39px;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
     box-shadow: 0 0 0 2px $color-grey4;
 
@@ -122,8 +122,8 @@
 
   &__radio:checked + &__label-control:before {
 
-    width: 19px;
-    height: 19px;
+    width: 16px;
+    height: 16px;
     background-color:$color-red1;
     border-radius: 50%;
     border: 10px solid $color-white;
@@ -211,7 +211,7 @@
     color: $color-blue;
     text-transform: uppercase;
 
-    span:first-of-type{
+    span:first-child{
 
       color: $color-red1;
 
@@ -229,37 +229,42 @@
   }
 
   // ФИО
-  &__items:first-of-type{
+  &__items:first-child{
 
     order: 1;
     margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+
 
 
   }
   // с каким приложением путешествуете
-  &__items:nth-of-type(2){
+  &__items:nth-child(2){
 
     order: 4;
 
   }
   // безбашенные достижения
-  &__items:nth-of-type(3){
+  &__items:nth-child(3){
 
     order: 3;
 
 
   }
   // Номер телефона
-  &__items:nth-of-type(4){
+  &__items:nth-child(4){
 
     order: 3;
     padding-top: 10px;
     padding-bottom: 34px;
+    display: flex;
+    flex-direction: row;
 
   }
 
   //опишите свои эмоции
-  &__items:nth-of-type(5){
+  &__items:nth-child(5){
 
     order: 5;
     margin: 0;
@@ -268,7 +273,7 @@
   }
 
 
-  &__items:nth-of-type(5) &__title{
+  &__items:nth-child(5) &__title{
 
     position: static;
     top: 0;
@@ -363,42 +368,41 @@
 
     }
 
-
     //  ФИО
-    &__items:first-of-type{
+    &__items:first-child{
 
       margin-bottom: 0;
 
     }
 
     // с каким приложением путешествуете
-    &__items:nth-of-type(2){
+    &__items:nth-child(2){
 
       order: 2;
 
     }
 
-    &__items:nth-of-type(3){
+    &__items:nth-child(3){
 
       padding-top: 41px;
 
     }
 
-    &__items:nth-of-type(3) &__item--control{
+    &__items:nth-child(3) &__item--control{
 
       margin: 0;
       margin-bottom: 40px;
 
     }
 
-    &__items:nth-of-type(3) &__layout{
+    &__items:nth-child(3) &__layout{
 
       padding: 0;
 
     }
 
     // Номер телефона
-    &__items:nth-of-type(4){
+    &__items:nth-child(4){
 
       order: 2;
       border: 2px solid $color-grey4;
@@ -408,15 +412,13 @@
 
     }
 
-    &__items:nth-of-type(4) &__title--not-mobile{
+    &__items:nth-child(4) &__title--not-mobile{
 
-      display: block;
       margin-bottom: 19px;
-
 
     }
 
-    &__items:nth-of-type(4) &__item{
+    &__items:nth-child(4) &__item{
 
       display: flex;
       flex-direction: column-reverse;
@@ -427,7 +429,7 @@
 
     }
 
-    &__items:nth-of-type(4) &__label-content{
+    &__items:nth-child(4) &__label-content{
 
       padding-top: 11px;
       padding-left: 20px;
@@ -436,14 +438,14 @@
     }
 
     //опишите свои эмоции
-    &__items:nth-of-type(5)  &__item {
+    &__items:nth-child(5)  &__item {
 
         display: flex;
         flex-direction: column;
 
     }
 
-    &__items:nth-of-type(5) &__title{
+    &__items:nth-child(5) &__title{
 
       position: static;
       margin-bottom: 28px;
@@ -451,7 +453,7 @@
 
     }
 
-    &__items:nth-of-type(5) {
+    &__items:nth-child(5) {
 
       border: 2px solid $color-grey4;
       margin-bottom: 67px;
@@ -459,7 +461,7 @@
       margin: 0 $layout-padding-tablet;
     }
 
-    &__items:nth-of-type(5) &__textarea {
+    &__items:nth-child(5) &__textarea {
 
       &::-webkit-input-placeholder {
 
@@ -554,15 +556,21 @@
     &__items{
 
       padding: 0;
+      margin: 0;
 
     }
+
 
     &__layout{
 
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       flex-wrap: wrap;
       position: relative;
+      justify-content: space-around;
+      align-content: stretch;
+      align-items: stretch;
+      @include layout();
 
     }
 
@@ -570,6 +578,18 @@
 
       background: none;
 
+    }
+
+
+    &__item-layout{
+
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-top: 12px;
+      margin-left: 57px;
+      margin-right: 57px;
     }
 
 
@@ -583,7 +603,8 @@
 
     &__label-content{
 
-      padding-right: 20px;
+      padding-right: 15px;
+      margin-left:0;
 
     }
 
@@ -599,6 +620,8 @@
       position: static;
       margin-bottom: 0;
       padding: 0 25px;
+      margin-top: -16px;
+      background-color: $color-white;
 
 
     }
@@ -650,7 +673,7 @@
 
     &__item--control, &__item--content{
 
-      padding:0 55px;
+      padding:0 75px;
 
     }
 
@@ -661,41 +684,47 @@
     }
 
 
-    &__items:nth-of-type(1){
+    &__items:first-child{
 
-      align-self: flex-start;
-      margin-left: 55px;
       padding: 0;
-      padding-bottom: 32px;
-      width: 432px;
+      flex-basis: 433px;
+      margin: 0;
+      margin-top: 7px;
+      padding-right: 60px;
 
     }
 
-    &__items:nth-of-type(1) &__item{
+    &__items:first-child &__item{
 
       display: flex;
       flex-direction: row;
-      padding-bottom: 53px;
+      margin-bottom: 53px;
 
     }
 
-    &__items:nth-of-type(2) {
+    &__items:first-child &__item--content{
 
-      position: absolute;
-      right: 130px;
-      top: -13px;
       padding: 0;
 
     }
 
-    &__items:nth-of-type(3){
+    &__items:nth-child(2) {
+
+      padding: 0;
+      flex-basis: 430px;
+      order:1;
+      margin-bottom: 54px;
+    }
+
+    &__items:nth-child(3){
 
       height: 280px;
       width: $width-content-desktop - ($layout-padding-desktop * 2);
+      flex-basis: 100%;
 
     }
 
-    &__items:nth-of-type(3) &__layout{
+    &__items:nth-child(3) &__layout{
 
       display: flex;
       flex-direction: row;
@@ -710,42 +739,44 @@
 
     }
 
-    &__items:nth-of-type(3) &__item--control{
+    &__items:nth-child(3) &__item--control{
 
       padding: 0;
       order: 1;
 
-      &:first-of-type{
+      &:first-child{
 
-        order:1;
-
-      }
-
-      &:nth-of-type(2){
-
-        order:3;
+        order: 1;
 
       }
 
-      &:nth-of-type(3){
+      &:nth-child(2){
 
         order:2;
 
       }
 
-      &:nth-of-type(4){
+      &:nth-child(3){
+
+        order:3;
+        width: 278px;
+
+
+      }
+
+      &:nth-child(4){
 
         order:4;
 
       }
 
-      &:nth-of-type(5){
+      &:nth-child(5){
 
         order:2;
 
       }
 
-      &:last-of-type{
+      &:last-child{
 
         order:6;
 
@@ -754,41 +785,52 @@
     }
 
     // Номер телефона
-    &__items:nth-of-type(4){
+    &__items:nth-child(4){
 
       order: 2;
       border: 2px solid $color-grey4;
       display: block;
-      width: $width-content-desktop - ($layout-padding-desktop * 2);
-      margin-bottom: 50px;
+      margin-bottom: 52px;
+      padding-bottom: 8px;
+      flex-basis: 940px;
 
     }
 
-    &__items:nth-of-type(4) &__item:first-of-type{
+    &__items:nth-child(4) &__item--content{
 
-      float: left;
-      margin-top: 44px;
-
-    }
-
-    &__items:nth-of-type(4) &__item:last-of-type{
-
-      float: right;
-      margin-top: 44px;
-      margin-bottom: 55px;
+      padding: 0;
 
     }
 
-    &__items:nth-of-type(4) &__input{
+    &__items:nth-child(4) &__label-content{
+
+      padding-top: 12px;
+      padding-left: 21px;
+
+    }
+
+    &__items:nth-child(4) &__input{
 
       order: -1;
-      width: 360px;
+      width: 375px;
+      padding-left: 21px;
 
+
+    }
+
+    &__items:nth-child(5) {
+
+      border: 2px solid $color-grey4;
+      margin: 0 auto;
+      margin-bottom: 67px;
+      margin-top: 60px;
+      width: $width-content-desktop - ($layout-padding-desktop * 2);
+      flex-basis: 100%;
 
     }
 
     //опишите свои эмоции
-    &__items:nth-of-type(5)  &__item {
+    &__items:nth-child(5)  &__item {
 
       display: flex;
       flex-direction: column;
@@ -796,7 +838,7 @@
       line-height:  30px / ($font-size + 4px);
     }
 
-    &__items:nth-of-type(5) &__textarea {
+    &__items:nth-child(5) &__textarea {
 
       &::-webkit-input-placeholder {
 
@@ -808,22 +850,14 @@
 
     }
 
-    &__items:nth-of-type(5) &__title{
+    &__items:nth-child(5) &__title{
 
       position: static;
       margin-bottom: 38px;
 
     }
 
-    &__items:nth-of-type(5) {
 
-      border: 2px solid $color-grey4;
-      margin: 0 auto;
-      margin-bottom: 67px;
-      margin-top: 60px;
-      width: $width-content-desktop - ($layout-padding-desktop * 2);
-
-    }
 
     &__control{
 
