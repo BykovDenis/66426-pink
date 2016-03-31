@@ -11,20 +11,20 @@ html
         .main-nav__layout
           a(href="index.html").main-nav__logo
           .main-nav__menu
-            a(href="#").main-nav__main-link
-              span.main-nav__icon
-        ul.main-nav__items
+            a(href="#" id="main_link").main-nav__main-link
+              span(id="main_icon").main-nav__icon
+        ul(id="main_nav").main-nav__items
           li.main-nav__item
             a(href="index.html").main-nav__link.main-nav__link--active Главная
           li.main-nav__item
             a(href="photo.html").main-nav__link Фотографии
           li.main-nav__item
-            a(href="#").main-nav__link Конкурс
+            a(href="form.html").main-nav__link Конкурс
           li.main-nav__item
-            a(href="#").main-nav__link Html Academy
+            a(href="http://www.htmlacademy.ru" target="_blank").main-nav__link Html Academy
       .intro.intro--form
         h1.intro__header Конкурс на самое безбашенное путешествие с Пинк
-      section.block-header.block-header--form
+      .block-header.block-header--form
         .block-header__layout
           .block-header__description Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!
             span.block-header__add-info Пожалуйста заполните форму ниже
@@ -109,3 +109,4 @@ html
         .htmlacademy
           span.htmlacademy__description Разработано
           img(src="img/img_htmlacademy.png" width="27" height="34" alt="htmlacademy").htmlacademy__logo
+    script(src="js/script.js")

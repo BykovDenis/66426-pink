@@ -11,25 +11,25 @@ html
         .main-nav__layout
           a(href="index.html").main-nav__logo
           .main-nav__menu
-            a(href="#").main-nav__main-link
-              span.main-nav__icon
-        ul.main-nav__items
+            a(href="#" id="main_link").main-nav__main-link
+              span(id="main_icon").main-nav__icon
+        ul(id="main_nav").main-nav__items
           li.main-nav__item
             a(href="index.html").main-nav__link.main-nav__link--active Главная
           li.main-nav__item
             a(href="photo.html").main-nav__link Фотографии
           li.main-nav__item
-            a(href="#").main-nav__link Конкурс
+            a(href="form.html").main-nav__link Конкурс
           li.main-nav__item
-            a(href="#").main-nav__link Html Academy
+            a(href="http://www.htmlacademy.ru").main-nav__link Html Academy
       .intro
             h1.intro__header Фотографии пользователей
-      section.block-header
+      .block-header
         .block-header__layout
           .block-header__description Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?
     main.page-main
       .photo
-        section.photo-card.photo-card--top
+        .photo-card.photo-card--top
           picture
             source(media="(min-width:1200px)" srcset="img/panorama-desktop.jpg 1x, img/panorama-desktop@2x.jpg 2x")
             source(media="(min-width:700px)" srcset="img/panorama-tablet.jpg 1x, img/panorama-tablet@2x.jpg 2x")
@@ -53,7 +53,7 @@ html
 
               if card["type"] != "top"
 
-                section.photo-card
+                .photo-card
                   picture
                     source(media="(min-width: 1200px)" srcset="#{card['srcset_dsk']}")
                     source(media="(min-width: 700px)" srcset="#{card['srcset_tbl']}")
@@ -68,7 +68,7 @@ html
                    Нравится:
                    span.photo-card__likes-counter #{card["counter"]}
 
-      section.block-header.block-header--photo
+      .block-header.block-header--photo
         .block-header__layout
           .block-header__description Затмите их всех! <br> Выкладывайте все, что накопилось в телефоне!
 
@@ -102,7 +102,7 @@ html
             .progressbar__line
             .progressbar__point
           .upload__controls
-            input(type="file" value="Прикрепить фото").btn.btn__file
+            input(type="file").btn.btn__file
             input(type="submit" value="Запостить").btn
             input(type="reset" value="Отмена").btn.btn--disable
     footer.main-footer
@@ -115,3 +115,4 @@ html
         .htmlacademy
           span.htmlacademy__description Разработано
           img(src="img/img_htmlacademy.png" width="27" height="34" alt="htmlacademy").htmlacademy__logo
+    script(src="js/script.js")

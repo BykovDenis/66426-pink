@@ -10,13 +10,13 @@
   <header class="main-header">
    <nav class="main-nav">
     <div class="main-nav__layout"><a href="index.html" class="main-nav__logo"></a>
-     <div class="main-nav__menu"><a href="#" class="main-nav__main-link"><span class="main-nav__icon"></span></a></div>
+     <div class="main-nav__menu"><a href="#" id="main_link" class="main-nav__main-link"><span id="main_icon" class="main-nav__icon"></span></a></div>
     </div>
-    <ul class="main-nav__items main-nav__items">
+    <ul id="main_nav" class="main-nav__items">
      <li class="main-nav__item"><a href="index.html" class="main-nav__link main-nav__link--active">Главная</a></li>
      <li class="main-nav__item"><a href="photo.html" class="main-nav__link">Фотографии</a></li>
-     <li class="main-nav__item"><a href="#" class="main-nav__link">Конкурс</a></li>
-     <li class="main-nav__item"><a href="#" class="main-nav__link">Html Academy</a></li>
+     <li class="main-nav__item"><a href="form.html" class="main-nav__link">Конкурс</a></li>
+     <li class="main-nav__item"><a href="http://www.htmlacademy.ru" target="_blank" class="main-nav__link">Html Academy</a></li>
     </ul>
    </nav>
    <section class="download">
@@ -74,12 +74,12 @@
      <p class="application-profit__description">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p><a href="#" class="application-profit__link">Узнать больше об использовании</a>
     </div>
    </section>
-   <section class="review">
+   <div class="review">
     <div class="review__layout">
      <div class="review__prev"><a href="#"></a></div>
      <div class="review__slides">
       <div class="review__slide review__slide--active">
-       <h4 class="review__title">Николай Петров</h4>
+       <p class="review__title">Николай Петров</p>
        <p class="review__details">25 лет, водитель трамвая</p>
        <p class="review__description">
         "Это приложение перевернуло мой мир и позволило
@@ -88,7 +88,7 @@
        </p>
       </div>
       <div class="review__slide">
-       <h4 class="review__title">Николай Петров</h4>
+       <p class="review__title">Николай Петров</p>
        <p class="review__details">25 лет, водитель трамвая</p>
        <p class="review__description">
         "Это приложение перевернуло мой мир и позволило
@@ -97,7 +97,7 @@
        </p>
       </div>
       <div class="review__slide">
-       <h4 class="review__title">Николай Петров</h4>
+       <p class="review__title">Николай Петров</p>
        <p class="review__details">25 лет, водитель трамвая</p>
        <p class="review__description">
         "Это приложение перевернуло мой мир и позволило
@@ -109,21 +109,21 @@
      <div class="review__next"><a href="#"></a></div>
      <div class="controls"><a href="#" class="controls__item controls__item--active"></a><a href="#" class="controls__item"></a><a href="#" class="controls__item"></a></div>
     </div>
-   </section>
-   <section class="price">
+   </div>
+   <div class="price">
     <div class="price__layout">
      <table class="table">
       <tr class="table__row">
        <th class="table__header-cell">
-        <h4 class="table__title">База</h4>
+        <p class="table__title">База</p>
         <p class="table__value">1,99 USD</p>
        </th>
        <th class="table__header-cell table__header-cell--hit">
-        <h4 class="table__title">Стандарт</h4>
+        <p class="table__title">Стандарт</p>
         <p class="table__value">3,99 USD</p>
        </th>
        <th class="table__header-cell">
-        <h4 class="table__title">Анлим</h4>
+        <p class="table__title">Анлим</p>
         <p class="table__value">9,99 USD</p>
        </th>
       </tr>
@@ -145,7 +145,7 @@
      </table>
     </div>
     <div class="controls controls--table"><a href="#" class="controls__item"></a><a href="#" class="controls__item controls__item--active"></a><a href="#" class="controls__item"></a></div>
-   </section>
+   </div>
    <section class="contacts">
     <div class="contacts__layout">
      <h2 class="contacts__header">Остались вопросы? Свяжитесь с нами!</h2>
@@ -171,5 +171,6 @@
     <div class="htmlacademy"><span class="htmlacademy__description">Разработано</span><img src="img/img_htmlacademy.png" width="27" height="34" alt="htmlacademy" class="htmlacademy__logo"/></div>
    </div>
   </footer>
+  <script src="js/script.js"></script>
  </body>
 </html>

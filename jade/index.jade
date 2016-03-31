@@ -11,17 +11,17 @@ html
         .main-nav__layout
           a(href="index.html").main-nav__logo
           .main-nav__menu
-            a(href="#").main-nav__main-link
-              span.main-nav__icon
-        ul.main-nav__items.main-nav__items
+            a(href="#" id="main_link").main-nav__main-link
+              span(id="main_icon").main-nav__icon
+        ul(id="main_nav").main-nav__items
           li.main-nav__item
             a(href="index.html").main-nav__link.main-nav__link--active Главная
           li.main-nav__item
             a(href="photo.html").main-nav__link Фотографии
           li.main-nav__item
-            a(href="#").main-nav__link Конкурс
+            a(href="form.html").main-nav__link Конкурс
           li.main-nav__item
-            a(href="#").main-nav__link Html Academy
+            a(href="http://www.htmlacademy.ru" target="_blank").main-nav__link Html Academy
       section.download
         .download__body
           .intro.intro--mainpage
@@ -75,27 +75,27 @@ html
           p.application-profit__description Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!
           a(href="#").application-profit__link Узнать больше об использовании
 
-      section.review
+      .review
         .review__layout
           .review__prev
             a(href="#")
           .review__slides
             .review__slide.review__slide--active
-              h4.review__title Николай Петров
+              p.review__title Николай Петров
               p.review__details 25 лет, водитель трамвая
               p.review__description.
                 "Это приложение перевернуло мой мир и позволило
                 по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой
                 в комментариях к выложенной фотографии!"
             .review__slide
-              h4.review__title Николай Петров
+              p.review__title Николай Петров
               p.review__details 25 лет, водитель трамвая
               p.review__description.
                 "Это приложение перевернуло мой мир и позволило
                 по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой
                 в комментариях к выложенной фотографии!"
             .review__slide
-              h4.review__title Николай Петров
+              p.review__title Николай Петров
               p.review__details 25 лет, водитель трамвая
               p.review__description.
                 "Это приложение перевернуло мой мир и позволило
@@ -107,18 +107,18 @@ html
             a(href="#").controls__item.controls__item--active
             a(href="#").controls__item
             a(href="#").controls__item
-      section.price
+      .price
         .price__layout
           table.table
             tr.table__row
               th.table__header-cell
-                h4.table__title База
+                p.table__title База
                 p.table__value 1,99 USD
               th.table__header-cell.table__header-cell--hit
-                h4.table__title Стандарт
+                p.table__title Стандарт
                 p.table__value 3,99 USD
               th.table__header-cell
-                h4.table__title Анлим
+                p.table__title Анлим
                 p.table__value 9,99 USD
             tr.table__row
               td.table__cell
@@ -181,6 +181,7 @@ html
         .htmlacademy
           span.htmlacademy__description Разработано
           img(src="img/img_htmlacademy.png" width="27" height="34" alt="htmlacademy").htmlacademy__logo
+    script(src="js/script.js")
 
 
 
