@@ -10,6 +10,21 @@
 
   }
 
+  &:after {
+
+    display: block;
+    content: "";
+    background: url(../img/bg-triangle-white-footer.svg) 0 0 no-repeat;
+    width: 600px;
+    height: 72px;
+    position: absolute;
+    bottom: 140px;
+    left: -139px;
+    background-size: 600px;
+    z-index: 100;
+
+  }
+
   &__header{
 
     font: 100 #{$font-size-h2 - 6px} / 1.2 $open-sans;
