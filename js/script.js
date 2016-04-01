@@ -1,7 +1,7 @@
 /**
  * Created by Denis on 31.03.2016.
  */
-/*
+
 var main_nav = document.getElementById("main_nav");
 var main_link = document.getElementById("main_link");
 var main = document.querySelector(".main-nav");
@@ -35,7 +35,7 @@ var main_icon = document.getElementById("main_icon");
 
   });
 
-*/
+
 // Показать карту
 /*
 var contacts_map = document.querySelector(".contacts__map");
