@@ -58,29 +58,29 @@
 
   &__map{
 
-    position: relative;
     overflow: hidden;
     width: $width-content-mobile;
     height: 212px;
 
-
-
-    img {
-
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      z-index: 100;
-      width: 1200px;
-      height: 976px;
-      display: block;
-      transform: translate(-439px, 330px);
-
-
-
-    }
-
   }
+
+}
+
+@media (max-width: $width-content-desktop - 1px){
+
+ .contacts{
+
+   &__contain {
+
+     &:last-child {
+
+       margin-bottom: 10px;
+
+     }
+
+   }
+
+ }
 
 }
 
@@ -174,12 +174,6 @@
 
       width: $width-content-tablet;
       height: 377px;
-
-      img {
-
-        transform: translate(-249px, 256px);
-
-      }
 
     }
 
@@ -293,14 +287,6 @@
 
         width: $width-content-desktop;
         height: 524px;
-
-
-
-        img {
-
-          transform: translate(0px, 257px);
-
-        }
 
       }
 

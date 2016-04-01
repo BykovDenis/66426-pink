@@ -170,8 +170,8 @@ html
             p.contacts__name Приезжайте в гости:
             p.contacts__description ул. Большая Конюшенная, 19/8
         .contacts__map
-          img(src="img/img_map_desktop.jpg" width="320" height="645" alt="Карта")
-          .map(id="map").map
+          .map(id="map")
+          img(src="img/img_map_desktop.jpg" width="320" height="645" alt="Карта").map__image
     footer.main-footer.main-footer--mainpage
       .main-footer__layout
         a(href="index.html").main-footer__logo
@@ -182,7 +182,7 @@ html
         .htmlacademy
           span.htmlacademy__description Разработано
           img(src="img/img_htmlacademy.png" width="27" height="34" alt="htmlacademy").htmlacademy__logo
-    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgjyr7w5tXCAn5-3sETmXNDymaDIsy0N8" async defer)
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgjyr7w5tXCAn5-3sETmXNDymaDIsy0N8&callback=initMap"></script>
     script(src="js/script.js")
 
 
