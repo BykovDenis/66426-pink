@@ -11,14 +11,22 @@
     text-align: center;
     font: 400 #{$font-size} / 2.14 $open-sans;
     color: $color-blue;
-    margin-bottom: 50px;
-    margin-top: 54px;
+    margin-top: 46px;
+    margin-bottom: 17px;
 
   }
 
   &__add-info{
 
     display: none;
+
+  }
+
+
+  &--photo &__description{
+
+    margin-top: 22px;
+    margin-bottom: 46px;
 
   }
 
@@ -41,11 +49,12 @@
 
     }
 
-    &--photo &__description{
+    &--photo &__description {
 
-      margin: 84px 65px 72px;
+      margin-bottom: 70px;
 
     }
+
 
   }
 
@@ -57,9 +66,8 @@
 
     &__description {
 
-      margin: 100px 233px 64px;
-      font-size: $font-size + 4px;
-      line-height: 30px / ($font-size + 4px);
+      margin: 92px 184px 85px;
+      font: 400 #{$font-size + 4px} / #{30px/($font-size + 4px)} $open-sans;
 
     }
 
@@ -68,6 +76,23 @@
       display: inline;
 
     }
+
+    &--photo &__description{
+
+      margin-top: 7px;
+      margin-bottom: 66px;
+
+    }
+
+
+    &--form &__description{
+
+      margin-left: 97px;
+      margin-right: 97px;
+      margin-bottom: 79px;
+
+    }
+
 
   }
 

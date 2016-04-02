@@ -6,7 +6,16 @@
   display: flex;
   flex-direction: column;
 
-  background: url(../../img/bg-back-tablet.jpg) 50% 0px no-repeat $color-blue-dark1;
+  background: url(../img/bg-back-mobile.jpg) 50% -6px no-repeat $color-blue-dark1;
+  background-size: 700px 462px;
+
+  @media (min-resolution: 1.5dppx) {
+
+    background: url(../img/bg-back-mobile@2x.jpg) 50% -6px no-repeat $color-blue-dark1;
+    background-size: 700px 462px;
+
+  }
+
   padding-top: 111px;
   position: relative;
   font-size: 0;
@@ -56,19 +65,19 @@
 
     &--apple{
 
-      background: url(../../img/logo-apple.svg) 0 0 no-repeat;
+      background: url(../img/logo-apple.svg) 0 0 no-repeat;
 
     }
 
     &--android{
 
-      background: url(../../img/logo-android.svg) 0 9px no-repeat;
+      background: url(../img/logo-android.svg) 0 9px no-repeat;
 
     }
 
     &--microsoft{
 
-      background: url(../../img/logo-microsoft.svg) 0 13px no-repeat;
+      background: url(../img/logo-microsoft.svg) 0 13px no-repeat;
 
     }
 
@@ -84,7 +93,7 @@
 
   }
 
-  &__body--mainpage{
+  &__body{
 
     background-color: $color-blue-dark1;
     order: 1;
@@ -108,17 +117,12 @@
   .download {
 
     display: block;
-    background: url(../../img/bg-back-tablet.jpg) 50% 0px no-repeat $color-blue-dark1;
+    background: url(../img/bg-back-tablet.jpg) 50% 0px no-repeat $color-blue-dark1;
     padding-top: 111px;
     position: relative;
     font-size: 0;
-    height: 331px;
+    height: auto;
 
-    &--mainpage{
-
-      height: auto;
-
-    }
 
     &__btn{
 
@@ -145,8 +149,8 @@
       position: absolute;
       width: 300px;
       z-index: 1;
-      top: 206px;
-      left: 40px;
+      top: 84px;
+      left: 39px;
       background: none;
 
     }
@@ -156,9 +160,9 @@
       position: relative;
       display: inline-block;
       text-align: center;
-      left: 73px;
-      padding-top: 76px;
-      width: 482px;
+      left: 0;
+      padding-top: 71px;
+      width: 700px;
       height: 545px;
 
     }
@@ -173,16 +177,18 @@
     display: flex;
     flex-direction: row;
     justify-content:center;
-    background: url(../../img/bg-back-desktop.jpg) 50% 0px no-repeat $color-blue-dark1;
+    background: url(../img/bg-back-desktop.jpg) 50% 0px no-repeat $color-blue-dark1;
     font-size: 0;
     padding-top: 147px;
 
     &__body{
 
-      background: none;
+      position: absolute;
       width: 300px;
-      order:-1;
-      align-self: center;
+      z-index: 1;
+      top: 108px;
+      left: 130px;
+      background: none;
 
 
     }
@@ -190,15 +196,17 @@
     &__image{
 
       display: block;
-      width: 555px;
+      width: 1050px;
       height: 645px;
+      position: relative;
+      left: 70px;
 
     }
 
     &__btn{
 
       width: 290px;
-      margin-bottom: 46px;
+      margin-bottom: 70px;
       font: 600 #{$font-size + 7px} / 1.03 $open-sans;
 
     }
@@ -212,7 +220,7 @@
 
     &__icon {
 
-      margin-bottom: 40px;
+      margin-bottom: 54px;
 
     }
 

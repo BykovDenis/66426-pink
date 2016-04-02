@@ -14,9 +14,8 @@
 
     text-align: left;
     margin: 0 auto;
-    margin-top: 50px;
+    padding-top: 58px;
     margin-bottom: 100px;
-
 
     &:after{
 
@@ -27,7 +26,36 @@
     &__image{
 
       float: left;
+      display: block;
       padding-left: $layout-padding-tablet;
+      width: 240px;
+      height: 277px;
+
+
+    }
+
+    &__hours{
+
+      font: 700 #{($font-size - 2px) * 8}/ #{149px/(($font-size - 2px) * 8)} $open-sans;
+      color: $color-red1;
+      position: absolute;
+      top: 135px;
+      left: 104px;
+      z-index: 200;
+
+
+      &:after{
+
+        display: block;
+        border: 13px solid $color-red1;
+        width: 178px;
+        height: 173px;
+        border-radius: 50%;
+        position: absolute;
+        top: -18px;
+        left: -47px;
+        content: "";
+      }
 
     }
 
@@ -35,18 +63,19 @@
 
       float: right;
       width: 320px;
-      padding-right: $layout-padding-tablet;
+      padding-right: 29px;
 
     }
 
     &__title{
 
       border: 1px solid transparent;
-      margin-top: 40px;
+      padding-right: 110px;
+      display: block;
+      margin-top: 39px;
+      margin-bottom: 10px;
       font: 600 #{$font-size-h2} /  1.2 $open-sans;
       color: $color-black;
-      width: 168px;
-      display: block;
 
     }
 
@@ -87,7 +116,7 @@
 
     text-align: left;
     margin: 0 auto;
-    padding-top: 50px;
+    padding-top: 0;
     padding-bottom: 65px;
     background-color: $color-grey;
 
@@ -98,24 +127,42 @@
 
     }
 
-    &__image{
+    &__hours{
 
-      float: left;
-      padding-left: $layout-padding-desktop;
+      font: 700 #{$font-size * 10 - 20px}/ #{187px/($font-size * 10)} $open-sans;
+      color: $color-red1;
+      position: absolute;
+      top:  105px;
+      left: 210px;
+      z-index: 200;
+
+
+      &:after{
+
+        display: block;
+        border: 17px solid $color-red1;
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        position: absolute;
+        top: -40px;
+        left: -58px;
+        content: "";
+      }
 
     }
 
     &__layout{
 
       float: right;
-      width: 520px;
-      padding-right: $layout-padding-desktop + 75px; /* 205 */
+      width: 513px;
+      padding-right: 190px;
 
     }
 
     &__title{
 
-      padding-top: 40px;
+      padding-top: 60px;
       font: 600 #{$font-size-h2} /  1.2 $open-sans;
       color: $color-black;
 
@@ -124,15 +171,28 @@
 
     &__description{
 
-      font: 400 #{$font-size}/ 1.71 $open-sans;
+      font: 400 #{$font-size + 4px}/ #{30px/($font-size + 4px)} $open-sans;
       color: $color-blue;
+      margin: 0;
+      margin-bottom: 28px;
 
     }
 
     &__link{
 
-      font: 400 #{$font-size} / 1.71 $open-sans;
+      font: 400 #{$font-size + 4px}/ #{30px/($font-size + 4px)} $open-sans;
       color: $color-red1;
+
+    }
+
+    &__image{
+
+      width: 298px;
+      height: 345px;
+      float: left;
+      display: block;
+      padding-left: 131px;
+
 
     }
 

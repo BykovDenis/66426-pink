@@ -27,7 +27,7 @@
     width: 75px;
     height: 22px;
     padding: 22px 0;
-    background: url(../../img/logo-pink-white-mobile.svg) 0 22px no-repeat;
+    background: url(../img/logo-pink-white-mobile.svg) 0 22px no-repeat;
  }
 
 
@@ -41,7 +41,7 @@
   &__icon{
 
     display: block;
-    background: url(../../img/icon-menu-burger.svg) 0 0 no-repeat;
+    background: url(../img/icon-menu-burger.svg) 0 0 no-repeat;
     width: 50px;
     height: 25px;
 
@@ -50,7 +50,7 @@
   &__icon--active{
 
     display: block;
-    background: url(../../img/icon-menu-cross.svg) 25px 0 no-repeat;
+    background: url(../img/icon-menu-cross.svg) 25px 0 no-repeat;
     width: 50px;
     height: 25px;
 
@@ -65,7 +65,6 @@
 
   &__items{
 
-    display: flex;
     display: none;
     flex-direction: column;
     list-style-type: none;
@@ -88,12 +87,13 @@
 
   &__link{
 
+    display: block;
     text-decoration: none;
 
     font: 600 #{$font-size + 4px} / 3 $open-sans;
     color: $color-white;
 
-    padding: 15px 0;
+    padding: 4px 0;
     text-align: center;
     text-transform: uppercase;
 
@@ -129,7 +129,7 @@
      width: 147px;
      height: 65px;
      padding: 22px 0;
-     background: url(../../img/logotype-white-tablet.png) 0 27px no-repeat;
+     background: url(../img/logotype-white-tablet.png) 0 27px no-repeat;
    }
 
    &__main-link{
@@ -195,7 +195,7 @@
       height: 65px;
       padding: 22px 0;
       padding-right: 170px;
-      background: url(../../img/logotype-white-desktop.png) 0 27px no-repeat;
+      background: url(../img/logotype-white-desktop.png) 0 27px no-repeat;
 
     }
 

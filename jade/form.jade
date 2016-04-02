@@ -11,54 +11,53 @@ html
         .main-nav__layout
           a(href="index.html").main-nav__logo
           .main-nav__menu
-            a(href="#").main-nav__main-link
-              span.main-nav__icon
-        ul.main-nav__items
+            a(href="#" id="main_link").main-nav__main-link
+              span(id="main_icon").main-nav__icon
+        ul(id="main_nav").main-nav__items
           li.main-nav__item
             a(href="index.html").main-nav__link.main-nav__link--active Главная
           li.main-nav__item
             a(href="photo.html").main-nav__link Фотографии
           li.main-nav__item
-            a(href="#").main-nav__link Конкурс
+            a(href="form.html").main-nav__link Конкурс
           li.main-nav__item
-            a(href="#").main-nav__link Html Academy
-      .intro.intro--not-main
+            a(href="http://www.htmlacademy.ru" target="_blank").main-nav__link Html Academy
+      .intro.intro--form
         h1.intro__header Конкурс на самое безбашенное путешествие с Пинк
-      section.block-header
+      .block-header.block-header--form
         .block-header__layout
-          .block-header__description
-            Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!
+          .block-header__description Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!
             span.block-header__add-info Пожалуйста заполните форму ниже
     main.page-main
       form(method="get").form
         .form__layout
 
-          fieldset.form__items
+          .form__items
             .form__item.form__item--content
               label(for="first_name").form__label-content Имя:
               input(type="text" id="first_name" placeholder="Введите ваше имя").form__input
             .form__item.form__item--content
               label(for="last_name").form__label-content Фамилия:
-              input(type="text" id="last_name" placeholder="Введите фамилию").form__input
+              input(type="text" id="last_name" placeholder="Укажите фамилию").form__input
             .form__item.form__item--content
               label(for="middle_name").form__label-content Отчество:
               input(type="text" id="middle_name" placeholder="Ну и отчество тоже").form__input
 
-          fieldset.form__items.form__items--grey
-            legend.form__title С каким приложением путешествовали?
+          .form__items.form__items--grey
+            p.form__title С каким приложением путешествовали?
             label.form__item.form__item--control
               input(type="radio" name="application" id="radio1" checked).form__radio
               span.form__label-control Pink для iOS
             label.form__item.form__item--control
               input(type="radio"  name="application" id="radio2").form__radio
-              span.form__label-control Pink для Android
+              span.form__label-control Pink на Android
             label.form__item.form__item--control
               input(type="radio"  name="application" id="radio3").form__radio
               span.form__label-control Windows Phone
 
           fieldset.form__items.form__items--grey
             legend.form__title Ваши безбашенные достижения в путешествии
-            .form__layout
+            .form__item-layout1
               .form__item.form__item--control
                 input(type="checkbox" name="item1" id="check1" checked).form__checkbox
                 label(for="check1").form__label-control Сделал селфи с акулой
@@ -80,28 +79,29 @@ html
 
           fieldset.form__items
             legend.form__title.form__title--not-mobile Контактная информация
-            .form__item.form__item--content
-              label(for="phone").form__label-content.form__label-content--mobile Номерок телефончика
-              label(for="phone").form__label-content.form__label-content--other Номер телефона
-              input(type="text" id="phone" placeholder="Номер, пожалуйста").form__input
-            .form__item.form__item--content
-              label(for="email").form__label-content.form__label-content--mobile Адресок почты
-              label(for="email").form__label-content.form__label-content--other Адрес почты
-              input(type="text" id="email" placeholder="E-mail, пожалуйста").form__input
+            .form__item-layout
+              .form__item.form__item--content
+                label(for="phone").form__label-content.form__label-content--mobile Номерок телефончика
+                label(for="phone").form__label-content.form__label-content--other Номер телефона
+                input(type="text" id="phone" placeholder="Номер, пожалуйста").form__input
+              .form__item.form__item--content
+                label(for="email").form__label-content.form__label-content--mobile Адресок почты
+                label(for="email").form__label-content.form__label-content--other Адрес почты
+                input(type="text" id="email" placeholder="E-mail, пожалуйста").form__input
 
-          fieldset.form__items
-            legend.form__title Опишите свои эмоции
+          .form__items
+            p.form__title Опишите свои эмоции
             .form__item.form__item--content
               textarea(placeholder="Можно прям в красках, не стесняясь в выражениях").form__textarea
-          fieldset.form__control
+          .form__control
             button(type="submit").form__send Отправить форму
             p.form__requirement
               span *
-              span - Обязательные поля
+              span — обязательные поля
+              span — обязательные для заполнения поля
     footer.main-footer
       .main-footer__layout
         a(href="index.html").main-footer__logo
-          img(src="img/img_logo1.png" width="147" height="40" alt="PINK")
         .socials
           span.socials__icon.socials__icon--twitter
           span.socials__icon.socials__icon--fb
@@ -109,3 +109,4 @@ html
         .htmlacademy
           span.htmlacademy__description Разработано
           img(src="img/img_htmlacademy.png" width="27" height="34" alt="htmlacademy").htmlacademy__logo
+    script(src="js/script.js")

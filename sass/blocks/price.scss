@@ -4,10 +4,12 @@
   overflow-x: hidden;
   background-color: $color-grey;
   margin-bottom: 48px;
+  padding-bottom: 5px;
 
   &__layout{
 
     @include layout();
+    padding-top: 35px;
 
   }
 
@@ -43,7 +45,8 @@
 
     overflow-x: visible;
     text-align: right;
-    padding-bottom: 68px;
+    padding-bottom: 91px;
+    margin-bottom: 63px;
 
 
     & .controls{

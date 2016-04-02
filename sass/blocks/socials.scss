@@ -1,7 +1,8 @@
 .socials{
 
-  display: inline;
+  display: inline-block;
   width: 200px;
+  text-align: center;
 
   &__icon{
 
@@ -9,16 +10,13 @@
     vertical-align: top;
 
 
-    width: 51px;
-    height: 51px;
+    width: 45px;
+    height: 45px;
 
     margin-right: 12px;
 
     border: 3px solid $color-grey;
     border-radius: 50%;
-
-    opacity: 0.1;
-    border: 3px solid #283645;
 
     &:last-of-type{
 
@@ -28,19 +26,19 @@
 
     &--twitter{
 
-      background: url(../../img/icon-twitter.svg) 50% 50% no-repeat;
+      background: url(../img/icon-twitter.svg) 50% 50% no-repeat;
 
     }
 
     &--fb{
 
-      background: url(../../img/icon-facebook.svg) 50% 50% no-repeat;
+      background: url(../img/icon-facebook.svg) 50% 50% no-repeat;
 
     }
 
     &--youtube{
 
-      background: url(../../img/icon-youtube.svg) 50% 50% no-repeat;
+      background: url(../img/icon-youtube.svg) 50% 50% no-repeat;
 
     }
 
@@ -53,8 +51,7 @@
 
   .socials{
 
-    display: inline;
-    width: 200px;
+    text-align: left;
 
     &__icon {
 
@@ -74,8 +71,12 @@
 
   .socials{
 
-    display: inline;
+    text-align: left;
+
+    display: inline-block;
     width: 200px;
+    margin-top: 34px;
+    margin-left: 30px;
 
     &__icon {
 

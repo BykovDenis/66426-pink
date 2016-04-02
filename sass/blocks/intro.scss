@@ -1,17 +1,22 @@
 .intro{
 
-  &--not-main{
+  @include page-width();
+  min-height: 141px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 
-    @include page-width();
+  background: url(../img/bg-back-mobile.jpg) 50% 0px no-repeat $color-blue-dark1;
 
-    text-align: center;
-    display: flex;
-    flex-direction: column;
+  @media (min-resolution: 144dpi),  (min-resolution: 1.5dppx){
 
-    background: url(../../img/bg-back-tablet.jpg) 50% 0px no-repeat $color-blue-dark1;
-    padding-top: 111px;
+    background: url(../img/bg-back-mobile@2x.jpg) 50% 0px no-repeat $color-blue-dark1;
+    background-size: 700px 462px;
 
   }
+
+  padding-top: 96px;
 
   &:after{
 
@@ -21,11 +26,19 @@
 
   &__header{
 
-    font: 100 #{$font-size + 10px} / 1.4 $open-sans;
+    font: 100 #{$font-size + 10px} / 1.22 $open-sans;
     color: $color-white;
     text-align: center;
-    padding: 10px 20px 80px;
+    padding: 0px 20px 54px;
     margin: 0;
+
+
+  }
+
+  &--mainpage{
+
+    display: none;
+
   }
 
   &--mainpage &__header{
@@ -40,34 +53,48 @@
 
 @media(min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px){
 
-
-  .intro{
+  .intro {
 
     text-align: center;
+    min-height: 343px;
+    background: url(../img/bg-back-tablet.jpg) 50% 0px no-repeat #1d2631;
 
-    &__header{
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx){
 
-      font: 100 #{$font-size-h1 + 10px} / 1.4 $open-sans;
-      color: $color-white;
-      text-align: center;
-      margin: 0;
+      background: url(../img/bg-back-tablet@2x.jpg) 50% 0px no-repeat #1d2631;
+      background-size: 1200px 729px;
 
     }
 
-    &--mainpage &__header{
+    &__header {
+
+      font: 100 #{$font-size-h1 + 10px} / 1.25 $open-sans;
+      color: $color-white;
+      text-align: center;
+      margin: 0;
+      padding: 79px 113px;
+
+
+    }
+
+    &--mainpage {
+
+      display: block;
+      background: none;
+      width: auto;
+      margin-top: 15px;
+      min-height: 155px;
+
+    }
+
+    &--mainpage &__header {
 
       display: block;
       float: left;
       margin: 0 40px;
       font: 100 #{$font-size-h1} /  1.2 $open-sans;
       color: $color-white;
-      padding: 10px 20px 0px;
-
-    }
-
-    &--not-main &__header{
-
-      padding: 63px 113px;
+      padding: 10px 15px 0px;
 
     }
 
@@ -80,33 +107,29 @@
   .intro{
 
     text-align: center;
+    display: block;
 
-    &--not-main{
+    background: url(../img/bg-back-desktop.jpg) 50% 0px no-repeat $color-blue-dark1;
 
-      display: block;
-
-      background: url(../../img/bg-back-desktop.jpg) 50% 0px no-repeat $color-blue-dark1;
-      padding-top: 111px;
-
-    }
-
-    &--not-main &__header{
-
-      padding: 62px 224px 100px;
-
-    }
-
+    padding-top: 111px;
+    min-height: 283px;
 
     &--mainpage{
 
+      display: block;
+      background: none;
+      width: auto;
       float: left;
+      min-height: 202px;
+
 
     }
 
     &__header{
 
-      font: 100 #{$font-size-h1 + 10px} /  1.2 $open-sans;
+      font: 300 #{$font-size-h1 + 10px} /  1.21 $open-sans;
       color: $color-white;
+      padding: 62px 426px 100px;
 
     }
 
@@ -114,8 +137,17 @@
 
       display: block;
       padding: 0 10px;
+      margin-bottom: 21px;
 
     }
+
+    &--form &__header{
+
+      padding-left: 101px;
+      padding-right: 99px;
+
+    }
+
 
   }
 

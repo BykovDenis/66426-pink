@@ -19,11 +19,18 @@
 
   }
 
+  &__cell {
+
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+  }
+
   &__header-cell {
 
     background-color: $color-blue;
     color: $color-white;
-    padding: 25px 0;
+    padding: 19px 0;
     text-align: center;
     position: relative;
 
@@ -33,12 +40,12 @@
 
 
     &:before{
-
+ 
       width: 100px;
       height: 100px;
       content: "";
       display: block;
-      background: url(../../img/bg-hit.png) 0 0 no-repeat;
+      background: url(../img/bg-hit.png) 0 0 no-repeat;
       position: absolute;
       top: 0;
       left: 0;
@@ -52,12 +59,14 @@
 
     font: 400 #{$font-size} / 2.14 $open-sans;
     color: $color-blue;
+    text-transform: uppercase;
 
   }
 
   &__title{
 
     font: 600 #{$font-size + 4px} / 1.67 $open-sans;
+    text-transform: uppercase;
     margin: 0;
 
   }
@@ -73,10 +82,13 @@
 
     display: block;
     float: right;
-    width: 27px;
-    height: 26px;
-    background: url(../../img/icon_yes.png) 0 0 no-repeat;
-    padding-right: 17px;
+    width: 31px;
+    height: 21px;
+    background: url(../img/icon-yes.svg) 0 0 no-repeat;
+    background-size: 31px 21px;
+    padding-right: 13px;
+    color: $color-red1;
+
 
   }
 
@@ -86,8 +98,10 @@
     float: right;
     width: 27px;
     height: 26px;
-    background: url(../../img/icon_no.png) 0 0 no-repeat;
-    padding-right: 17px;
+    background: url(../img/icon-no.svg) 0 0 no-repeat;
+    background-size: 27px 26px;
+    padding-right: 13px;
+    color: $color-red1;
 
   }
 
@@ -98,9 +112,13 @@
 
   .table{
 
-    width: 457px;
-    transform: translateX(3%);
+    box-sizing: border-box;
+    width: 465px;
+    transform: translateX(0);
     float:right;
+    margin-top: 38px;
+
+
 
     &__description{
 
@@ -112,8 +130,29 @@
 
 
       display: table-cell;
-      width: 130px;
       position: relative;
+      box-sizing: border-box;
+      width: 156px;
+      padding-left:0;
+
+    }
+
+    &__header-cell{
+
+      padding: 10px 0;
+
+      &:before{
+
+        background: url(../img/bg-hit.png) -7px -7px no-repeat;
+
+      }
+
+    }
+
+    &__cell{
+
+      padding-top: 11px;
+      padding-bottom: 8px;
 
     }
 
@@ -129,7 +168,8 @@
       display: inline-block;
       vertical-align: top;
       width: 130px;
-      background: url(../../img/icon_yes.png) 50% 0 no-repeat;
+      background: url(../img/icon-yes.svg) 50% 0 no-repeat;
+      background-size: 31px 21px;
 
     }
 
@@ -139,19 +179,38 @@
       display: inline-block;
       vertical-align: top;
       width: 130px;
-      background: url(../../img/icon_no.png) 50% 0 no-repeat;
+      background: url(../img/icon-no.svg) 50% 0 no-repeat;
+      background-size: 27px 26px;
 
     }
 
     &__cell:first-of-type &__description{
 
-        box-sizing: border-box;
-        width: 130px;
-        position: absolute;
-        transform: translate(-117%, -7px);
-        background-color: white;
-        padding: 4px;
-        border: 2px solid $color-grey;
+      box-sizing: border-box;
+      width: 157px;
+      position: absolute;
+      transform: translate(-100%, -13px);
+      background-color: white;
+      border: 2px solid #f2f2f2;
+      padding-top: 7px;
+      padding-bottom: 9px;
+      padding-left: 16px;
+      text-transform: none;
+
+    }
+
+    &__title{
+
+      font: 600 #{$font-size + 2px} / #{30px/($font-size + 2px)} $open-sans;
+      text-transform: uppercase;
+      margin: 0;
+
+    }
+
+    &__value{
+
+      font: 300 #{$font-size + 4px}/ #{30px/($font-size + 4px)} $open-sans;
+
     }
 
 
@@ -163,9 +222,11 @@
 
   .table{
 
+    margin-top:0;
     width: 698px;
     transform: translateX(0%);
     float: right;
+
 
 
     &__description{
@@ -178,8 +239,14 @@
 
 
       display: table-cell;
-      width: 216px;
       position: relative;
+      padding-left: 0;
+
+    }
+
+    &__cell{
+
+      padding: 18px 0;
 
     }
 
@@ -194,8 +261,11 @@
       float: none;
       display: inline-block;
       vertical-align: top;
-      width: 216px;
-      background: url(../../img/icon_yes.png) 50% 0 no-repeat;
+      width: 224px;
+      padding-left: 10px;
+      padding-right:0;
+      background: url(../img/icon_yes.png) 50% 0 no-repeat;
+
 
     }
 
@@ -204,20 +274,32 @@
       float: none;
       display: inline-block;
       vertical-align: top;
-      width: 216px;
-      background: url(../../img/icon_no.png) 50% 0 no-repeat;
+      width: 224px;
+      padding-left: 10px;
+      padding-right:0;
+      background: url(../img/icon_no.png) 50% 0 no-repeat;
 
     }
 
     &__cell:first-of-type &__description{
 
       box-sizing: border-box;
-      width: 216px;
+      width: 232px;
       position: absolute;
-      transform: translate(-110%, -7px);
+      transform: translate(-100%, -20px);
       background-color: white;
-      padding: 4px;
-      border: 2px solid $color-grey;
+      padding: 14px 20px 18px;
+      border: 2px solid #f2f2f2;
+      text-transform: none;
+
+    }
+
+    &__description{
+
+      font: 400 #{$font-size + 4px} / #{(30px / ($font-size + 4px))} $open-sans;
+      color: $color-blue;
+      text-transform: none;
+
     }
 
 

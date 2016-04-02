@@ -7,23 +7,23 @@ html
     link(href="css/style.css" rel="stylesheet")
   body
     header.main-header
-      nav.main-nav.main-nav--active
+      nav.main-nav
         .main-nav__layout
           a(href="index.html").main-nav__logo
           .main-nav__menu
-            a(href="#").main-nav__main-link
-              span.main-nav__icon
-        ul.main-nav__items.main-nav__items
+            a(href="#" id="main_link").main-nav__main-link
+              span(id="main_icon").main-nav__icon
+        ul(id="main_nav").main-nav__items
           li.main-nav__item
             a(href="index.html").main-nav__link.main-nav__link--active Главная
           li.main-nav__item
             a(href="photo.html").main-nav__link Фотографии
           li.main-nav__item
-            a(href="#").main-nav__link Конкурс
+            a(href="form.html").main-nav__link Конкурс
           li.main-nav__item
-            a(href="#").main-nav__link Html Academy
-      section.download.download--mainpage
-        .download__body.download__body--mainpage
+            a(href="http://www.htmlacademy.ru" target="_blank").main-nav__link Html Academy
+      section.download
+        .download__body
           .intro.intro--mainpage
             .intro__layout
               h1.intro__header Взгляните на жизнь иначе!
@@ -36,7 +36,10 @@ html
             a(href="#").download__item
               span.download__icon.download__icon--microsoft
             p.download__description Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
-        img(src="img/iphone-hand-tablet.png" width="482" height="545" alt ="Скачать приложение").download__image
+        picture
+          source(media="(min-width:1200px)" srcset="img/iphone-hand-desktop@1x.png 1x, img/iphone-hand-desktop@2x.png 2x")
+          source(media="(min-width:700px)" srcset="img/iphone-hand-tablet@1x.png 1x, img/iphone-hand-tablet@2x.png 2x")
+          img(src="img/iphone-hand-mobile.png" srcset="img/iphone-hand-mobile@2x.png 2x"  alt ="Скачать приложение").download__image
     main.page-main
       section.information
         p.information__item Устали от серости мегаполиса?
@@ -45,82 +48,87 @@ html
           .information__body
             .advantages
               .advantages__image
-                img(src="img/iphone-screen-desktop1.png" width="157" height="382" alt="Преимущества")
-              h3.advantages__title Поднимает настроение
+                picture
+                  source(media="(min-width:1200px)" srcset="img/iphone-screen-desktop-1@1x.png, img/iphone-screen-desktop-1@2x.png 2x, img/iphone-screen-desktop-1@3x.png 3x")
+                  source(media="(min-width:700px)" srcset="img/iphone-screen-tablet-3@1x.png 1x, img/iphone-screen-tablet-3@2x.png 2x, img/iphone-screen-tablet-3@3x.png 3x")
+                  img(src="img/iphone-screen-mobile.png" srcset="img/iphone-screen-mobile@2x.png 2x" alt="Преимущества")
+              h2.advantages__title Поднимает настроение
               p.advantages__description Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
             .advantages
               .advantages__image
-                img(src="img/iphone-screen-desktop2.png" width="157" height="382" alt="Преимущества")
-              h3.advantages__title Меняет мир вокруг
+                img(src="img/iphone-screen-desktop-2.png"  srcset="img/iphone-screen-desktop-2@2x.png" width="292" height="302" alt="Преимущества")
+              h2.advantages__title Меняет мир вокруг
               p.advantages__description Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
             .advantages
               .advantages__image
-                img(src="img/iphone-screen-tablet.png" width="157" height="382" alt="Преимущества")
-              h3.advantages__title Заводит новых друзей
-              p.advantages__description Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
+                img(src="img/iphone-screen-desktop-3.png"  srcset="img/iphone-screen-desktop-3@2x.png" width="292" height="302"  alt="Преимущества")
+              h2.advantages__title Заводит новых друзей
+              p.advantages__description Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых
             .information__image
-              img(src="img/iphone-screen-tablet.png" width="157" height="382" alt="Преимущества")
+              picture
+                img(src="img/iphone-screen-mobile.png" srcset="img/iphone-screen-mobile@2x.png" width="157" height="382" alt="Преимущества")
       section.application-profit
-        img(src="img/img_application_profit.png" width="240" height="278" alt="Эффект на 24 часа!" ).application-profit__image
+        span.application-profit__hours 24
+        img(src="img/icon-timer.svg" width="240" height="278" alt="Эффект на 24 часа!" ).application-profit__image
         .application-profit__layout
           h2.application-profit__title Эффект на 24 часа!
           p.application-profit__description Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!
           a(href="#").application-profit__link Узнать больше об использовании
 
-      section.review
+      .review
         .review__layout
           .review__prev
-            a(href="#") <
-          section.review__slides
+            a(href="#")
+          .review__slides
             .review__slide.review__slide--active
-              h4.review__title Николай Петров
+              p.review__title Николай Петров
               p.review__details 25 лет, водитель трамвая
-              p.review__description
+              p.review__description.
                 "Это приложение перевернуло мой мир и позволило
                 по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой
                 в комментариях к выложенной фотографии!"
             .review__slide
-              h4.review__title Николай Петров
+              p.review__title Николай Петров
               p.review__details 25 лет, водитель трамвая
-              p.review__description
+              p.review__description.
                 "Это приложение перевернуло мой мир и позволило
                 по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой
                 в комментариях к выложенной фотографии!"
             .review__slide
-              h4.review__title Николай Петров
+              p.review__title Николай Петров
               p.review__details 25 лет, водитель трамвая
-              p.review__description
+              p.review__description.
                 "Это приложение перевернуло мой мир и позволило
                 по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой
                 в комментариях к выложенной фотографии!"
           .review__next
-            a(href="#") >
+            a(href="#")
           .controls
             a(href="#").controls__item.controls__item--active
             a(href="#").controls__item
             a(href="#").controls__item
-      section.price
+      .price
         .price__layout
           table.table
             tr.table__row
               th.table__header-cell
-                h4.table__title База
+                p.table__title База
                 p.table__value 1,99 USD
               th.table__header-cell.table__header-cell--hit
-                h4.table__title Стандарт
+                p.table__title Стандарт
                 p.table__value 3,99 USD
               th.table__header-cell
-                h4.table__title Анлим
+                p.table__title Анлим
                 p.table__value 9,99 USD
             tr.table__row
               td.table__cell
-                span.table__description Розовый цвет
+                span.table__description Розовый фильтр
                 span.table__icon-yes
               td.table__cell
-                span.table__description Розовый цвет
+                span.table__description Розовый фильтр
                 span.table__icon-yes
               td.table__cell
-                span.table__description Розовый цвет
+                span.table__description Розовый фильтр
                 span.table__icon-yes
             tr.table__row
               td.table__cell
@@ -161,12 +169,12 @@ html
           .contacts__contain
             p.contacts__name Приезжайте в гости:
             p.contacts__description ул. Большая Конюшенная, 19/8
-        .div.contacts__map
-          img(src="../../img/img_map_desktop.jpg" width="320" height="645" alt="Карта")
+        .contacts__map
+          .map(id="map")
+          img(src="img/img_map_desktop.jpg" width="320" height="645" alt="Карта").map__image
     footer.main-footer.main-footer--mainpage
       .main-footer__layout
         a(href="index.html").main-footer__logo
-          img(src="img/img_logo1.png" width="147" height="40" alt="PINK")
         .socials
           span.socials__icon.socials__icon--twitter
           span.socials__icon.socials__icon--fb
@@ -174,6 +182,8 @@ html
         .htmlacademy
           span.htmlacademy__description Разработано
           img(src="img/img_htmlacademy.png" width="27" height="34" alt="htmlacademy").htmlacademy__logo
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgjyr7w5tXCAn5-3sETmXNDymaDIsy0N8&callback=initMap"></script>
+    script(src="js/script.js")
 
 
 

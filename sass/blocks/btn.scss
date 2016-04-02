@@ -19,10 +19,40 @@
 
   &--disable{
 
-    color: rgba(0,0,0,.1);
-    border-color: rgba(0,0,0,0.1);
+    color: rgba(40, 54, 69, .1);
+    border-color: rgba(40, 54, 69, .1);
 
   }
+
+
+}
+
+@media(min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px) {
+
+  .btn {
+
+    width: 258px;
+    margin-bottom: 21px;
+
+  }
+
+}
+
+@media(min-width: $width-content-desktop) {
+
+  .btn{
+
+    width: 183px;
+
+    &--disable{
+
+      margin-left: 44px;
+
+    }
+
+
+  }
+
 
 
 }

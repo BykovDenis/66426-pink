@@ -25,7 +25,7 @@
     justify-content: space-between;
     align-self: center;
     align-items: center;
-    margin-bottom: 40px;
+    margin-bottom: 37px;
 
   }
 
@@ -34,7 +34,7 @@
       display: block;
       width:44px;
       height: 44px;
-      background: url(../../img/icon-editor-crop.svg) 0 0 no-repeat;
+      background: url(../img/icon-editor-crop.svg) 0 0 no-repeat;
 
     }
 
@@ -44,7 +44,7 @@
     display: block;
     width:48px;
     height: 43px;
-    background: url(../../img/icon-editor-fill.svg) 0 0 no-repeat;
+    background: url(../img/icon-editor-fill.svg) 0 0 no-repeat;
 
   }
 
@@ -53,7 +53,7 @@
     display: block;
     width:32px;
     height: 32px;
-    background: url(../../img/icon-editor-contrast.svg) 0 0 no-repeat;
+    background: url(../img/icon-editor-contrast.svg) 0 0 no-repeat;
 
   }
 
@@ -112,6 +112,16 @@
       width: 300px;
       height: 400px;
 
+      margin-bottom: 13px;
+
+
+      img{
+
+        width: 300px;
+        height: 400px;
+
+      }
+
 
     }
 
@@ -121,7 +131,9 @@
       flex-direction: column;
       justify-content:space-around;
       height: auto;
-      margin-top: 20px;
+      margin-top: 29px;
+      margin-bottom: 42px;
+
 
 
     }
@@ -139,7 +151,7 @@
       display: block;
       width:22px;
       height: 22px;
-      background: url(../../img/icon-editor-crop.svg) 0 0 no-repeat;
+      background: url(../img/icon-editor-crop.svg) 0 0 no-repeat;
       background-size: 22px 22px;
 
     }
@@ -150,7 +162,7 @@
       display: block;
       width:24px;
       height: 22px;
-      background: url(../../img/icon-editor-fill.svg) 0 0 no-repeat;
+      background: url(../img/icon-editor-fill.svg) 0 0 no-repeat;
       background-size: 24px 22px;
 
     }
@@ -158,9 +170,9 @@
     &__icon-contrast{
 
       display: block;
-      width:16px;
+      width:18px;
       height: 16px;
-      background: url(../../img/icon-editor-contrast.svg) 0 0 no-repeat;
+      background: url(../img/icon-editor-contrast.svg) 2px 0 no-repeat;
       background-size: 16px 16px;
 
     }
@@ -199,10 +211,13 @@
 
     &__src{
 
+      width: auto;
+      padding:0;
       justify-content: center;
       align-items: center;
       width: 300px;
       height: 400px;
+      padding-left: 37px;
 
 
     }
@@ -213,8 +228,8 @@
       flex-direction: column;
       justify-content:space-around;
       height: auto;
-      margin-top: 20px;
-
+      margin-top:0;
+      margin-bottom: 129px;
 
     }
 
@@ -229,10 +244,10 @@
     &__icon-crop{
 
       display: block;
-      width:22px;
-      height: 22px;
-      background: url(../../img/icon-editor-crop.svg) 0 0 no-repeat;
-      background-size: 22px 22px;
+      width:44px;
+      height: 44px;
+      background: url(../img/icon-editor-crop.svg) 50% 50%  no-repeat;
+      background-size: 44px 44px;
 
     }
 
@@ -240,20 +255,20 @@
     &__icon-fill{
 
       display: block;
-      width:24px;
-      height: 22px;
-      background: url(../../img/icon-editor-fill.svg) 0 0 no-repeat;
-      background-size: 24px 22px;
+      width:48px;
+      height: 43px;
+      background: url(../img/icon-editor-fill.svg) 50% 50%  no-repeat;
+      background-size: 48px 43px;
 
     }
 
     &__icon-contrast{
 
       display: block;
-      width:16px;
-      height: 16px;
-      background: url(../../img/icon-editor-contrast.svg) 0 0 no-repeat;
-      background-size: 16px 16px;
+      width:42px;
+      height: 37px;
+      background: url(../img/icon-editor-contrast.svg) 50% 50% no-repeat;
+      background-size: 32px 32px;
 
     }
 
