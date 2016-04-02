@@ -3,9 +3,8 @@
 module.exports = function(grunt) {
   require("load-grunt-tasks")(grunt);
 
-
   grunt.initConfig({
-    
+
     sass: {
       style: {
         files: {
@@ -167,8 +166,8 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask("serve", ["browserSync", "watch"]);
-  //grunt.registerTask("build",["clean", "jade", "sass", "postcss", "csso", "imagemin", "uglify", "copy"])
-  grunt.registerTask("build", ["jade", "sass", "postcss", "csso", "copy"])
+  grunt.registerTask("build",["clean", "jade", "sass", "postcss", "csso", "imagemin", "uglify", "copy"])
+  //grunt.registerTask("build", ["jade", "sass", "copy"])
   grunt.registerTask("symbols", ["svgmin", "svgstore"]);
 
 };

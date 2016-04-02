@@ -101,15 +101,21 @@
 
   }
 
-  &__label-control:before:hover {
-    
-      border: 2px solid $color-black;   
+  &__checkbox + &__label-control:hover:before {
+
+      border: 2px solid $color-blue;
+
+  }
+
+    &__checkbox + &__label-control:active:before {
+
+      border: 2px solid $color-red1;
 
   }
 
   &__checkbox:checked + &__label-control:before {
 
-    background: url(../img/icon-yes.svg) 50% 50% no-repeat $color-white;
+    background: url(../img/icon_check.svg) 50% 50% no-repeat $color-white;
 
   }
 
@@ -127,6 +133,18 @@
 
   }
 
+  &__radio + &__label-control:hover:before{
+
+    box-shadow: 0 0 0 2px $color-blue;
+
+  }
+
+  &__radio + &__label-control:active:before{
+
+    box-shadow: 0 0 0 2px $color-red1;
+
+  }
+
   &__radio:checked + &__label-control:before {
 
     width: 16px;
@@ -138,12 +156,25 @@
 
   }
 
+  &__radio:checked + &__label-control:hover:before{
+
+    box-shadow: 0 0 0 2px $color-black;
+
+  }
+
+  &__radio:checked + &__label-control:active:before{
+
+    box-shadow: 0 0 0 2px $color-red1;
+
+  }
+
   &__input{
 
     box-sizing: border-box;
     width: 280px;
     height: 63px;
     border: 2px solid $color-grey;
+    outline: none;
     padding-left:19px;
     font: 400 #{$font-size + 4px} / 2.14 $open-sans;
     color: $color-blue;
@@ -151,6 +182,19 @@
     &::-webkit-input-placeholder{
 
       color: $color-blue;
+
+    }
+
+    &:hover{
+
+      border: 2px solid $color-blue;
+
+
+    }
+
+    &:focus{
+
+      border: 2px solid $color-red1;
 
     }
 
@@ -186,10 +230,24 @@
     vertical-align: middle;
     border: 2px solid $color-grey4;
     margin-bottom:47px;
+    outline:0;
 
     &::-webkit-input-placeholder{
 
       color: $color-blue;
+
+    }
+
+    &:hover{
+
+      border: 2px solid $color-blue;
+
+
+    }
+
+    &:focus{
+
+      border: 2px solid $color-red1;
 
     }
 
@@ -206,6 +264,21 @@
     font: 400 #{$font-size + 4px} / 1.3 $open-sans;
     color: $color-white;
     text-transform: uppercase;
+    outline: 0;
+
+    &:hover{
+      background-color: $color-green1;
+    }
+
+    &:active{
+      background-color: $color-green1;
+      color: rgba(255,255,255,.3);
+    }
+
+    &:focus{
+      background-color: $color-green1;
+      color: rgba(255,255,255,.3);
+    }
 
 
   }

@@ -33,7 +33,7 @@
   },
   "scripts": {
     "test": "editorconfig-tools check *",
-    "build": "grunt clean && grunt sass && grunt postcss && grunt jade && grunt csso && grunt uglify && grunt copy",
+    "build": "grunt clean && grunt sass && grunt postcss && grunt jade && grunt imagemin && grunt csso && grunt uglify && grunt copy",
     "start": "npm run build && grunt serve"
   },
   "engines": {
