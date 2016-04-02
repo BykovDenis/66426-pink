@@ -15,13 +15,7 @@
   font-family: $open-sans;
   color: $color-blue;
 
-  &:last-of-child{
-
-    margin-bottom: 0;
-
-  }
-
-  &__layout{
+ &__layout{
 
     position: relative;
     padding-top: 19px;
