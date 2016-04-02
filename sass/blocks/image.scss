@@ -34,6 +34,8 @@
       display: block;
       width:44px;
       height: 44px;
+      cursor: pointer;
+
 
     }
 
@@ -43,6 +45,7 @@
     display: block;
     width:48px;
     height: 43px;
+    cursor: pointer;
 
   }
 
@@ -51,30 +54,42 @@
     display: block;
     width:32px;
     height: 32px;
+    cursor: pointer;
+
+  }
+
+  &__icon-crop > &__icon,
+  &__icon-fill > &__icon,
+  &__icon-contrast > &__icon{
+
+    fill: $color-black;
+    opacity: .3;
+
+    &:hover{
+
+      opacity: .5;
+
+    }
+
+    &__logo{
+
+
+
+    }
 
   }
 
 
-  &__image__crop:checked +  &__icon{
+  &__crop:checked + &__icon-crop > &__icon,
+  &__fill:checked + &__icon-fill >  &__icon,
+  &__contrast:checked + &__icon-contrast >  &__icon{
 
+    opacity: 1;
     fill: $color-red1;
     color: $color-red1;
 
   }
 
-  &__image__fill:checked +  &__icon{
-
-    fill: $color-red1;
-    color: $color-red1;
-
-  }
-
-  &__image__contrast:checked +  &__icon{
-
-    fill: $color-red1;
-    color: $color-red1;
-
-  }
 
   &__crop{
 

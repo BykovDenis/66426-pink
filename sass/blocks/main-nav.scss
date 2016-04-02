@@ -27,7 +27,33 @@
     width: 75px;
     height: 22px;
     padding: 22px 0;
-    background: url(../img/logo-pink-white-mobile.svg) 0 22px no-repeat;
+
+
+    &:hover g{
+
+      fill: $color-red1;
+
+    }
+
+    &:active g{
+
+      fill: $color-white;
+      opacity: .3;
+
+    }
+
+    &--tablet{
+
+      display: none;
+
+    }
+
+    &--desktop{
+
+      display: none;
+
+    }
+
  }
 
 
@@ -41,7 +67,7 @@
   &__icon{
 
     display: block;
-    background: url(../img/icon-menu-burger.svg) 0 0 no-repeat;
+    /* background: url(../img/icon-menu-burger.svg) 0 0 no-repeat; */
     width: 50px;
     height: 25px;
 
@@ -135,9 +161,37 @@
      display: block;
      width: 147px;
      height: 65px;
-     padding: 22px 0;
-     background: url(../img/logo-pink-white-tablet.svg) 0 27px no-repeat;
+     padding: 16px 0;
+
+     &:hover g{
+
+       fill: $color-red1;
+
+     }
+
+     &:active g{
+
+       fill: $color-white;
+       opacity: .3;
+
+     }
+
+     &--mobile{
+
+       display: none;
+
+     }
+
+     &--desktop{
+
+       display: none;
+
+     }
+
+
    }
+
+
 
    &__main-link{
 
@@ -200,15 +254,27 @@
       vertical-align: top;
       width: 147px;
       height: 65px;
-      padding: 22px 0;
+      padding-top: 15px;
       padding-right: 170px;
-      background: url(../img/logo-pink-white-desktop.svg) 0 27px no-repeat;
+
+      &--tablet{
+
+        display: none;
+
+      }
+
+      &--mobile{
+
+        display: none;
+
+      }
 
     }
 
     &__items {
 
       @include page-width();
+      padding: 31px 0;
 
     }
 
