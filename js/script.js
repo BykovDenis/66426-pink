@@ -2,27 +2,38 @@
  * Created by Denis on 31.03.2016.
  */
 
-var main_nav = document.getElementById("main_nav");
-var main_link = document.getElementById("main_link");
-var main = document.querySelector(".main-nav");
-var main_icon = document.getElementById("main_icon");
+function ready() {
 
+  var main_nav = document.getElementById("main_nav");
+  var main_link = document.getElementById("main_link");
+  var main = document.querySelector(".main-nav__layout");
+  var main_icon = document.getElementById("main_icon");
+
+  // При загрузке с мобильного
+
+  document.querySelector(".main-nav__icon--active").style.display = "none";
+  document.querySelector(".main-nav__icon").style.display = "block";
+
+  if(document.body.clientWidth < 700)
+    document.querySelector(".main-nav__items").style.display = "none";
+  main.classList.remove("main-nav--active");
 
   main_link.addEventListener("click", function () {
 
-    if(main_icon.classList.contains("main-nav__icon")){
 
-      main_icon.classList.remove("main-nav__icon");
-      main_icon.classList.add("main-nav__icon--active");
+    if (document.querySelector(".main-nav__icon--active").style.display == "none") {
+
+      document.querySelector(".main-nav__icon--active").style.display = "block";
+      document.querySelector(".main-nav__icon").style.display = "none";
 
       main_nav.style.display = "flex";
       main.classList.add("main-nav--active");
 
     }
-    else{
+    else {
 
-      main_icon.classList.add("main-nav__icon");
-      main_icon.classList.remove("main-nav__icon--active");
+      document.querySelector(".main-nav__icon--active").style.display = "none";
+      document.querySelector(".main-nav__icon").style.display = "block";
 
       main_nav.style.display = "none";
       main.classList.remove("main-nav--active");
@@ -34,6 +45,10 @@ var main_icon = document.getElementById("main_icon");
 
 
   });
+
+}
+
+document.addEventListener("DOMContentLoaded", ready);
 
 
 // Показать карту
@@ -113,7 +128,7 @@ if(document.getElementById('map')){
       initMap();
 
   });
-  
+
 }
 
 
