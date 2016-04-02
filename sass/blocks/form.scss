@@ -94,10 +94,17 @@
     vertical-align: middle;
     width: 37px;
     height: 37px;
-    border: 2px solid #e5e5e5;
+    border: 2px solid $color-grey4;
     background-color: $color-white;
     margin-right: 30px;
     content: "";
+
+  }
+
+  &__label-control:before:hover {
+    
+      border: 2px solid $color-black;   
+
   }
 
   &__checkbox:checked + &__label-control:before {

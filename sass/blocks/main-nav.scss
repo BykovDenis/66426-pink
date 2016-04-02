@@ -99,7 +99,14 @@
 
     &:hover{
 
-      color: red;
+      color: $color-red1;
+
+    }
+
+    &:active{
+
+      color: $color-red1;
+      opacity: .3;
 
     }
 
@@ -129,7 +136,7 @@
      width: 147px;
      height: 65px;
      padding: 22px 0;
-     background: url(../img/logotype-white-tablet.png) 0 27px no-repeat;
+     background: url(../img/logo-pink-white-tablet.svg) 0 27px no-repeat;
    }
 
    &__main-link{
@@ -195,7 +202,7 @@
       height: 65px;
       padding: 22px 0;
       padding-right: 170px;
-      background: url(../img/logotype-white-desktop.png) 0 27px no-repeat;
+      background: url(../img/logo-pink-white-desktop.svg) 0 27px no-repeat;
 
     }
 
@@ -225,14 +232,25 @@
       font: 400 #{$font-size + 4px} / 1 $open-sans;
       color: $color-white;
 
-      padding: 15px 0;
       text-align: center;
       text-transform: none;
-
+      padding: 15px 0;
 
       &:hover{
 
-        color: red;
+        padding-bottom: 13px;
+        border-bottom: 2px solid $color-white;
+        text-decoration: none;
+        color: $color-white;
+
+      }
+
+      &:active{
+
+        opacity: .3;
+        border-bottom: 0;
+        padding-bottom: 15px;
+        text-decoration: none;
 
       }
 

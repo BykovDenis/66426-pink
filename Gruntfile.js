@@ -5,6 +5,7 @@ module.exports = function(grunt) {
 
 
   grunt.initConfig({
+    
     sass: {
       style: {
         files: {
@@ -136,11 +137,42 @@ module.exports = function(grunt) {
 
     clean: {
       build: ["build"]
-    }
+    },
 
+    svgstore:{
+
+      options: {
+        svg: {
+          style: "display: none"
+        }
+      },
+      symbols: {
+        files: {
+          "img/symbols.svg": ["img/*.svg"]
+        }
+      }
+    },
+
+    svgmin:{
+
+      symbols: {
+        files: [{
+          expand: true,
+          src: ["img/*.svg"]
+        }]
+      }
+
+    }
 
   });
 
   grunt.registerTask("serve", ["browserSync", "watch"]);
-  grunt.registerTask("build",["clean", "jade", "sass", "postcss", "csso", "imagemin", "uglify", "copy"])
+  //grunt.registerTask("build",["clean", "jade", "sass", "postcss", "csso", "imagemin", "uglify", "copy"])
+  grunt.registerTask("build", ["jade", "sass", "postcss", "csso", "copy"])
+  grunt.registerTask("symbols", ["svgmin", "svgstore"]);
+
 };
+
+
+// вернуть в package.json
+// /*"build": "grunt clean && grunt sass && grunt postcss && grunt jade && grunt imagemin && grunt csso && grunt uglify && grunt copy", */

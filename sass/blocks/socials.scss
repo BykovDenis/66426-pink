@@ -18,6 +18,18 @@
     border: 3px solid $color-grey;
     border-radius: 50%;
 
+    &:hover{
+
+      border: 3px solid $color-black;
+
+    }
+
+    &:focus{
+
+      border: 3px solid $color-grey;
+
+    }
+
     &:last-of-type{
 
       margin-right: 0;

@@ -35,6 +35,20 @@
     border: 3px solid $color-white;
     border-radius: 40px;
 
+    &:hover{
+
+      background-color: $color-white;
+      color: $color-red1;
+
+    }
+
+    &:active{
+
+      background-color: $color-white;
+      color: $color-red2;
+
+    }
+
   }
 
   &__items{
@@ -129,6 +143,20 @@
       width: 290px;
       margin-bottom: 46px;
 
+      &:hover{
+
+        background-color: $color-white;
+        color: $color-red1;
+
+      }
+
+      &:active{
+
+        background-color: $color-white;
+        color: $color-red2;
+
+      }
+
     }
 
     &__description{
@@ -208,6 +236,20 @@
       width: 290px;
       margin-bottom: 70px;
       font: 600 #{$font-size + 7px} / 1.03 $open-sans;
+
+      &:hover{
+
+        background-color: $color-white;
+        color: $color-red1;
+
+      }
+
+      &:active{
+
+        background-color: $color-white;
+        color: $color-red2;
+
+      }
 
     }
 
