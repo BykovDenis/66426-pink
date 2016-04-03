@@ -81,9 +81,18 @@
 
     opacity: 1;
     fill: $color-red1;
-    color: $color-red1;
 
   }
+
+  &__fill:checked + &__icon-fill >  &__icon,
+  &__contrast:checked + &__icon-contrast >  &__icon{
+
+    fill: $color-black;
+    opacity: .3;
+
+  }
+
+
 
 
   &__crop{
@@ -240,6 +249,15 @@
 
     }
 
+    &__crop:checked + &__icon-crop > &__icon,
+    &__fill:checked + &__icon-fill >  &__icon,
+    &__contrast:checked + &__icon-contrast >  &__icon{
+
+      opacity: 1;
+      fill: $color-red1;
+
+    }
+
   }
 
 }
@@ -330,6 +348,16 @@
       opacity:1;
 
     }
+
+    &__crop:checked + &__icon-crop > &__icon,
+    &__fill:checked + &__icon-fill >  &__icon,
+    &__contrast:checked + &__icon-contrast >  &__icon{
+
+      opacity: 1;
+      fill: $color-red1;
+
+    }
+
 
   }
 

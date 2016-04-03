@@ -14,9 +14,14 @@ function ready() {
 
   var main = document.getElementById("main");
 
-  main.classList.remove("main-nav--mobile");
+
+  if(main.classList.contains("main-nav--mobile"))
+    main.classList.remove("main-nav--mobile");
 
   main_layout.classList.remove("main-nav__layout--active");
+
+  if(main_nav.classList.contains("main-nav__items--active"))
+    main_nav.classList.remove("main-nav__items--active");
 
   main_link.addEventListener("click", function () {
 
@@ -46,7 +51,7 @@ function ready() {
   });
 
 
- 
+
   /* Работа с формой */
   /* Показывается и закрываются окно с удачной и не удачной попыткой передачи данных формы на сервер */
   /* каждое нечетное нажатие на кнопку открывает успешную отправку на сервер, каждое четное отображает не успешное */

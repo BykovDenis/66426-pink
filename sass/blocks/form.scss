@@ -404,6 +404,12 @@
 
   }
 
+  &__email{
+
+    display: none;
+
+  }
+
 }
 
 @media (min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px){
