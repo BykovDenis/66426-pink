@@ -4,6 +4,16 @@
   left: 0;
   display: none;
 
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  text-align: center;
+
+  width: $width-content-mobile;
+  background-color: $color-white;
+  z-index: 100;
+
+
   &--success {
 
     bottom: 456px;
@@ -16,20 +26,11 @@
 
   }
 
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: stretch;
-  text-align: center;
-
   &--active{
 
     display: flex;
 
   }
-
-  width: $width-content-mobile;
-  background-color: $color-white;
-  z-index: 100;
 
 
   &:before{
@@ -76,7 +77,6 @@
   &__layout{
 
     background-color: $color-grey;
-   /* box-shadow: 0 5px 11px 5px $color-grey6; */
 
   }
 
@@ -112,7 +112,7 @@
   &__header--failure{
 
     margin-bottom: 25px;
-    margin-top: 33px !important;
+    margin-top: 33px;
 
   }
 
@@ -127,5 +127,101 @@
     margin: 41px 20px 60px;
 
   }
+
+}
+
+@media (min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px) {
+
+  .popup{
+
+    width: 460px;
+    box-shadow: 0 4px 12px 3px $color-grey1;
+
+    &--success{
+
+      bottom: 1062px;
+      left: 50%;
+      transform: translateX(-50%);
+
+    }
+
+    &--failure{
+
+      bottom: 1601px;
+      left: 50%;
+      transform: translateX(-50%);
+
+    }
+
+    &:before{
+
+      background-image: none;
+      height:0;
+
+    }
+
+    &:after{
+
+      background-image: none;
+      height:0;
+
+    }
+
+    &__header{
+
+      padding-left: 77px;
+      padding-right: 77px;
+      margin-bottom: 25px;
+      font: 700 #{$font-size-h4 + 12px}/ #{40px/($font-size-h4 + 12px)} $open-sans;
+
+    }
+
+    &__description{
+
+      font: 400 #{$font-size + 4px} / #{24px / ($font-size + 4px)} $open-sans;
+      padding-left: 77px;
+      padding-right: 77px;
+      margin-bottom: 38px;
+
+    }
+
+    &__layout{
+
+      padding-left: 77px;
+      padding-right: 79px;
+
+    }
+
+    &__close {
+
+      padding: 18px 0;
+      margin-left:0;
+      margin-right: 0;
+
+    }
+
+    &__header--failure{
+
+      margin-bottom: 25px;
+      margin-top: 33px;
+      padding-left: 115px;
+      padding-right: 115px;
+
+    }
+
+    &__description--failure{
+
+      margin-bottom: 0;
+
+    }
+
+
+
+  }
+
+}
+
+@media(min-width: $width-content-desktop){
+
 
 }
