@@ -51,7 +51,6 @@
     &--desktop{
 
       display: none;
-
     }
 
  }
@@ -66,7 +65,7 @@
 
   &__icon{
 
-    display: none;
+
     width: 50px;
     height: 25px;
 
@@ -87,14 +86,14 @@
 
   &__icon--active{
 
-    display: flex;
+    display: none;
     width: 50px;
     height: 25px;
 
   }
 
 
-  &--active{
+  &__layout--active{
 
     background-color: $color-blue-dark;
 
@@ -103,13 +102,17 @@
   &__items{
 
     display: flex;
-    flex-direction: column;
     list-style-type: none;
     margin: 0;
     padding:0;
     text-align: center;
     border-top: 1px solid $color-black1;
     background-color: $color-blue-dark;
+    z-index: 100;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    width: $width-content-mobile;
 
   }
 
@@ -170,6 +173,7 @@
 @media (min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px){
 
  .main-nav {
+
 
    &__logo {
 
@@ -269,6 +273,7 @@
 
     &__items{
 
+      position: static;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
@@ -372,7 +377,7 @@
 
     }
 
-    &--active{
+    &__layout--active{
 
       background: none;
 

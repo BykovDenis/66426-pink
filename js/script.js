@@ -11,39 +11,32 @@ function ready() {
   var main = document.querySelector(".main-nav__layout");
   var main_icon = document.getElementById("main_icon");
 
-  // При загрузке с мобильного
-
-  document.querySelector(".main-nav__icon--active").style.display = "none";
-  document.querySelector(".main-nav__icon").style.display = "block";
-
-  if(document.body.clientWidth < 700)
-    document.querySelector(".main-nav__items").style.display = "none";
-  main.classList.remove("main-nav--active");
-
   main_link.addEventListener("click", function () {
 
 
-    if (document.querySelector(".main-nav__icon--active").style.display == "none") {
+  if (document.querySelector(".main-nav__icon--active").style.display == "none") {
 
-      document.querySelector(".main-nav__icon--active").style.display = "block";
-      document.querySelector(".main-nav__icon").style.display = "none";
+    document.querySelector(".main-nav__icon--active").style.display = "block";
+    document.querySelector(".main-nav__icon").style.display = "none";
 
-      main_nav.style.display = "flex";
-      main.classList.add("main-nav--active");
+    main_nav.style.display = "flex";
+    main.classList.add("main-nav__layout--active");
 
-    }
-    else {
+  }
+  else {
 
-      document.querySelector(".main-nav__icon--active").style.display = "none";
-      document.querySelector(".main-nav__icon").style.display = "block";
+    document.querySelector(".main-nav__icon--active").style.display = "none";
+    document.querySelector(".main-nav__icon").style.display = "block";
 
-      main_nav.style.display = "none";
-      main.classList.remove("main-nav--active");
+    main_nav.style.display = "flex";
+    main.classList.remove("main-nav__layout--active");
+    document.querySelector(".main-nav__items").style.display = "none";
 
-    }
+  }
 
 
   });
+
 
   /* Работа с формой */
   /* Показывается и закрываются окно с удачной и не удачной попыткой передачи данных формы на сервер */
@@ -107,7 +100,16 @@ function ready() {
 
 document.addEventListener("DOMContentLoaded", ready);
 
-if(document.getElementById("map")){
+map = document.getElementById("map");
+
+if(map){
+
+  map.style.display = "block";
+
+  var contact_img = document.querySelector(".contacts_img");
+
+  if(contact_img)
+    contact_img.style.display = "none";
 
   function initMap() {
 

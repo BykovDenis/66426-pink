@@ -143,6 +143,14 @@
     height: auto;
 
 
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+
+      background: url(../img/bg-back-tablet@2x.jpg) 50% 0px no-repeat $color-blue-dark1;
+      background-size: 1200px 729px;
+
+    }
+
+
     &__btn{
 
       width: 290px;
@@ -214,6 +222,7 @@
     background: url(../img/bg-back-desktop.jpg) 50% 0px no-repeat $color-blue-dark1;
     font-size: 0;
     padding-top: 147px;
+
 
     &__body{
 
