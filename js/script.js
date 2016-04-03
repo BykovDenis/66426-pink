@@ -10,34 +10,43 @@ function ready() {
   var main_link = document.getElementById("main_link");
   var main = document.querySelector(".main-nav__layout");
   var main_icon = document.getElementById("main_icon");
+  var main_layout = document.getElementById("main_layout");
+
+  var main = document.getElementById("main");
+
+  main.classList.remove("main-nav--mobile");
+
+  main_layout.classList.remove("main-nav__layout--active");
 
   main_link.addEventListener("click", function () {
 
+    if(main_nav.classList.contains("main-nav__items--active")) {
 
-  if (document.querySelector(".main-nav__icon--active").style.display == "none") {
+      main_nav.classList.remove("main-nav__items--active")
 
-    document.querySelector(".main-nav__icon--active").style.display = "block";
-    document.querySelector(".main-nav__icon").style.display = "none";
+      document.querySelector(".main-nav__icon--active").style.display = "none";
+      document.querySelector(".main-nav__icon").style.display = "block";
 
-    main_nav.style.display = "flex";
-    main.classList.add("main-nav__layout--active");
+      if(main_layout.classList.contains("main-nav__layout--active"))
+        main_layout.classList.remove("main-nav__layout--active");
 
-  }
-  else {
+    }
+    else {
 
-    document.querySelector(".main-nav__icon--active").style.display = "none";
-    document.querySelector(".main-nav__icon").style.display = "block";
+      main_nav.classList.add("main-nav__items--active");
 
-    main_nav.style.display = "flex";
-    main.classList.remove("main-nav__layout--active");
-    document.querySelector(".main-nav__items").style.display = "none";
+      document.querySelector(".main-nav__icon--active").style.display = "block";
+      document.querySelector(".main-nav__icon").style.display = "none";
 
-  }
+      if(!main_layout.classList.contains("main-nav__layout--active"))
+        main_layout.classList.add("main-nav__layout--active");
 
+    }
 
   });
 
 
+ 
   /* Работа с формой */
   /* Показывается и закрываются окно с удачной и не удачной попыткой передачи данных формы на сервер */
   /* каждое нечетное нажатие на кнопку открывает успешную отправку на сервер, каждое четное отображает не успешное */

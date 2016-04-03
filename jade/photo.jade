@@ -59,13 +59,13 @@ html
             img(src="img/panorama-mobile.jpg" srcset="img/panorama-mobile@2x.jpg 2x" alt="Анна" width="320" height="137").photo-card__top-image
           p.photo-card__title Панорама дня
           .photo-card__layout
-            p.photo-card__author Анна
-              span.photo-card__time-added (5 минут назад)
+            p.photo-card__author Анна &nbsp;
+              span.photo-card__time-added   (5 минут назад)
             p.photo-card__content.
               Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую транслацию в перископе, задавайте свои вопросы!
             p.photo-card__likes
               span.photo-card__icon-heart
-              Нравится:
+              Нравится: &nbsp;
               span.photo-card__likes-counter 215
 
         .photo__layout
@@ -82,13 +82,13 @@ html
                     source(media="(min-width: 700px)" srcset="#{card['srcset_tbl']}")
                     img(src="#{card['filepath']}" srcset="#{card['srcset']}" alt="#{card['title']}" width="280" height="180").photo-card__image
 
-                  p.photo-card__author #{card["title"]}
+                  p.photo-card__author #{card["title"]} &nbsp;
                    span.photo-card__time-added #{card["time_added"]}
                   p.photo-card__content.
                    #{card["content"]}
                   p.photo-card__likes
                    span.photo-card__icon-heart
-                   Нравится:
+                   Нравится: &nbsp;
                    span.photo-card__likes-counter #{card["counter"]}
 
       .block-header.block-header--photo

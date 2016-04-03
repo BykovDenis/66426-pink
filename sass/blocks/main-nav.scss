@@ -8,6 +8,12 @@
 
   @include page-width();
 
+  &--mobile{
+
+    position: static;
+
+  }
+
 
   &__layout {
 
@@ -68,6 +74,7 @@
 
     width: 50px;
     height: 25px;
+    cursor: pointer;
 
     &:hover path{
 
@@ -101,7 +108,7 @@
 
   &__items{
 
-    display: flex;
+    display: none;
     list-style-type: none;
     margin: 0;
     padding:0;
@@ -116,12 +123,19 @@
 
   }
 
+  &__items--active{
+
+    display: flex;
+
+  }
+
+
   &__item{
 
     border-top: 1px solid $color-grey2;
     border-bottom: 1px solid $color-black1;
 
-    font: 600 #{$font-size + 4px} / 3 $open-sans;
+    font: 700 #{$font-size + 4px} / 3 $open-sans;
     color: $color-white;
 
     padding: 4px 0;
@@ -135,7 +149,7 @@
     display: block;
     text-decoration: none;
 
-    font: 600 #{$font-size + 4px} / 3 $open-sans;
+    font: 700 #{$font-size + 4px} / 3 $open-sans;
     color: $color-white;
 
     padding: 4px 0;
@@ -222,13 +236,8 @@
 
      }
 
-     &__items{
 
-       display: none;
-
-     }
-
-     &--active{
+     &__layout--active{
 
        display: flex;
        background-color: $color-blue-dark;

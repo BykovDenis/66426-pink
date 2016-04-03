@@ -68,13 +68,13 @@ html
           .form__items
             .form__item.form__item--content
               label(for="first_name").form__label-content Имя:
-              input(type="text" id="first_name" placeholder="Введите ваше имя").form__input
+              input(type="text" id="first_name" placeholder="Введите ваше имя" name="first_name").form__input
             .form__item.form__item--content
               label(for="last_name").form__label-content Фамилия:
-              input(type="text" id="last_name" placeholder="Укажите фамилию").form__input
+              input(type="text" id="last_name" placeholder="Укажите фамилию" name="last_name").form__input
             .form__item.form__item--content
               label(for="middle_name").form__label-content Отчество:
-              input(type="text" id="middle_name" placeholder="Ну и отчество тоже").form__input
+              input(type="text" id="middle_name" placeholder="Ну и отчество тоже" name="middle_name").form__input
 
           .form__items.form__items--grey
             p.form__title С каким приложением путешествовали?
@@ -116,11 +116,14 @@ html
               .form__item.form__item--content
                 label(for="phone").form__label-content.form__label-content--mobile Номерок телефончика
                 label(for="phone").form__label-content.form__label-content--other Номер телефона
-                input(type="text" id="phone" placeholder="Номер, пожалуйста").form__input
+                input(type="tel" id="phone" placeholder="Номер, пожалуйста" name="phone").form__input
+                img(src="img/icon-phone.svg").form__phone
+
               .form__item.form__item--content
                 label(for="email").form__label-content.form__label-content--mobile Адресок почты
                 label(for="email").form__label-content.form__label-content--other Адрес почты
-                input(type="text" id="email" placeholder="E-mail, пожалуйста").form__input
+                input(type="text" id="email" placeholder="E-mail, пожалуйста" name="email").form__input
+                img(src="img/icon-mail.svg").form__email
 
           .form__items
             p.form__title Опишите свои эмоции
