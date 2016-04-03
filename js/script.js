@@ -42,9 +42,6 @@ function ready() {
 
     }
 
-    //main_icon.classList.toggle("main-nav__icon--active");
-    //main_icon.classList.toggle("main-nav__icon");
-
 
   });
 
@@ -110,7 +107,7 @@ function ready() {
 
 document.addEventListener("DOMContentLoaded", ready);
 
-if(document.getElementById('map')){
+if(document.getElementById("map")){
 
   function initMap() {
 
@@ -119,7 +116,7 @@ if(document.getElementById('map')){
     var marker = {lat: 59.936421, lng: 30.321119};
     var center = {lat: 59.937078, lng: 30.320990};
 
-    map = new google.maps.Map(document.getElementById('map'), {
+    map = new google.maps.Map(document.getElementById("map"), {
       center: center,
       zoom: 16,
       disableDefaultUI: true,
@@ -130,14 +127,20 @@ if(document.getElementById('map')){
 
     image = "img/icon-map-marker.svg";
     var marker = new google.maps.Marker({map: map, position: marker, icon: image});
-    marker.addListener('click', function () {
+    marker.addListener("click", function () {
       infowindow.open(map, marker);
+    });
+
+    var contentString = "г. Санкт-Петербург, ул. Большая Конюшенная, 19/8";
+
+    var infowindow = new google.maps.InfoWindow({
+      content: contentString
     });
 
   }
 
   // Перерисовка при смене размера страницы
-  window.addEventListener('resize', function(){
+  window.addEventListener("resize", function(){
 
     if(google)
       initMap();

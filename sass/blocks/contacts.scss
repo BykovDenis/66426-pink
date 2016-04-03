@@ -47,6 +47,29 @@
     font: 100 #{$font-size + 10px} / 1.2 $open-sans;
     color: $color-red1;
     margin: 0;
+  }
+
+  &__email{
+
+    font: 100 #{$font-size + 10px} / 1.2 $open-sans;
+    color: $color-red1;
+    margin: 0;
+    text-decoration: none;
+
+    &:hover{
+
+      color: $color-blue;
+      text-decoration: underline;
+
+    }
+
+    &:active{
+
+      color: $color-blue;
+      opacity: .3;
+      text-decoration: none;
+
+    }
 
   }
 

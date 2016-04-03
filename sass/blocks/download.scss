@@ -9,7 +9,7 @@
   background: url(../img/bg-back-mobile.jpg) 50% -6px no-repeat $color-blue-dark1;
   background-size: 700px 462px;
 
-  @media (min-resolution: 1.5dppx) {
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
 
     background: url(../img/bg-back-mobile@2x.jpg) 50% -6px no-repeat $color-blue-dark1;
     background-size: 700px 462px;
@@ -73,23 +73,28 @@
 
   &__icon{
 
-    display: block;
-    width: 44px;
-    height: 56px;
+    &-apple{
 
-    &--apple{
+      width: 44px;
+      height: 56px;
 
       background: url(../img/logo-apple.svg) 0 0 no-repeat;
 
     }
 
-    &--android{
+    &-android{
+
+      width: 44px;
+      height: 56px;
 
       background: url(../img/logo-android.svg) 0 9px no-repeat;
 
     }
 
-    &--microsoft{
+    &-microsoft{
+
+      width: 44px;
+      height: 56px;
 
       background: url(../img/logo-microsoft.svg) 0 13px no-repeat;
 
@@ -163,6 +168,7 @@
 
       font: 100 #{$font-size + 4px} / #{$font-size * 1.71}  $open-sans;
       margin:0;
+      margin-top: 39px;
 
     }
 
@@ -257,6 +263,7 @@
 
       font: 100 #{$font-size + 4px} / #{$font-size * 1.71}  $open-sans;
       margin:0;
+      margin-top: 53px;
 
     }
 

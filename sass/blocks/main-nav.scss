@@ -118,6 +118,13 @@
     border-top: 1px solid $color-grey2;
     border-bottom: 1px solid $color-black1;
 
+    font: 600 #{$font-size + 4px} / 3 $open-sans;
+    color: $color-white;
+
+    padding: 4px 0;
+    text-align: center;
+    text-transform: uppercase;
+
   }
 
   &__link{
@@ -271,14 +278,13 @@
       align-content: stretch;
 
       margin: 0;
-      padding:0;
       text-align: center;
       border: 0;
       margin-left: 173px;
       background: none;
 
       @include page-width();
-      padding: 31px 0;
+      padding: 15px 0;
 
     }
 
@@ -310,6 +316,15 @@
     &__item{
 
       border: none;
+
+      text-decoration: none;
+
+      font: 400 #{$font-size + 4px} / 1 $open-sans;
+      color: $color-white;
+
+      text-align: center;
+      text-transform: none;
+      padding: 15px 0;
 
     }
 

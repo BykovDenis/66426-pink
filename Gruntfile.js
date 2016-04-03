@@ -4,11 +4,10 @@ module.exports = function(grunt) {
   require("load-grunt-tasks")(grunt);
 
   grunt.initConfig({
-
     sass: {
       style: {
         files: {
-          "build/css/style.css": "sass/style.scss"
+          "css/style.css": "sass/style.scss"
         }
       }
     },
@@ -26,7 +25,7 @@ module.exports = function(grunt) {
         ]
       },
       style: {
-        src: "build/css/*.css"
+        src: "css/*.css"
       }
     },
 
@@ -34,12 +33,12 @@ module.exports = function(grunt) {
       server: {
         bsFiles: {
           src: [
-            "build/*.html",
-            "build/css/*.css"
+            "*.html",
+            "css/*.css"
           ]
         },
         options: {
-          server: "./build",
+          server: ".",
           watchTask: true,
           notify: false,
           open: true,
@@ -75,103 +74,12 @@ module.exports = function(grunt) {
 
     watch: {
       files: ["sass/**/*.{scss,sass}","jade/**/*.{jade}"],
-      tasks: ["sass", "postcss", "csso", "jade", "copy", "uglify", "imagemin"],
+      tasks: ["sass", "postcss","jade"],
       options: {
         spawn: false
       }
-    },
-
-    csso:{
-      style:{
-        options:{
-          reports: "gzip"
-        },
-        files:{
-          "build/css/style.min.css": ["build/css/style.css"]
-        }
-      }
-    },
-
-    imagemin: {
-      images: {
-        options: {
-          optimizationLevel: 5
-        },
-        files: [{
-          expand: true,                  // Enable dynamic expansion
-          cwd: 'img/',                   // Src matches are relative to this path
-          src: ['**/*.{png,jpg,gif}'],   // Actual patterns to match
-          dest: 'build/img/'             // Destination path prefix
-        }]
-      }
-    },
-
-    copy:{
-      build: {
-        files: [{
-          expand: true,
-          src: [
-            "fonts/**/*.{woff,woff2}",
-            "img/**",
-            "js/**",
-            "*.html"
-          ],
-          dest: "build"
-        }]
-      }
-    },
-
-    uglify: {
-      options: {
-        mangle: {
-          except: ['jQuery', 'Backbone']
-        }
-      },
-      my_target: {
-        files: {
-          'build/js/script.min.js': ['js/script.js']
-        }
-      }
-    },
-
-    clean: {
-      build: ["build"]
-    },
-
-    svgstore:{
-
-      options: {
-        svg: {
-          style: "display: none"
-        }
-      },
-      symbols: {
-        files: {
-          "img/symbols.svg": ["img/*.svg"]
-        }
-      }
-    },
-
-    svgmin:{
-
-      symbols: {
-        files: [{
-          expand: true,
-          src: ["img/*.svg"]
-        }]
-      }
-
     }
-
   });
 
   grunt.registerTask("serve", ["browserSync", "watch"]);
-  grunt.registerTask("build",["clean", "jade", "sass", "postcss", "csso", "imagemin", "uglify", "copy"])
-  //grunt.registerTask("build", ["jade", "sass", "copy"])
-  grunt.registerTask("symbols", ["svgmin", "svgstore"]);
-
 };
-
-
-// вернуть в package.json
-// /*"build": "grunt clean && grunt sass && grunt postcss && grunt jade && grunt imagemin && grunt csso && grunt uglify && grunt copy", */
