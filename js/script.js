@@ -4,6 +4,8 @@
 
 function ready() {
 
+  /* Работа с выпадающим меню */
+
   var main_nav = document.getElementById("main_nav");
   var main_link = document.getElementById("main_link");
   var main = document.querySelector(".main-nav__layout");
@@ -46,80 +48,91 @@ function ready() {
 
   });
 
+  /* Работа с формой */
+
+  var form = document.getElementById("frm1");
+
+  var i = 0;
+
+  if(form){
+
+   var btn_send = document.getElementById("btn_send");
+   var btn_close = document.getElementById("btn_close");
+   var btn_close1 = document.getElementById("btn_close1");
+   var popup_success = document.getElementById("popup_success");
+   var popup_failure = document.getElementById("popup_failure");
+
+    if(btn_send) {
+
+      btn_send.addEventListener("click", function () {
+
+        if (!i) {
+          if (!popup_success.classList.contains("popup--active"))
+            popup_success.classList.add("popup--active");
+
+          i++;
+        }
+        else {
+          if (!popup_failure.classList.contains("popup--active"))
+            popup_failure.classList.add("popup--active");
+
+          i=0;
+
+        }
+
+
+      });
+
+      if (btn_close)
+
+        btn_close.addEventListener("click", function () {
+
+
+            if (popup_success.classList.contains("popup--active"))
+              popup_success.classList.remove("popup--active");
+
+        });
+
+        btn_close1.addEventListener("click", function () {
+
+          if (popup_failure.classList.contains("popup--active"))
+            popup_failure.classList.remove("popup--active");
+
+        });
+
+    }
+
+  }
+
 }
 
 document.addEventListener("DOMContentLoaded", ready);
-
-
-// Показать карту
-/*
-var contacts_map = document.querySelector(".contacts__map");
-
-    var piter = {lat: 59.936421, lng: 30.321119};
-    var center = {lat: 59.936077, lng: 30.321108};
-    var map = new google.maps.Map(document.getElementById('map'), {
-      scaleControl: true,
-      center: center,
-      zoom: 16
-    });
-
-    image = "img/icon-map-marker.svg";
-    var marker = new google.maps.Marker({map: map, position: piter, icon: image});
-    marker.addListener('click', function() {
-      infowindow.open(map, marker);
-    });
-*/
-/*
-
-function initialize() {
-
-  var contacts_map = document.querySelector(".contacts__map");
-
-  var piter = {lat: 59.936421, lng: 30.321119};
-  var center = {lat: 59.936077, lng: 30.321108};
-  var map = new google.maps.Map(document.getElementById('map'), {
-    scaleControl: true,
-    center: center,
-    zoom: 17
-  });
-
-  image = "img/icon-map-marker.svg";
-  var marker = new google.maps.Marker({map: map, position: piter, icon: image});
-  marker.addListener('click', function() {
-    infowindow.open(map, marker);
-  });
-
-
-}
-
-google.maps.event.addDomListener(window, 'load', initialize);
-*/
 
 if(document.getElementById('map')){
 
   function initMap() {
 
-      var map;
+    var map;
 
-      var marker = {lat: 59.936421, lng: 30.321119};
-      var center = {lat: 59.937078, lng: 30.320990};
+    var marker = {lat: 59.936421, lng: 30.321119};
+    var center = {lat: 59.937078, lng: 30.320990};
 
-      map = new google.maps.Map(document.getElementById('map'), {
-        center: center,
-        zoom: 16,
-        disableDefaultUI: true,
-        mapTypeControlOptions: {
-          style: google.maps.MapTypeControlStyle.DROPDOWN_MENU
-        }
-      });
+    map = new google.maps.Map(document.getElementById('map'), {
+      center: center,
+      zoom: 16,
+      disableDefaultUI: true,
+      mapTypeControlOptions: {
+        style: google.maps.MapTypeControlStyle.DROPDOWN_MENU
+      }
+    });
 
-      image = "img/icon-map-marker.svg";
-      var marker = new google.maps.Marker({map: map, position: marker, icon: image});
-      marker.addListener('click', function () {
-        infowindow.open(map, marker);
-      });
+    image = "img/icon-map-marker.svg";
+    var marker = new google.maps.Marker({map: map, position: marker, icon: image});
+    marker.addListener('click', function () {
+      infowindow.open(map, marker);
+    });
 
-    }
+  }
 
   // Перерисовка при смене размера страницы
   window.addEventListener('resize', function(){
@@ -130,6 +143,8 @@ if(document.getElementById('map')){
   });
 
 }
+
+
 
 
 
