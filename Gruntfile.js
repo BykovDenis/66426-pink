@@ -50,26 +50,26 @@ module.exports = function(grunt) {
 
     jade: {
 
-        options: {
-          processName: function(filename) {
-            return filename.toUpperCase();
-          },
-          client: false,
-          runtime: true,
-          pretty: ' ',
-          compileDebug: false,
-          extension: false,
-          inline: false
+      options: {
+        processName: function(filename) {
+          return filename.toUpperCase();
         },
-        all: {
-            files: [{
-                expand: true,
-                cwd: 'jade/',
-                src: '**/*.jade',
-                dest: 'build/',
-                ext: '.html'
-            }]
-        }
+        client: false,
+        runtime: true,
+        pretty: ' ',
+        compileDebug: false,
+        extension: false,
+        inline: false
+      },
+      all: {
+        files: [{
+          expand: true,
+          cwd: 'jade/',
+          src: '**/*.jade',
+          dest: 'build/',
+          ext: '.html'
+        }]
+      }
 
     },
 

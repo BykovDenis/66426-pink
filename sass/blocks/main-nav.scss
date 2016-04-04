@@ -66,6 +66,7 @@
 
     float: right;
     padding: 20px 0;
+    display: none;
 
   }
 
@@ -342,6 +343,11 @@
 
     }
 
+    &--mobile{
+
+      position: absolute;;
+
+    }
 
     &__icon{
 

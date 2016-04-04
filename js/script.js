@@ -23,6 +23,8 @@ function ready() {
   if(main_nav.classList.contains("main-nav__items--active"))
     main_nav.classList.remove("main-nav__items--active");
 
+  main_link.style.display = "block";
+
   main_link.addEventListener("click", function () {
 
     if(main_nav.classList.contains("main-nav__items--active")) {

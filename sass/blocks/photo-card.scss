@@ -42,7 +42,8 @@
 
   &__time-added{
 
-    font-weight: 400;
+    font-size: $font-size - 2px;
+    font-weight: 100;
     text-transform: uppercase;
     color: $color-grey1;
 
@@ -59,7 +60,6 @@
     padding: 6px 20px 6px 19px;
     text-transform: uppercase;
     margin: 0;
-
 
   }
 
