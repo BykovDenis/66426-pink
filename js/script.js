@@ -2,92 +2,139 @@
  * Created by Denis on 31.03.2016.
  */
 
-var main_nav = document.getElementById("main_nav");
-var main_link = document.getElementById("main_link");
-var main = document.querySelector(".main-nav");
-var main_icon = document.getElementById("main_icon");
+function ready() {
 
+  /* Работа с выпадающим меню */
+
+  var main_nav = document.getElementById("main_nav");
+  var main_link = document.getElementById("main_link");
+  var main = document.querySelector(".main-nav__layout");
+  var main_icon = document.getElementById("main_icon");
+  var main_layout = document.getElementById("main_layout");
+
+  var main = document.getElementById("main");
+
+
+  if(main.classList.contains("main-nav--mobile"))
+    main.classList.remove("main-nav--mobile");
+
+  main_layout.classList.remove("main-nav__layout--active");
+
+  if(main_nav.classList.contains("main-nav__items--active"))
+    main_nav.classList.remove("main-nav__items--active");
+
+  main_link.style.display = "block";
 
   main_link.addEventListener("click", function () {
 
-    if(main_icon.classList.contains("main-nav__icon")){
+    if(main_nav.classList.contains("main-nav__items--active")) {
 
-      main_icon.classList.remove("main-nav__icon");
-      main_icon.classList.add("main-nav__icon--active");
+      main_nav.classList.remove("main-nav__items--active")
 
-      main_nav.style.display = "flex";
-      main.classList.add("main-nav--active");
+      document.querySelector(".main-nav__icon--active").style.display = "none";
+      document.querySelector(".main-nav__icon").style.display = "block";
 
-    }
-    else{
-
-      main_icon.classList.add("main-nav__icon");
-      main_icon.classList.remove("main-nav__icon--active");
-
-      main_nav.style.display = "none";
-      main.classList.remove("main-nav--active");
+      if(main_layout.classList.contains("main-nav__layout--active"))
+        main_layout.classList.remove("main-nav__layout--active");
 
     }
+    else {
 
-    //main_icon.classList.toggle("main-nav__icon--active");
-    //main_icon.classList.toggle("main-nav__icon");
+      main_nav.classList.add("main-nav__items--active");
 
+      document.querySelector(".main-nav__icon--active").style.display = "block";
+      document.querySelector(".main-nav__icon").style.display = "none";
+
+      if(!main_layout.classList.contains("main-nav__layout--active"))
+        main_layout.classList.add("main-nav__layout--active");
+
+    }
 
   });
 
 
-// Показать карту
-/*
-var contacts_map = document.querySelector(".contacts__map");
 
-    var piter = {lat: 59.936421, lng: 30.321119};
-    var center = {lat: 59.936077, lng: 30.321108};
-    var map = new google.maps.Map(document.getElementById('map'), {
-      scaleControl: true,
-      center: center,
-      zoom: 16
-    });
+  /* Работа с формой */
+  /* Показывается и закрываются окно с удачной и не удачной попыткой передачи данных формы на сервер */
+  /* каждое нечетное нажатие на кнопку открывает успешную отправку на сервер, каждое четное отображает не успешное */
 
-    image = "img/icon-map-marker.svg";
-    var marker = new google.maps.Marker({map: map, position: piter, icon: image});
-    marker.addListener('click', function() {
-      infowindow.open(map, marker);
-    });
-*/
-/*
+  var form = document.getElementById("frm1");
 
-function initialize() {
+  var i = 0;
 
-  var contacts_map = document.querySelector(".contacts__map");
+  if(form){
 
-  var piter = {lat: 59.936421, lng: 30.321119};
-  var center = {lat: 59.936077, lng: 30.321108};
-  var map = new google.maps.Map(document.getElementById('map'), {
-    scaleControl: true,
-    center: center,
-    zoom: 17
-  });
+   var btn_send = document.getElementById("btn_send");
+   var btn_close = document.getElementById("btn_close");
+   var btn_close1 = document.getElementById("btn_close1");
+   var popup_success = document.getElementById("popup_success");
+   var popup_failure = document.getElementById("popup_failure");
 
-  image = "img/icon-map-marker.svg";
-  var marker = new google.maps.Marker({map: map, position: piter, icon: image});
-  marker.addListener('click', function() {
-    infowindow.open(map, marker);
-  });
+    if(btn_send) {
 
+      btn_send.addEventListener("click", function () {
+
+        if (!i) {
+          if (!popup_success.classList.contains("popup--active"))
+            popup_success.classList.add("popup--active");
+
+          i++;
+        }
+        else {
+          if (!popup_failure.classList.contains("popup--active"))
+            popup_failure.classList.add("popup--active");
+
+          i=0;
+
+        }
+
+
+      });
+
+      if (btn_close)
+
+        btn_close.addEventListener("click", function () {
+
+
+            if (popup_success.classList.contains("popup--active"))
+              popup_success.classList.remove("popup--active");
+
+        });
+
+        btn_close1.addEventListener("click", function () {
+
+          if (popup_failure.classList.contains("popup--active"))
+            popup_failure.classList.remove("popup--active");
+
+        });
+
+    }
+
+  }
 
 }
 
-google.maps.event.addDomListener(window, 'load', initialize);
-*/
+document.addEventListener("DOMContentLoaded", ready);
 
-function initMap() {
+map = document.getElementById("map");
+
+if(map){
+
+  map.style.display = "block";
+
+  var contact_img = document.querySelector(".contacts_img");
+
+  if(contact_img)
+    contact_img.style.display = "none";
+
+  function initMap() {
 
     var map;
 
     var marker = {lat: 59.936421, lng: 30.321119};
     var center = {lat: 59.937078, lng: 30.320990};
 
-    map = new google.maps.Map(document.getElementById('map'), {
+    map = new google.maps.Map(document.getElementById("map"), {
       center: center,
       zoom: 16,
       disableDefaultUI: true,
@@ -98,19 +145,29 @@ function initMap() {
 
     image = "img/icon-map-marker.svg";
     var marker = new google.maps.Marker({map: map, position: marker, icon: image});
-    marker.addListener('click', function () {
+    marker.addListener("click", function () {
       infowindow.open(map, marker);
+    });
+
+    var contentString = "г. Санкт-Петербург, ул. Большая Конюшенная, 19/8";
+
+    var infowindow = new google.maps.InfoWindow({
+      content: contentString
     });
 
   }
 
-// Перерисовка при смене размера страницы
-window.addEventListener('resize', function(){
+  // Перерисовка при смене размера страницы
+  window.addEventListener("resize", function(){
 
-  if(google)
-    initMap();
+    if(google)
+      initMap();
 
-});
+  });
+
+}
+
+
 
 
 

@@ -32,8 +32,38 @@
     display: block;
     width: 147px;
     height: 40px;
-    background: url(../img/logo-pink-blue-mobile.svg) 0 0 no-repeat;
     margin: 47px 0 42px;
+
+  }
+
+  &__img{
+
+    width: 147px;
+    height: 40px;
+
+    &:hover path{
+
+      fill: $color-red1;
+
+    }
+
+    &:active path{
+
+      opacity: .3;
+
+    }
+
+    &:active path:first-of-type{
+
+      fill: $color-black;
+
+    }
+
+    &--desktop{
+
+      display: none;
+
+    }
 
 
   }
@@ -79,11 +109,50 @@
     &__logo{
 
       float: left;
-      background: url(../img/logo-pink-blue-desktop.svg) 0 0 no-repeat;
       margin-top: 69px;
 
 
     }
+
+    &__img{
+
+      width: 147px;
+      height: 40px;
+
+      &:hover path{
+
+        fill: $color-red1;
+
+      }
+
+      &:hover g{
+
+        fill: $color-red1;
+
+      }
+
+
+      &:active path{
+
+        opacity: .3;
+
+      }
+
+      &--desktop{
+
+        display: block;
+
+      }
+
+      &--mobile{
+
+        display: none;
+
+      }
+
+
+    }
+
 
   }
 

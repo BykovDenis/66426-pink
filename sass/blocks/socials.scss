@@ -1,6 +1,7 @@
 .socials{
 
   display: inline-block;
+  vertical-align: top;
   width: 200px;
   text-align: center;
 
@@ -17,6 +18,19 @@
 
     border: 3px solid $color-grey;
     border-radius: 50%;
+
+    &:hover{
+
+      border: 3px solid $color-black;
+
+    }
+
+    &:active{
+
+      border: 3px solid rgba(0,0,0,.2);
+      opacity: .3;
+
+    }
 
     &:last-of-type{
 
@@ -74,6 +88,7 @@
     text-align: left;
 
     display: inline-block;
+    vertical-align: top;
     width: 200px;
     margin-top: 34px;
     margin-left: 30px;

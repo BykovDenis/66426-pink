@@ -47,6 +47,29 @@
     font: 100 #{$font-size + 10px} / 1.2 $open-sans;
     color: $color-red1;
     margin: 0;
+  }
+
+  &__email{
+
+    font: 100 #{$font-size + 10px} / 1.2 $open-sans;
+    color: $color-red1;
+    margin: 0;
+    text-decoration: none;
+
+    &:hover{
+
+      color: $color-blue;
+      text-decoration: underline;
+
+    }
+
+    &:active{
+
+      color: $color-blue;
+      opacity: .3;
+      text-decoration: none;
+
+    }
 
   }
 
@@ -61,6 +84,19 @@
     overflow: hidden;
     width: $width-content-mobile;
     height: 212px;
+
+  }
+
+  &__img {
+
+    position: relative;
+    bottom: 0;
+    left: 0;
+    z-index: 50;
+    width: 848px;
+    height: 700px;
+    display: block;
+    transform: translate(-257px, -332px);
 
   }
 
@@ -156,7 +192,7 @@
 
     &__name {
 
-      font: 600 #{$font-size + 4px} / 1.2 $open-sans;
+      font: 700 #{$font-size + 4px} / 1.2 $open-sans;
       color: $color-blue;
       margin: 0;
 
@@ -174,6 +210,12 @@
 
       width: $width-content-tablet;
       height: 377px;
+
+    }
+
+    &__img {
+
+      transform: translate(-69px, -234px);
 
     }
 
@@ -267,7 +309,7 @@
 
       &__name{
 
-        font: 600 #{$font-size + 4px} / 1.2 $open-sans;
+        font: 700 #{$font-size + 4px} / 1.2 $open-sans;
         color: $color-blue;
         margin: 0;
         margin-bottom: 26px;
@@ -289,6 +331,16 @@
         height: 524px;
 
       }
+
+      &__img {
+
+        width: 1200px;
+        height: 900px;
+        display: block;
+        transform: translate(15px, -195px);
+
+      }
+
 
 
   }

@@ -49,6 +49,12 @@
     border-radius: 50%;
     background-color: $color-grey;
 
+    &:active{
+
+      background-color: $color-red1;
+
+    }
+
   }
 
   &--main &__point{

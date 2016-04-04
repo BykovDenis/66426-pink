@@ -4,19 +4,6 @@
   height: 100%;
   z-index: 100;
 
-  &__img {
-
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 100;
-    width: 1200px;
-    height: 976px;
-    display: block;
-    transform: translate(-439px, 330px);
-
-  }
-
 }
 
 @media (min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px) {
@@ -24,12 +11,6 @@
   .map {
 
     width: $width-content-tablet;
-
-    &__img {
-
-      transform: translate(-249px, 256px);
-
-    }
 
   }
 
@@ -41,12 +22,6 @@
   .map {
 
     width: $width-content-desktop;
-
-    &__img {
-
-      transform: translate(0px, 257px);
-
-    }
 
   }
 

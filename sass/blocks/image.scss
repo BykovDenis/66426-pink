@@ -34,7 +34,8 @@
       display: block;
       width:44px;
       height: 44px;
-      background: url(../img/icon-editor-crop.svg) 0 0 no-repeat;
+      cursor: pointer;
+
 
     }
 
@@ -44,7 +45,7 @@
     display: block;
     width:48px;
     height: 43px;
-    background: url(../img/icon-editor-fill.svg) 0 0 no-repeat;
+    cursor: pointer;
 
   }
 
@@ -53,9 +54,46 @@
     display: block;
     width:32px;
     height: 32px;
-    background: url(../img/icon-editor-contrast.svg) 0 0 no-repeat;
+    cursor: pointer;
 
   }
+
+  &__icon-crop > &__icon,
+  &__icon-fill > &__icon,
+  &__icon-contrast > &__icon{
+
+    fill: $color-black;
+
+    opacity: .3;
+
+    &:hover{
+
+      opacity: .5;
+
+    }
+
+  }
+
+
+  &__crop:checked + &__icon-crop > &__icon,
+  &__fill:checked + &__icon-fill >  &__icon,
+  &__contrast:checked + &__icon-contrast >  &__icon{
+
+    opacity: 1;
+    fill: $color-red1;
+
+  }
+
+  &__fill:checked + &__icon-fill >  &__icon,
+  &__contrast:checked + &__icon-contrast >  &__icon{
+
+    fill: $color-black;
+    opacity: .3;
+
+  }
+
+
+
 
   &__crop{
 
@@ -103,7 +141,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
 
     &__src{
 
@@ -135,7 +173,6 @@
       margin-bottom: 42px;
 
 
-
     }
 
     &__effect{
@@ -151,19 +188,30 @@
       display: block;
       width:22px;
       height: 22px;
-      background: url(../img/icon-editor-crop.svg) 0 0 no-repeat;
-      background-size: 22px 22px;
+    }
+
+
+    &__icon-crop &__icon{
+
+      width:22px;
+      height: 22px;
 
     }
 
 
-    &__icon-fill{
+    &__icon-fill {
 
       display: block;
-      width:24px;
+      width: 24px;
       height: 22px;
-      background: url(../img/icon-editor-fill.svg) 0 0 no-repeat;
-      background-size: 24px 22px;
+
+    }
+
+
+    &__icon-fill &__icon{
+
+        width:24px;
+        height: 22px;
 
     }
 
@@ -172,10 +220,16 @@
       display: block;
       width:18px;
       height: 16px;
-      background: url(../img/icon-editor-contrast.svg) 2px 0 no-repeat;
-      background-size: 16px 16px;
 
     }
+
+    &__icon-contrast &__icon {
+
+      width: 18px;
+      height: 16px;
+
+    }
+
 
     &__fill:checked + &__icon-fill {
 
@@ -195,6 +249,15 @@
 
     }
 
+    &__crop:checked + &__icon-crop > &__icon,
+    &__fill:checked + &__icon-fill >  &__icon,
+    &__contrast:checked + &__icon-contrast >  &__icon{
+
+      opacity: 1;
+      fill: $color-red1;
+
+    }
+
   }
 
 }
@@ -208,6 +271,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
+    width: 778px;
 
     &__src{
 
@@ -217,7 +281,7 @@
       align-items: center;
       width: 300px;
       height: 400px;
-      padding-left: 37px;
+      margin-right: 85px;
 
 
     }
@@ -246,8 +310,6 @@
       display: block;
       width:44px;
       height: 44px;
-      background: url(../img/icon-editor-crop.svg) 50% 50%  no-repeat;
-      background-size: 44px 44px;
 
     }
 
@@ -257,8 +319,6 @@
       display: block;
       width:48px;
       height: 43px;
-      background: url(../img/icon-editor-fill.svg) 50% 50%  no-repeat;
-      background-size: 48px 43px;
 
     }
 
@@ -267,8 +327,7 @@
       display: block;
       width:42px;
       height: 37px;
-      background: url(../img/icon-editor-contrast.svg) 50% 50% no-repeat;
-      background-size: 32px 32px;
+      padding-left: 6px;
 
     }
 
@@ -289,6 +348,16 @@
       opacity:1;
 
     }
+
+    &__crop:checked + &__icon-crop > &__icon,
+    &__fill:checked + &__icon-fill >  &__icon,
+    &__contrast:checked + &__icon-contrast >  &__icon{
+
+      opacity: 1;
+      fill: $color-red1;
+
+    }
+
 
   }
 

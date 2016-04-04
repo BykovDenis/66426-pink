@@ -46,12 +46,13 @@
     flex-direction: row;
     align-items: center;
     width: $width-content-tablet;
-    padding-top: 37px;
+    padding-top: 35px;
+    padding-bottom: 23px;
     justify-content: space-between;
 
     &__rules{
 
-      padding-right: 43px;
+      margin-left: 12px;
 
     }
 

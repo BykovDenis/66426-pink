@@ -9,6 +9,21 @@
   border-radius: 27px;
   color: $color-red1;
   background-color: $color-grey;
+  outline: 0;
+
+  &:hover{
+
+    background-color: $color-red1;
+    color: $color-white;
+
+  }
+
+  &:active{
+
+    background-color: $color-red1;
+    color: rgba(255,255,255,.3);
+
+  }
 
 
   &__file{
@@ -19,8 +34,25 @@
 
   &--disable{
 
-    color: rgba(40, 54, 69, .1);
-    border-color: rgba(40, 54, 69, .1);
+    color: rgba(0, 0, 0, .1);
+    border-color: rgba(0, 0, 0, .1);
+    background-color: transparent;
+
+    &:hover{
+
+      color: rgba(0, 0, 0, .3);
+      border-color: rgba(0, 0, 0, .3);
+      background-color: transparent;
+
+    }
+
+    &:active{
+
+      color: $color-white;
+      background-color: $color-black;
+      opacity: .3;
+
+    }
 
   }
 

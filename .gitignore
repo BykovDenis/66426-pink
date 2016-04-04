@@ -10,3 +10,4 @@ Thumbs.db
 css/*.css
 css/*.map
 build/
+*.html

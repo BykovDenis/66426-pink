@@ -18,13 +18,37 @@
 
     display: inline-block;
     vertical-align: top;
-    width: 27px;
+    width: 30px;
     height: 34px;
     margin-top: 40px;
-    background: url(../img/img_htmlacademy.png) 0 0 no-repeat;
 
   }
 
+
+  &__img{
+
+    fill: $color-blue;
+
+    &:hover{
+
+      fill: $color-blue;
+
+    }
+
+    &:hover path{
+
+      fill: $color-blue;
+
+    }
+
+    &:active{
+
+      fill: $color-blue;
+      opacity: .3;
+
+    }
+
+  }
 
 }
 
@@ -54,11 +78,10 @@
 
       display: inline-block;
       vertical-align: top;
-      width: 27px;
+      width: 30px;
       height: 34px;
       margin-top: 50px;
       margin-bottom: 43px;
-      background: url(../img/img_htmlacademy.png) 0 0 no-repeat;
 
     }
 
@@ -85,6 +108,7 @@
       margin-right: 40px;
 
     }
+
 
   }
 

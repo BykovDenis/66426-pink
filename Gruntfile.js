@@ -3,8 +3,8 @@
 module.exports = function(grunt) {
   require("load-grunt-tasks")(grunt);
 
-
   grunt.initConfig({
+
     sass: {
       style: {
         files: {
@@ -50,32 +50,32 @@ module.exports = function(grunt) {
 
     jade: {
 
-        options: {
-          processName: function(filename) {
-            return filename.toUpperCase();
-          },
-          client: false,
-          runtime: true,
-          pretty: ' ',
-          compileDebug: false,
-          extension: false,
-          inline: false
+      options: {
+        processName: function(filename) {
+          return filename.toUpperCase();
         },
-        all: {
-            files: [{
-                expand: true,
-                cwd: 'jade/',
-                src: '**/*.jade',
-                dest: '',
-                ext: '.html'
-            }]
-        }
+        client: false,
+        runtime: true,
+        pretty: ' ',
+        compileDebug: false,
+        extension: false,
+        inline: false
+      },
+      all: {
+        files: [{
+          expand: true,
+          cwd: 'jade/',
+          src: '**/*.jade',
+          dest: 'build/',
+          ext: '.html'
+        }]
+      }
 
     },
 
     watch: {
       files: ["sass/**/*.{scss,sass}","jade/**/*.{jade}"],
-      tasks: ["sass", "postcss", "csso", "jade", "copy", "uglify", "imagemin"],
+      tasks: ["sass", "postcss", "csso", "jade", "copy", "uglify"],
       options: {
         spawn: false
       }
@@ -136,11 +136,37 @@ module.exports = function(grunt) {
 
     clean: {
       build: ["build"]
-    }
+    },
 
+    svgstore:{
+
+      options: {
+        svg: {
+          style: "display: none"
+        }
+      },
+      symbols: {
+        files: {
+          "img/symbols.svg": ["img/*.svg"]
+        }
+      }
+    },
+
+    svgmin:{
+
+      symbols: {
+        files: [{
+          expand: true,
+          src: ["img/*.svg"]
+        }]
+      }
+
+    }
 
   });
 
   grunt.registerTask("serve", ["browserSync", "watch"]);
   grunt.registerTask("build",["clean", "jade", "sass", "postcss", "csso", "imagemin", "uglify", "copy"])
+  grunt.registerTask("symbols", ["svgmin", "svgstore"]);
+
 };

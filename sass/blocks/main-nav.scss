@@ -8,6 +8,12 @@
 
   @include page-width();
 
+  &--mobile{
+
+    position: static;
+
+  }
+
 
   &__layout {
 
@@ -27,7 +33,32 @@
     width: 75px;
     height: 22px;
     padding: 22px 0;
-    background: url(../img/logo-pink-white-mobile.svg) 0 22px no-repeat;
+
+
+    &:hover g{
+
+      fill: $color-red1;
+
+    }
+
+    &:active g{
+
+      fill: $color-white;
+      opacity: .3;
+
+    }
+
+    &--tablet{
+
+      display: none;
+
+    }
+
+    &--desktop{
+
+      display: none;
+    }
+
  }
 
 
@@ -35,29 +66,42 @@
 
     float: right;
     padding: 20px 0;
+    display: none;
 
   }
 
   &__icon{
 
-    display: block;
-    background: url(../img/icon-menu-burger.svg) 0 0 no-repeat;
+
     width: 50px;
     height: 25px;
+    cursor: pointer;
+
+    &:hover path{
+
+      fill: $color-red1;
+
+    }
+
+    &:active path {
+
+      fill: $color-white;
+      opacity: .3;
+
+    }
 
   }
 
   &__icon--active{
 
-    display: block;
-    background: url(../img/icon-menu-cross.svg) 25px 0 no-repeat;
+    display: none;
     width: 50px;
     height: 25px;
 
   }
 
 
-  &--active{
+  &__layout--active{
 
     background-color: $color-blue-dark;
 
@@ -66,31 +110,47 @@
   &__items{
 
     display: none;
-    flex-direction: column;
     list-style-type: none;
     margin: 0;
     padding:0;
     text-align: center;
     border-top: 1px solid $color-black1;
     background-color: $color-blue-dark;
+    z-index: 100;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    width: $width-content-mobile;
 
   }
+
+  &__items--active{
+
+    display: flex;
+
+  }
+
 
   &__item{
 
     border-top: 1px solid $color-grey2;
     border-bottom: 1px solid $color-black1;
 
+    font: 700 #{$font-size + 4px} / 3 $open-sans;
+    color: $color-white;
+
+    padding: 4px 0;
+    text-align: center;
+    text-transform: uppercase;
+
   }
-
-
 
   &__link{
 
     display: block;
     text-decoration: none;
 
-    font: 600 #{$font-size + 4px} / 3 $open-sans;
+    font: 700 #{$font-size + 4px} / 3 $open-sans;
     color: $color-white;
 
     padding: 4px 0;
@@ -99,7 +159,14 @@
 
     &:hover{
 
-      color: red;
+      color: $color-red1;
+
+    }
+
+    &:active{
+
+      color: $color-red1;
+      opacity: .3;
 
     }
 
@@ -122,15 +189,62 @@
 
  .main-nav {
 
+
    &__logo {
 
      float: left;
      display: block;
      width: 147px;
      height: 65px;
-     padding: 22px 0;
-     background: url(../img/logotype-white-tablet.png) 0 27px no-repeat;
+     padding: 16px 0;
+
+     &:hover g {
+
+       fill: $color-red1;
+
+     }
+
+     &:active g {
+
+       fill: $color-white;
+       opacity: .3;
+
+     }
+
+     &--mobile {
+
+       display: none;
+
+     }
+
+     &--desktop {
+
+       display: none;
+
+     }
+
    }
+
+     &__icon{
+
+       display: block;
+
+     }
+
+     &__icon--active{
+
+       display: none;
+
+     }
+
+
+     &__layout--active{
+
+       display: flex;
+       background-color: $color-blue-dark;
+
+     }
+
 
    &__main-link{
 
@@ -169,6 +283,7 @@
 
     &__items{
 
+      position: static;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
@@ -178,11 +293,13 @@
       align-content: stretch;
 
       margin: 0;
-      padding:0;
       text-align: center;
       border: 0;
       margin-left: 173px;
       background: none;
+
+      @include page-width();
+      padding: 15px 0;
 
     }
 
@@ -193,26 +310,52 @@
       vertical-align: top;
       width: 147px;
       height: 65px;
-      padding: 22px 0;
+      padding-top: 15px;
       padding-right: 170px;
-      background: url(../img/logotype-white-desktop.png) 0 27px no-repeat;
+
+      &--tablet{
+
+        display: none;
+
+      }
+
+      &--mobile{
+
+        display: none;
+
+      }
 
     }
 
-    &__items {
-
-      @include page-width();
-
-    }
 
     &__item{
 
       border: none;
 
+      text-decoration: none;
+
+      font: 400 #{$font-size + 4px} / 1 $open-sans;
+      color: $color-white;
+
+      text-align: center;
+      text-transform: none;
+      padding: 15px 0;
+
     }
 
+    &--mobile{
+
+      position: absolute;;
+
+    }
 
     &__icon{
+
+      display: none;
+
+    }
+
+    &__icon:active{
 
       display: none;
 
@@ -225,22 +368,39 @@
       font: 400 #{$font-size + 4px} / 1 $open-sans;
       color: $color-white;
 
-      padding: 15px 0;
       text-align: center;
       text-transform: none;
-
+      padding: 15px 0;
 
       &:hover{
 
-        color: red;
+        padding-bottom: 13px;
+        border-bottom: 2px solid $color-white;
+        text-decoration: none;
+        color: $color-white;
+
+      }
+
+      &:active{
+
+        opacity: .3;
+        border-bottom: 0;
+        padding-bottom: 15px;
+        text-decoration: none;
 
       }
 
     }
 
-    &--active{
+    &__layout--active{
 
-      background: rgba(0,0,0,.4);
+      background: none;
+
+    }
+
+    &__main-link{
+
+      display: none;
 
     }
 

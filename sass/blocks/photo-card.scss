@@ -42,7 +42,10 @@
 
   &__time-added{
 
-    font-weight: 300;
+    font-size: $font-size - 2px;
+    font-weight: 100;
+    text-transform: uppercase;
+    color: $color-grey1;
 
   }
 
@@ -58,7 +61,6 @@
     text-transform: uppercase;
     margin: 0;
 
-
   }
 
   &__content{
@@ -66,7 +68,7 @@
     margin-top:5px;
     margin-bottom: 9px;
     padding: 0 $layout-padding-mobile - 1px;
-    font: 300 #{$font-size} / (24px / $font-size) $open-sans;
+    font: 400 #{$font-size} / (24px / $font-size) $open-sans;
   }
 
   &__likes{
@@ -78,6 +80,7 @@
     line-height: 24px / ($font-size - 2px);
     color: $color-red1;
     text-transform: uppercase;
+    cursor: pointer;
 
 
   }

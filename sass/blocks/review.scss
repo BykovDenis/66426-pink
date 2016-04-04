@@ -70,7 +70,7 @@
 
     &__title{
 
-      font: 600 #{$font-size-h4 +2px}/  1.5 $open-sans;
+      font: 700 #{$font-size-h4 +2px}/  1.5 $open-sans;
       color: $color-black;
       margin: 0 ;
       margin-top: 37px;
@@ -104,28 +104,32 @@
       display: inline-block;
       vertical-align: middle;
       width: 25px;
-      height: 40px;
+      height: 42px;
       padding-top: 18px;
+      opacity: .3;
 
-      a {
+      &:hover{
 
-        display: block;
-        width: 22px;
-        height: 42px;
+        opacity: .6;
+
+      }
+
+      &:active{
+
         opacity: .3;
 
       }
 
     }
 
-    &__prev a{
+    &__prev{
 
       background: url(../img/icon-review-arrow-left.svg) 0 0 no-repeat;
       background-size: 22px 42px;
 
     }
 
-    &__next a{
+    &__next{
 
       background: url(../img/icon-review-arrow-right.svg) 0 0 no-repeat;
       background-size: 22px 42px;
@@ -145,7 +149,7 @@
 
     &__title{
 
-      font: 600 #{$font-size-h4 +6px}/  1.25 $open-sans;
+      font: 700 #{$font-size-h4 +6px}/  1.25 $open-sans;
       color: $color-black;
       margin: 0 ;
       margin-top: 37px;

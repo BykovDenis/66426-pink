@@ -9,7 +9,7 @@
   background: url(../img/bg-back-mobile.jpg) 50% -6px no-repeat $color-blue-dark1;
   background-size: 700px 462px;
 
-  @media (min-resolution: 1.5dppx) {
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
 
     background: url(../img/bg-back-mobile@2x.jpg) 50% -6px no-repeat $color-blue-dark1;
     background-size: 700px 462px;
@@ -35,6 +35,20 @@
     border: 3px solid $color-white;
     border-radius: 40px;
 
+    &:hover{
+
+      background-color: $color-white;
+      color: $color-red1;
+
+    }
+
+    &:active{
+
+      background-color: $color-white;
+      color: $color-red2;
+
+    }
+
   }
 
   &__items{
@@ -59,23 +73,28 @@
 
   &__icon{
 
-    display: block;
-    width: 44px;
-    height: 56px;
+    &-apple{
 
-    &--apple{
+      width: 44px;
+      height: 56px;
 
       background: url(../img/logo-apple.svg) 0 0 no-repeat;
 
     }
 
-    &--android{
+    &-android{
+
+      width: 44px;
+      height: 56px;
 
       background: url(../img/logo-android.svg) 0 9px no-repeat;
 
     }
 
-    &--microsoft{
+    &-microsoft{
+
+      width: 44px;
+      height: 56px;
 
       background: url(../img/logo-microsoft.svg) 0 13px no-repeat;
 
@@ -124,10 +143,32 @@
     height: auto;
 
 
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+
+      background: url(../img/bg-back-tablet@2x.jpg) 50% 0px no-repeat $color-blue-dark1;
+      background-size: 1200px 729px;
+
+    }
+
+
     &__btn{
 
       width: 290px;
       margin-bottom: 46px;
+
+      &:hover{
+
+        background-color: $color-white;
+        color: $color-red1;
+
+      }
+
+      &:active{
+
+        background-color: $color-white;
+        color: $color-red2;
+
+      }
 
     }
 
@@ -135,6 +176,7 @@
 
       font: 100 #{$font-size + 4px} / #{$font-size * 1.71}  $open-sans;
       margin:0;
+      margin-top: 39px;
 
     }
 
@@ -181,10 +223,12 @@
     font-size: 0;
     padding-top: 147px;
 
+
     &__body{
 
       position: absolute;
       width: 300px;
+      max-width: 300px;
       z-index: 1;
       top: 108px;
       left: 130px;
@@ -207,7 +251,21 @@
 
       width: 290px;
       margin-bottom: 70px;
-      font: 600 #{$font-size + 7px} / 1.03 $open-sans;
+      font: 700 #{$font-size + 7px} / 1.03 $open-sans;
+
+      &:hover{
+
+        background-color: $color-white;
+        color: $color-red1;
+
+      }
+
+      &:active{
+
+        background-color: $color-white;
+        color: $color-red2;
+
+      }
 
     }
 
@@ -215,6 +273,7 @@
 
       font: 100 #{$font-size + 4px} / #{$font-size * 1.71}  $open-sans;
       margin:0;
+      margin-top: 53px;
 
     }
 

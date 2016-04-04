@@ -40,7 +40,7 @@
 
 
     &:before{
- 
+
       width: 100px;
       height: 100px;
       content: "";
@@ -201,7 +201,7 @@
 
     &__title{
 
-      font: 600 #{$font-size + 2px} / #{30px/($font-size + 2px)} $open-sans;
+      font: 700 #{$font-size + 2px} / #{30px/($font-size + 2px)} $open-sans;
       text-transform: uppercase;
       margin: 0;
 
@@ -209,7 +209,7 @@
 
     &__value{
 
-      font: 300 #{$font-size + 4px}/ #{30px/($font-size + 4px)} $open-sans;
+      font: 400 #{$font-size + 4px}/ #{30px/($font-size + 4px)} $open-sans;
 
     }
 
