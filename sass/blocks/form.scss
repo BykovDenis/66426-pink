@@ -146,6 +146,12 @@
 
   }
 
+  &__radio + &__label-control:disabled:before{
+
+    box-shadow: 0 0 0 2px $color-grey4;
+
+  }
+
   &__radio:checked + &__label-control:before {
 
     width: 16px;
@@ -196,6 +202,12 @@
     &:focus{
 
       border: 2px solid $color-red1;
+
+    }
+
+    &:disabled{
+
+      border: 2px solid $color-grey;
 
     }
 
@@ -273,6 +285,13 @@
     &:active{
       background-color: $color-green1;
       color: rgba(255,255,255,.3);
+    }
+
+    &:disabled{
+
+      background-color: $color-grey4;
+      border: 2px solid $color-grey4;
+
     }
 
 

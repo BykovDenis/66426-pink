@@ -4,8 +4,9 @@
     margin: 35px 0;
 
 
-    &__item{
+    &__radio + &__item:before{
 
+        content: "";
         display: inline-block;
         vertical-align: top;
         width: 6px;
@@ -23,7 +24,36 @@
 
     }
 
-    &--table > &__item {
+    &__radio{
+
+      display: none;
+
+    }
+
+    &__item:hover:before{
+
+      background-color: $color-grey8;
+
+    }
+
+    &__item:active:before{
+
+      background-color: $color-grey9;
+
+    }
+
+    &__radio:checked + &__item:before{
+
+      border: 3px solid $color-blue;
+      background-color: $color-white;
+
+    }
+
+
+
+
+
+    &--table > &__item:before {
 
         border: 3px solid $color-grey;
 
