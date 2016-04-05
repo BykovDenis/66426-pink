@@ -286,7 +286,7 @@
       position: static;
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: flex-end;
       align-items: center;
       list-style-type: none;
       flex-wrap: wrap;
@@ -295,10 +295,10 @@
       margin: 0;
       text-align: center;
       border: 0;
-      margin-left: 173px;
+
       background: none;
 
-      @include page-width();
+      width: 795px;
       padding: 15px 0;
 
     }
@@ -311,7 +311,7 @@
       width: 147px;
       height: 65px;
       padding-top: 15px;
-      padding-right: 170px;
+
 
       &--tablet{
 
@@ -340,8 +340,17 @@
       text-align: center;
       text-transform: none;
       padding: 15px 0;
+      margin-left: 83px;
+
+      &:first-child{
+
+        margin-left: 0;
+
+      }
 
     }
+
+
 
     &--mobile{
 
