@@ -2,6 +2,7 @@
 
   @include page-width();
   position: relative;
+  overflow: hidden;
 
   &:after{
 

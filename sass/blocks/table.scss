@@ -134,6 +134,7 @@
       box-sizing: border-box;
       width: 156px;
       padding-left:0;
+      outline: 2px solid #f2f2f2;
 
     }
 
@@ -189,9 +190,10 @@
       box-sizing: border-box;
       width: 157px;
       position: absolute;
-      transform: translate(-100%, -13px);
+      transform: translate(-100%, -11px);
       background-color: white;
       border: 2px solid #f2f2f2;
+      border-top:0;
       padding-top: 7px;
       padding-bottom: 9px;
       padding-left: 16px;
@@ -210,6 +212,24 @@
     &__value{
 
       font: 400 #{$font-size + 4px}/ #{30px/($font-size + 4px)} $open-sans;
+
+    }
+
+    &__row:nth-of-type(2) &__description{
+
+      padding: 5px 9px 4px;
+
+    }
+
+    &__row:nth-of-type(3) &__description{
+
+      padding: 7px 9px 7px;
+
+    }
+
+    &__row:nth-of-type(4) &__description{
+
+      padding: 7px 9px 7px;
 
     }
 
@@ -241,12 +261,20 @@
       display: table-cell;
       position: relative;
       padding-left: 0;
+      border:0;
+      outline: 2px solid #f2f2f2;
+
+    }
+
+    &__header-cell{
+
+      padding: 20px 0;
 
     }
 
     &__cell{
 
-      padding: 18px 0;
+      padding: 19px 0;
 
     }
 
@@ -286,10 +314,11 @@
       box-sizing: border-box;
       width: 232px;
       position: absolute;
-      transform: translate(-100%, -20px);
+      transform: translate(-100%, -18px);
       background-color: white;
-      padding: 14px 20px 18px;
+      padding: 14px 20px 19px;
       border: 2px solid #f2f2f2;
+      border-top:0;
       text-transform: none;
 
     }
@@ -299,6 +328,24 @@
       font: 400 #{$font-size + 4px} / #{(30px / ($font-size + 4px))} $open-sans;
       color: $color-blue;
       text-transform: none;
+
+    }
+
+    &__row:nth-of-type(2) &__description{
+
+      padding: 13px 20px 14px;
+
+    }
+
+    &__row:nth-of-type(3) &__description{
+
+      padding: 16px 20px 15px;
+
+    }
+
+    &__row:nth-of-type(4) &__description{
+
+      padding: 16px 20px 16px;
 
     }
 

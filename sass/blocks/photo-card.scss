@@ -69,6 +69,7 @@
     margin-bottom: 9px;
     padding: 0 $layout-padding-mobile - 1px;
     font: 400 #{$font-size} / (24px / $font-size) $open-sans;
+    max-width: 242px;
   }
 
   &__likes{
@@ -80,8 +81,6 @@
     line-height: 24px / ($font-size - 2px);
     color: $color-red1;
     text-transform: uppercase;
-    cursor: pointer;
-
 
   }
 
@@ -90,10 +89,11 @@
     display: inline-block;
     vertical-align: top;
     content:"";
-    width: 14px;
+    width: 16px;
     height: 24px;
-    background: url(../img/icon-heart.svg) 0 45% no-repeat;
+    background: url(../img/icon-heart.svg) 50% 45% no-repeat;
     padding-right: 18px;
+    text-decoration: none;
 
   }
 
@@ -120,7 +120,6 @@
 
 }
 
-
 @media (min-width: $width-content-tablet) and (max-width: $width-content-desktop - 1px){
 
   .photo-card{
@@ -133,6 +132,12 @@
     &--top {
 
       margin-bottom: 49px;
+
+    }
+
+    &--top &__content{
+
+      max-width: 550px;
 
     }
 
@@ -264,6 +269,12 @@
 
     }
 
+    &--top &__content{
+
+      max-width: 890px;
+
+    }
+
     &__top-image {
 
       width: $width-content-desktop;
@@ -291,29 +302,14 @@
 
     }
 
-    &--top &__likes {
-
-      position: absolute;
-      top: 24px;
-      right: 0;
-      padding: 0 16px;
-
-    }
-
     &--top &__icon-heart {
 
-      float: right;
-      margin-left: 16px;
+
+      margin-left: 0;
 
     }
 
-    &--top &__content {
 
-      padding-left: 27px;
-      margin-bottom: 22px;
-      font: 400 #{$font-size} / (24px / $font-size) $open-sans;
-
-    }
 
     &__content{
 
@@ -340,11 +336,39 @@
       margin: 0 $layout-padding-desktop;
       padding-top: 25px;
 
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: stretch;
+      flex-wrap: wrap;
+
     }
 
     &--top &__author{
 
       padding-left: 27px;
+      flex-basis: 200px;
+      max-width: 200px;
+      order: 1;
+
+    }
+
+    &--top &__likes {
+
+      margin-bottom: 0;
+      padding: 0 16px;
+      flex-basis: 137px;
+      order: 2;
+
+    }
+
+    &--top &__content {
+
+      margin-top:0;
+      padding-left: 27px;
+      margin-bottom: 22px;
+      font: 400 #{$font-size} / (24px / $font-size) $open-sans;
+      order: 3;
 
     }
 
@@ -363,7 +387,7 @@
 
       order: 1;
       margin-left: auto;
-      padding-right: 12px;
+      padding-right: 28px;
 
     }
 

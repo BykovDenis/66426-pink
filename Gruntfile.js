@@ -56,7 +56,7 @@ module.exports = function(grunt) {
         },
         client: false,
         runtime: true,
-        pretty: ' ',
+        pretty: " ",
         compileDebug: false,
         extension: false,
         inline: false
@@ -64,10 +64,10 @@ module.exports = function(grunt) {
       all: {
         files: [{
           expand: true,
-          cwd: 'jade/',
-          src: '**/*.jade',
-          dest: 'build/',
-          ext: '.html'
+          cwd: "jade/",
+          src: "**/*.jade",
+          dest: "build/",
+          ext: ".html"
         }]
       }
 
@@ -99,9 +99,9 @@ module.exports = function(grunt) {
         },
         files: [{
           expand: true,                  // Enable dynamic expansion
-          cwd: 'img/',                   // Src matches are relative to this path
-          src: ['**/*.{png,jpg,gif}'],   // Actual patterns to match
-          dest: 'build/img/'             // Destination path prefix
+          cwd: "img/",                   // Src matches are relative to this path
+          src: ["**/*.{png,jpg,gif}"],   // Actual patterns to match
+          dest: "build/img/"             // Destination path prefix
         }]
       }
     },
@@ -124,12 +124,14 @@ module.exports = function(grunt) {
     uglify: {
       options: {
         mangle: {
-          except: ['jQuery', 'Backbone']
+          except: ["jQuery", "Backbone"]
         }
       },
       my_target: {
         files: {
-          'build/js/script.min.js': ['js/script.js']
+          "build/js/script.min.js": ["js/script.js"],
+          "build/js/picturefill.min.js": ["js/picturefill.js"],
+          "build/js/pf.intrinsic.min.js": ["js/pf.intrinsic.js"]
         }
       }
     },
