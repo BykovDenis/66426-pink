@@ -4,10 +4,11 @@ module.exports = function(grunt) {
   require("load-grunt-tasks")(grunt);
 
   grunt.initConfig({
+
     sass: {
       style: {
         files: {
-          "css/style.css": "sass/style.scss"
+          "build/css/style.css": "sass/style.scss"
         }
       }
     },
@@ -25,7 +26,7 @@ module.exports = function(grunt) {
         ]
       },
       style: {
-        src: "css/*.css"
+        src: "build/css/*.css"
       }
     },
 
@@ -33,12 +34,12 @@ module.exports = function(grunt) {
       server: {
         bsFiles: {
           src: [
-            "*.html",
-            "css/*.css"
+            "build/*.html",
+            "build/css/*.css"
           ]
         },
         options: {
-          server: ".",
+          server: "./build",
           watchTask: true,
           notify: false,
           open: true,
@@ -49,37 +50,123 @@ module.exports = function(grunt) {
 
     jade: {
 
-        options: {
-          processName: function(filename) {
-            return filename.toUpperCase();
-          },
-          client: false,
-          runtime: true,
-          pretty: ' ',
-          compileDebug: false,
-          extension: false,
-          inline: false
+      options: {
+        processName: function(filename) {
+          return filename.toUpperCase();
         },
-        all: {
-            files: [{
-                expand: true,
-                cwd: 'jade/',
-                src: '**/*.jade',
-                dest: '',
-                ext: '.html'
-            }]
-        }
+        client: false,
+        runtime: true,
+        pretty: " ",
+        compileDebug: false,
+        extension: false,
+        inline: false
+      },
+      all: {
+        files: [{
+          expand: true,
+          cwd: "jade/",
+          src: "**/*.jade",
+          dest: "build/",
+          ext: ".html"
+        }]
+      }
 
     },
 
     watch: {
       files: ["sass/**/*.{scss,sass}","jade/**/*.{jade}"],
-      tasks: ["sass", "postcss","jade"],
+      tasks: ["sass", "postcss", "csso", "jade", "copy", "uglify"],
       options: {
         spawn: false
       }
+    },
+
+    csso:{
+      style:{
+        options:{
+          reports: "gzip"
+        },
+        files:{
+          "build/css/style.min.css": ["build/css/style.css"]
+        }
+      }
+    },
+
+    imagemin: {
+      images: {
+        options: {
+          optimizationLevel: 5
+        },
+        files: [{
+          expand: true,                  // Enable dynamic expansion
+          cwd: "img/",                   // Src matches are relative to this path
+          src: ["**/*.{png,jpg,gif}"],   // Actual patterns to match
+          dest: "build/img/"             // Destination path prefix
+        }]
+      }
+    },
+
+    copy:{
+      build: {
+        files: [{
+          expand: true,
+          src: [
+            "fonts/**/*.{woff,woff2}",
+            "img/**",
+            "js/**",
+            "*.html"
+          ],
+          dest: "build"
+        }]
+      }
+    },
+
+    uglify: {
+      options: {
+        mangle: {
+          except: ["jQuery", "Backbone"]
+        }
+      },
+      my_target: {
+        files: {
+          "build/js/script.min.js": ["js/script.js"]
+        }
+      }
+    },
+
+    clean: {
+      build: ["build"]
+    },
+
+    svgstore:{
+
+      options: {
+        svg: {
+          style: "display: none"
+        }
+      },
+      symbols: {
+        files: {
+          "img/symbols.svg": ["img/*.svg"]
+        }
+      }
+    },
+
+    svgmin:{
+
+      symbols: {
+        files: [{
+          expand: true,
+          src: ["img/*.svg"]
+        }]
+      }
+
     }
+
   });
 
   grunt.registerTask("serve", ["browserSync", "watch"]);
+  grunt.registerTask("build",["clean", "jade", "sass", "postcss", "csso", "imagemin", "uglify", "copy"])
+  grunt.registerTask("symbols", ["svgmin", "svgstore"]);
+
 };

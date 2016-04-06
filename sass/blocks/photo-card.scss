@@ -80,7 +80,6 @@
     line-height: 24px / ($font-size - 2px);
     color: $color-red1;
     text-transform: uppercase;
-    cursor: pointer;
 
   }
 
@@ -291,15 +290,6 @@
 
     }
 
-    &--top &__likes {
-
-      position: absolute;
-      top: 24px;
-      right: 0;
-      padding: 0 16px;
-
-    }
-
     &--top &__icon-heart {
 
       float: right;
@@ -307,13 +297,7 @@
 
     }
 
-    &--top &__content {
 
-      padding-left: 27px;
-      margin-bottom: 22px;
-      font: 400 #{$font-size} / (24px / $font-size) $open-sans;
-
-    }
 
     &__content{
 
@@ -340,11 +324,39 @@
       margin: 0 $layout-padding-desktop;
       padding-top: 25px;
 
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: stretch;
+      flex-wrap: wrap;
+
     }
 
     &--top &__author{
 
       padding-left: 27px;
+      flex-basis: 200px;
+      max-width: 200px;
+      order: 1;
+
+    }
+
+    &--top &__likes {
+
+      margin-bottom: 0;
+      padding: 0 16px;
+      flex-basis: 137px;
+      order: 2;
+
+    }
+
+    &--top &__content {
+
+      margin-top:0;
+      padding-left: 27px;
+      margin-bottom: 22px;
+      font: 400 #{$font-size} / (24px / $font-size) $open-sans;
+      order: 3;
 
     }
 
