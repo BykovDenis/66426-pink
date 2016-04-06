@@ -19,8 +19,8 @@
   &__items--grey{
 
     background-color: $color-grey;
-    padding-top:26px;
-    padding-bottom: 34px;
+    padding-top:0;
+    padding-bottom: 31px;
 
   }
 
@@ -49,7 +49,6 @@
     text-align: left;
 
   }
-
 
   &__label-content{
 
@@ -222,7 +221,7 @@
     text-transform: uppercase;
     position: relative;
     top: 55px;
-    margin-bottom: 39px;
+    margin-bottom: 35px;
     max-width: 252px;
     text-align: center;
 
@@ -233,6 +232,8 @@
     }
 
   }
+
+
 
   &__textarea{
 
@@ -334,7 +335,7 @@
   &__items:first-child{
 
     order: 1;
-    margin-bottom: 24px;
+    margin-bottom: 41px;
     display: flex;
     flex-direction: column;
 
@@ -354,7 +355,7 @@
 
   &__items:nth-child(2) &__title{
 
-    margin-top: -47px;
+    margin-top: -15px;
     margin-bottom: 62px;
 
   }
@@ -366,6 +367,14 @@
 
 
   }
+
+  &__items:nth-child(3) &__title {
+
+    top: 25px;
+    margin-bottom: 34px;
+
+  }
+
   // Номер телефона
   &__items:nth-child(4){
 
@@ -521,6 +530,7 @@
 
       order: 2;
       padding-bottom: 56px;
+      margin-bottom: 63px;
 
     }
 
@@ -562,6 +572,15 @@
 
     }
 
+    &__items:nth-child(3) &__title{
+
+      margin-top: -57px;
+      margin-bottom: 41px;
+      background-color: white;
+      align-self: center;
+
+    }
+
     // Номер телефона
     &__items:nth-child(4){
 
@@ -569,14 +588,17 @@
       border: 2px solid $color-grey4;
       margin: 0 $layout-padding-tablet;
       padding-bottom: 0;
-      margin-bottom: 47px;
+      margin-bottom: 57px;
       flex-direction: column;
 
     }
 
-    &__items:nth-child(4) &__title--not-mobile{
+    &__items:nth-child(4) &__title{
 
-      margin-bottom: 19px;
+      margin-top: -23px;
+      margin-bottom: 30px;
+      background-color: white;
+      align-self: center;
 
     }
 
@@ -848,13 +870,13 @@
 
       font-size: $font-size + 4px;
       line-height: 30px /($font-size + 4px);
-      width: 262px;
+      width: 265px;
 
     }
 
     &__title--not-mobile{
 
-      display: inline;
+      display: block;
 
     }
 
@@ -1008,13 +1030,22 @@
 
     }
 
+    &__items:nth-child(3)  &__title{
+
+      top: 25px;
+      margin-bottom: 18px;
+      max-width: 386px;
+
+    }
+
     // Номер телефона
     &__items:nth-child(4){
 
       order: 2;
       border: 2px solid $color-grey4;
       display: block;
-      margin-bottom: 52px;
+      margin-bottom: 62px;
+      margin-top: 9px;
       padding-bottom: 8px;
       flex-basis: 940px;
 
@@ -1039,6 +1070,13 @@
       width: 375px;
       padding-left: 21px;
 
+    }
+
+    &__items:nth-child(4) &__title{
+
+      margin-top: -24px;
+      margin-bottom: 27px;
+      max-width: 211px;
 
     }
 

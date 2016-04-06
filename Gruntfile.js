@@ -129,7 +129,9 @@ module.exports = function(grunt) {
       },
       my_target: {
         files: {
-          "build/js/script.min.js": ["js/script.js"]
+          "build/js/script.min.js": ["js/script.js"],
+          "build/js/picturefill.min.js": ["js/picturefill.js"],
+          "build/js/pf.intrinsic.min.js": ["js/pf.intrinsic.js"]
         }
       }
     },
